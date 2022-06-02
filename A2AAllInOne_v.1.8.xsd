@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://Mindbus.nl/A2A"
+    elementFormDefault="qualified"
+    xmlns:A2A="http://Mindbus.nl/A2A"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+
+
+  <xsd:annotation>
+    <xsd:documentation>
+      A2A is the schema for historical records concerning persons
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <!--Main Element everything is a child to this-->
+  <xsd:element name="A2A" type="A2A:A2AType">
+
+    <!--all keys -->
+
+    <!--define the unique keys-->
+    <xsd:key name="PersonKey" >
+      <xsd:selector xpath="A2A:Person" />
+      <xsd:field xpath="@pid" />
+    </xsd:key>
+
+    <xsd:key name="EventKey"  >
+      <xsd:selector xpath="A2A:Event" />
+      <xsd:field xpath="@eid" />
+    </xsd:key>
+
+    <xsd:key name="ObjectKey"  >
+      <xsd:selector xpath="A2A:Object" />
+      <xsd:field xpath="@oid" />
+    </xsd:key>
+
+    <!--define the references to valid keys-->
+    <xsd:keyref name="PersonKeyRef_EP" refer="A2A:PersonKey">
+      <xsd:selector xpath="A2A:RelationEP"/>
+      <xsd:field xpath="A2A:PersonKeyRef"/>
+    </xsd:keyref>
+    <xsd:keyref name="EventKeyRef_EP" refer="A2A:EventKey">
+      <xsd:selector xpath="A2A:RelationEP"/>
+      <xsd:field xpath="A2A:EventKeyRef"/>
+    </xsd:keyref>
+
+		<xsd:keyref name="PersonKeyRef_PP" refer="A2A:PersonKey" >
+      <xsd:selector xpath="A2A:RelationPP/A2A:PersonKeyRef" />
+			<xsd:field xpath="." />
+		</xsd:keyref>
+
+		<xsd:keyref name="PersonKeyRef_PO" refer="A2A:PersonKey">
+			<xsd:selector xpath="A2A:RelationPO"/>
+			<xsd:field xpath="A2A:PersonKeyRef"/>
+		</xsd:keyref>
+		<xsd:keyref name="ObjectKeyRef_PO" refer="A2A:ObjectKey">
+			<xsd:selector xpath="A2A:RelationPO"/>
+			<xsd:field xpath="A2A:ObjectKeyRef"/>
+		</xsd:keyref>
+
+		<xsd:keyref name="EventKeyRef_EO" refer="A2A:EventKey">
+			<xsd:selector xpath="A2A:RelationEO"/>
+			<xsd:field xpath="A2A:EventKeyRef"/>
+		</xsd:keyref>
+		<xsd:keyref name="ObjectKeyRef_EO" refer="A2A:ObjectKey">
+			<xsd:selector xpath="A2A:RelationEO"/>
+			<xsd:field xpath="A2A:ObjectKeyRef"/>
+		</xsd:keyref>
+
+		<xsd:keyref name="PersonKeyRef_P" refer="A2A:PersonKey">
+			<xsd:selector xpath="A2A:RelationP"/>
+			<xsd:field xpath="A2A:PersonKeyRef"/>
+		</xsd:keyref>
+
+		<xsd:keyref name="ObjectKeyRef_OO" refer="A2A:ObjectKey">
+			<xsd:selector xpath="A2A:RelationOO/A2A:ObjectKeyRef"/>
+			<xsd:field xpath="."/>
+		</xsd:keyref>
+
+		<xsd:keyref name="ObjectKeyRef_O" refer="A2A:ObjectKey">
+			<xsd:selector xpath="A2A:RelationO"/>
+			<xsd:field xpath="A2A:ObjectKeyRef"/>
+		</xsd:keyref>
+
+		<!--all keys-->
+  </xsd:element>
+
+  <!--The type of the main element-->
+  <xsd:complexType  name="A2AType">
+    <xsd:sequence>
+      <xsd:element name="Person" type="A2A:ctPerson" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="Event" type="A2A:ctEvent" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="Object" type="A2A:ctObject" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationEP" type="A2A:ctRelationEP" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationPP" type="A2A:ctRelationPP" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationPO" type="A2A:ctRelationPO" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationEO" type="A2A:ctRelationEO" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationP" type="A2A:ctRelationP" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationOO" type="A2A:ctRelationOO" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="RelationO" type="A2A:ctRelationO" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="Source" type="A2A:ctSource" minOccurs="1" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="Version" type="A2A:stVersion" use="required"></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stVersion">
+    <xsd:restriction base="A2A:token100">
+      <xsd:enumeration value="1.7"></xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+
+  <xsd:complexType name="ctEvent">
+    <xsd:sequence>
+      <xsd:element name="EventType" type="A2A:stEventType" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name="EventDate" type="A2A:ctTransDate" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="EventPlace" type="A2A:ctDetailPlace" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="EventReligion" type="A2A:ctReligion" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="EventRemark" type="A2A:ctRemarkPair" minOccurs ="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="eid" type="A2A:token100"></xsd:attribute>
+  </xsd:complexType>
+  <xsd:simpleType name="stEventType">
+    <xsd:restriction base="A2A:token100" >
+      <xsd:pattern value="Geboorte|Doop|Ondertrouw|Huwelijk|Trouwen|Echtscheiding|Overlijden|Begraven|Registratie|Notariële akte|Memorie van successie|Anders|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ctReligion">
+    <xsd:sequence>
+      <xsd:element name="ReligionLiteral" type="A2A:ctTransString"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:simpleType name="token100">
+    <xsd:restriction base="xsd:token">
+      <xsd:maxLength value="100"></xsd:maxLength>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="token500">
+    <xsd:restriction base="xsd:token">
+      <xsd:maxLength value="500"></xsd:maxLength>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:simpleType name="token4000">
+    <xsd:restriction base="xsd:token">
+      <xsd:maxLength value="4000"></xsd:maxLength>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="ctTransLongString" mixed="true">
+    <xsd:simpleContent>
+      <xsd:extension base="A2A:token4000">
+        <xsd:attribute name="TranscriptionRemark" type="A2A:token500">
+        </xsd:attribute>
+        <xsd:attribute name="Language" >
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:language">
+              <xsd:maxLength value="50"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ctTransString" mixed="true" >
+    <xsd:simpleContent>
+      <xsd:extension base="A2A:token100">
+        <xsd:attribute name="TranscriptionRemark" type="A2A:token500" >
+        </xsd:attribute>
+        <xsd:attribute name="Language" >
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:language">
+              <xsd:maxLength value="50"></xsd:maxLength>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ctTransNumber" mixed="true" >
+    <xsd:simpleContent>
+      <xsd:extension base="A2A:token500" >
+        <xsd:attribute name="TranscriptionRemark" type="A2A:token500" ></xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ctTransDate">
+    <xsd:sequence>
+      <xsd:element name="LiteralDate" type="A2A:ctTransLongString" minOccurs="0" maxOccurs="1" ></xsd:element >
+      <xsd:element name="Year" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Month" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Day" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Hour" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Minute" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="Calendar" type="A2A:token100"></xsd:attribute>
+    <xsd:attribute name ="IndexDateTime" type="xsd:dateTime"></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:simpleType name ="stGender">
+    <xsd:restriction base="A2A:token100" >
+      <xsd:pattern value="Man|Vrouw|Onbekend|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="ctRemarkPair">
+    <xsd:sequence>
+      <xsd:element name ="Value" type="A2A:ctTransLongString" minOccurs="1" maxOccurs="1">
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="Key" type="A2A:token100" use="required"></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctDetailPlace">
+    <xsd:sequence>
+      <xsd:element name ="Country" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Province" type="A2A:ctTransString"  minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="State" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="County" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Place" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Municipality" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="PartMunicipality" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Block" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Quarter" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1" ></xsd:element>
+      <xsd:element name ="Street" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="DescriptiveLocationIndicator" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="HouseName" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="HouseNumber" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="HouseNumberAddition" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Longitude" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Latitude" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="DetailPlaceRemark" type="A2A:ctRemarkPair" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="ctObject">
+    <xsd:sequence>
+      <xsd:element name="Description" type="A2A:token4000" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="ObjectRemark" type="A2A:ctRemarkPair" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="oid" type="A2A:token100"></xsd:attribute>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="ctPerson">
+    <xsd:sequence>
+      <xsd:element name="PersonName" type="A2A:ctPersonName" minOccurs="1" maxOccurs="1" ></xsd:element>
+      <xsd:element name="Gender" type="A2A:stGender" minOccurs ="0" maxOccurs="1"> </xsd:element>
+      <xsd:element name="Residence" type="A2A:ctDetailPlace" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Religion" type="A2A:ctPersonReligion" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Origin" type="A2A:ctDetailPlace" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Age" type="A2A:ctPersonAge" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="BirthDate" type="A2A:ctTransDate" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="BirthPlace" type="A2A:ctDetailPlace" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Profession" type="A2A:ctTransString" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+      <xsd:element name="MaritalStatus" type="A2A:stMaritalStatus" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonRemark" type="A2A:ctRemarkPair" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="pid" type="A2A:token100" ></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctPersonName">
+    <xsd:sequence>
+      <xsd:element name="PersonNameLiteral" type="A2A:ctTransLongString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameTitle" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameTitleOfNobility" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameFirstName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameNickName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameAlias" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNamePatronym" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <!--xsd:element name="PersonNameMatronym" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/-->
+      <xsd:element name="PersonNamePrefixLastName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameLastName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameFamilyName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <!--xsd:element name="PersonNamePrefixMaidenName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/-->
+      <!--xsd:element name="PersonNameMaidenName" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/-->
+      <xsd:element name="PersonNameInitials" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PersonNameRemark" type="A2A:ctRemarkPair" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctPersonReligion">
+    <xsd:sequence>
+      <xsd:element name="PersonReligionLiteral" type="A2A:ctTransString" minOccurs ="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name ="ctPersonAge">
+    <xsd:sequence>
+      <xsd:element name="PersonAgeLiteral" type="A2A:ctTransLongString" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeYears" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeMonths" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeWeeks" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeDays" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeHours" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="PersonAgeMinutes" type="A2A:ctTransNumber" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stMaritalStatus">
+    <xsd:restriction base="A2A:token100" >
+      <xsd:pattern value="Alleenstaand|Weduwe|Weduwnaar|Gehuwd|Gescheiden|Verloofd|Nietig verklaard huwelijk|Samenwonend|Gescheiden van tafel en bed|Jongedochter|Jongeman|Geen|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:complexType name ="ctRelationEP">
+    <xsd:sequence>
+      <xsd:element name ="PersonKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="EventKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationEP" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationEP">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="Kind|Dopeling|Bruid|Bruidegom|Overledene|Vader|Moeder|Vader van de bruid|Moeder van de bruid|Vader van de bruidegom|Moeder van de bruidegom|Getuige|Geregistreerde|Partner|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationPP">
+    <xsd:sequence>
+      <xsd:element name ="PersonKeyRef" type="A2A:token100" minOccurs="2" maxOccurs="2"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationPP" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationPP">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="Partner|Echtgenoot|Echtgenote|Weduwe|Weduwnaar|Gescheidene|Dochter|Zoon|Kind|Relatie|Vorige partner|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationPO">
+    <xsd:sequence>
+      <xsd:element name ="PersonKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ObjectKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationPO" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationPO">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationEO">
+    <xsd:sequence>
+      <xsd:element name ="EventKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ObjectKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationEO" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationEO">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationP">
+    <xsd:sequence>
+      <xsd:element name ="PersonKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationP" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationP">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationOO">
+    <xsd:sequence>
+      <xsd:element name ="ObjectKeyRef" type="A2A:token100" minOccurs="2" maxOccurs="2"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationOO" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationOO">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name ="ctRelationO">
+    <xsd:sequence>
+      <xsd:element name ="ObjectKeyRef" type="A2A:token100" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="RelationType" type="A2A:stRelationO" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name ="ExtendedRelationType" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stRelationO">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+
+  <xsd:complexType name="ctSource">
+    <xsd:sequence>
+      <xsd:element name="SourcePlace" type="A2A:ctPlace" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceIndexDate" type="A2A:ctIndexDate" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceDate" type="A2A:ctTransDate" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceType" type="A2A:stSourceType" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="EAD" type="A2A:ctEad" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="EAC" type="A2A:ctEac" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceReference" type="A2A:ctSourceReference" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceAvailableScans" type="A2A:ctScans" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceDigitalizationDate" type="xsd:date" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceLastChangeDate" type="xsd:date" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceDigitalOriginal" type="xsd:anyURI" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="RecordIdentifier" type="A2A:token100"  minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="RecordGUID" type="A2A:stGUID"  minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name="SourceRemark" type="A2A:ctRemarkPair" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name = "ctPlace">
+    <xsd:sequence>
+      <xsd:element name ="Country" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Province" type="A2A:ctTransString"  minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="State" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name ="Place" type="A2A:ctTransString" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stSourceType">
+    <xsd:restriction base="A2A:token100">
+      <xsd:pattern value="DTB Dopen|DTB Trouwen|DTB Begraven|BS Geboorte|BS Huwelijk|BS Overlijden|Bevolkingsregister|Notariële archieven|VOC Opvarenden|Kadaster|Memories van Successie|Familieadvertenties|other:.*"></xsd:pattern>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="ctScans">
+    <xsd:sequence>
+      <xsd:element name="Scan" type="A2A:ctScan" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ctScan">
+    <xsd:sequence >
+      <xsd:element name="OrderSequenceNumber" type="xsd:unsignedShort" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Uri" type="xsd:anyURI" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="UriViewer" type="xsd:anyURI" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="UriPreview" type="xsd:anyURI" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctSourceReference">
+    <xsd:sequence>
+      <xsd:element name="Place" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="InstitutionName" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Archive" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Collection" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Section" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Book" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Folio" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Rolodeck" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+      <xsd:element name="Stack" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="RegistryNumber" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="DocumentNumber" type="A2A:token100" minOccurs="0" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctIndexDate">
+    <xsd:sequence>
+      <xsd:element name="From" type="xsd:date" minOccurs="1" maxOccurs="1"></xsd:element>
+      <xsd:element name="To" type="xsd:date" minOccurs="1" maxOccurs="1"></xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctEad">
+    <xsd:choice>
+      <xsd:any namespace="urn:isbn:1-931666-22-9"	minOccurs="1" maxOccurs="1" ></xsd:any>
+      <xsd:element name="URL" type="xsd:anyURI"></xsd:element>
+      <xsd:element name="Code" type="A2A:token4000"></xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="ctEac">
+    <xsd:choice>
+      <xsd:any namespace="http://jefferson.village.virginia.edu/eac" minOccurs="0" maxOccurs="1" ></xsd:any>
+      <xsd:element name="URL" type="xsd:anyURI"></xsd:element>
+      <xsd:element name="Code" type="A2A:token4000"></xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:simpleType name="stGUID">
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>
+
+
+
+
+
