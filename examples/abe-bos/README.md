@@ -14,4 +14,4 @@ Preliminary conclusion:
 * Use roar, pnv and schema. 
 * CBG addition would be the relevant "named individuals" 
 
-![Part of graph on Abe Bos](https://github.com/cbg-nl/a2a-ld/blob/main/abe-bos.png?raw=true)
+![Part of graph on Abe Bos](https://github.com/CBG-nl/A2A-LD/blob/main/examples/abe-bos/abe-bos.png?raw=true)
