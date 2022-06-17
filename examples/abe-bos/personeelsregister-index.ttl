@@ -1,0 +1,32 @@
+@prefix hua:    <https://hetutrechtsarchief.nl/> .
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+
+@prefix roar:   <https://w3id.org/roar#> .
+@prefix schema: <http://schema.org/> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
+@prefix ex:     <https://data.cbg.nl/ontology#> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
+@prefix terms:  <https://data.cbg.nl/terms#> .
+
+# PERSOONSVERMELDING
+dl:persregind192 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Bos, A." ;
+        pnv:baseSurname "Bos" ;
+        pnv:firstName "A." ;
+    ] ;
+    schema:occupation "loc. Bankwr" ;
+    dl-ont:deel "F"^^xsd:string ;
+    dl-ont:folio "245"^^xsd:integer .
+
+# BRON
+hua:NL-UtHUA_920_26-29 a rico:RecordSet ;
+    rdfs:label "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922" .
+
+hua:NL-UtHUA_920_26-29_2430 a rico:Record ;
+    rdfs:label "Pagina uit Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922" ;
+    rico:isOrWasIncludedIn hua:NL-UtHUA_920_26-29 ;
+    rico:hasOrHadSubject dl:persregind192 .

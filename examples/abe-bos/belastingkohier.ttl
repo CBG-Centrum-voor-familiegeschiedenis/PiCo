@@ -1,0 +1,70 @@
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+
+@prefix roar:   <https://w3id.org/roar#> .
+@prefix schema: <http://schema.org/> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
+@prefix ex:     <https://data.cbg.nl/ontology#> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
+@prefix terms:  <https://data.cbg.nl/terms#> .
+
+# PERSOONSVERMELDING
+dl:belkoh78 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Bos, A." ;
+        pnv:baseSurname "Bos" ;
+        pnv:firstName "A." ;
+    ] ;
+    schema:adress "Eendrachtstraat 3" ;
+    dl-ont:inkomen "550"^^xsd:integer ;
+    dl-ont:aftrek "500"^^xsd:integer ;
+    dl-ont:grondslag "50"^^xsd:integer ;
+    dl-ont:aanslag "1.95"^^xsd:decimal .
+
+# BRON
+nha:NL-HlmNHA_1503 a rico:RecordSet ;
+    rdfs:label "Archief van de gemeenteontvanger van Haarlem" ;
+    rico:isAssociatedWithPlace "Haarlem" .
+
+nha:NL-HlmNHA_1503_517-597 a rico:RecordSet ;
+    rdfs:label "Kohieren van de plaatselijke directe belastingen, 1890-1921" ;
+    schema:url <https://hdl.handle.net/21.12102/212D81AA6F954CC7A726C4DFE3D5D115> ;
+    rico:isAssociatedWithDate [
+        a rico:DateRange ;
+        rico:hasBeginningDate [
+            a rico:SingleDate ;
+            rico:normalizedDateValue "1890-01-01"^^xsd:date ;
+        ] ;
+        rico:hasEndDate [
+            a rico:SingleDate ;
+            rico:normalizedDateValue "1921-12-31"^^xsd:date ;
+        ] 
+    ] ;
+    rico:isOrWasIncludedIn nha:NL-HlmNHA_1503 .
+
+nha:NL-HlmNHA_1503_537 a rico:RecordSet ;
+    rdfs:label "1902, afd. IV t/m VI (1e deel)" ;
+    schema:url <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
+    rico:isOrWasIncludedIn nha:NL-HlmNHA_1503_517-597 .
+
+nha:NL-HlmNHA_1503_537_IVa a rico:RecordSet ;
+    rdfs:label "Belastingkohier directe plaatselijk belasting Haarlem 1902, afd. IV, deel 1" ;
+    rico:hasDocumentaryFormType terms:Belastingkohier ;
+    rico:isAssociatedWithDate [
+        a rico:DateRange ;
+        rico:hasBeginningDate [
+            a rico:SingleDate ;
+            rico:normalizedDateValue "1902-01-01"^^xsd:date ;
+        ] ;
+        rico:hasEndDate [
+            a rico:SingleDate ;
+            rico:normalizedDateValue "1902-12-31"^^xsd:date ;
+        ] 
+    ] .
+
+nha:NL-HlmNHA_1503_537_IVa_63 a rico:Record ;
+    rdfs:label "Belastingkohier directe plaatselijk belasting Haarlem 1902, afd. IV, deel 1, spread 63" ;
+    rico:hasOrHadSubject dl:belkoh78 .

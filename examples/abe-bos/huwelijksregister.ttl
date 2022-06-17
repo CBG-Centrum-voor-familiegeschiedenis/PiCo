@@ -1,0 +1,103 @@
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+
+@prefix roar:   <https://w3id.org/roar#> .
+@prefix schema: <http://schema.org/> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
+@prefix ex:     <https://data.cbg.nl/ontology#> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
+@prefix terms:  <https://data.cbg.nl/terms#> .
+
+# PERSOONSVERMELDINGEN
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Abe Bos" ;
+        pnv:baseSurname "Bos" ;
+        pnv:firstName "Abe" ;
+    ] ;
+    ex:age "27"^^xsd:decimal ;
+    schema:birthPlace "Joure" ;
+    schema:occupation "agent van politie" ;
+    schema:gender schema:Male ;
+    ex:hasRole terms:bruidegom ;
+    ex:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
+    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
+    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
+
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Anna Maria Koppen" ;
+        pnv:baseSurname "Koppen" ;
+        pnv:firstName "Anna" ;
+    ] ;
+    ex:age "25"^^xsd:decimal ;
+    schema:birthPlace "Haarlem" ;
+    schema:occupation "dienstbode" ;
+    schema:gender schema:Female ;
+    ex:hasRole terms:bruid ;
+    ex:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
+    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
+    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
+
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Sjouke Abes Bos" ;
+        pnv:baseSurname "Bos" ;
+        pnv:patronym "Abes" ;
+        pnv:firstName "Sjouke" ;
+    ] ;
+    schema:gender schema:Male ;
+    ex:hasRole terms:vaderVanDeBruidegom .
+
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Geertruida van der Wijk" ;
+        pnv:baseSurname "Wijk" ;
+        pnv:surnamePrefix "van der" ;
+        pnv:firstName "Geertruida" ;
+    ] ;
+    schema:gender schema:Female ;
+    ex:hasRole terms:moederVanDeBruidegom .
+
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Johannes Koppen" ;
+        pnv:baseSurname "Koppen" ;
+        pnv:firstName "Johannes" ;
+    ] ;
+    schema:gender schema:Male ;
+    ex:hasRole terms:vaderVanDeBruid .
+
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Helena Catharina van Zijl" ;
+        pnv:baseSurname "Zijl" ;
+        pnv:surnamePrefix "van" ;
+        pnv:firstName "Helena Catharina" ;
+    ] ;
+    schema:gender schema:Female ;
+    ex:hasRole terms:moederVanDeBruid .
+
+# BRON
+
+nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a rico:Record ;
+    rdfs:label "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+    schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
+    rico:isAssociatedWithDate [
+        a rico:SingleDate ;
+        rico:normalizedDateValue "1885-11-11"^^xsd:date ;
+    ] ;
+    rico:hasOrHadSubject dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 , 
+                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 , 
+                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ,
+                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 ,
+                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ,
+                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
