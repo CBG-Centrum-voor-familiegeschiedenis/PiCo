@@ -16,7 +16,7 @@ dl:persregind192 a roar:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
         pnv:baseSurname "Bos" ;
-        pnv:firstName "A." ;
+        pnv:initials "A." ;
     ] ;
     schema:occupation "loc. Bankwr" ;
     dl-ont:deel "F"^^xsd:string ;

@@ -15,14 +15,17 @@ dl:bevreg509 a roar:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
         pnv:baseSurname "Bos" ;
-        pnv:firstName "Abe" ;
+        pnv:givenName "Abe" ;
     ] ;
+    ex:role "hoofd" ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:birthPlace "Joure" ;
     schema:address "Eendrachtstraat 3" ;
     ex:religion "rk" ;
     schema:occupation "smid" ;
-    schema:gender schema:Male .
+    schema:gender schema:Male ;
+    roar:documentedIn :NL-HlmNHA_1482_234_B_0006_1 ;
+    roar:onScan "" . # Mmmmmm
 
 dl:bevreg510 a roar:PersonObservation ;
     pnv:hasName [
@@ -86,7 +89,21 @@ dl:bevreg517 a roar:PersonObservation ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     ex:kindVan dl:bevreg509 .
-   
+
+dl:NL-HlmNHA_1482_234_B_0006
+    a roar:Document ;
+    schema:name "Bevolkingsregister Haarlem 1900-1924, lksjldkfjlskadj" ;
+    # wat hebben we nodig hier?
+    # ? aktedatum
+    # ? akteplaats
+    # ? archiefnummer
+    # ? inventarisnummer
+    # ? folio/aktenr.
+    schema:additionalType terms:Bevolkingsregistratie ;
+    schema:sameAs "Archiefnr 1234, invnr 5678, fol. 3456" ;
+    schema:sameAs nha:NL-HlmNHA_1482_234_B_0006 .
+
+
 # BRON
 nha:NL-HlmNHA_1482_234
     a rico:RecordSet ;
@@ -106,6 +123,5 @@ nha:NL-HlmNHA_1482_234
 nha:NL-HlmNHA_1482_234_B_0006
     a rico:Record ;
     rico:isOrWasIncludedIn nha:NL-HlmNHA_1482_234 ;
-    rico:hasDocumentaryFormType terms:Bevolkingsregisters ;
-    rico:hasOrHadSubject dl:bevreg509, dl:bevreg510, dl:bevreg511, dl:bevreg512, dl:bevreg513, dl:bevreg514, dl:bevreg515, dl:bevreg516, dl:bevreg517 .
+    rico:hasDocumentaryFormType terms:Bevolkingsregisters .
 

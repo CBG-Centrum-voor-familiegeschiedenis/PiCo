@@ -16,9 +16,9 @@ dl:jaarboekje105 a roar:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
         pnv:baseSurname "Bos" ;
-        pnv:firstName "A." ;
+        pnv:initials "A." ;
     ] ;
-    schema:address "Eendrachtstraat 3" ;
+    schema:address "Eendrachtstraat 3" ; # Mmmmmmmm
     dl-ont:bestuurderVan "Vereeniging de Dageraad"^^xsd:string ;
     dl-ont:functie "secretaris" .
 

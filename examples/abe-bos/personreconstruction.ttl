@@ -15,7 +15,7 @@ dl:ind247 a roar:PersonReconstruction ;
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
         pnv:baseSurname "Bos" ;
-        pnv:firstName "Abe" ;
+        pnv:givenName "Abe" ;
     ] ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:birthPlace "Joure" ;

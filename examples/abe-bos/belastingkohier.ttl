@@ -16,7 +16,7 @@ dl:belkoh78 a roar:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
         pnv:baseSurname "Bos" ;
-        pnv:firstName "A." ;
+        pnv:givenName "A." ;
     ] ;
     schema:adress "Eendrachtstraat 3" ;
     dl-ont:inkomen "550"^^xsd:integer ;
