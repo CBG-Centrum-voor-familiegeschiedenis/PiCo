@@ -1,13 +1,15 @@
+@prefix cbg:    <https://cbg.nl/> .
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix hua:    <https://hetutrechtsarchief.nl/> .
+
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
-@prefix ex:     <https://data.cbg.nl/ontology#> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
+@prefix ex:     <https://data.cbg.nl/ontology#> .
 @prefix terms:  <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDING
@@ -22,15 +24,10 @@ dl:jaarboekje105 a roar:PersonObservation ;
     dl-ont:bestuurderVan "Vereeniging de Dageraad"^^xsd:string ;
     dl-ont:functie "secretaris" .
 
-# BRON
-nha:jaarboekje a schema:BookSeries ;
-    schema:url <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .
-
-nha:jaarboekje13 a schema:Book ;
-    rdfs:label "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903)" ;
-    schema:isPartOf nha:jaarboekje .
-
-nha:jaarboekje13-p299 a ex:Referentie ;
-    rdfs:label "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
-    schema:isPartOf nha:jaarboekje13 ;
-    rico:hasOrHadSubject dl:jaarboekje105 .
+nha:jaarboekje13-p299 a roar:Document ;
+    schema:additionalType terms:boekpagina ;
+    schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
+    schema:holdingArchive <https://noord-hollandsarchief.nl> ;
+    schema:dateCreated "1903"^^xsd:gYear ;
+    schema:contentLocation "Haarlem" ;
+    schema:isPartOf <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .

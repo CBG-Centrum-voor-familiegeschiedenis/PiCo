@@ -1,17 +1,20 @@
+@prefix cbg:    <https://cbg.nl/> .
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix hua:    <https://hetutrechtsarchief.nl/> .
+
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
-@prefix ex:     <https://data.cbg.nl/ontology#> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
+@prefix ex:     <https://data.cbg.nl/ontology#> .
 @prefix terms:  <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDING
 dl:persregind192 a roar:PersonObservation ;
+    roar:documentedIn hua:NL-UtHUA_920_26-29_2430 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
@@ -22,11 +25,9 @@ dl:persregind192 a roar:PersonObservation ;
     dl-ont:deel "F"^^xsd:string ;
     dl-ont:folio "245"^^xsd:integer .
 
-# BRON
-hua:NL-UtHUA_920_26-29 a rico:RecordSet ;
-    rdfs:label "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922" .
-
-hua:NL-UtHUA_920_26-29_2430 a rico:Record ;
-    rdfs:label "Pagina uit Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922" ;
-    rico:isOrWasIncludedIn hua:NL-UtHUA_920_26-29 ;
-    rico:hasOrHadSubject dl:persregind192 .
+hua:NL-UtHUA_920_26-29_2430 a roar:Document ;
+    schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
+    schema:additionalType terms:personeelsregister ;
+    schema:isPartOf <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;
+    schema:contentLocation "Haarlem" ;
+    schema:holdingArchive <https://hetutrechtsarchief.nl> .

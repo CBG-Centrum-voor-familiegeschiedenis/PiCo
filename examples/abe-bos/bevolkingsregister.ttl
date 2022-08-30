@@ -1,16 +1,20 @@
+@prefix cbg:    <https://cbg.nl/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix hua:    <https://hetutrechtsarchief.nl/> .
+
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
-@prefix ex:     <https://data.cbg.nl/ontology#> .
 
+@prefix ex:     <https://data.cbg.nl/ontology#> .
 @prefix terms:  <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
 dl:bevreg509 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
@@ -23,11 +27,10 @@ dl:bevreg509 a roar:PersonObservation ;
     schema:address "Eendrachtstraat 3" ;
     ex:religion "rk" ;
     schema:occupation "smid" ;
-    schema:gender schema:Male ;
-    roar:documentedIn :NL-HlmNHA_1482_234_B_0006_1 ;
-    roar:onScan "" . # Mmmmmm
+    schema:gender schema:Male .
 
 dl:bevreg510 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
@@ -42,6 +45,7 @@ dl:bevreg510 a roar:PersonObservation ;
     ex:eegaVan dl:bevreg509 .
 
 dl:bevreg511 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1887-06-07"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -49,6 +53,7 @@ dl:bevreg511 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg512 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1888-08-11"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -56,6 +61,7 @@ dl:bevreg512 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg513 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1891-04-13"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -63,6 +69,7 @@ dl:bevreg513 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg514 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1892-12-25"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -70,6 +77,7 @@ dl:bevreg514 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg515 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1894-10-04"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -77,6 +85,7 @@ dl:bevreg515 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg516 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1900-08-27"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -84,44 +93,14 @@ dl:bevreg516 a roar:PersonObservation ;
     ex:kindVan dl:bevreg509 .
 
 dl:bevreg517 a roar:PersonObservation ;
+    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1900-08-27"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     ex:kindVan dl:bevreg509 .
 
-dl:NL-HlmNHA_1482_234_B_0006
-    a roar:Document ;
-    schema:name "Bevolkingsregister Haarlem 1900-1924, lksjldkfjlskadj" ;
-    # wat hebben we nodig hier?
-    # ? aktedatum
-    # ? akteplaats
-    # ? archiefnummer
-    # ? inventarisnummer
-    # ? folio/aktenr.
-    schema:additionalType terms:Bevolkingsregistratie ;
-    schema:sameAs "Archiefnr 1234, invnr 5678, fol. 3456" ;
-    schema:sameAs nha:NL-HlmNHA_1482_234_B_0006 .
-
-
-# BRON
-nha:NL-HlmNHA_1482_234
-    a rico:RecordSet ;
-    rico:isAssociatedWithPlace "Haarlem" ;
-    rico:isAssociatedWithDate [
-        a rico:DateRange ;
-        rico:hasBeginningDate [
-            a rico:SingleDate ;
-            rico:normalizedDateValue "1900-01-01"^^xsd:date ;
-        ] ;
-        rico:hasEndDate [
-            a rico:SingleDate ;
-            rico:normalizedDateValue "1924-01-01"^^xsd:date ;
-        ] 
-    ] .
-
-nha:NL-HlmNHA_1482_234_B_0006
-    a rico:Record ;
-    rico:isOrWasIncludedIn nha:NL-HlmNHA_1482_234 ;
-    rico:hasDocumentaryFormType terms:Bevolkingsregisters .
-
+nha:NL-HlmNHA_1482_234_B_0006 a roar:Document ;
+    schema:name "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
+    schema:holdingArchive <https://noord-hollandsarchief.nl/> ;
+    schema:additionalType terms:bevolkingsregistratie .

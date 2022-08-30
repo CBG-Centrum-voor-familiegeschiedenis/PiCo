@@ -1,17 +1,20 @@
+@prefix cbg:    <https://cbg.nl/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix hua:    <https://hetutrechtsarchief.nl/> .
+
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix rico:   <https://www.ica.org/standards/RiC/ontology#> .
-@prefix ex:     <https://data.cbg.nl/ontology#> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
+@prefix ex:     <https://data.cbg.nl/ontology#> .
 @prefix terms:  <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
@@ -28,6 +31,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
     ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
@@ -44,6 +48,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
     ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Sjouke Abes Bos" ;
@@ -55,6 +60,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
     ex:hasRole terms:vaderVanDeBruidegom .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Geertruida van der Wijk" ;
@@ -66,6 +72,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
     ex:hasRole terms:moederVanDeBruidegom .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Johannes Koppen" ;
@@ -76,6 +83,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
     ex:hasRole terms:vaderVanDeBruid .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
+    roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Helena Catharina van Zijl" ;
@@ -87,17 +95,10 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
     ex:hasRole terms:moederVanDeBruid .
 
 # BRON
-
-nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a rico:Record ;
-    rdfs:label "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a roar:Document ;
+    schema:additionalType terms:huwelijksakte ;
+    schema:name "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+    schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
-    rico:isAssociatedWithDate [
-        a rico:SingleDate ;
-        rico:normalizedDateValue "1885-11-11"^^xsd:date ;
-    ] ;
-    rico:hasOrHadSubject dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 , 
-                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 , 
-                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ,
-                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 ,
-                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ,
-                            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
+    schema:dateCreated "1885-11-11"^^xsd:date ;
+    schema:contentLocation "Haarlem" .

@@ -1,4 +1,4 @@
-# Example data about Abe Bos (Joure 1858 - Haarlem 1953), strike leader Railwaystrike 1903
+# Example data about Abe Bos (Joure 1858 - Haarlem 1954), strike leader Railwaystrike 1903
 
 This example contains five sources with data about one person, ie. it contains five PersonObservations. They refer to the same person, ie. the PersonReconstruction.
 
