@@ -1,13 +1,12 @@
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 
-@prefix ex:     <https://data.cbg.nl/ontology#> .
-@prefix terms:  <https://data.cbg.nl/terms#> .
+@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 dl:ind247 a roar:PersonReconstruction ;
     pnv:hasName [

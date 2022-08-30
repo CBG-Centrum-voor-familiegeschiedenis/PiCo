@@ -1,6 +1,4 @@
-@prefix cbg:    <https://cbg.nl/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
-@prefix hua:    <https://hetutrechtsarchief.nl/> .
 
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
@@ -9,8 +7,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 
-@prefix ex:     <https://data.cbg.nl/ontology#> .
-@prefix terms:  <https://data.cbg.nl/terms#> .
+@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
@@ -21,14 +19,14 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
         pnv:baseSurname "Bos" ;
         pnv:givenName "Abe" ;
     ] ;
-    ex:age "27"^^xsd:decimal ;
+    cbgo:age "27"^^xsd:decimal ;
     schema:birthPlace "Joure" ;
     schema:occupation "agent van politie" ;
     schema:gender schema:Male ;
-    ex:hasRole terms:bruidegom ;
-    ex:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
-    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
-    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
+    cbgo:hasRole cbgt:bruidegom ;
+    cbgo:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
+    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
+    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -38,14 +36,14 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
         pnv:baseSurname "Koppen" ;
         pnv:firstName "Anna" ;
     ] ;
-    ex:age "25"^^xsd:decimal ;
+    cbgo:age "25"^^xsd:decimal ;
     schema:birthPlace "Haarlem" ;
     schema:occupation "dienstbode" ;
     schema:gender schema:Female ;
-    ex:hasRole terms:bruid ;
-    ex:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
-    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
-    ex:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
+    cbgo:hasRole cbgt:bruid ;
+    cbgo:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
+    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
+    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -57,7 +55,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
         pnv:firstName "Sjouke" ;
     ] ;
     schema:gender schema:Male ;
-    ex:hasRole terms:vaderVanDeBruidegom .
+    cbgo:hasRole cbgt:vaderVanDeBruidegom .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -69,7 +67,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
         pnv:firstName "Geertruida" ;
     ] ;
     schema:gender schema:Female ;
-    ex:hasRole terms:moederVanDeBruidegom .
+    cbgo:hasRole cbgt:moederVanDeBruidegom .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -80,7 +78,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
         pnv:firstName "Johannes" ;
     ] ;
     schema:gender schema:Male ;
-    ex:hasRole terms:vaderVanDeBruid .
+    cbgo:hasRole cbgt:vaderVanDeBruid .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -92,11 +90,11 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
         pnv:firstName "Helena Catharina" ;
     ] ;
     schema:gender schema:Female ;
-    ex:hasRole terms:moederVanDeBruid .
+    cbgo:hasRole cbgt:moederVanDeBruid .
 
 # BRON
 nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a roar:Document ;
-    schema:additionalType terms:huwelijksakte ;
+    schema:additionalType cbgt:huwelijksakte ;
     schema:name "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
