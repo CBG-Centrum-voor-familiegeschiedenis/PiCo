@@ -25,7 +25,7 @@ dl:persregind192 a roar:PersonObservation ;
 
 hua:NL-UtHUA_920_26-29_2430 a roar:Document ;
     schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
-    schema:additionalType cbgt:personeelsregister ;
+    schema:additionalType cbgt:personeelsregistratie ;
     schema:isPartOf <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;
     schema:contentLocation "Haarlem" ;
     schema:holdingArchive <https://hetutrechtsarchief.nl> .

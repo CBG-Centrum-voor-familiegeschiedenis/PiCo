@@ -1,16 +1,16 @@
 relationtype	count	a2a	rol	relatie
 Geregistreerde	64576435	*	--	--
 Overledene	47118891	*	overledene	
-Vader	35869119	*		vaderVan
-Moeder	35312207	*		moederVan
+Vader	35869119	*		ouderVan
+Moeder	35312207	*		ouderVan
 Kind	21069169	*	boreling	kindVan
 Getuige	13474487	*	getuige	
 Bruid	9804806	*	bruid	
 Bruidegom	9796097	*	bruidegom	
-Moeder van de bruidegom	6279608	*		moederVan
-Moeder van de bruid	6279576	*		moederVan
-Vader van de bruidegom	6213201	*		vaderVan
-Vader van de bruid	6195839	*		vaderVan
+Moeder van de bruidegom	6279608	*		ouderVan
+Moeder van de bruid	6279576	*		ouderVan
+Vader van de bruidegom	6213201	*		ouderVan
+Vader van de bruid	6195839	*		ouderVan
 Partner	4423576	*		partnerVan
 Relatie	3036971			relatieVan
 Reiziger	2596159		reiziger	

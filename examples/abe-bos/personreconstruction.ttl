@@ -17,6 +17,7 @@ dl:ind247 a roar:PersonReconstruction ;
     ] ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:birthPlace "Joure" ;
+    # etc. etc.
     prov:wasDerivedFrom 
             dl:bevreg509, 
             dl:belkoh78, 
