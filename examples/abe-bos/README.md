@@ -43,7 +43,7 @@ Option 2a) do reification (with the roar:hasRelation construct) and define named
 ### Is rdfs:label a MUST-HAVE?
 
 ### What are good and sufficient relation properties?
-see [named individual/relations-openarch.tsv](https://github.com/CBG-nl/A2A-LD/blob/main/named%20individuals/archives-openarch.tsv)
+see [named individual/relations-openarch.tsv](https://github.com/CBG-nl/A2A-LD/blob/main/named%20individuals/relations-openarch.tsv)
 
 ### What are good and sufficient role names?
 see [named individual/relations-openarch.tsv](https://github.com/CBG-nl/A2A-LD/blob/main/named%20individuals/relations-openarch.tsv)
