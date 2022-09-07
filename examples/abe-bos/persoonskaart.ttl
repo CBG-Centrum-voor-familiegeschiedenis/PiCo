@@ -21,6 +21,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
         pnv:baseSurname "Bos" ;
         pnv:givenName "Abe" ;
     ] ;
+    schema:gender schema:Male ;
     schema:occupation "zonder" ;
     schema:birthPlace "Gemeente Haskerland" ;
     schema:birthPlace "Joure" ;
@@ -29,9 +30,15 @@ dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
     schema:deathDate "1954-02-28"^^xsd:date ;
     cbgo:marriageDate "1885-11-11"^^xsd:date ; # bij het huwelijk hoort ook de bruid
     cbgo:marriagePlace "Haarlem" ;
-    cbgo:weduwnaarVan dl:NL-HaCBG_1755_0341_142_person2 ; # eegaVan / weduwnaarVan
     cbgo:kindVan dl:NL-HaCBG_1755_0341_142_person3 ;
-    cbgo:kindVan dl:NL-HaCBG_1755_0341_142_person4 .
+    cbgo:kindVan dl:NL-HaCBG_1755_0341_142_person4 ; 
+    # optie 1:
+    cbgo:wedVan dl:NL-HaCBG_1755_0341_142_person2 ; 
+    # optie 2:
+    roar:hasRelation [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
+                       roar:relationType cbgt:eegaVan ;
+                       cbgo:van "1885-11-11"^^xsd:date ;
+                       cbgo:tot "1926"^^xsd:gYear ] .
 
 dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
     roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
