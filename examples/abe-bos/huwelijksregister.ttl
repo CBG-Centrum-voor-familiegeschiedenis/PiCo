@@ -6,6 +6,7 @@
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
@@ -19,14 +20,16 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a roar:PersonObservation ;
         pnv:baseSurname "Bos" ;
         pnv:givenName "Abe" ;
     ] ;
-    cbgo:age "27"^^xsd:decimal ;
+    cbgo:age "27"^^xsd:decimal ; 
+    cbgo:age "P27Y3M"^^xsd:duration ; 
+    cbgo:age "27 jaar en 3 maanden" ; 
     schema:birthPlace "Joure" ;
     schema:occupation "agent van politie" ;
     schema:gender schema:Male ;
-    cbgo:hasRole cbgt:bruidegom ;
-    cbgo:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
-    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
-    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
+    cbgo:hasRole cbgt:huwelijkspartij ;
+    schema:spouse dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
+    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
+    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -40,10 +43,9 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a roar:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:occupation "dienstbode" ;
     schema:gender schema:Female ;
-    cbgo:hasRole cbgt:bruid ;
-    cbgo:eegaVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
-    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
-    cbgo:kindVan dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
+    cbgo:hasRole cbgt:huwelijkspartij ;
+    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
+    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -54,8 +56,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a roar:PersonObservation ;
         pnv:patronym "Abes" ;
         pnv:firstName "Sjouke" ;
     ] ;
-    schema:gender schema:Male ;
-    cbgo:hasRole cbgt:vaderVanDeBruidegom . ## dubbel
+    schema:gender schema:Male .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -66,8 +67,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a roar:PersonObservation ;
         pnv:surnamePrefix "van der" ;
         pnv:firstName "Geertruida" ;
     ] ;
-    schema:gender schema:Female ;
-    cbgo:hasRole cbgt:moederVanDeBruidegom . ## dubbel
+    schema:gender schema:Female .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -77,8 +77,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a roar:PersonObservation ;
         pnv:baseSurname "Koppen" ;
         pnv:firstName "Johannes" ;
     ] ;
-    schema:gender schema:Male ;
-    cbgo:hasRole cbgt:vaderVanDeBruid . ## dubbel
+    schema:gender schema:Male . 
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
     roar:documentedIn nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
@@ -89,8 +88,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a roar:PersonObservation ;
         pnv:surnamePrefix "van" ;
         pnv:firstName "Helena Catharina" ;
     ] ;
-    schema:gender schema:Female ;
-    cbgo:hasRole cbgt:moederVanDeBruid . ## dubbel
+    schema:gender schema:Female . 
 
 # BRON
 nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a roar:Document ;
@@ -99,4 +97,11 @@ nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a roar:Document ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
     schema:dateCreated "1885-11-11"^^xsd:date ;
-    schema:contentLocation "Haarlem" .
+    schema:contentLocation "Haarlem" ;
+    schema:associatedMedia [
+        a schema:ImageObject ;
+        schema:position 1 ;
+        schema:url "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC" ;
+        schema:embedUrl "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC" ;
+        schema:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC" ;
+    ] .

@@ -6,6 +6,7 @@
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .

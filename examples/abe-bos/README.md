@@ -15,32 +15,16 @@ This example contains five sources with data about one person, ie. it contains f
 - cbgt:personeelsregistratie
 - cbgt:persoonskaart
 
-- cbgt:bruid
-- cbgt:bruidegom
-- cbgt:moederVanDeBruid
-- cbgt:moederVanDeBruidegom
-- cbgt:vaderVanDeBruid
-- cbgt:vaderVanDeBruidegom
+- cbgt:hoofdVanHetGezin
+- cbgt:huwelijkspartij
 
 ### Ontology from examples (https://data.cbg.nl/ontology#)
 
-- cbgo:eegaVan
-- cbgo:kindVan
-- cbgo:weduwnaarVan (cbgo:weduweVan dan ook?)
 - cbgo:hasRole
-- cbgo:role (verschilt van cbgo:hasRole?)
-- cbgo:marriageDate (dan ook divorce, burial, vestiging, .. ?)
-- cbgo:marriagePlace
 - cbgo:religion
 - cbgo:age
 
 ## Discussion
-### How to model relations?
-Option 1) define properties. disadvantage: not flexible because new relationtypes must be added to the ontology; advantage: enables "real" reasoning in the future
-
-Option 2a) do reification (with the roar:hasRelation construct) and define named individuals. Disadvantage: a more complex construct, excludes reasoning, advantage: easier extensible (one could even use a Literal to define a relation, if no defined named individual is available (yet)), 
-
-### Is rdfs:label a MUST-HAVE?
 
 ### What are good and sufficient relation properties?
 see [named individual/relations-openarch.tsv](https://github.com/CBG-nl/A2A-LD/blob/main/named%20individuals/relations-openarch.tsv)

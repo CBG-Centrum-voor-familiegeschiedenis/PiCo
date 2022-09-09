@@ -8,6 +8,7 @@
 @prefix roar:   <https://w3id.org/roar#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
@@ -23,22 +24,22 @@ dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
     ] ;
     schema:gender schema:Male ;
     schema:occupation "zonder" ;
-    schema:birthPlace "Gemeente Haskerland" ;
-    schema:birthPlace "Joure" ;
+    schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:deathPlace "Haarlem" ;
     schema:deathDate "1954-02-28"^^xsd:date ;
-    cbgo:marriageDate "1885-11-11"^^xsd:date ; # bij het huwelijk hoort ook de bruid
-    cbgo:marriagePlace "Haarlem" ;
-    cbgo:kindVan dl:NL-HaCBG_1755_0341_142_person3 ;
-    cbgo:kindVan dl:NL-HaCBG_1755_0341_142_person4 ; 
-    # optie 1:
-    cbgo:wedVan dl:NL-HaCBG_1755_0341_142_person2 ; 
-    # optie 2:
-    roar:hasRelation [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
-                       roar:relationType cbgt:eegaVan ;
-                       cbgo:van "1885-11-11"^^xsd:date ;
-                       cbgo:tot "1926"^^xsd:gYear ] .
+# TBD
+    cbgo:hasMarriage [ 
+        a schema:MarryAction ;
+        schema:date "1885-11-11"^^xsd:date ;
+        schema:location "Haarlem" ;
+    ]
+# /TBD
+    schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
+    schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
+    schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
+                       cbgo:beginDatum "1885-11-11"^^xsd:date ;
+                       cbgo:eindDatum "1926"^^xsd:gYear ] .
 
 dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
     roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
@@ -50,10 +51,8 @@ dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
     ] ;
     schema:birthPlace "Haarlem" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
-    schema:deathPlace "Detroit, USA" ;
-    schema:deathDate "1926"^^xsd:gYear ;
-    cbgo:marriageDate "1885-11-11"^^xsd:date ; # bij het huwelijk hoort ook de bruidegom
-    cbgo:marriagePlace "Haarlem" .
+    schema:deathPlace "Detroit, VSA" ;
+    schema:deathDate "1926"^^xsd:gYear .
 
 dl:NL-HaCBG_1755_0341_142_person3 a roar:PersonObservation ;
     roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
@@ -76,8 +75,8 @@ dl:NL-HaCBG_1755_0341_142_person4 a roar:PersonObservation ;
     ] .
 
 # BRON
-
 cbg:NL-HaCBG_1755_0341_142 a roar:Document ;
     schema:name "Persoonskaart Abe Bos" ;
+    schema:contentLocation "Nederland" ;
     schema:additionalType cbgt:persoonskaart ;
     schema:holdingArchive <https://cbg.nl/> .

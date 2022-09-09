@@ -11,8 +11,8 @@ Moeder van de bruidegom	6279608	*		ouderVan
 Moeder van de bruid	6279576	*		ouderVan
 Vader van de bruidegom	6213201	*		ouderVan
 Vader van de bruid	6195839	*		ouderVan
-Partner	4423576	*		partnerVan
-Relatie	3036971			relatieVan
+Partner	4423576	*		
+Relatie	3036971			knows
 Reiziger	2596159		reiziger	
 Dopeling	2094086		dopeling	
 Vermeld	1278248		--	--
@@ -109,7 +109,7 @@ Beluid	32392
 Buur	32198			
 Overdrager	31687			
 Ontvanger	29183			
-Verwant	28322			
+Verwant	28322			relatedTo
 Curator	28054			
 Poorter	27152			
 anderszins vermeld	26937			
