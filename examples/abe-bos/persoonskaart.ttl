@@ -38,8 +38,8 @@ dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
     schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
-                       cbgo:beginDatum "1885-11-11"^^xsd:date ;
-                       cbgo:eindDatum "1926"^^xsd:gYear ] .
+                       cbgo:beginDate "1885-11-11"^^xsd:date ;
+                       cbgo:endDate "1926"^^xsd:gYear ] .
 
 dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
     roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;

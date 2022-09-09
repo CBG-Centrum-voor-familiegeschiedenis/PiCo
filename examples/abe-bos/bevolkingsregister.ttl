@@ -41,7 +41,7 @@ dl:bevreg510 a roar:PersonObservation ;
     schema:address "Eendrachtstraat 3" ;
     cbgo:religion "rk" ;
     schema:gender schema:Female ;
-    cbgo:eegaVan dl:bevreg509 .
+    schema:spouse dl:bevreg509 .
 
 dl:bevreg511 a roar:PersonObservation ;
     roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
