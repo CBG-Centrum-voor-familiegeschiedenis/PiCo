@@ -15,7 +15,7 @@ This example contains five sources with data about one person, ie. it contains f
 - cbgt:personeelsregistratie
 - cbgt:persoonskaart
 
-- cbgt:hoofdVanHetGezin
+- cbgt:hoofd
 - cbgt:huwelijkspartij
 
 ### Ontology from examples (https://data.cbg.nl/ontology#)
@@ -23,6 +23,7 @@ This example contains five sources with data about one person, ie. it contains f
 - cbgo:hasRole
 - cbgo:religion
 - cbgo:age
+- cbgo:deceased (xsd:boolean)
 
 ## Discussion
 
