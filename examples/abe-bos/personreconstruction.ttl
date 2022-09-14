@@ -26,3 +26,4 @@ dl:ind247 a roar:PersonReconstruction ;
             dl:jaarboekje105, 
             dl:persregind192, 
             dl:NL-HaCBG_1755_0341_142_person1 .
+    # TBD: meer prov-dingen om aan te geven wie/wat de reconstructie heeft gemaakt
