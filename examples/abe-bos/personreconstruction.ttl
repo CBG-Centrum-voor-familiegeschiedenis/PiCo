@@ -16,14 +16,51 @@ dl:ind247 a roar:PersonReconstruction ;
         pnv:baseSurname "Bos" ;
         pnv:givenName "Abe" ;
     ] ;
+    schema:gender schema:Male ;
+    schema:occupation [ rdf:value "agent van politie" ;
+                       schema:endDate "1892"^^xsd:gYear ] ;
+    schema:occupation [ rdf:value "locomotief bankwerker" ;
+                       schema:startDate "1892"^^xsd:gYear ] ;
+    schema:occupation [ rdf:value "zonder" ;
+                       schema:endDate "1954"^^xsd:gYear ] ;
+    schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
-    schema:birthPlace "Joure" ;
-    # etc. etc.
+    schema:deathPlace "Haarlem" ;
+    schema:deathDate "1954-02-28"^^xsd:date ;
+    schema:spouse [ rdf:value dl:ind247Spouse ;
+                       schema:startDate "1885-11-11"^^xsd:date ;
+                       schema:endDate "1926"^^xsd:gYear ] ;
     prov:wasDerivedFrom 
             dl:bevreg509, 
             dl:belkoh78, 
             dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1, 
             dl:jaarboekje105, 
             dl:persregind192, 
-            dl:NL-HaCBG_1755_0341_142_person1 .
-    # TBD: meer prov-dingen om aan te geven wie/wat de reconstructie heeft gemaakt
+            dl:NL-HaCBG_1755_0341_142_person1 ;
+    prov:wasGeneratedBy dl:recon_activity01 .
+
+dl:ind247Spouse a roar:PersonReconstruction ;
+    pnv:hasName [
+        a pnv:PersonName ;
+        pnv:literalName "Anna Maria Koppen" ;
+        pnv:baseSurname "Koppen" ;
+        pnv:firstName "Anna" ;
+    ] ;
+    schema:gender schema:Female ;
+    schema:birthPlace "Haarlem" ;
+    schema:birthDate "1860-03-31"^^xsd:date ;
+    schema:deathPlace "Detroit, VSA" ;
+    schema:deathDate "1926"^^xsd:gYear ;
+    prov:wasDerivedFrom 
+            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2,
+            dl:NL-HaCBG_1755_0341_142_person2 ;
+    prov:wasGeneratedBy dl:recon_activity01 .
+
+dl:recon_activity01 a prov:Activity ;
+    prov:wasAssociatedWith dl:recon_agent01 ;
+    prov:startedAtTime "2015-08-07T00:00:00"^^xsd:dateTime ;
+    prov:endedAtTime "2020-01-08T00:00:00"^^xsd:dateTime .
+
+dl:recon_agent01 a prov:Agent ;
+    schema:name "Ivo Zandhuis" ;
+    schema:identifier "https://orcid.org/0000-0003-0165-8341" .
