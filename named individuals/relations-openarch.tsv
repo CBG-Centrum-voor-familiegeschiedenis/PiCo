@@ -1,9 +1,9 @@
 relationtype	count	a2a	rol	relatie
 Geregistreerde	64576435	*	--	--
 Overledene	47118891	*	overledene	
-Vader	35869119	*		ouderVan
-Moeder	35312207	*		ouderVan
-Kind	21069169	*	boreling	kindVan
+Vader	35869119	*		schema:parent
+Moeder	35312207	*		schema:parent
+Kind	21069169	*	boreling	schema:children
 Getuige	13474487	*	getuige	
 Bruid	9804806	*	bruid	
 Bruidegom	9796097	*	bruidegom	
