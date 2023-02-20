@@ -3,7 +3,7 @@
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
-@prefix roar:   <https://w3id.org/roar#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -12,7 +12,8 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDING
-dl:jaarboekje105 a roar:PersonObservation ;
+dl:jaarboekje105 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:jaarboekje13-p299 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
@@ -23,7 +24,7 @@ dl:jaarboekje105 a roar:PersonObservation ;
     dl-ont:bestuurderVan "Vereeniging de Dageraad" ;
     dl-ont:functie "secretaris" .
 
-nha:jaarboekje13-p299 a roar:Document ;
+nha:jaarboekje13-p299 a cbgo:Document ;
     schema:additionalType cbgt:boekpagina ;
     schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;

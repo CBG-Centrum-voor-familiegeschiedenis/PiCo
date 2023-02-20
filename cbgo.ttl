@@ -1,0 +1,47 @@
+# First version IZ 20230220
+
+@prefix : <https://data.cbg.nl/ontology#> .
+
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix schema: <http://schema.org/> .
+
+# ontology
+<https://data.cbg.nl/ontology> a owl:Ontology .
+
+# classes
+:PersonObservation a owl:Class ;
+    rdfs:label "Persoonsvermelding"@nl ;
+    rdfs:subClassOf pnv:Person ;
+    rdfs:subClassOf prov:Entity .
+
+:PersonReconstruction a owl:Class ;
+    rdfs:label "Persoonsreconstructie"@nl ;
+    rdfs:subClassOf pnv:Person ;
+    rdfs:subClassOf prov:Entity .
+
+:Document a owl:Class ;
+    rdfs:label "Brondocument"@nl ;
+    rdfs:subClassOf schema:CreativeWork ;
+    rdfs:subClassOf prov:Entity .
+
+# properties
+:hasAge a owl:DatatypeProperty ;
+    rdfs:label "heeft leeftijd"@nl ;
+    rdfs:domain :PersonObservation ;
+    rdfs:range rdfs:Literal .
+
+:hasReligion a owl:DatatypeProperty ;
+    rdfs:label "heeft religie"@nl ;
+    rdfs:domain :PersonObservation ;
+    rdfs:range rdfs:Literal .
+
+:hasRole a owl:ObjectProperty ;
+    rdfs:label "heeft rol"@nl ;
+    rdfs:domain :PersonObservation .
+
+

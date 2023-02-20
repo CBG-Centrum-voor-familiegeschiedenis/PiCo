@@ -3,7 +3,7 @@
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
-@prefix roar:   <https://w3id.org/roar#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -12,8 +12,8 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
-dl:bevreg509 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg509 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
@@ -24,12 +24,12 @@ dl:bevreg509 a roar:PersonObservation ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:birthPlace "Joure" ;
     schema:address "Eendrachtstraat 3" ;
-    cbgo:religion "rk" ;
+    cbgo:hasReligion "rk" ;
     schema:occupation "smid" ;
     schema:gender schema:Male .
 
-dl:bevreg510 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg510 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
@@ -39,67 +39,67 @@ dl:bevreg510 a roar:PersonObservation ;
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
-    cbgo:religion "rk" ;
+    cbgo:hasReligion "rk" ;
     schema:gender schema:Female ;
     schema:spouse dl:bevreg509 .
 
-dl:bevreg511 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg511 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1887-06-07"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg512 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg512 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1888-08-11"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg513 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg513 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1891-04-13"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg514 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg514 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1892-12-25"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg515 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg515 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1894-10-04"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Male ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg516 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg516 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1900-08-27"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Male ;
     schema:parent dl:bevreg509 .
 
-dl:bevreg517 a roar:PersonObservation ;
-    roar:documentedIn nha:NL-HlmNHA_1482_234_B_0006 ;
+dl:bevreg517 a cbgo:PersonObservation ;
+    prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     schema:birthDate "1900-08-27"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-nha:NL-HlmNHA_1482_234_B_0006 a roar:Document ;
+nha:NL-HlmNHA_1482_234_B_0006 a cbgo:Document ;
     schema:name "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl/> ;
     schema:additionalType cbgt:bevolkingsregistratie .

@@ -5,7 +5,7 @@
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
-@prefix roar:   <https://w3id.org/roar#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -14,8 +14,8 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
-dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
-    roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
+dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
+    prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
@@ -28,21 +28,19 @@ dl:NL-HaCBG_1755_0341_142_person1 a roar:PersonObservation ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:deathPlace "Haarlem" ;
     schema:deathDate "1954-02-28"^^xsd:date ;
-# TBD
     cbgo:hasMarriage [ 
         a schema:MarryAction ;
         schema:date "1885-11-11"^^xsd:date ;
         schema:location "Haarlem" ;
     ]
-# /TBD
     schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
     schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
                        schema:startDate "1885-11-11"^^xsd:date ;
                        schema:endDate "1926"^^xsd:gYear ] .
 
-dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
-    roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
+dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
+    prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
@@ -54,8 +52,8 @@ dl:NL-HaCBG_1755_0341_142_person2 a roar:PersonObservation ;
     schema:deathPlace "Detroit, VSA" ;
     schema:deathDate "1926"^^xsd:gYear .
 
-dl:NL-HaCBG_1755_0341_142_person3 a roar:PersonObservation ;
-    roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
+dl:NL-HaCBG_1755_0341_142_person3 a cbgo:PersonObservation ;
+    prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Sjouke Abes Bos" ;
@@ -64,8 +62,8 @@ dl:NL-HaCBG_1755_0341_142_person3 a roar:PersonObservation ;
         pnv:firstName "Sjouke" ;
     ] .
 
-dl:NL-HaCBG_1755_0341_142_person4 a roar:PersonObservation ;
-    roar:documentedIn cbg:NL-HaCBG_1755_0341_142 ;
+dl:NL-HaCBG_1755_0341_142_person4 a cbgo:PersonObservation ;
+    prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Geertruida van der Wijk" ;
@@ -75,7 +73,7 @@ dl:NL-HaCBG_1755_0341_142_person4 a roar:PersonObservation ;
     ] .
 
 # BRON
-cbg:NL-HaCBG_1755_0341_142 a roar:Document ;
+cbg:NL-HaCBG_1755_0341_142 a cbgo:Document ;
     schema:name "Persoonskaart Abe Bos" ;
     schema:contentLocation "Nederland" ;
     schema:additionalType cbgt:persoonskaart ;

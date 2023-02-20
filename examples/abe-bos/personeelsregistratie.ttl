@@ -1,9 +1,9 @@
-@prefix hua:    <https://hetutrechtsarchief.nl/> .
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
 
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
-@prefix roar:   <https://w3id.org/roar#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -12,8 +12,8 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDING
-dl:persregind192 a roar:PersonObservation ;
-    roar:documentedIn hua:NL-UtHUA_920_26-29_2430 ;
+dl:persregind192 a cbgo:PersonObservation ;
+    prov:hadPrimarySource hua:NL-UtHUA_920_26-29_2430 ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
@@ -24,7 +24,7 @@ dl:persregind192 a roar:PersonObservation ;
     dl-ont:deel "F"^^xsd:string ;
     dl-ont:folio "245"^^xsd:integer .
 
-hua:NL-UtHUA_920_26-29_2430 a roar:Document ;
+hua:NL-UtHUA_920_26-29_2430 a cbgo:Document ;
     schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
     schema:additionalType cbgt:personeelsregistratie ;
     schema:isPartOf <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;

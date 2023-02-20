@@ -1,15 +1,14 @@
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 
-@prefix roar:   <https://w3id.org/roar#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
-dl:ind247 a roar:PersonReconstruction ;
+dl:ind247 a cbgo:PersonReconstruction ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Abe Bos" ;
@@ -39,7 +38,7 @@ dl:ind247 a roar:PersonReconstruction ;
             dl:NL-HaCBG_1755_0341_142_person1 ;
     prov:wasGeneratedBy dl:recon_activity01 .
 
-dl:ind247Spouse a roar:PersonReconstruction ;
+dl:ind247Spouse a cbgo:PersonReconstruction ;
     pnv:hasName [
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
@@ -63,4 +62,4 @@ dl:recon_activity01 a prov:Activity ;
 
 dl:recon_agent01 a prov:Agent ;
     schema:name "Ivo Zandhuis" ;
-    schema:identifier "https://orcid.org/0000-0003-0165-8341" .
+    schema:sameAs <https://orcid.org/0000-0003-0165-8341> .

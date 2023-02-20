@@ -26,7 +26,7 @@ Het huidige A2A-model schiet op een aantal punten te kort. Een aantal knelpunten
 - A2A is onvoldoende genormaliseerd: 
 - Bij een persoon wordt bijvoorbeeld zijn verblijfplaats, beroep en leeftijd vermeld. Dat zijn geen van allen vaste (identificeerbare) kenmerk van een persoon (maar wel van de persoonsvermelding). 
 - A2A maakt geen gebruik van bestaande thesauri. Bijvoorbeeld voor plaatsnamen, event types of voor type relaties. 
-- A2A definieert eigenschappen waar al breed geaccepteerde standaarden voor bestaan. Bijvoorbeeld het element Bron. Dit zou goed vervangen kunnen worden door elementen uit, bijvoorbeeld, [Records in Context](https://www.ica.org/en/records-in-contexts-ontology). 
+- A2A definieert eigenschappen waar al breed geaccepteerde standaarden voor bestaan. Bijvoorbeeld het element Bron. Dit zou goed vervangen kunnen worden door elementen uit, bijvoorbeeld, [Records in Contexts](https://www.ica.org/en/records-in-contexts-ontology). 
 
 ## Deliverables
 - Een uitwerking van het conceptuele datamodel voor A2A-LD (in tekst vorm). 
@@ -39,14 +39,5 @@ Het huidige A2A-model schiet op een aantal punten te kort. Een aantal knelpunten
 
 Alle deliverables worden in eerste instantie in het Nederlands opgesteld. Indien nodig, kunnen deze later vertaald worden naar het Engels. 
 
-## Planning 
 
-Het streven is om over zes maanden (dus voor december 2022) de eerste versie van het applicatieprofiel A2A-LD te publiceren. 
-
-Om dit te bereiken hebben we de volgende globale planning vastgesteld: 
-
-- In de periode **mei t/m september 2022** worden drie inhoudelijke sessies gehouden, waarbij het conceptuele model en de technische vertaling in SHACL worden uitgewerkt. 
-- In de periode **september t/m oktober 2022** wordt het eerste resultaat intern bij het CBG en extern met een klankbord groep gereviewd. 
-- Uitwerking van de feedback vind plaats in **november**, 
-- Publicatie eerste versie: **eind november** 
 
