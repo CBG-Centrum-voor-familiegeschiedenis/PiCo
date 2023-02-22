@@ -37,7 +37,7 @@ Schuldenaar	270269		schuldenaar	--
 Lidmaat of gevormde	248149		???	--
 Schuldeiser	243391		schuldeiser	--
 Loteling	229823		loteling	--
-Comparant	229327		--	--
+Comparant	229327		comparant	--
 Notarieel geregistreerde	228644		--	--
 Eigenaar	226239		eigenaar	--
 Eerdere partner	222735			eerderePartnerVan --> schema?
@@ -51,27 +51,27 @@ Begravene	128482		begravene	--
 Huurder	126704		huurder	--
 Meter	126365		meter	--
 Gewettigd kind	126344			schema:children
-Constituant	125074			--
+Constituant	125074		constituant	--
 Bruids zijde	122880			--
 Andere naam dan overledene	117977			--
 Vader bruidegom/bruid	117845			schema:parent
 Vorige partner bruidegom	116578			schema???
-Partij	116394			
+Partij	116394		partij
 handelt voor zich	114898			--
-Begunstigde	111741			--
+Begunstigde	111741		begunstigde	--
 Echtgenote	108398			schema:spouse
 Peter	107864			schema?
 Bruidegoms zijde	105408			--
-Personeelslid	104849			--
-Gedaagde	102997			--
+Personeelslid	104849		personeelslid	--
+Gedaagde	102997		gedaagde	--
 Persoon in na	101029			--
 Eerdere vrouw	97926			schema?
-Geconstitueerde	97718			--
+Geconstitueerde	97718		geconstitueerde	--
 Genoemd	96375			--
-Verhuurder	93092			--
+Verhuurder	93092		verhuurder	--
 Vrouw	92418			schema:spouse
 Man	87888			schema:spouse
-Overige belanghebbenden	85247			--
+Overige belanghebbenden	85247		overige belanghebbende	--
 Persoon in ra	82359			--
 Eerdere man	82123			schema?
 Vorige partner bruid	78496			schema?
@@ -80,19 +80,19 @@ Echtgenoot	75945			schema:spouse
 Hoofdpersoon	75231			--
 Borg	69849			--
 Wederpartij	64285			--
-Eigenaar/rechthebbende	62219			--
+Eigenaar/rechthebbende	62219		eigenaar	--
 Grootouder bruidegom	61818			schema?
-Erfgenaam	61733			schema?
-Eerste partij	58374			--
+Erfgenaam	61733		erfgenaam	schema?
+Eerste partij	58374		eerste partij	--
 Ingeschreven	55632			--
-Tweede partij	47703			--
+Tweede partij	47703		tweede partij	--
 Grootouder bruid	47584			schema?
-Testateur	44709			--
+Testateur	44709		testateur	--
 In kwaliteit	43638			--
-Kiesgerechtigde	41290			--
-Arrestant	40732			--
-Veroordeelde	40456			--
-Patentplichtige	39411			--
+Kiesgerechtigde	41290		kiesgerechtigde	--
+Arrestant	40732		arrestant	--
+Veroordeelde	40456		veroordeelde	--
+Patentplichtige	39411		patentplichtige	--
 Moeder kind	38405			schema:parent
 Eerdere relatie	36770			schema?
 Vader kind	36482			schema:parent
