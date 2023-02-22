@@ -5,7 +5,7 @@ Vader	35869119	*	--	schema:parent
 Moeder	35312207	*	--	schema:parent
 Kind	21069169	*	boreling	schema:children
 Bruid	9804806	*	bruid	schema:spouse
-Bruidegom	9796097	*	bruidegom	shema:spouse
+Bruidegom	9796097	*	bruidegom	schema:spouse
 Moeder van de bruidegom	6279608	*		schema:parent
 Moeder van de bruid	6279576	*		schema:parent
 Vader van de bruidegom	6213201	*		schema:parent
