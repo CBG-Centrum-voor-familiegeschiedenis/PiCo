@@ -56,7 +56,7 @@ Bruids zijde	122880			--
 Andere naam dan overledene	117977			--
 Vader bruidegom/bruid	117845			schema:parent
 Vorige partner bruidegom	116578			schema???
-Partij	116394		partij
+Partij	116394		partij	--
 handelt voor zich	114898			--
 Begunstigde	111741		begunstigde	--
 Echtgenote	108398			schema:spouse
