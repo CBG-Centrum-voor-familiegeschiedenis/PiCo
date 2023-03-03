@@ -34,7 +34,7 @@ dl:bevreg510 a cbgo:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
         pnv:baseSurname "Koppen" ;
-        pnv:firstName "Anna Maria" ;
+        pnv:givenName "Anna Maria" ;
     ] ;
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:birthPlace "Haarlem" ;

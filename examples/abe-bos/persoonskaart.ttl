@@ -45,7 +45,7 @@ dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
         pnv:baseSurname "Koppen" ;
-        pnv:firstName "Anna" ;
+        pnv:givenName "Anna" ;
     ] ;
     schema:birthPlace "Haarlem" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
@@ -59,7 +59,7 @@ dl:NL-HaCBG_1755_0341_142_person3 a cbgo:PersonObservation ;
         pnv:literalName "Sjouke Abes Bos" ;
         pnv:baseSurname "Bos" ;
         pnv:patronym "Abes" ;
-        pnv:firstName "Sjouke" ;
+        pnv:givenName "Sjouke" ;
     ] .
 
 dl:NL-HaCBG_1755_0341_142_person4 a cbgo:PersonObservation ;
@@ -69,7 +69,7 @@ dl:NL-HaCBG_1755_0341_142_person4 a cbgo:PersonObservation ;
         pnv:literalName "Geertruida van der Wijk" ;
         pnv:baseSurname "Wijk" ;
         pnv:surnamePrefix "van der" ;
-        pnv:firstName "Geertruida" ;
+        pnv:givenName "Geertruida" ;
     ] .
 
 # BRON

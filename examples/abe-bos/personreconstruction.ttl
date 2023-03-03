@@ -43,7 +43,7 @@ dl:ind247Spouse a cbgo:PersonReconstruction ;
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
         pnv:baseSurname "Koppen" ;
-        pnv:firstName "Anna" ;
+        pnv:givenName "Anna" ;
     ] ;
     schema:gender schema:Female ;
     schema:birthPlace "Haarlem" ;

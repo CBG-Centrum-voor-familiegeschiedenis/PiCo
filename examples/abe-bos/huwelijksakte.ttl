@@ -37,7 +37,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a cbgo:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Anna Maria Koppen" ;
         pnv:baseSurname "Koppen" ;
-        pnv:firstName "Anna" ;
+        pnv:givenName "Anna" ;
     ] ;
     cbgo:hasAge "25"^^xsd:decimal ;
     schema:birthPlace "Haarlem" ;
@@ -54,7 +54,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a cbgo:PersonObservation ;
         pnv:literalName "Sjouke Abes Bos" ;
         pnv:baseSurname "Bos" ;
         pnv:patronym "Abes" ;
-        pnv:firstName "Sjouke" ;
+        pnv:givenName "Sjouke" ;
     ] ;
     schema:gender schema:Male .
 
@@ -65,7 +65,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a cbgo:PersonObservation ;
         pnv:literalName "Geertruida van der Wijk" ;
         pnv:baseSurname "Wijk" ;
         pnv:surnamePrefix "van der" ;
-        pnv:firstName "Geertruida" ;
+        pnv:givenName "Geertruida" ;
     ] ;
     schema:gender schema:Female .
 
@@ -75,7 +75,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a cbgo:PersonObservation ;
         a pnv:PersonName ;
         pnv:literalName "Johannes Koppen" ;
         pnv:baseSurname "Koppen" ;
-        pnv:firstName "Johannes" ;
+        pnv:givenName "Johannes" ;
     ] ;
     schema:gender schema:Male . 
 
@@ -86,7 +86,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a cbgo:PersonObservation ;
         pnv:literalName "Helena Catharina van Zijl" ;
         pnv:baseSurname "Zijl" ;
         pnv:surnamePrefix "van" ;
-        pnv:firstName "Helena Catharina" ;
+        pnv:givenName "Helena Catharina" ;
     ] ;
     schema:gender schema:Female . 
 
