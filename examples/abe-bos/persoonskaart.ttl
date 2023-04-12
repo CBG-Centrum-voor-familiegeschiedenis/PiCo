@@ -32,7 +32,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
         a schema:MarryAction ;
         schema:date "1885-11-11"^^xsd:date ;
         schema:location "Haarlem" ;
-    ]
+    ] ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
     schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
