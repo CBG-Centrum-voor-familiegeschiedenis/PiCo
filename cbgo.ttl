@@ -1,4 +1,5 @@
 # First version IZ 20230220
+# Added DTB-properties IZ 20230613
 
 @prefix : <https://data.cbg.nl/ontology#> .
 
@@ -14,15 +15,18 @@
 <https://data.cbg.nl/ontology> a owl:Ontology .
 
 # classes
-:PersonObservation a owl:Class ;
-    rdfs:label "Persoonsvermelding"@nl ;
+:Person a owl:Class ;
+    rdfs:label "Persoon"@nl ;
     rdfs:subClassOf pnv:Person ;
     rdfs:subClassOf prov:Entity .
 
+:PersonObservation a owl:Class ;
+    rdfs:label "Persoonsvermelding"@nl ;
+    rdfs:subClassOf :Person .
+
 :PersonReconstruction a owl:Class ;
     rdfs:label "Persoonsreconstructie"@nl ;
-    rdfs:subClassOf pnv:Person ;
-    rdfs:subClassOf prov:Entity .
+    rdfs:subClassOf :Person .
 
 :Document a owl:Class ;
     rdfs:label "Brondocument"@nl ;
@@ -44,4 +48,19 @@
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
+:baptizationDate a owl:DatatypeProperty ;
+    rdfs:label "is gedoopt op"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal .
 
+:burialDate a owl:DatatypeProperty ;
+    rdfs:label "is begraven op"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal .
+
+:betrothalDate a owl:DatatypeProperty ;
+    rdfs:label "is in ondertrouw gegaan op"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range rdfs:Literal .
+
+# TODO: add our own relations

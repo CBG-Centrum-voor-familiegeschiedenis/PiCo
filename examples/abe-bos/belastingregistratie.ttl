@@ -20,7 +20,7 @@ dl:belkoh78 a cbgo:PersonObservation ;
         pnv:baseSurname "Bos" ;
         pnv:initials "A." ;
     ] ;
-    schema:adress "Eendrachtstraat 3" ;
+    schema:address "Eendrachtstraat 3" ;
     dl-ont:inkomen "550"^^xsd:integer ;
     dl-ont:aftrek "500"^^xsd:integer ;
     dl-ont:grondslag "50"^^xsd:integer ;
