@@ -1,5 +1,6 @@
 # First version IZ 20230220
 # Added DTB-properties IZ 20230613
+# Downgraded properties to RDF instead of OWL IZ 20230617
 
 @prefix : <https://data.cbg.nl/ontology#> .
 
@@ -34,33 +35,29 @@
     rdfs:subClassOf prov:Entity .
 
 # properties
-:hasAge a owl:DatatypeProperty ;
+:hasAge a rdf:Property ;
     rdfs:label "heeft leeftijd"@nl ;
-    rdfs:domain :PersonObservation ;
-    rdfs:range rdfs:Literal .
+    rdfs:domain :PersonObservation .
 
-:hasReligion a owl:DatatypeProperty ;
+:hasReligion a rdf:Property ;
     rdfs:label "heeft religie"@nl ;
-    rdfs:domain :PersonObservation ;
-    rdfs:range rdfs:Literal .
+    rdfs:domain :PersonObservation .
 
-:hasRole a owl:ObjectProperty ;
+:hasRole a rdf:Property ;
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-:baptizationDate a owl:DatatypeProperty ;
+:baptizationDate a rdf:Property ;
     rdfs:label "is gedoopt op"@nl ;
     rdfs:domain :Person ;
     rdfs:range rdfs:Literal .
 
-:burialDate a owl:DatatypeProperty ;
+:burialDate a rdf:Property ;
     rdfs:label "is begraven op"@nl ;
     rdfs:domain :Person ;
     rdfs:range rdfs:Literal .
 
-:betrothalDate a owl:DatatypeProperty ;
+:betrothalDate a rdf:Property ;
     rdfs:label "is in ondertrouw gegaan op"@nl ;
     rdfs:domain :Person ;
     rdfs:range rdfs:Literal .
-
-# TODO: add our own relations
