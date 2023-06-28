@@ -25,7 +25,7 @@ dl:bevreg509 a cbgo:PersonObservation ;
     schema:birthPlace "Joure" ;
     schema:address "Eendrachtstraat 3" ;
     cbgo:hasReligion "rk" ;
-    schema:occupation "smid" ;
+    schema:hasOccupation "smid" ;
     schema:gender schema:Male .
 
 dl:bevreg510 a cbgo:PersonObservation ;
