@@ -23,7 +23,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
         pnv:givenName "Abe" ;
     ] ;
     schema:gender schema:Male ;
-    schema:occupation "zonder" ;
+    schema:hasOccupation "zonder" ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:deathPlace "Haarlem" ;

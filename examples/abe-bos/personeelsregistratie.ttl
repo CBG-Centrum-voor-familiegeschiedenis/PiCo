@@ -22,7 +22,7 @@ dl:persregind192 a cbgo:PersonObservation ;
         pnv:baseSurname "Bos" ;
         pnv:initials "A." ;
     ] ;
-    schema:occupation "loc. Bankwr" .
+    schema:hasO ccupation "loc. Bankwr" .
 
 hua:NL-UtHUA_920_26-29_2430 a cbgo:Document ;
     schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;

@@ -23,7 +23,7 @@ dl:dienstbodereg_person1 a cbgo:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:address "Gr. Houtstr 104" ;
     cbgo:hasReligion "rk" ;
-    schema:occupation "dienstbode" ;
+    schema:schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female .
 
 dl:dienstbodereg_person2 a cbgo:PersonObservation ;
@@ -38,7 +38,7 @@ dl:dienstbodereg_person2 a cbgo:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:address "L. Vaart 6" ;
     cbgo:hasReligion "rk" ;
-    schema:occupation "dienstbode" ;
+    schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female .
 
 <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> a cbgo:Document ;
