@@ -61,3 +61,10 @@
     rdfs:label "is in ondertrouw gegaan op"@nl ;
     rdfs:domain :Person ;
     rdfs:range rdfs:Literal .
+
+# Properties - Interpersonal relations
+:grandparent a rdf:Property ;
+    rdfs:label "heeft grootouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
