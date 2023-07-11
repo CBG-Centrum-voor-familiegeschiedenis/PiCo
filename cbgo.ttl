@@ -91,81 +91,81 @@
     rdfs:range :Person .
 
 :wid a rdf:Property ;
-    rdfs:label "is weduwe/weduwnaar van" ;
+    rdfs:label "is weduwe/weduwnaar van"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepparent a rdf:Property ;
-    rdfs:label "heeft stiefouder" ;
+    rdfs:label "heeft stiefouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepchild a rdf:Property ;
-    rdfs:label "heeft stiefkind" ;
+    rdfs:label "heeft stiefkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :child-in-law a rdf:Property ;
-    rdfs:label "heeft schoonkind" ;
+    rdfs:label "heeft schoonkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :parent-in-law a rdf:Property ;
-    rdfs:label "heeft schoonouder" ;
+    rdfs:label "heeft schoonouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :half-sibbling a rdf:Property ;
-    rdfs:label "heeft halbroer/halfzus" ;
+    rdfs:label "heeft halbroer/halfzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :step-sibbling a rdf:Property ;
-    rdfs:label "heeft stiefbroer/stiefzus" ;
+    rdfs:label "heeft stiefbroer/stiefzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :sibbling-in-law a rdf:Property ;
-    rdfs:label "heeft schoonbroer/schoonzus" ;
+    rdfs:label "heeft schoonbroer/schoonzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :great-grandparent a rdf:Property ;
-    rdfs:label "heeft overgrootouder" ;
+    rdfs:label "heeft overgrootouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :great-grandchild a rdf:Property ;
-    rdfs:label "heeft achterkleinkind" ;
+    rdfs:label "heeft achterkleinkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :fosterParent a rdf:Property ;
-    rdfs:label "heeft pleegouder" ;
+    rdfs:label "heeft pleegouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :fosterChild a rdf:Property ;
-    rdfs:label "heeft pleegkind" ;
+    rdfs:label "heeft pleegkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepparent-in-law a rdf:Property ;
-    rdfs:label "heeft stiefschoonouder" ;
+    rdfs:label "heeft stiefschoonouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepchild-in-law a rdf:Property ;
-    rdfs:label "heeft stiefschoonkind" ;
+    rdfs:label "heeft stiefschoonkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :grandparent-in-law a rdf:Property ;
-    rdfs:label "heeft schoongrootouder" ;
+    rdfs:label "heeft schoongrootouder"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :grandchild-in-law a rdf:Property ;
-    rdfs:label "heeft schoonkleinkind" ;
+    rdfs:label "heeft schoonkleinkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
