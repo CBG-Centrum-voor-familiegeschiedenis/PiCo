@@ -29,5 +29,5 @@ nha:jaarboekje13-p299 a cbgo:Document ;
     schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:dateCreated "1903"^^xsd:gYear ;
-    schema:contentLocation "Haarlem" ;
+    schema:locationCreated "Haarlem" ;
     schema:isPartOf <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .

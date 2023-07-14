@@ -97,7 +97,7 @@ nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a cbgo:Document ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
     schema:dateCreated "1885-11-11"^^xsd:date ;
-    schema:contentLocation "Haarlem" ;
+    schema:locationCreated "Haarlem" ;
     schema:associatedMedia [
         a schema:ImageObject ;
         schema:position 1 ;

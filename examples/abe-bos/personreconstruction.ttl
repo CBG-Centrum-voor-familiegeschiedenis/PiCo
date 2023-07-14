@@ -19,18 +19,18 @@ dl:ind247 a cbgo:PersonReconstruction ;
     ] ;
     schema:gender schema:Male ;
     schema:hasOccupation [ rdf:value "agent van politie" ;
-                       schema:endDate "1892"^^xsd:gYear ] ;
+                       cbgo:endDate "1892"^^xsd:gYear ] ;
     schema:hasOccupation [ rdf:value "locomotief bankwerker" ;
-                       schema:startDate "1892"^^xsd:gYear ] ;
+                       cbgo:startDate "1892"^^xsd:gYear ] ;
     schema:hasOccupation [ rdf:value "zonder" ;
-                       schema:endDate "1954"^^xsd:gYear ] ;
+                       cbgo:endDate "1954"^^xsd:gYear ] ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:deathPlace "Haarlem" ;
     schema:deathDate "1954-02-28"^^xsd:date ;
     schema:spouse [ rdf:value dl:ind247Spouse ;
-                       schema:startDate "1885-11-11"^^xsd:date ;
-                       schema:endDate "1926"^^xsd:gYear ] ;
+                       cbgo:startDate "1885-11-11"^^xsd:date ;
+                       cbgo:endDate "1926"^^xsd:gYear ] ;
     prov:wasDerivedFrom 
             dl:bevreg509, 
             dl:belkoh78, 

@@ -13,7 +13,7 @@
 # ontology
 <https://data.cbg.nl/ontology> a owl:Ontology .
 
-# Classes
+# Basic classes
 :Person a owl:Class ;
     rdfs:label "Persoon"@nl ;
     rdfs:subClassOf pnv:Person ;
@@ -32,63 +32,69 @@
     rdfs:subClassOf schema:CreativeWork ;
     rdfs:subClassOf prov:Entity .
 
-# Properties - Time dependency
+# Event classes
+:LifeEvent a owl:Class ;
+    rdfs:label "Levensgebeurtenis"@nl .
+    rdfs:subClassOf schema:Event .
+
+:Birth a owl:Class ;
+    rdfs:label "Geboorte"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+:Baptization a owl:Class ;
+    rdfs:label "Doop"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+:Betrothal a owl:Class ;
+    rdfs:label "Ondertrouw"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+:Marriage a owl:Class ;
+    rdfs:label "Huwelijk"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+:Death a owl:Class ;
+    rdfs:label "Overlijden"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+:Burial a owl:Class ;
+    rdfs:label "Begrafenis"@nl ;
+    rdfs:subClassOf :LifeEvent .
+
+# Properties - Spatio-temporal stuff
+:location a rdf:Property ;
+    rdfs:label "vond plaats in"@nl .
+
+:date a rdf:Property ;
+    rdfs:label "vond plaats op"@nl ;
+    rdfs:range rdfs:Literal . # preferably xsd:date, xsd:gYear or the like
+
+:startDate a rdf:Property ;
+    rdfs:label "vond plaats van"@nl ;
+    rdfs:range rdfs:Literal . # preferably xsd:date, xsd:gYear or the like
+
+:endDate a rdf:Property ;
+    rdfs:label "vond plaats tot"@nl ;
+    rdfs:range rdfs:Literal . # preferably xsd:date, xsd:gYear or the like
+
+# Properties - observation dependent
 :hasAge a rdf:Property ;
     rdfs:label "heeft leeftijd"@nl ;
-    rdfs:domain :PersonObservation .
-
-:hasReligion a rdf:Property ;
-    rdfs:label "heeft religie"@nl ;
     rdfs:domain :PersonObservation .
 
 :hasRole a rdf:Property ;
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-:startDate a rdf:Property ;
-    rdfs:label "van"@nl ;
-    rdfs:range rdfs:Literal .
-
-:endDate a rdf:Property ;
-    rdfs:label "tot"@nl ;
-    rdfs:range rdfs:Literal .
-
-# Properties - Events
-:baptizationDate a rdf:Property ;
-    rdfs:label "is gedoopt op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:baptizationPlace a rdf:Property ;
-    rdfs:label "is gedoopt in"@nl ;
+# Properties - observation INdependent
+:hasReligion a rdf:Property ;
+    rdfs:label "heeft religie"@nl ;
     rdfs:domain :Person .
 
-:betrothalDate a rdf:Property ;
-    rdfs:label "is in ondertrouw gegaan op"@nl ;
+:hasLifeEvent a rdf:Property ;
+    rdfs:label "heeft levensgebeurtenis"
     rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:betrothalPlace a rdf:Property ;
-    rdfs:label "is in ondertrouw gegaan in"@nl ;
-    rdfs:domain :Person .
-
-:marriageDate a rdf:Property ;
-    rdfs:label "is getrouwd op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:marriagePlace a rdf:Property ;
-    rdfs:label "is getrouwd in"@nl ;
-    rdfs:domain :Person .
-
-:burialDate a rdf:Property ;
-    rdfs:label "is begraven op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:burialPlace a rdf:Property ;
-    rdfs:label "is begraven in"@nl ;
-    rdfs:domain :Person .
+    rdfs:range :LifeEvent .
 
 # Properties - Interpersonal relations
 :grandparent a rdf:Property ;
@@ -144,7 +150,7 @@
     rdfs:range :Person .
 
 :half-sibling a rdf:Property ;
-    rdfs:label "heeft halbroer/halfzus"@nl ;
+    rdfs:label "heeft halfbroer/halfzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
@@ -154,7 +160,7 @@
     rdfs:range :Person .
 
 :sibling-in-law a rdf:Property ;
-    rdfs:label "heeft schoonbroer/schoonzus"@nl ;
+    rdfs:label "heeft zwager/schoonzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 

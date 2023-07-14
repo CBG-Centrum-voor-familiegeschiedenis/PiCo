@@ -26,18 +26,15 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
     schema:hasOccupation "zonder" ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
+    cbgo:marriageDate "1885-11-11"^^xsd:date ;
+    cbgo:marriagePlace "Haarlem" ;
     schema:deathPlace "Haarlem" ;
     schema:deathDate "1954-02-28"^^xsd:date ;
-    cbgo:hasMarriage [ 
-        a schema:MarryAction ;
-        schema:date "1885-11-11"^^xsd:date ;
-        schema:location "Haarlem" ;
-    ] ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
     schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
-                       schema:startDate "1885-11-11"^^xsd:date ;
-                       schema:endDate "1926"^^xsd:gYear ] .
+                       cbgo:startDate "1885-11-11"^^xsd:date ;
+                       cbgo:endDate "1926"^^xsd:gYear ] .
 
 dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
@@ -49,6 +46,8 @@ dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     ] ;
     schema:birthPlace "Haarlem" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
+    cbgo:marriageDate "1885-11-11"^^xsd:date ;
+    cbgo:marriagePlace "Haarlem" ;
     schema:deathPlace "Detroit, VSA" ;
     schema:deathDate "1926"^^xsd:gYear .
 
@@ -75,6 +74,6 @@ dl:NL-HaCBG_1755_0341_142_person4 a cbgo:PersonObservation ;
 # BRON
 cbg:NL-HaCBG_1755_0341_142 a cbgo:Document ;
     schema:name "Persoonskaart Abe Bos" ;
-    schema:contentLocation "Nederland" ;
+    schema:locationCreated "Nederland" ;
     schema:additionalType cbgt:persoonskaart ;
     schema:holdingArchive <https://cbg.nl/> .
