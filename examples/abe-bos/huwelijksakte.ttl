@@ -21,12 +21,10 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
         pnv:givenName "Abe" ;
     ] ;
     cbgo:hasAge "27"^^xsd:decimal ; 
-    cbgo:hasAge "P27Y3M"^^xsd:duration ; 
-    cbgo:hasAge "27 jaar en 3 maanden" ; 
     schema:birthPlace "Joure" ;
     schema:hasOccupation "agent van politie" ;
     schema:gender schema:Male ;
-    cbgo:hasRole cbgt:huwelijkspartij ;
+    cbgo:hasRole "bruidegom"@nl ;
     schema:spouse dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
     schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
     schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
@@ -43,7 +41,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a cbgo:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female ;
-    cbgo:hasRole cbgt:huwelijkspartij ;
+    cbgo:hasRole "bruid"@nl ;
     schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
     schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
 
