@@ -33,6 +33,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
         a cbgo:Marriage ;
         cbgo:date "1885-11-11"^^xsd:date ;
         cbgo:location "Haarlem" ;
+        cbgo:createsRelationWith dl:NL-HaCBG_1755_0341_142_person2 ;
     ] ;
     cbgo:hasLifeEvent [
         a cbgo:Death ;
@@ -41,9 +42,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
     ] ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person3 ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
-    schema:spouse [ rdf:value dl:NL-HaCBG_1755_0341_142_person2 ;
-                       cbgo:startDate "1885-11-11"^^xsd:date ;
-                       cbgo:endDate "1926"^^xsd:gYear ] .
+    schema:spouse dl:NL-HaCBG_1755_0341_142_person2 .
 
 dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
