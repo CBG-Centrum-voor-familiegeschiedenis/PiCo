@@ -12,6 +12,12 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_event a schema:MarryAction ;
+    schema:startTime "1885-11-11"^^xsd:date ;
+    schema:location "Haarlem" ;
+    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
+    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 .
+
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [

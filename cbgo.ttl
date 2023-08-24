@@ -13,7 +13,7 @@
 # ontology
 <https://data.cbg.nl/ontology> a owl:Ontology .
 
-# Classes
+# Basic classes
 :Person a owl:Class ;
     rdfs:label "Persoon"@nl ;
     rdfs:subClassOf pnv:Person ;
@@ -32,62 +32,18 @@
     rdfs:subClassOf schema:CreativeWork ;
     rdfs:subClassOf prov:Entity .
 
-# Properties - Time dependency
+# Properties - observation dependent
 :hasAge a rdf:Property ;
     rdfs:label "heeft leeftijd"@nl ;
-    rdfs:domain :PersonObservation .
-
-:hasReligion a rdf:Property ;
-    rdfs:label "heeft religie"@nl ;
     rdfs:domain :PersonObservation .
 
 :hasRole a rdf:Property ;
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-:startDate a rdf:Property ;
-    rdfs:label "van"@nl ;
-    rdfs:range rdfs:Literal .
-
-:endDate a rdf:Property ;
-    rdfs:label "tot"@nl ;
-    rdfs:range rdfs:Literal .
-
-# Properties - Events
-:baptizationDate a rdf:Property ;
-    rdfs:label "is gedoopt op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:baptizationPlace a rdf:Property ;
-    rdfs:label "is gedoopt in"@nl ;
-    rdfs:domain :Person .
-
-:betrothalDate a rdf:Property ;
-    rdfs:label "is in ondertrouw gegaan op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:betrothalPlace a rdf:Property ;
-    rdfs:label "is in ondertrouw gegaan in"@nl ;
-    rdfs:domain :Person .
-
-:marriageDate a rdf:Property ;
-    rdfs:label "is getrouwd op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:marriagePlace a rdf:Property ;
-    rdfs:label "is getrouwd in"@nl ;
-    rdfs:domain :Person .
-
-:burialDate a rdf:Property ;
-    rdfs:label "is begraven op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:burialPlace a rdf:Property ;
-    rdfs:label "is begraven in"@nl ;
+# Properties - observation INdependent
+:hasReligion a rdf:Property ;
+    rdfs:label "heeft religie"@nl ;
     rdfs:domain :Person .
 
 # Properties - Interpersonal relations
@@ -144,7 +100,7 @@
     rdfs:range :Person .
 
 :half-sibling a rdf:Property ;
-    rdfs:label "heeft halbroer/halfzus"@nl ;
+    rdfs:label "heeft halfbroer/halfzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
@@ -154,7 +110,7 @@
     rdfs:range :Person .
 
 :sibling-in-law a rdf:Property ;
-    rdfs:label "heeft schoonbroer/schoonzus"@nl ;
+    rdfs:label "heeft zwager/schoonzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
