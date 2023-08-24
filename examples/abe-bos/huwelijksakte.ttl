@@ -1,101 +1,102 @@
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
-# PERSOONSVERMELDINGEN
-dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_event a schema:MarryAction ;
-    schema:startTime "1885-11-11"^^xsd:date ;
-    schema:location "Haarlem" ;
-    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
-    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 .
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
 
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
+# PERSOONSVERMELDINGEN
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Abe Bos" ;
-        pnv:baseSurname "Bos" ;
-        pnv:givenName "Abe" ;
-    ] ;
+    schema:name "Abe Bos" ;
+    schema:familyName "Bos" ;
+    schema:givenName "Abe" ;
     cbgo:hasAge "27"^^xsd:decimal ; 
     schema:birthPlace "Joure" ;
     schema:hasOccupation "agent van politie" ;
     schema:gender schema:Male ;
     cbgo:hasRole cbgt:huwelijkspartij ;
+    bio:event [
+        a bio:Marriage ;
+        schema:startTime "1885-11-11"^^xsd:date ;
+        schema:location "Haarlem" ; #NB er bestaat ook bio:place maar dit lijkt me beter
+        bio:partner
+            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1,
+            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
+    ];
     schema:spouse dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
-    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 ;
-    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
+    schema:parent 
+        dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3,
+        dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Anna Maria Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Anna" ;
-    ] ;
+    schema:name "Anna Maria Koppen" ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
     cbgo:hasAge "25"^^xsd:decimal ;
     schema:birthPlace "Haarlem" ;
     schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female ;
     cbgo:hasRole cbgt:huwelijkspartij ;
-    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ;
-    schema:parent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
+    schema:parent
+        dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ,
+        dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
+    schema:name "Sjouke Abes Bos" ;
+    schema:familyName "Bos" ;
+    schema:givenName "Sjouke" ;
+    schema:additionalName [
         a pnv:PersonName ;
         pnv:literalName "Sjouke Abes Bos" ;
-        pnv:baseSurname "Bos" ;
         pnv:patronym "Abes" ;
-        pnv:givenName "Sjouke" ;
-    ] ;
+    ];
     schema:gender schema:Male .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person4 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
+    schema:name "Geertruida van der Wijk" ;
+    schema:familyName "van der Wijk" ;
+    schema:givenName "Geertruida" ;
+    schema:additionalName [
         a pnv:PersonName ;
         pnv:literalName "Geertruida van der Wijk" ;
         pnv:baseSurname "Wijk" ;
         pnv:surnamePrefix "van der" ;
-        pnv:givenName "Geertruida" ;
     ] ;
     schema:gender schema:Female .
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Johannes Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Johannes" ;
-    ] ;
+    schema:name "Johannes Koppen" ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Johannes" ;
     schema:gender schema:Male . 
 
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
-    pnv:hasName [
+    schema:name "Helena Catharina van Zijl" ;
+    schema:familyName "van Zijl" ;
+    schema:givenName "Helena Catharina" ;
+    schema:additionalName [
         a pnv:PersonName ;
         pnv:literalName "Helena Catharina van Zijl" ;
         pnv:baseSurname "Zijl" ;
         pnv:surnamePrefix "van" ;
-        pnv:givenName "Helena Catharina" ;
     ] ;
     schema:gender schema:Female . 
 
 # BRON
-nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a cbgo:Document ;
+nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a schema:ArchiveComponent ;
     schema:additionalType cbgt:huwelijksakte ;
     schema:name "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;

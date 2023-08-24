@@ -1,24 +1,20 @@
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
 dl:dienstbodereg_person1 a cbgo:PersonObservation ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Anna Maria Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Anna" ;
-    ] ;
+    schema:name "Anna Maria Koppen" ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" zijn?
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Gr. Houtstr 104" ;
@@ -28,12 +24,9 @@ dl:dienstbodereg_person1 a cbgo:PersonObservation ;
 
 dl:dienstbodereg_person2 a cbgo:PersonObservation ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Anna Maria Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Anna" ;
-    ] ;
+    schema:name "Anna Maria Koppen" ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" zijn?
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "L. Vaart 6" ;
@@ -41,7 +34,7 @@ dl:dienstbodereg_person2 a cbgo:PersonObservation ;
     schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female .
 
-<https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> a cbgo:Document ;
+<https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> a schema:ArchiveComponent ;
     schema:additionalType cbgt:dienstboderegistratie ;
     schema:name "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;

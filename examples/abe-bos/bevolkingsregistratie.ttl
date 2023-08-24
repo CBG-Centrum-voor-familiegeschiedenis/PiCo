@@ -1,25 +1,21 @@
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
 # PERSOONSVERMELDINGEN
 dl:bevreg509 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Abe Bos" ;
-        pnv:baseSurname "Bos" ;
-        pnv:givenName "Abe" ;
-    ] ;
+    schema:name "Abe Bos" ;
+    schema:familyName "Bos" ;
+    schema:givenName "Abe" ;
     cbgo:hasRole "hoofd" ;
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:birthPlace "Joure" ;
@@ -30,12 +26,9 @@ dl:bevreg509 a cbgo:PersonObservation ;
 
 dl:bevreg510 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Anna Maria Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Anna Maria" ;
-    ] ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Anna Maria" ;
+    schema:name "Anna Maria Koppen" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:birthPlace "Haarlem" ;
     schema:address "Eendrachtstraat 3" ;
@@ -99,7 +92,7 @@ dl:bevreg517 a cbgo:PersonObservation ;
     schema:gender schema:Female ;
     schema:parent dl:bevreg509 .
 
-nha:NL-HlmNHA_1482_234_B_0006 a cbgo:Document ;
+nha:NL-HlmNHA_1482_234_B_0006 a schema:ArchiveComponent ;
     schema:name "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl/> ;
     schema:additionalType cbgt:bevolkingsregistratie .

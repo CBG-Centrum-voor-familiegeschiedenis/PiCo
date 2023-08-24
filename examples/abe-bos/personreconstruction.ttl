@@ -1,29 +1,29 @@
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+
 dl:ind247 a cbgo:PersonReconstruction ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Abe Bos" ;
-        pnv:baseSurname "Bos" ;
-        pnv:givenName "Abe" ;
-    ] ;
+    schema:name "Abe Bos" ;
+    schema:familyName "Bos" ;
+    schema:givenName "Abe" ;
     schema:gender schema:Male ;
-    schema:hasOccupation [ rdf:value "agent van politie" ;
-                       cbgo:endDate "1892"^^xsd:gYear ] ;
-    schema:hasOccupation [ rdf:value "locomotief bankwerker" ;
-                       cbgo:startDate "1892"^^xsd:gYear ] ;
-    schema:hasOccupation [ rdf:value "zonder" ;
-                       cbgo:endDate "1954"^^xsd:gYear ] ;
+    schema:hasOccupation [ 
+        rdf:value "agent van politie" ;
+        schema:endTime "1892"^^xsd:gYear 
+    ], [
+        rdf:value "locomotief bankwerker" ;
+        schema:startTime "1892"^^xsd:gYear 
+    ], [
+        rdf:value "zonder" ;
+        schema:endTime "1954"^^xsd:gYear
+    ] ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
     schema:deathPlace "Haarlem" ;
@@ -41,12 +41,9 @@ dl:ind247 a cbgo:PersonReconstruction ;
     prov:wasGeneratedBy dl:recon_activity01 .
 
 dl:ind247Spouse a cbgo:PersonReconstruction ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "Anna Maria Koppen" ;
-        pnv:baseSurname "Koppen" ;
-        pnv:givenName "Anna" ;
-    ] ;
+    schema:name "Anna Maria Koppen" ;
+    schema:familyName "Koppen" ;
+    schema:givenName "Anna" ;
     schema:gender schema:Female ;
     schema:birthPlace "Haarlem" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
