@@ -23,14 +23,6 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
     schema:hasOccupation "agent van politie" ;
     schema:gender schema:Male ;
     cbgo:hasRole cbgt:huwelijkspartij ;
-    bio:event [
-        a bio:Marriage ;
-        schema:startTime "1885-11-11"^^xsd:date ;
-        schema:location "Haarlem" ; #NB er bestaat ook bio:place maar dit lijkt me beter
-        bio:partner
-            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1,
-            dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
-    ];
     schema:spouse dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
     schema:parent 
         dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3,
@@ -94,6 +86,15 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 a cbgo:PersonObservation ;
         pnv:surnamePrefix "van" ;
     ] ;
     schema:gender schema:Female . 
+
+[]
+ a bio:Marriage ;
+ prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
+ schema:startTime "1885-11-11"^^xsd:date ;
+ schema:location "Haarlem" ; #NB er bestaat ook bio:place maar dit lijkt me beter
+ bio:partner
+    dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1,
+    dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 .
 
 # BRON
 nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a schema:ArchiveComponent ;
