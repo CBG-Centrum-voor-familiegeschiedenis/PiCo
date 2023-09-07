@@ -38,14 +38,16 @@ dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:birthDate "1860-03-31"^^xsd:date ;
     schema:deathPlace "Detroit, VSA" ;
-    schema:deathDate "1926"^^xsd:gYear;
-    bio:event [
-         a bio:Marriage ;
-        schema:startTime "1885-11-11"^^xsd:date ;
-        schema:location "Haarlem" ;
-        bio:partner dl:NL-HaCBG_1755_0341_142_person1,
-            dl:NL-HaCBG_1755_0341_142_person2 ;
-    ] .
+    schema:deathDate "1926"^^xsd:gYear .
+
+[]
+ a bio:Marriage ;
+ prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
+ bio:date "1885-11-11"^^xsd:date ;
+ bio:place "Haarlem" ; 
+ bio:partner
+    dl:NL-HaCBG_1755_0341_142_person1,
+    dl:NL-HaCBG_1755_0341_142_person2 .
 
 dl:NL-HaCBG_1755_0341_142_person3 a cbgo:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
