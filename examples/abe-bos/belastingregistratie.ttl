@@ -32,4 +32,4 @@ nha:NL-HlmNHA_1503_537_IVa_63 a cbgo:Document ;
     schema:isPartOf <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:dateCreated "1902"^^xsd:gYear ;
-    schema:contentLocation "Haarlem" .
+    schema:locationCreated "Haarlem" .

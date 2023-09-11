@@ -7,7 +7,7 @@ Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandh
 ## Inleiding
 
 ### Samenvatting
-A2A-LD is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek identificeerbare personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën ([Schema.org](https://schema.org/), [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) en [PROV-O](https://www.w3.org/TR/prov-o/)). Daaraan wordt een beperkt aantal eigen properties toegevoegd. Geïnspireerd op [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) is A2A-LD gebaseerd op vermeldingen van personen in bronnen. Van één of meer persoonsvermeldingen kan een uniek identificeerbaar persoon gereconstrueerd worden.
+A2A-LD is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek geidentificeerde personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën ([Schema.org](https://schema.org/), [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) en [PROV-O](https://www.w3.org/TR/prov-o/)). Daaraan wordt een beperkt aantal eigen properties toegevoegd. Geïnspireerd op [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) is A2A-LD gebaseerd op vermeldingen van personen in bronnen. Van één of meer persoonsvermeldingen kan een uniek identificeerbaar persoon gereconstrueerd worden.
 
 ### Inleiding
 A2A-LD is ontwikkeld en wordt beheerd door het CBG voor het beschrijven van haar eigen collecties en als nieuwe standaard voor het aanleveren van data aan [WieWasWie](https://wiewaswie.nl/).
@@ -24,7 +24,7 @@ A2A-LD is de beoogde opvolger van A2A. Het wijkt op een aantal punten af van A2A
 * A2A-LD maakt onderscheid tussen relaties en rollen. In A2A worden beiden vastgelegd in het veld Relatie. Een Rol in A2A-LD beschrijft de rol van een persoonsvermelding op de bron. Een Relatie beschrijft de relatie tussen twee personen.
 * A2A-LD kent geen Gebeurtenissen, waar deze in A2A wel voorkomen. Het beschrijven van gebeurtenissen (zoals een huwelijk of een geboorte) is geen doel van de ontologie. Het bleek daarom niet nodig om gebeurtenis als aparte entiteit op te nemen. Bovendien kunnen persoonsvermeldingen lang niet altijd gekoppeld worden aan een gebeurtenis. 
 * In A2A-LD kan metadata worden vastgelegd over links tussen personen of persoonsvermeldingen. Bijvoorbeeld: “Op basis van bron B1 stellen we dat de persoonsvermeldingen PV1 en PV2 beiden horen bij persoon P1.” Of: “Op basis van bron B2 stellen we dat persoon P1 de vader is van persoon P2”.
-* Net als alle andere linked-data ontologieën, is A2A-LD uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
+* Net als alle andere linked-data ontologieën is A2A-LD uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
 
 ## Drie concepten
 Om data over personen in bronnen te kunnen uitwisselen maken we onderscheid tussen drie verschillende concepten: een Persoonsvermelding, een Persoonsreconstructie en een Document.
@@ -160,9 +160,7 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 * cbgo:hasRole
 * cbgo:hasAge
 * cbgo:hasReligion
-* cbgo:hasMarriage
-  * schema:date
-  * schema:location
+
 
 ### 3. Eigenschappen van Persoonsreconstructie
 Class: cbgo:PersonReconstruction
@@ -184,17 +182,17 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * schema:sibling (broer/zus)
 * schema:knows (kent, de meest generieke relatie)
 * schema:relatedTo (de meest generieke familierelatie)
-* previousPartner (eerdere partner)
-* cbgt:wid (weduwe/weduwnaar van)
-* cbgt:godparent (peetouder)
-* cbgt:grandparent (grootouder)
+* cbgo:previousPartner (eerdere partner)
+* cbgo:wid (weduwe/weduwnaar van)
+* cbgo:godparent (peetouder)
+* cbgo:grandparent (grootouder)
 
 ### 5. Terminologiebron voor Rollen
 Een persoonsvermelding kan de volgende rollen hebben op een document:
 
 * deceased (overledene)
 * birthling (boreling)
-* huwelijkspartner (spouse)
+* spouse (huwelijkspartner)
 * traveler (reiziger)
 * baptized (dopeling)
 * employee (werknemer, personeelslid)
@@ -234,7 +232,7 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * ??? (geconstitueerde)
 * ??? (rechthebbende)
 * skipper (schipper)
-* getuige (witness)
+* witness (getuige)
 * registered (geregistreerde) 
 
 ### 6. Terminologiebron voor Documenttypes
@@ -245,21 +243,22 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * BS geboorte
 * BS huwelijk
 * BS overlijden
+* DTB overig
 * bevolkingsregister
 * memories van successie
 * notariële archieven
-* onroerend goed
 * familieadvertenties
-* militairen
-* divers
-* fiscaal en financieel
+* militaire registers
 * rechterlijke archieven
-* DTB overig
-* vestiging en vertrek
+* vestigings- en vertrekregisters
+* bidprentjes
+* slavernijbronnen
+
+#### ???
+* Tweede Wereldoorlog
+* misdaad en straf
 * beroep en bedrijf
 * Onderwijs
 * sociale zorg
-* bidprentjes
-* slavernijbronnen
-* Tweede Wereldoorlog
-* misdaad en straf
+* fiscaal en financieel
+* onroerend goed

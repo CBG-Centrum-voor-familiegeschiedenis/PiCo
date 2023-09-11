@@ -1,6 +1,4 @@
-# First version IZ 20230220
-# Added DTB-properties IZ 20230613
-# Downgraded properties to RDF instead of OWL IZ 20230617
+# Version: 20230714
 
 @prefix : <https://data.cbg.nl/ontology#> .
 
@@ -15,7 +13,7 @@
 # ontology
 <https://data.cbg.nl/ontology> a owl:Ontology .
 
-# classes
+# Basic classes
 :Person a owl:Class ;
     rdfs:label "Persoon"@nl ;
     rdfs:subClassOf pnv:Person ;
@@ -34,33 +32,19 @@
     rdfs:subClassOf schema:CreativeWork ;
     rdfs:subClassOf prov:Entity .
 
-# properties
+# Properties - observation dependent
 :hasAge a rdf:Property ;
     rdfs:label "heeft leeftijd"@nl ;
-    rdfs:domain :PersonObservation .
-
-:hasReligion a rdf:Property ;
-    rdfs:label "heeft religie"@nl ;
     rdfs:domain :PersonObservation .
 
 :hasRole a rdf:Property ;
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-:baptizationDate a rdf:Property ;
-    rdfs:label "is gedoopt op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:burialDate a rdf:Property ;
-    rdfs:label "is begraven op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
-
-:betrothalDate a rdf:Property ;
-    rdfs:label "is in ondertrouw gegaan op"@nl ;
-    rdfs:domain :Person ;
-    rdfs:range rdfs:Literal .
+# Properties - observation INdependent
+:hasReligion a rdf:Property ;
+    rdfs:label "heeft religie"@nl ;
+    rdfs:domain :Person .
 
 # Properties - Interpersonal relations
 :grandparent a rdf:Property ;
@@ -115,18 +99,18 @@
     rdfs:domain :Person ;
     rdfs:range :Person .
 
-:half-sibbling a rdf:Property ;
-    rdfs:label "heeft halbroer/halfzus"@nl ;
+:half-sibling a rdf:Property ;
+    rdfs:label "heeft halfbroer/halfzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
-:step-sibbling a rdf:Property ;
+:step-sibling a rdf:Property ;
     rdfs:label "heeft stiefbroer/stiefzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
-:sibbling-in-law a rdf:Property ;
-    rdfs:label "heeft schoonbroer/schoonzus"@nl ;
+:sibling-in-law a rdf:Property ;
+    rdfs:label "heeft zwager/schoonzus"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 

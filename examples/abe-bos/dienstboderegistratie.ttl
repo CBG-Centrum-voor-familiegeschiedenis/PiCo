@@ -45,7 +45,7 @@ dl:dienstbodereg_person2 a cbgo:PersonObservation ;
     schema:additionalType cbgt:dienstboderegistratie ;
     schema:name "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
-    schema:contentLocation "Haarlem" ;
+    schema:locationCreated "Haarlem" ;
     schema:associatedMedia [
         a schema:ImageObject ;
         schema:position 1 ;

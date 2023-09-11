@@ -12,6 +12,12 @@
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDINGEN
+dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_event a schema:MarryAction ;
+    schema:startTime "1885-11-11"^^xsd:date ;
+    schema:location "Haarlem" ;
+    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 ;
+    schema:agent dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 .
+
 dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c ;
     pnv:hasName [
@@ -21,8 +27,6 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a cbgo:PersonObservation ;
         pnv:givenName "Abe" ;
     ] ;
     cbgo:hasAge "27"^^xsd:decimal ; 
-    cbgo:hasAge "P27Y3M"^^xsd:duration ; 
-    cbgo:hasAge "27 jaar en 3 maanden" ; 
     schema:birthPlace "Joure" ;
     schema:hasOccupation "agent van politie" ;
     schema:gender schema:Male ;
@@ -97,7 +101,7 @@ nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a cbgo:Document ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
     schema:dateCreated "1885-11-11"^^xsd:date ;
-    schema:contentLocation "Haarlem" ;
+    schema:locationCreated "Haarlem" ;
     schema:associatedMedia [
         a schema:ImageObject ;
         schema:position 1 ;
