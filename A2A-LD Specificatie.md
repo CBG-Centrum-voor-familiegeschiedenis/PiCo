@@ -9,7 +9,7 @@ Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandh
 ### Samenvatting
 PiCo is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek geidentificeerde personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën:
 * [Schema.org](https://schema.org/) wordt zo veel mogelijk gebruikt voor de klassen en eigenschappen 
-* [BIO](https://vocab.org/bio/)) wordt gebruikt voor een aantal life events, zoals een huwelijk of echtscheiding 
+* [BIO](https://vocab.org/bio/) wordt gebruikt voor een aantal life events, zoals een huwelijk of echtscheiding 
 * [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) wordt optioneel gebruikt voor uitgebreide persoonsnamen
 * [PROV-O](https://www.w3.org/TR/prov-o/) wordt gebruikt voor informatie over de totstandkoming van persoonsreconstructies 
 
