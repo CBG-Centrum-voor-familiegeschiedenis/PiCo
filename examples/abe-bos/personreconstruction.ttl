@@ -22,7 +22,7 @@ dl:ind247 a cbgo:PersonReconstruction ;
             a schema:Occupation ;
             schema:name "agent van politie" ;
         ];
-        schema:startDate "1892"^^xsd:gYear
+        schema:endDate "1892"^^xsd:gYear
     ], [
         a schema:Role ;
         schema:hasOccupation [
