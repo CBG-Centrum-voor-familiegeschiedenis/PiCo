@@ -14,29 +14,15 @@ dl:ind247 a cbgo:PersonReconstruction ;
     schema:familyName "Bos" ;
     schema:givenName "Abe" ;
     schema:gender schema:Male ;
-    # From schema.org: "The Person's occupation. For past professions, use Role for expressing dates."
-    # Zie example 4 in Json-LD op https://schema.org/Role
-    schema:hasOccupation [
-        a schema:Role ;
-        schema:hasOccupation [
-            a schema:Occupation ;
-            schema:name "agent van politie" ;
-        ];
-        schema:endDate "1892"^^xsd:gYear
+    schema:hasOccupation [ 
+        rdf:value "agent van politie" ;
+        schema:endTime "1892"^^xsd:gYear 
     ], [
-        a schema:Role ;
-        schema:hasOccupation [
-            a schema:Occupation ;
-            schema:name "locomotief bankwerker" ;
-        ];
-        schema:startDate "1892"^^xsd:gYear
+        rdf:value "locomotief bankwerker" ;
+        schema:startTime "1892"^^xsd:gYear 
     ], [
-        a schema:Role ;
-        schema:hasOccupation [
-            a schema:Occupation ;
-            schema:name "zonder" ;
-        ];
-        schema:startDate "1954"^^xsd:gYear
+        rdf:value "zonder" ;
+        schema:endTime "1954"^^xsd:gYear
     ] ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
