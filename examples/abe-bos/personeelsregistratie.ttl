@@ -1,8 +1,3 @@
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
@@ -11,20 +6,27 @@
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
 @prefix hua: <https://hetutrechtsarchief.nl/> .
 
 # PERSOONSVERMELDING
 dl:persregind192 a cbgo:PersonObservation ;
     prov:hadPrimarySource hua:NL-UtHUA_920_26-29_2430 ;
-    pnv:hasName [
+    schema:name "Bos, A." ;
+    schema:familyName "Bos" ;
+    # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
+    schema:additionalName [
         a pnv:PersonName ;
         pnv:literalName "Bos, A." ;
-        pnv:baseSurname "Bos" ;
         pnv:initials "A." ;
     ] ;
-    schema:hasO ccupation "loc. Bankwr" .
+    schema:hasOccupation "loc. Bankwr" .
 
-hua:NL-UtHUA_920_26-29_2430 a cbgo:Document ;
+hua:NL-UtHUA_920_26-29_2430 a schema:ArchiveComponent ;
     schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
     schema:additionalType cbgt:personeelsregistratie ;
     schema:isPartOf <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;

@@ -1,17 +1,11 @@
 @prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 # PERSOONSVERMELDING
 <> a cbgo:PersonObservation ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
-    pnv:hasName [
-        a pnv:PersonName ;
-        pnv:literalName "DEN PRINSCHE DORANGE" ;
-    ] ;
+    schema:name "DEN PRINSCHE DORANGE" ;
     schema:deathDate "DEN TIENDEN IVLI" ;
     schema:deathPlace "DELFT" ;
     cbgo:hasAge "51" .

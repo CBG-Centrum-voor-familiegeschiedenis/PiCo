@@ -1,30 +1,30 @@
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
+@prefix pnv:    <https://w3id.org/pnv#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix cbgo:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+
+@prefix dl:     <https://example.com/dwarsliggers/ind/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+
 # PERSOONSVERMELDING
 dl:jaarboekje105 a cbgo:PersonObservation ;
     prov:hadPrimarySource nha:jaarboekje13-p299 ;
-    pnv:hasName [
+    schema:name "Bos, A." ;
+    pnv:additionalName [
         a pnv:PersonName ;
-        pnv:literalName "Bos, A." ;
-        pnv:baseSurname "Bos" ;
         pnv:initials "A." ;
+        pnv:literalName "Bos, A."
     ] ;
     schema:address "Eendrachtstraat 3" ;
     dl-ont:bestuurderVan "Vereeniging de Dageraad" ;
     dl-ont:functie "secretaris" .
 
-nha:jaarboekje13-p299 a cbgo:Document ;
+nha:jaarboekje13-p299 a schema:ArchiveComponent ;
     schema:additionalType cbgt:boekpagina ;
     schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
