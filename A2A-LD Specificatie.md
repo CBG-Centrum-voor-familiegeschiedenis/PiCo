@@ -1,5 +1,5 @@
 
-# A2A-LD
+# PiCo
 De volgende generatie uitwisseling van persoonsinformatie\
 Versie 1.0\
 Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandhuis
@@ -7,24 +7,31 @@ Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandh
 ## Inleiding
 
 ### Samenvatting
-A2A-LD is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek geidentificeerde personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën ([Schema.org](https://schema.org/), [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) en [PROV-O](https://www.w3.org/TR/prov-o/)). Daaraan wordt een beperkt aantal eigen properties toegevoegd. Geïnspireerd op [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) is A2A-LD gebaseerd op vermeldingen van personen in bronnen. Van één of meer persoonsvermeldingen kan een uniek identificeerbaar persoon gereconstrueerd worden.
+PiCo is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek geidentificeerde personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën:
+* [Schema.org](https://schema.org/) wordt zo veel mogelijk gebruikt voor de klassen en eigenschappen 
+* [BIO](https://vocab.org/bio/) wordt gebruikt voor een aantal life events, zoals een huwelijk of echtscheiding 
+* [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) wordt optioneel gebruikt voor uitgebreide persoonsnamen
+* [PROV-O](https://www.w3.org/TR/prov-o/) wordt gebruikt voor informatie over de totstandkoming van persoonsreconstructies 
+
+
+Daaraan wordt een beperkt aantal eigen properties toegevoegd. Geïnspireerd op [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) is PiCo gebaseerd op vermeldingen van personen in bronnen. Van één of meer persoonsvermeldingen kan een uniek identificeerbaar persoon gereconstrueerd worden.
 
 ### Inleiding
-A2A-LD is ontwikkeld en wordt beheerd door het CBG voor het beschrijven van haar eigen collecties en als nieuwe standaard voor het aanleveren van data aan [WieWasWie](https://wiewaswie.nl/).
+PiCo is ontwikkeld en wordt beheerd door het CBG voor het beschrijven van haar eigen collecties en als nieuwe standaard voor het aanleveren van data aan [WieWasWie](https://wiewaswie.nl/).
 
-Het primaire doel van het kennismodel is het kunnen zoeken naar voorouders. Persoonsreconstructies zijn binnen A2A-LD uniek identificeerbaar en gelinkt aan één of meerdere Persoonsvermeldingen. De ontwikkeling van A2A-LD was gewenst om de volgende redenen:
+Het primaire doel van het kennismodel is het kunnen zoeken naar voorouders. Persoonsreconstructies zijn binnen PiCo uniek identificeerbaar en gelinkt aan één of meerdere Persoonsvermeldingen. De ontwikkeling van PiCo was gewenst om de volgende redenen:
 * Nieuwe technieken stellen ons in staat data van hogere kwaliteit af te dwingen, waardoor nieuwe toepassingen mogelijk worden, zoals het geautomatiseerd maken van uniek identificeerbare personen.
 * Het CBG wil graag aansluiten bij de mogelijkheden van Linked Data zoals deze door het erfgoed is omarmd;
 * Linked Data maakt de data makkelijker uitbreidbaar en toepasbaar in andere contexten;
 * De toepassing van A2A bij archiefinstellingen bleek bij een aantal nieuwe bronnen en toepassingen alleen mogelijk met een (te) ruime interpretatie van de standaard;
 
-A2A-LD is de beoogde opvolger van A2A. Het wijkt op een aantal punten af van A2A:
-* A2A kent alleen persoonsvermeldingen (in A2A ‘personen’ genoemd), waar A2A-LD ook uniek identificeerbare personen kent;
-* A2A maakt gebruik van eigen woordenlijsten voor bijvoorbeeld rollen of documentsoorten. A2A-LD maakt zo veel mogelijk gebruik van bestaande thesauri en ontologieën, waardoor het koppelen met andere datasets wordt vereenvoudigd;
-* A2A-LD maakt onderscheid tussen relaties en rollen. In A2A worden beiden vastgelegd in het veld Relatie. Een Rol in A2A-LD beschrijft de rol van een persoonsvermelding op de bron. Een Relatie beschrijft de relatie tussen twee personen.
-* A2A-LD kent geen Gebeurtenissen, waar deze in A2A wel voorkomen. Het beschrijven van gebeurtenissen (zoals een huwelijk of een geboorte) is geen doel van de ontologie. Het bleek daarom niet nodig om gebeurtenis als aparte entiteit op te nemen. Bovendien kunnen persoonsvermeldingen lang niet altijd gekoppeld worden aan een gebeurtenis. 
-* In A2A-LD kan metadata worden vastgelegd over links tussen personen of persoonsvermeldingen. Bijvoorbeeld: “Op basis van bron B1 stellen we dat de persoonsvermeldingen PV1 en PV2 beiden horen bij persoon P1.” Of: “Op basis van bron B2 stellen we dat persoon P1 de vader is van persoon P2”.
-* Net als alle andere linked-data ontologieën is A2A-LD uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
+PiCo is de beoogde opvolger van A2A. Het wijkt op een aantal punten af van A2A:
+* A2A kent alleen persoonsvermeldingen (in A2A ‘personen’ genoemd), waar PiCo ook uniek identificeerbare personen kent;
+* A2A maakt gebruik van eigen woordenlijsten voor bijvoorbeeld rollen of documentsoorten. PiCo maakt zo veel mogelijk gebruik van bestaande thesauri en ontologieën, waardoor het koppelen met andere datasets wordt vereenvoudigd;
+* PiCo maakt onderscheid tussen relaties en rollen. In A2A worden beiden vastgelegd in het veld Relatie. Een Rol in PiCo beschrijft de rol van een persoonsvermelding op de bron. Een Relatie beschrijft de relatie tussen twee personen.
+* PiCo kent geen Gebeurtenissen, waar deze in A2A wel voorkomen. Het beschrijven van gebeurtenissen (zoals een huwelijk of een geboorte) is geen doel van de ontologie. Het bleek daarom niet nodig om gebeurtenis als aparte entiteit op te nemen. Bovendien kunnen persoonsvermeldingen lang niet altijd gekoppeld worden aan een gebeurtenis. 
+* In PiCo kan metadata worden vastgelegd over links tussen personen of persoonsvermeldingen. Bijvoorbeeld: “Op basis van bron B1 stellen we dat de persoonsvermeldingen PV1 en PV2 beiden horen bij persoon P1.” Of: “Op basis van bron B2 stellen we dat persoon P1 de vader is van persoon P2”.
+* Net als alle andere linked-data ontologieën, is PiCo uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
 
 ## Drie concepten
 Om data over personen in bronnen te kunnen uitwisselen maken we onderscheid tussen drie verschillende concepten: een Persoonsvermelding, een Persoonsreconstructie en een Document.
@@ -60,7 +67,7 @@ In een akte worden vaak ook de onderlinge relaties tussen de Personen opgenomen.
 In A2A werden relaties vaak als de eigenschap “rol” gezien. Zo kun je zeggen dat iemand bij het huwelijk de rol van “moeder van de bruid” heeft. Er is dan een relatie tussen de Persoonsvermelding (van de moeder van de bruid) en de bron (de huwelijksakte). Maar het is correcter om deze informatie weer te geven door een relatie te definiëren tussen de personen die zijn vermeld. De eigenschap ‘rol’ blijft dan beperkt tot termen die de verhouding uitdrukken tussen de persoon en de bron. Zo is de broer van de bruidegom (een relatie) de getuige (rol) bij het huwelijk. Het is niet noodzakelijk om voor elke Persoonsvermelding een rol of een relatie vast te leggen.
 
 ### Eigenschappen van Documenten
-Documenten waarop onderzoek naar personen is gebaseerd, kunnen zich voordoen in veel vormen. Onze ontologie hoeft daarin niet voorzien: erfgoedbeherende instellingen kunnen daarin keuzes maken die het beste passen bij hun domein. Voor de uitwisseling die nodig is voor A2A-LD toepassingen schrijven we daarom voor dat instellingen hun data over Documenten ook met een algemene samengestelde bronvermelding publiceren. Een Huwelijksakte is dan bijvoorbeeld als volgt omschreven: “BS Huwelijk Haarlem, 11 november 1885, aktenummer 321”. Natuurlijk bestaat deze omschrijving uit verschillende elementen die je als eigenschappen van het document kunt onderscheiden, maar daarvoor kan de erfgoedinstelling een domein-specifieke standaard inzetten, en schrijft A2A-LD geen structuur voor.
+Documenten waarop onderzoek naar personen is gebaseerd, kunnen zich voordoen in veel vormen. Onze ontologie hoeft daarin niet voorzien: erfgoedbeherende instellingen kunnen daarin keuzes maken die het beste passen bij hun domein. Voor de uitwisseling die nodig is voor PiCo toepassingen schrijven we daarom voor dat instellingen hun data over Documenten ook met een algemene samengestelde bronvermelding publiceren. Een Huwelijksakte is dan bijvoorbeeld als volgt omschreven: “BS Huwelijk Haarlem, 11 november 1885, aktenummer 321”. Natuurlijk bestaat deze omschrijving uit verschillende elementen die je als eigenschappen van het document kunt onderscheiden, maar daarvoor kan de erfgoedinstelling een domein-specifieke standaard inzetten, en schrijft PiCo geen structuur voor.
 
 Het is bij een Document wel mogelijk (en gewenst) om een link op te nemen naar het record bij de erfgoedbeherende instelling. Dit kan bijvoorbeeld een weblink zijn naar het inventarisnummer. Deze link is bij voorkeur een permalink.
 
@@ -70,12 +77,12 @@ Zie [Bijlage 1](#1-eigenschappen-van-document) voor een overzicht van eigenschap
 Persoonsvermeldingen hebben als eigenschap dat zij zijn overgenomen uit een bepaald Document. En Persoonsreconstructies hebben als eigenschap dat zij zijn gebaseerd op één of meer Persoonsvermeldingen.
 
 ## Ontologieën
-We maken zoveel mogelijk gebruik van classes en properties uit verschillende bestaande ontologieën, waarbij we proberen het aantal ontologieën zo laag mogelijk te houden. Daarmee houden we het gebruik zo eenvoudig mogelijk. Ook proberen we - om de toepassing van A2A-LD eenvoudig te houden, resources zonder eigen URI (blank nodes) zoveel mogelijk te voorkomen.
+We maken zoveel mogelijk gebruik van classes en properties uit verschillende bestaande ontologieën, waarbij we proberen het aantal ontologieën zo laag mogelijk te houden. Daarmee houden we het gebruik zo eenvoudig mogelijk. Ook proberen we - om de toepassing van PiCo eenvoudig te houden, resources zonder eigen URI (blank nodes) zoveel mogelijk te voorkomen.
 
 Als het nodig is, zullen we eigenschappen uit de gebruikte ontologieën uitbreiden met extra kenmerken. Bijvoorbeeld: de relatie schema:spouse is in Schema.org niet als wederkerig gedefinieerd. Dat willen we wel. Daarom voegen we in de ontologie deze wederkerigheid toe.
 
 ### CBG-ontologie
-De basisstructuur van A2A-LD is geïnspireerd door de ontologie Reconstructions and Observations in Archival Resources (ROAR). In deze ontologie zijn de concepten Persoonsvermelding (roar:PersonObservation) en Persoonsreconstructie (roar:PersonReconstruction) gedefinieerd. We hebben ervoor gekozen voor deze concepten zelf classes te definiëren in een eigen ontologie, om de complexiteit van de verschillende definities te beperken.
+De basisstructuur van PiCo is geïnspireerd door de ontologie Reconstructions and Observations in Archival Resources (ROAR). In deze ontologie zijn de concepten Persoonsvermelding (roar:PersonObservation) en Persoonsreconstructie (roar:PersonReconstruction) gedefinieerd. We hebben ervoor gekozen voor deze concepten zelf classes te definiëren in een eigen ontologie, om de complexiteit van de verschillende definities te beperken.
 
 Behalve de definities van Persoonsvermelding en Persoonsreconstructie, onderkennen we enkele eigenschappen die niet beschikbaar zijn in een van de door ons gekozen ontologieën. We missen een eigenschap voor leeftijd, geloof, rol en overleden. Deze eigenschappen worden daarom in de eigen ontologie vastgelegd.
 
@@ -95,12 +102,12 @@ Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebas
 
 ## Termen
 ### Rollen en Relaties
-Relaties tussen personen worden vastgelegd met behulp van eigenschappen, waarin de aard van de relatie is vastgelegd (bijvoorbeeld schema:parent). Rollen daarentegen zijn eigenschappen van de persoonsvermelding in de context van de bron waarin de vermelding is aangetroffen. Onderdeel van A2A-LD is een lijst van mogelijke rollen. Hierin staan onder meer overledene, getuige, aangever, testateur, koper, verkoper en hoofd van het gezin.
+Relaties tussen personen worden vastgelegd met behulp van eigenschappen, waarin de aard van de relatie is vastgelegd (bijvoorbeeld schema:parent). Rollen daarentegen zijn eigenschappen van de persoonsvermelding in de context van de bron waarin de vermelding is aangetroffen. Onderdeel van PiCo is een lijst van mogelijke rollen. Hierin staan onder meer overledene, getuige, aangever, testateur, koper, verkoper en hoofd van het gezin.
 
 Voor een overzicht van de mogelijke rollen, zie [Bijlage 5](#5-terminologiebron-voor-rollen). Voor een overzicht van de mogelijke relaties tussen Persoonsvermeldingen onderling of Persoonsreconstructies onderling, zie [Bijlage 4](#4-relaties-tussen-persoonsvermeldingen--persoonsreconstructies).
 
 ### Soorten documenten
-Het is noodzakelijk om bij een Document aan te geven wat voor soort document de bron is. De waardes bij deze eigenschap zijn in A2A-LD gestandaardiseerd in een voorgeschreven terminologiebron die als onderdeel van A2A-LD wordt ontwikkeld. Hierin staan ten minste huwelijksakte, geboorteakte, overlijdensakte, bevolkingsregistratie, notariële akte, doopinschrijving, begrafenisregistratie en trouwregistratie.
+Het is noodzakelijk om bij een Document aan te geven wat voor soort document de bron is. De waardes bij deze eigenschap zijn in PiCo gestandaardiseerd in een voorgeschreven terminologiebron die als onderdeel van PiCo wordt ontwikkeld. Hierin staan ten minste huwelijksakte, geboorteakte, overlijdensakte, bevolkingsregistratie, notariële akte, doopinschrijving, begrafenisregistratie en trouwregistratie.
 
 Om deze documenttypes vast te leggen maakt deze terminologiebron gebruik van de ontologie Simple Knowledge Organization Standard (SKOS).
 
@@ -110,7 +117,7 @@ Voor een overzicht van de mogelijke documenttypen, [zie Bijlage 6](#6-terminolog
 Naast dit document zijn de volgende documenten van belang voor de nieuwe richtlijn:
 * De ontologie zelf, uitgewerkt in Turtle.
 * Terminologiebronnen voor Rollen, Relaties en Documentsoorten in SKOS-formaat.
-* Uitwerking in SHACL. Voor nadere (technische) specificatie en validatie van datasets in A2A-LD.
+* Uitwerking in SHACL. Voor nadere (technische) specificatie en validatie van datasets in PiCo.
 
 Deze documenten zijn nog in ontwikkeling.
 
@@ -136,7 +143,7 @@ Eigenschappen van een Document:
 ### 2. Eigenschappen van Persoonsvermelding
 Class: cbgo:PersonObservation
 
-Een persoonsvermelding moet altijd gekoppeld zijn aan een document via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van schema:Person krijgen. A2A-LD voegt daar een paar eigenschappen aan toe uit de CBG-Ontologie.
+Een persoonsvermelding moet altijd gekoppeld zijn aan een document via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van schema:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de CBG-Ontologie.
 
 Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 
@@ -160,7 +167,9 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 * cbgo:hasRole
 * cbgo:hasAge
 * cbgo:hasReligion
-
+* cbgo:hasMarriage
+  * schema:date
+  * schema:location
 
 ### 3. Eigenschappen van Persoonsreconstructie
 Class: cbgo:PersonReconstruction
@@ -182,17 +191,45 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * schema:sibling (broer/zus)
 * schema:knows (kent, de meest generieke relatie)
 * schema:relatedTo (de meest generieke familierelatie)
-* cbgo:previousPartner (eerdere partner)
-* cbgo:wid (weduwe/weduwnaar van)
-* cbgo:godparent (peetouder)
 * cbgo:grandparent (grootouder)
+* cbgo:grandchild (kleinkind)
+* cbgo:godparent (peetouder)
+* cbgo:godchild (petekind)
+* cbgo:previousPartner (eerdere partner)
+* cbgo:wid (weduwe/weduwnaar)
+* cbgo:stepparent (stiefouder)
+* cbgo:stepchild (stiefkind) 
+* cbgo:child-in-law (schoonkind)
+* cbgo:parent-in-law (schoonouder)
+* cbgo:half-sibbling (halfbroer/halfzus)
+* cbgo:step-sibling (stiefbroer/stiefzus)
+* cbgo:sibling-in-law (schoonbroer/schoonzus)
+* cbgo:greatGrandparent (overgrootouder)
+* cbgo:greatGrandchild (overgrootkind)
+* cbgo:fosterParent (pleegouder)
+* cbgo:fosterChild (pleegkind)
+* cbgo:stepchild-in-law (tiefschoonkind)
+* cbgo:stepparent-in-law (stiefschoonouder)
+* cbgo:grandparent-in-law (schoongrootouder)
+* cbgo:grandchild-in-law (schoonkleinkind)
+
+# TODO Deze relaties toevoegen (genderneutrale variant?)
+* cbgo:uncle (oom)
+* cbgo:aunt (tante)
+* Nephew 
+* Niece 
+* Cousin 
+* Cousin-in-law 
+* Niece-in-law
+* Nephew-in-law
+* legitimizedChild
 
 ### 5. Terminologiebron voor Rollen
 Een persoonsvermelding kan de volgende rollen hebben op een document:
 
 * deceased (overledene)
 * birthling (boreling)
-* spouse (huwelijkspartner)
+* huwelijkspartner (spouse)
 * traveler (reiziger)
 * baptized (dopeling)
 * employee (werknemer, personeelslid)
@@ -232,7 +269,7 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * ??? (geconstitueerde)
 * ??? (rechthebbende)
 * skipper (schipper)
-* witness (getuige)
+* getuige (witness)
 * registered (geregistreerde) 
 
 ### 6. Terminologiebron voor Documenttypes
@@ -243,18 +280,22 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * BS geboorte
 * BS huwelijk
 * BS overlijden
-* DTB overig
 * bevolkingsregister
 * memories van successie
 * notariële archieven
+* onroerend goed
 * familieadvertenties
-* militaire registers
+* militairen
+* divers
+* fiscaal en financieel
 * rechterlijke archieven
-* vestigings- en vertrekregisters
+* DTB overig
+* vestiging en vertrek
+* beroep en bedrijf
+* Onderwijs
+* sociale zorg
 * bidprentjes
 * slavernijbronnen
-
-#### ???
 * Tweede Wereldoorlog
 * misdaad en straf
 * beroep en bedrijf
@@ -262,3 +303,6 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * sociale zorg
 * fiscaal en financieel
 * onroerend goed
+
+
+[^1]: De [ROAR ontologie](https://leonvanwissen.nl/vocab/roar/docs/) is ontwikkeld door Leon van Wissen en Menno den Engelse.
