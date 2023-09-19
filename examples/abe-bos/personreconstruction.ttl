@@ -16,13 +16,13 @@ dl:ind247 a cbgo:PersonReconstruction ;
     schema:gender schema:Male ;
     schema:hasOccupation [ 
         rdf:value "agent van politie" ;
-        schema:endTime "1892"^^xsd:gYear 
+        schema:endDate "1892"^^xsd:gYear 
     ], [
         rdf:value "locomotief bankwerker" ;
-        schema:startTime "1892"^^xsd:gYear 
+        schema:startDate "1892"^^xsd:gYear 
     ], [
         rdf:value "zonder" ;
-        schema:endTime "1954"^^xsd:gYear
+        schema:endDate "1954"^^xsd:gYear
     ] ;
     schema:birthPlace "Joure, gemeente Haskerland" ; 
     schema:birthDate "1858-01-21"^^xsd:date ;
