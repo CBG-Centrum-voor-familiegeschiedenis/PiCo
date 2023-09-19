@@ -1,6 +1,6 @@
 # Version: 20230714
 
-@prefix : <https://data.cbg.nl/ontology#> .
+@prefix : <https://data.cbg.nl/pico#> .
 
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,7 +11,7 @@
 @prefix schema: <http://schema.org/> .
 
 # ontology
-<https://data.cbg.nl/ontology> a owl:Ontology .
+<https://data.cbg.nl/pico> a owl:Ontology .
 
 # Basic classes
 :Person a owl:Class ;

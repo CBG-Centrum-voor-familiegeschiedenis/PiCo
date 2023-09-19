@@ -4,7 +4,7 @@
 @prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix pico:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/pico#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .

@@ -19,7 +19,7 @@ This example contains several sources with data about and around one person. The
 - cbgt:hoofd
 - cbgt:huwelijkspartij
 
-### Ontology from examples (https://data.cbg.nl/ontology#)
+### Ontology from examples (https://data.cbg.nl/pico#)
 
 - pico:PersonObservation
 - pico:PersonReconstruction

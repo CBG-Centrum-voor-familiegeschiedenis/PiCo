@@ -1,6 +1,6 @@
 @prefix schema: <http://schema.org/> .
 
-@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/pico#> .
 
 # PERSOONSVERMELDING
 <> a cbgo:PersonObservation ;

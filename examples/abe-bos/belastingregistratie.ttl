@@ -3,7 +3,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix pico:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/pico#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
