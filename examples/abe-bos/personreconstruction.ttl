@@ -4,12 +4,12 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 
-dl:ind247 a cbgo:PersonReconstruction ;
+dl:ind247 a pico:PersonReconstruction ;
     schema:name "Abe Bos" ;
     schema:familyName "Bos" ;
     schema:givenName "Abe" ;
@@ -29,8 +29,8 @@ dl:ind247 a cbgo:PersonReconstruction ;
     schema:deathPlace "Haarlem" ;
     schema:deathDate "1954-02-28"^^xsd:date ;
     schema:spouse [ rdf:value dl:ind247Spouse ;
-                       cbgo:startDate "1885-11-11"^^xsd:date ;
-                       cbgo:endDate "1926"^^xsd:gYear ] ;
+                       schema:startDate "1885-11-11"^^xsd:date ;
+                       schema:endDate "1926"^^xsd:gYear ] ;
     prov:wasDerivedFrom 
             dl:bevreg509, 
             dl:belkoh78, 
@@ -40,7 +40,7 @@ dl:ind247 a cbgo:PersonReconstruction ;
             dl:NL-HaCBG_1755_0341_142_person1 ;
     prov:wasGeneratedBy dl:recon_activity01 .
 
-dl:ind247Spouse a cbgo:PersonReconstruction ;
+dl:ind247Spouse a pico:PersonReconstruction ;
     schema:name "Anna Maria Koppen" ;
     schema:familyName "Koppen" ;
     schema:givenName "Anna" ;

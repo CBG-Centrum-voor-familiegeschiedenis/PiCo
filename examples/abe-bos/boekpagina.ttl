@@ -3,7 +3,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/pico#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
@@ -12,7 +12,7 @@
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 # PERSOONSVERMELDING
-dl:jaarboekje105 a cbgo:PersonObservation ;
+dl:jaarboekje105 a pico:PersonObservation ;
     prov:hadPrimarySource nha:jaarboekje13-p299 ;
     schema:name "Bos, A." ;
     pnv:additionalName [

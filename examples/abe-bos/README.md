@@ -21,13 +21,13 @@ This example contains several sources with data about and around one person. The
 
 ### Ontology from examples (https://data.cbg.nl/ontology#)
 
-- cbgo:PersonObservation
-- cbgo:PersonReconstruction
-- cbgo:Document
+- pico:PersonObservation
+- pico:PersonReconstruction
+- pico:Document
 
-- cbgo:hasRole
-- cbgo:hasReligion
-- cbgo:hasAge
+- pico:hasRole
+- pico:hasReligion
+- pico:hasAge
 
 
 

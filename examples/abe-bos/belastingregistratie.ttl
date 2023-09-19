@@ -3,7 +3,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
@@ -13,7 +13,7 @@
 
 
 # PERSOONSVERMELDING
-dl:belkoh78 a cbgo:PersonObservation ;
+dl:belkoh78 a pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1503_537_IVa_63 ;
     schema:name "Bos, A." ;
     schema:familyName "Bos" ;

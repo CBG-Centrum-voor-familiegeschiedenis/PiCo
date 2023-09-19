@@ -4,7 +4,7 @@
 @prefix bio: <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix cbgo:   <https://data.cbg.nl/ontology#> .
+@prefix pico:   <https://data.cbg.nl/ontology#> .
 @prefix cbgt:   <https://data.cbg.nl/terms#> .
 
 @prefix cbg:    <https://cbg.nl/> .
@@ -15,7 +15,7 @@
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 # PERSOONSVERMELDINGEN
-dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
+dl:NL-HaCBG_1755_0341_142_person1 a pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     schema:name "Abe Bos" ;
     schema:familyName "Bos" ;
@@ -30,7 +30,7 @@ dl:NL-HaCBG_1755_0341_142_person1 a cbgo:PersonObservation ;
     schema:parent dl:NL-HaCBG_1755_0341_142_person4 ; 
     schema:spouse dl:NL-HaCBG_1755_0341_142_person2 .
 
-dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
+dl:NL-HaCBG_1755_0341_142_person2 a pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     schema:name "Anna Maria Koppen" ;
     schema:familyName "Koppen" ;
@@ -40,7 +40,7 @@ dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     schema:deathPlace "Detroit, VSA" ;
     schema:deathDate "1926"^^xsd:gYear .
 
-[]
+dl:NL-HaCBG_1755_0341_142_event1
  a bio:Marriage ;
  prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
  bio:date "1885-11-11"^^xsd:date ;
@@ -49,7 +49,7 @@ dl:NL-HaCBG_1755_0341_142_person2 a cbgo:PersonObservation ;
     dl:NL-HaCBG_1755_0341_142_person1,
     dl:NL-HaCBG_1755_0341_142_person2 .
 
-dl:NL-HaCBG_1755_0341_142_person3 a cbgo:PersonObservation ;
+dl:NL-HaCBG_1755_0341_142_person3 a pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     schema:name "Sjouke Abes Bos" ;
     schema:familyName "Bos" ;
@@ -60,7 +60,7 @@ dl:NL-HaCBG_1755_0341_142_person3 a cbgo:PersonObservation ;
         pnv:patronym "Abes" ;
     ] .
 
-dl:NL-HaCBG_1755_0341_142_person4 a cbgo:PersonObservation ;
+dl:NL-HaCBG_1755_0341_142_person4 a pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     schema:name "Geertruida van der Wijk" ;
     schema:familyName "van der Wijk" ;
