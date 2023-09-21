@@ -29,7 +29,7 @@ PiCo is de beoogde opvolger van A2A. Het wijkt op een aantal punten af van A2A:
 * A2A kent alleen persoonsvermeldingen (in A2A ‘personen’ genoemd), waar PiCo ook uniek identificeerbare personen kent;
 * A2A maakt gebruik van eigen woordenlijsten voor bijvoorbeeld rollen of documentsoorten. PiCo maakt zo veel mogelijk gebruik van bestaande thesauri en ontologieën, waardoor het koppelen met andere datasets wordt vereenvoudigd;
 * PiCo maakt onderscheid tussen relaties en rollen. In A2A worden beiden vastgelegd in het veld Relatie. Een Rol in PiCo beschrijft de rol van een persoonsvermelding op de bron. Een Relatie beschrijft de relatie tussen twee personen.
-* In PiCo spelen Gebeurtenis een minder prominente rol. Het beschrijven van gebeurtenissen is geen doel van de ontologie. Voor het registreren van bijvoorbeeld een huwelijk worden wel Gebeurtenissen gebruikt, maar ze zijn niet langer verplicht.
+* In PiCo spelen Gebeurtenis een minder prominente rol. Het beschrijven van gebeurtenissen is geen doel van de ontologie. Voor het registreren van bijvoorbeeld een huwelijk worden wel Gebeurtenissen gebruikt, maar ze zijn niet langer noodzakelijk zoals dat het geval was in A2A.
 * In PiCo kan metadata worden vastgelegd over links tussen personen of persoonsvermeldingen. Bijvoorbeeld: “Op basis van bron B1 stellen we dat de persoonsvermeldingen PV1 en PV2 beiden horen bij persoon P1.” Of: “Op basis van bron B2 stellen we dat persoon P1 de vader is van persoon P2”.
 * Net als alle andere linked-data ontologieën, is PiCo uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
 
@@ -39,13 +39,13 @@ Om data over personen in bronnen te kunnen uitwisselen maken we onderscheid tuss
 ### Persoonsvermelding
 Een Persoonsvermelding is de weergave van hoe een persoon is opgenomen in een oorspronkelijke bron. Zo worden er in een huwelijksakte soms wel tien personen vermeld: naast de bruid en bruidegom ook de ouders van het echtpaar en de getuigen. 
 
-Bij de Persoonsvermeldingen wordt data zo veel mogelijk opgenomen zoals deze in de bron is weergegeven, dus met de leeftijd, het beroep en de spelling van de naam van de persoon zoals in de akte is opgenomen. Het model staat toe dat bij het registreren van een Persoonsvermelding keuzes gemaakt worden. De maker van de Persoonsvermelding kan bijvoorbeeld wel de datum opnemen volgens de ISO-standaard, ook al is deze niet in deze vorm op de akte aanwezig.
+Bij de Persoonsvermeldingen wordt data zo veel mogelijk opgenomen zoals deze in de bron is weergegeven, dus met de leeftijd, het beroep en de spelling van de naam van de persoon zoals in de akte is opgenomen. Het model staat toe dat bij het registreren van een Persoonsvermelding keuzes gemaakt worden. De maker van de Persoonsvermelding kan bijvoorbeeld wel de datum opnemen volgens de ISO-standaard (bijvoorbeeld: '1802-07-29'), ook al is deze niet in deze vorm op de akte aanwezig (bijvoorbeeld: '28 thermidor X').
 
 ### Persoonsreconstructie
 Eén of meer Persoonsvermeldingen kunnen worden gecombineerd tot een uniek identificeerbaar persoon. We noemen dit een Persoonsreconstructie. Deze kan zowel geautomatiseerd worden geconstrueerd of door (meer klassiek) genealogisch onderzoek. Bij het maken van een Persoonsreconstructie kan de onderzoeker data preciezer hebben gemaakt, bijvoorbeeld door plaatsnamen te relateren aan gestandaardiseerde plaatsnaamlijsten (zoals Geonames). Bij elke Persoonsreconstructie moeten verwijzingen zijn opgenomen naar de Persoonsvermeldingen waarop deze is gebaseerd.
 
 ### Document
-Elke Persoonsvermelding is aangetroffen in een Document. Behalve formele aktes en registraties kunnen dit ook boeken of persoonlijke documenten zijn, zoals brieven, dagboeken of e-mails. Van een Document is altijd weergegeven in welke erfgoedinstelling het Document wordt bewaard en hopelijk ook een link naar het webadres waarmee het Document online beschikbaar is gesteld.
+Elke Persoonsvermelding is aangetroffen in een Document. Behalve formele aktes en registraties kunnen dit ook boeken of persoonlijke documenten zijn, zoals brieven, dagboeken of e-mails. Van een Document is altijd weergegeven in welke erfgoedinstelling het Document wordt bewaard en hopelijk ook een link naar het webadres waarmee het Document online beschikbaar is gesteld. In PiCo wordt het type document met het juiste schema-type aangeduid, vaak schema:ArchiveComponent, maar soms ook schema:Book of zelfs schema:Painting.
 
 ## Eigenschappen van de concepten
 De concepten die in het voorgaande hoofdstuk zijn gedefinieerd hebben verschillende eigenschappen die we willen vastleggen.
@@ -55,19 +55,19 @@ De personen in Persoonsvermeldingen en Persoonsreconstructies hebben vele eigens
 
 Personen werden in het verleden vooral geïdentificeerd door hun naam, hun beroep, woonplaats, geloof en informatie over hun geboorte. Ook hun relaties ten opzichte van anderen zijn van belang; deze worden uitgewerkt in de volgende paragraaf. Deze eigenschappen komen daarom consequent terug in veel van de bronnen waarop onderzoek naar personen mogelijk wordt.
 
-Een Persoonsvermelding is een vermelding van een persoon op een bron en moet daarom altijd een relatie hebben met een Document. Hiervoor wordt de eigenschap prov:hadPrimarySource gebruikt.
+Een Persoonsvermelding is een vermelding van een persoon op een bron en *moet* daarom altijd een relatie hebben met een Document. Hiervoor wordt de eigenschap prov:hadPrimarySource gebruikt.
 
-Een Persoonsreconstructie komt altijd voort uit één of meerdere Persoonsvermeldingen en moet daarom altijd een relatie hebben met minstens één Persoonsvermelding. Hiervoor wordt de eigenschap prov:wasDerivedFrom gebruikt. Het gebruik van de eigenschap prov:wasGeneratedBy, om aan te geven op welke manier de Persoonsreconstructie tot stand is gekomen, wordt sterk aangeraden.
+Een Persoonsreconstructie komt altijd voort uit één of meerdere Persoonsvermeldingen en *moet* daarom altijd een relatie hebben met minstens één Persoonsvermelding. Hiervoor wordt de eigenschap prov:wasDerivedFrom gebruikt. Het gebruik van de eigenschap prov:wasGeneratedBy, om aan te geven op welke manier de Persoonsreconstructie tot stand is gekomen, wordt sterk aangeraden.
 
 Zie [Bijlage 2](#2-eigenschappen-van-persoonsvermelding) voor een overzicht van de eigenschappen van Persoonsvermeldingen en [Bijlage 3](#3-eigenschappen-van-persoonsreconstructie) voor een overzicht van de eigenschappen van Persoonsreconstructies.
 
 ### Relaties tussen personen en rollen van personen op een bron
 In een akte worden vaak ook de onderlinge relaties tussen de Personen opgenomen. Bij de Persoonsvermelding kunnen deze relaties ook worden weergegeven en getypeerd. Zo kan er in een huwelijksakte een ouderrelatie zijn tussen de bruid en haar moeder.
 
-In A2A werden relaties vaak als de eigenschap “rol” gezien. Zo kun je zeggen dat iemand bij het huwelijk de rol van “moeder van de bruid” heeft. Er is dan een relatie tussen de Persoonsvermelding (van de moeder van de bruid) en de bron (de huwelijksakte). Maar het is correcter om deze informatie weer te geven door een relatie te definiëren tussen de personen die zijn vermeld. De eigenschap ‘rol’ blijft dan beperkt tot termen die de verhouding uitdrukken tussen de persoon en de bron. Zo is de broer van de bruidegom (een relatie) de getuige (rol) bij het huwelijk. Het is niet noodzakelijk om voor elke Persoonsvermelding een rol of een relatie vast te leggen.
+In A2A werden relaties vaak als de eigenschap “rol” gezien. Zo kun je zeggen dat iemand bij het huwelijk de rol van “moeder van de bruid” heeft. Er is dan een relatie tussen de Persoonsvermelding (van de moeder van de bruid) en de bron (de huwelijksakte). Maar het is correcter om deze informatie weer te geven door een relatie te definiëren tussen de personen die zijn vermeld. De eigenschap ‘rol’ blijft dan beperkt tot termen die de verhouding uitdrukken tussen de persoon en de bron. Zo is de broer van de bruidegom (een relatie) de getuige (rol) bij het huwelijk. Het is niet verplicht om voor elke Persoonsvermelding een rol of een relatie vast te leggen.
 
 ### Eigenschappen van Documenten
-Documenten waarop onderzoek naar personen is gebaseerd, kunnen zich voordoen in veel vormen. Onze ontologie hoeft daarin niet voorzien: erfgoedbeherende instellingen kunnen daarin keuzes maken die het beste passen bij hun domein. Voor de uitwisseling die nodig is voor PiCo toepassingen schrijven we daarom voor dat instellingen hun data over Documenten ook met een algemene samengestelde bronvermelding publiceren. Een Huwelijksakte is dan bijvoorbeeld als volgt omschreven: “BS Huwelijk Haarlem, 11 november 1885, aktenummer 321”. Natuurlijk bestaat deze omschrijving uit verschillende elementen die je als eigenschappen van het document kunt onderscheiden, maar daarvoor kan de erfgoedinstelling een domein-specifieke standaard inzetten, en schrijft PiCo geen structuur voor.
+Documenten waarop onderzoek naar personen is gebaseerd, kunnen zich voordoen in veel vormen. Onze ontologie hoeft daarin niet te voorzien: erfgoedbeherende instellingen kunnen daarin keuzes maken die het beste passen bij hun domein. Voor de uitwisseling die nodig is voor PiCo toepassingen, schrijven we daarom voor dat instellingen hun data over Documenten ook met een algemene samengestelde bronvermelding publiceren. Een Huwelijksakte is dan bijvoorbeeld als volgt omschreven: “BS Huwelijk Haarlem, 11 november 1885, aktenummer 321”. Natuurlijk bestaat deze omschrijving uit verschillende elementen die je als eigenschappen van het document kunt onderscheiden, maar daarvoor kan de erfgoedinstelling een domein-specifieke standaard inzetten, en schrijft PiCo geen structuur voor.
 
 Het is bij een Document wel mogelijk (en gewenst) om een link op te nemen naar het record bij de erfgoedbeherende instelling. Dit kan bijvoorbeeld een weblink zijn naar het inventarisnummer. Deze link is bij voorkeur een permalink.
 
@@ -90,7 +90,7 @@ Behalve de definities van Persoonsvermelding en Persoonsreconstructie, onderkenn
 De structuur van namen in de Nederlandstalige cultuur wordt vastgelegd met behulp van de Person Name Vocabulary ([PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/)). Daarbij kan een pnv:PersonName - als de bron het toestaat - opgeknipt worden weergegeven met voornamen (pnv:givenName), tussenvoegsel (pnv:surnamePrefix) en achternaam (pnv:baseSurname). Om potentiële vergissingen in het opknippen te ondervangen is een pnv:literalName verplicht, waarin de gehele naam wordt opgenomen in zijn oorspronkelijke weergave op de bron.
 
 ### Schema.org - personen
-Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in [Schema.org](https://schema.org/). Het gaat daarbij onder meer om schema:birthDate, schema:birthPlace, schema:occupation en schema:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class schema:Person kunnen worden gebruikt. 
+Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in [Schema.org](https://schema.org/). Het gaat daarbij onder meer om schema:birthDate, schema:birthPlace, schema:hasOccupation en schema:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class schema:Person kunnen worden gebruikt. 
 
 In Schema.org zijn voor de relaties tussen personen onder meer schema:parent, schema:children en schema:spouse beschikbaar. Deze relaties zijn gender-neutraal. Het is daarom gewenst om ook de eigenschap schema:gender aan een persoon toe te voegen.
 
@@ -101,7 +101,7 @@ Ook voor documenten kunnen eigenschappen worden gebruikt uit [Schema.org](https:
 Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebaseerd, wordt de property prov:wasDerivedFrom voorgeschreven. Deze is afkomstig uit de [PROV-O](https://www.w3.org/TR/prov-o/) ontologie.
 
 ### BIO
-Voor een aantal life events die meerdere keren kunnen voorkomen in een leven, zoals huwelijken en echtscheidingen, wordt de [BIO](https://vocab.org/bio/) ontologie gebruikt. Geboortedatum en -plaats en overlijdensdatum en -plaats worden omwille van de eenvoud uit schema gehaald. De stelregel hierbij is: waar mogelijk gebruiken we schema.org. Wanneer dit niet goed mogelijk is, bijvoorbeeld omdat je meer gegevens wil vastleggen over een Gebeurtenis, of wanneer schema.org geen geschikte property heeft voor een specifieke gebeurtenis, gebruiken we BIO.  
+Voor een aantal life events die meerdere keren kunnen voorkomen in een leven, zoals huwelijken en echtscheidingen, wordt de [BIO](https://vocab.org/bio/) ontologie gebruikt. Geboortedatum en -plaats en overlijdensdatum en -plaats worden omwille van de eenvoud uit Schema.org gehaald. De stelregel hierbij is: waar mogelijk gebruiken we Schema.org. Wanneer dit niet goed mogelijk is, bijvoorbeeld omdat je meer gegevens wil vastleggen over een Gebeurtenis, of wanneer Schema.org geen geschikte property heeft voor een specifieke gebeurtenis, gebruiken we BIO.  
 
 ## Termen
 ### Rollen en Relaties
@@ -142,7 +142,7 @@ Eigenschappen van een Document:
   * schema:embedUrl
   * schema:thumbnail
 * schema:url
-* 
+
 ### 2. Eigenschappen van Persoonsvermelding
 Class: pico:PersonObservation
 

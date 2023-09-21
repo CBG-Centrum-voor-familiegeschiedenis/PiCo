@@ -36,7 +36,10 @@
     rdfs:label "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-# Properties - observation INdependent
+:deceased a rdf:Property ;
+    rdfs:label "overleden"@nl ;
+    rdfs:domain :PersonObservation .
+
 :hasReligion a rdf:Property ;
     rdfs:label "heeft religie"@nl ;
     rdfs:domain :Person .
