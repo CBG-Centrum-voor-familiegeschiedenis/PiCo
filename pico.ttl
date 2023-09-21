@@ -8,7 +8,7 @@
 
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 
 # ontology
 <https://data.cbg.nl/pico> a owl:Ontology .
