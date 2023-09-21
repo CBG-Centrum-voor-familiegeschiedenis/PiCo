@@ -127,7 +127,7 @@ Deze documenten zijn nog in ontwikkeling.
 ## Bijlages
 
 ### 1. Eigenschappen van Document
-Class: pico:Document
+Class: eg. schema:ArchiveComponent
 
 Eigenschappen van een Document:
 * schema:name
@@ -151,6 +151,9 @@ Een persoonsvermelding moet altijd gekoppeld zijn aan een document via de eigens
 Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 
 * prov:hadPrimarySource (verplicht)
+* schema:name
+* schema:familyName
+* schema:givenName
 * pnv:hasName
   * pnv:literalName
   * pnv:initials
@@ -201,15 +204,15 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * pico:stepchild (stiefkind) 
 * pico:child-in-law (schoonkind)
 * pico:parent-in-law (schoonouder)
-* pico:half-sibbling (halfbroer/halfzus)
-* pico:step-sibling (stiefbroer/stiefzus)
+* pico:half-sibling (halfbroer/halfzus)
+* pico:stepsibling (stiefbroer/stiefzus)
 * pico:sibling-in-law (schoonbroer/schoonzus)
-* pico:greatGrandparent (overgrootouder)
-* pico:greatGrandchild (overgrootkind)
+* pico:great-grandparent (overgrootouder)
+* pico:great-grandchild (overgrootkind)
 * pico:fosterParent (pleegouder)
 * pico:fosterChild (pleegkind)
-* pico:stepchild-in-law (tiefschoonkind)
 * pico:stepparent-in-law (stiefschoonouder)
+* pico:stepchild-in-law (stiefschoonkind)
 * pico:grandparent-in-law (schoongrootouder)
 * pico:grandchild-in-law (schoonkleinkind)
 * pico:uncle_aunt (oom/tante)
@@ -217,7 +220,7 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * pico:nephew_niece-in-law (stiefneef/stiefnicht (oomzegger/tantezegger))
 * pico:cousin (neef/nicht)
 * pico:cousin-in-law (stiefneef/stiefnicht)
-* pico:legitimizedChild (geligitimeerd kind)
+* pico:legitimizedChild (gelegitimeerd kind)
 
 
 ### 5. Terminologiebron voor Rollen
@@ -225,7 +228,7 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 
 * deceased (overledene)
 * birthling (boreling)
-* huwelijkspartner (spouse)
+* spouse (huwelijkspartner)
 * traveler (reiziger)
 * baptized (dopeling)
 * employee (werknemer, personeelslid)
@@ -236,9 +239,9 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * declarant (aangever)
 * resident (bewoner)
 * conscript (dienstplichtige)
-* member (lidmaat)
+* churchMember (lidmaat)
 * civilServant (ambtenaar)
-* military (militair)
+* soldier (militair)
 * decorated (gedecoreerde)
 * debtor (schuldenaar)
 * creditor (schuldeiser)
@@ -253,7 +256,6 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * beneficiary (begunstigde)
 * defendant (gedaagde)
 * landlord (verhuurder)
-* owner (eigenaar)
 * heir (erfgenaam)
 * firstParty (eerste partij)
 * secondParty (tweede partij)
@@ -266,39 +268,25 @@ Een persoonsvermelding kan de volgende rollen hebben op een document:
 * ??? (rechthebbende)
 * skipper (schipper)
 * getuige (witness)
-* registered (geregistreerde) 
 
 ### 6. Terminologiebron voor Documenttypes
 
 * DTB dopen
 * DTB trouwen
 * DTB begraven
+* DTB overig
 * BS geboorte
 * BS huwelijk
 * BS overlijden
 * bevolkingsregister
 * memories van successie
 * notariële archieven
-* onroerend goed
+* onroerend goed registraties
 * familieadvertenties
-* militairen
-* divers
-* fiscaal en financieel
+* militaire registraties
 * rechterlijke archieven
-* DTB overig
-* vestiging en vertrek
-* beroep en bedrijf
-* Onderwijs
-* sociale zorg
+* registratie van vestiging en vertrek
 * bidprentjes
 * slavernijbronnen
-* Tweede Wereldoorlog
-* misdaad en straf
-* beroep en bedrijf
-* Onderwijs
-* sociale zorg
-* fiscaal en financieel
-* onroerend goed
-
 
 [^1]: De [ROAR ontologie](https://leonvanwissen.nl/vocab/roar/docs/) is ontwikkeld door Leon van Wissen en Menno den Engelse.

@@ -1,4 +1,4 @@
-# Version: 20230714
+# Version: 20230921
 
 @prefix : <https://data.cbg.nl/pico#> .
 
@@ -26,11 +26,6 @@
 :PersonReconstruction a owl:Class ;
     rdfs:label "Persoonsreconstructie"@nl ;
     rdfs:subClassOf :Person .
-
-:Document a owl:Class ;
-    rdfs:label "Brondocument"@nl ;
-    rdfs:subClassOf schema:CreativeWork ;
-    rdfs:subClassOf prov:Entity .
 
 # Properties - observation dependent
 :hasAge a rdf:Property ;
@@ -61,125 +56,150 @@
 
 :godparent a rdf:Property ;
     rdfs:label "heeft peetouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :godchild a rdf:Property ;
     rdfs:label "heeft petekind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :previousPartner a rdf:Property ;
     rdfs:label "heeft eerdere partner"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :wid a rdf:Property ;
     rdfs:label "is weduwe/weduwnaar van"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepparent a rdf:Property ;
     rdfs:label "heeft stiefouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepchild a rdf:Property ;
     rdfs:label "heeft stiefkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :child-in-law a rdf:Property ;
     rdfs:label "heeft schoonkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :parent-in-law a rdf:Property ;
     rdfs:label "heeft schoonouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :half-sibling a rdf:Property ;
     rdfs:label "heeft halfbroer/halfzus"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
-:step-sibling a rdf:Property ;
+:stepsibling a rdf:Property ;
     rdfs:label "heeft stiefbroer/stiefzus"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :sibling-in-law a rdf:Property ;
     rdfs:label "heeft zwager/schoonzus"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :great-grandparent a rdf:Property ;
     rdfs:label "heeft overgrootouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :great-grandchild a rdf:Property ;
     rdfs:label "heeft achterkleinkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :fosterParent a rdf:Property ;
     rdfs:label "heeft pleegouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :fosterChild a rdf:Property ;
     rdfs:label "heeft pleegkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepparent-in-law a rdf:Property ;
     rdfs:label "heeft stiefschoonouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :stepchild-in-law a rdf:Property ;
     rdfs:label "heeft stiefschoonkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :grandparent-in-law a rdf:Property ;
     rdfs:label "heeft schoongrootouder"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :grandchild-in-law a rdf:Property ;
     rdfs:label "heeft schoonkleinkind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :uncle_aunt a rdf:Property ;
     rdfs:label "heeft oom/tante"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :nephew_niece a rdf:Property ;
     rdfs:label "heeft neef/nicht (oomzegger/tantezegger)"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :nephew_niece-in-law a rdf:Property ;
     rdfs:label "heeft stiefneef/stiefnicht (oomzegger/tantezegger)"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :cousin a rdf:Property ;
     rdfs:label "heeft neef/nicht"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :cousin-in-law a rdf:Property ;
     rdfs:label "heeft stiefneef/stiefnicht"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
 
 :legitimizedChild a rdf:Property ;
-    rdfs:label "heeft geligitimeerd kind"@nl ;
+    rdfs:label "heeft gelegitimeerd kind"@nl ;
+    rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .

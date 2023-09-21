@@ -3,12 +3,12 @@
 @prefix pico:   <https://data.cbg.nl/pico#> .
 
 # PERSOONSVERMELDING
-<> a cbgo:PersonObservation ;
+<> a pico:PersonObservation ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
     schema:name "DEN PRINSCHE DORANGE" ;
     schema:deathDate "DEN TIENDEN IVLI" ;
     schema:deathPlace "DELFT" ;
-    cbgo:hasAge "51" .
+    pico:hasAge "51" .
 
-<https://data.rkd.nl/images/170975> a cbgo:Document ;
+<https://data.rkd.nl/images/170975> a schema:Painting ;
     schema:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)" .
