@@ -1,7 +1,7 @@
 
 # PiCo
 De volgende generatie uitwisseling van persoonsinformatie\
-Versie 1.0\
+Versie 0.9\
 Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandhuis
 
 ## Inleiding
@@ -29,7 +29,7 @@ PiCo is de beoogde opvolger van A2A. Het wijkt op een aantal punten af van A2A:
 * A2A kent alleen persoonsvermeldingen (in A2A ‘personen’ genoemd), waar PiCo ook uniek identificeerbare personen kent;
 * A2A maakt gebruik van eigen woordenlijsten voor bijvoorbeeld rollen of documentsoorten. PiCo maakt zo veel mogelijk gebruik van bestaande thesauri en ontologieën, waardoor het koppelen met andere datasets wordt vereenvoudigd;
 * PiCo maakt onderscheid tussen relaties en rollen. In A2A worden beiden vastgelegd in het veld Relatie. Een Rol in PiCo beschrijft de rol van een persoonsvermelding op de bron. Een Relatie beschrijft de relatie tussen twee personen.
-* PiCo kent geen Gebeurtenissen, waar deze in A2A wel voorkomen. Het beschrijven van gebeurtenissen (zoals een huwelijk of een geboorte) is geen doel van de ontologie. Het bleek daarom niet nodig om gebeurtenis als aparte entiteit op te nemen. Bovendien kunnen persoonsvermeldingen lang niet altijd gekoppeld worden aan een gebeurtenis. 
+* In PiCo spelen Gebeurtenis een minder prominente rol. Het beschrijven van gebeurtenissen is geen doel van de ontologie. Voor het registreren van bijvoorbeeld een huwelijk worden wel Gebeurtenissen gebruikt, maar ze zijn niet langer verplicht.
 * In PiCo kan metadata worden vastgelegd over links tussen personen of persoonsvermeldingen. Bijvoorbeeld: “Op basis van bron B1 stellen we dat de persoonsvermeldingen PV1 en PV2 beiden horen bij persoon P1.” Of: “Op basis van bron B2 stellen we dat persoon P1 de vader is van persoon P2”.
 * Net als alle andere linked-data ontologieën, is PiCo uitbreidbaar. De doelstelling van het kennismodel (zoeken naar voorouders), hoeft geen beperking te zijn voor andere onderzoeksdoeleinden.
 
