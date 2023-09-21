@@ -153,3 +153,33 @@
     rdfs:label "heeft schoonkleinkind"@nl ;
     rdfs:domain :Person ;
     rdfs:range :Person .
+
+:uncle_aunt a rdf:Property ;
+    rdfs:label "heeft oom/tante"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:nephew_niece a rdf:Property ;
+    rdfs:label "heeft neef/nicht (oomzegger/tantezegger)"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:nephew_niece-in-law a rdf:Property ;
+    rdfs:label "heeft stiefneef/stiefnicht (oomzegger/tantezegger)"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:cousin a rdf:Property ;
+    rdfs:label "heeft neef/nicht"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:cousin-in-law a rdf:Property ;
+    rdfs:label "heeft stiefneef/stiefnicht"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
+
+:legitimizedChild a rdf:Property ;
+    rdfs:label "heeft geligitimeerd kind"@nl ;
+    rdfs:domain :Person ;
+    rdfs:range :Person .
