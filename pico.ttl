@@ -184,7 +184,7 @@
     rdfs:range :Person .
 
 :nephew_niece-in-law a rdf:Property ;
-    rdfs:label "heeft stiefneef/stiefnicht (oomzegger/tantezegger)"@nl ;
+    rdfs:label "heeft schoonneef/schoonnicht (oomzegger/tantezegger)"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
@@ -196,7 +196,7 @@
     rdfs:range :Person .
 
 :cousin-in-law a rdf:Property ;
-    rdfs:label "heeft stiefneef/stiefnicht"@nl ;
+    rdfs:label "heeft schoonneef/schoonnicht"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
     rdfs:domain :Person ;
     rdfs:range :Person .
