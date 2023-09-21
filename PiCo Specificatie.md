@@ -81,24 +81,27 @@ We maken zoveel mogelijk gebruik van classes en properties uit verschillende bes
 
 Als het nodig is, zullen we eigenschappen uit de gebruikte ontologieën uitbreiden met extra kenmerken. Bijvoorbeeld: de relatie schema:spouse is in Schema.org niet als wederkerig gedefinieerd. Dat willen we wel. Daarom voegen we in de ontologie deze wederkerigheid toe.
 
-### CBG-ontologie
+### PiCo-ontologie
 De basisstructuur van PiCo is geïnspireerd door de ontologie Reconstructions and Observations in Archival Resources (ROAR). In deze ontologie zijn de concepten Persoonsvermelding (roar:PersonObservation) en Persoonsreconstructie (roar:PersonReconstruction) gedefinieerd. We hebben ervoor gekozen voor deze concepten zelf classes te definiëren in een eigen ontologie, om de complexiteit van de verschillende definities te beperken.
 
 Behalve de definities van Persoonsvermelding en Persoonsreconstructie, onderkennen we enkele eigenschappen die niet beschikbaar zijn in een van de door ons gekozen ontologieën. We missen een eigenschap voor leeftijd, geloof, rol en overleden. Deze eigenschappen worden daarom in de eigen ontologie vastgelegd.
 
 ### PNV
-De structuur van namen in de Nederlandstalige cultuur wordt vastgelegd met behulp van de Person Name Vocabulary (PNV). Daarbij kan een pnv:PersonName - als de bron het toestaat - opgeknipt worden weergegeven met voornamen (pnv:givenName), tussenvoegsel (pnv:surnamePrefix) en achternaam (pnv:baseSurname). Om potentiële vergissingen in het opknippen te ondervangen is een pnv:literalName verplicht, waarin de gehele naam wordt opgenomen in zijn oorspronkelijke weergave op de bron.
+De structuur van namen in de Nederlandstalige cultuur wordt vastgelegd met behulp van de Person Name Vocabulary ([PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/)). Daarbij kan een pnv:PersonName - als de bron het toestaat - opgeknipt worden weergegeven met voornamen (pnv:givenName), tussenvoegsel (pnv:surnamePrefix) en achternaam (pnv:baseSurname). Om potentiële vergissingen in het opknippen te ondervangen is een pnv:literalName verplicht, waarin de gehele naam wordt opgenomen in zijn oorspronkelijke weergave op de bron.
 
 ### Schema.org - personen
-Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in Schema.org. Het gaat daarbij onder meer om schema:birthDate, schema:birthPlace, schema:occupation en schema:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class schema:Person kunnen worden gebruikt. 
+Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in [Schema.org](https://schema.org/). Het gaat daarbij onder meer om schema:birthDate, schema:birthPlace, schema:occupation en schema:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class schema:Person kunnen worden gebruikt. 
 
 In Schema.org zijn voor de relaties tussen personen onder meer schema:parent, schema:children en schema:spouse beschikbaar. Deze relaties zijn gender-neutraal. Het is daarom gewenst om ook de eigenschap schema:gender aan een persoon toe te voegen.
 
 ### Schema.org - documenten
-Ook voor documenten kunnen eigenschappen worden gebruikt uit Schema.org. De belangrijkste eigenschap is het type document. Deze eigenschap wordt vastgelegd met de property schema:additionalType. Verder kunnen allerlei properties worden gebruikt die horen bij de class schema:CreativeWork.
+Ook voor documenten kunnen eigenschappen worden gebruikt uit [Schema.org](https://schema.org/). De belangrijkste eigenschap is het type document. Deze eigenschap wordt vastgelegd met de property schema:additionalType. Verder kunnen allerlei properties worden gebruikt die horen bij de class schema:ArchiveComponent.
 
 ### PROV-O
-Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebaseerd, wordt de property prov:wasDerivedFrom voorgeschreven. Deze is afkomstig uit de PROV-O ontologie.
+Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebaseerd, wordt de property prov:wasDerivedFrom voorgeschreven. Deze is afkomstig uit de [PROV-O](https://www.w3.org/TR/prov-o/) ontologie.
+
+### BIO
+Voor een aantal life events die meerdere keren kunnen voorkomen in een leven, zoals huwelijken en echtscheidingen, wordt de [BIO](https://vocab.org/bio/) ontologie gebruikt. Geboortedatum en -plaats en overlijdensdatum en -plaats worden omwille van de eenvoud uit schema gehaald. De stelregel hierbij is: waar mogelijk gebruiken we schema.org. Wanneer dit niet goed mogelijk is, bijvoorbeeld omdat je meer gegevens wil vastleggen over een Gebeurtenis, of wanneer schema.org geen geschikte property heeft voor een specifieke gebeurtenis, gebruiken we BIO.  
 
 ## Termen
 ### Rollen en Relaties
@@ -124,7 +127,7 @@ Deze documenten zijn nog in ontwikkeling.
 ## Bijlages
 
 ### 1. Eigenschappen van Document
-Class: cbgo:Document
+Class: pico:Document
 
 Eigenschappen van een Document:
 * schema:name
@@ -141,9 +144,9 @@ Eigenschappen van een Document:
 * schema:url
 * 
 ### 2. Eigenschappen van Persoonsvermelding
-Class: cbgo:PersonObservation
+Class: pico:PersonObservation
 
-Een persoonsvermelding moet altijd gekoppeld zijn aan een document via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van schema:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de CBG-Ontologie.
+Een persoonsvermelding moet altijd gekoppeld zijn aan een document via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van schema:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de PiCo-Ontologie.
 
 Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 
@@ -164,23 +167,20 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 * schema:gender
 * schema:spouse
 * schema:parent
-* cbgo:hasRole
-* cbgo:hasAge
-* cbgo:hasReligion
-* cbgo:hasMarriage
-  * schema:date
-  * schema:location
+* pico:hasRole
+* pico:hasAge
+* pico:hasReligion
 
 ### 3. Eigenschappen van Persoonsreconstructie
-Class: cbgo:PersonReconstruction
+Class: pico:PersonReconstruction
 
-Een Persoonsreconstructie moet altijd gekoppeld zijn aan een Persoonsvermelding door middel van de eigenschap: prov:wasDerivedFrom. Hoe een Persoonsreconstructie tot stand is gekomen (bijvoorbeeld door middel van een algoritme of door handwerk van een onderzoeker) wordt vastgelegd met de eigenschap prov:wasGeneratedBy. Een Persoonsreconstructie is, in tegenstelling tot een Persoonsvermelding, niet direct gekoppeld aan een Document. De eigenschap cbgo:hasRole, voor de rol van een Persoonsvermelding op het Document, wordt niet gebruikt bij Persoonsreconstructies. 
+Een Persoonsreconstructie moet altijd gekoppeld zijn aan een Persoonsvermelding door middel van de eigenschap: prov:wasDerivedFrom. Hoe een Persoonsreconstructie tot stand is gekomen (bijvoorbeeld door middel van een algoritme of door handwerk van een onderzoeker) wordt vastgelegd met de eigenschap prov:wasGeneratedBy. Een Persoonsreconstructie is, in tegenstelling tot een Persoonsvermelding, niet direct gekoppeld aan een Document. De eigenschap pico:hasRole, voor de rol van een Persoonsvermelding op het Document, wordt niet gebruikt bij Persoonsreconstructies. 
 
 Naast alle eigenschappen die genoemd zijn bij een Persoonsvermelding, heeft een Persoonsreconstructie twee extra eigenschappen:
 * prov:wasDerivedFrom (verplicht)
 * prov:wasGeneratedBy
 
-De eigenschappen prov:hadPrimarySource en cbgo:hasRole, worden niet gebruikt bij een Persoonsreconstructie. Deze zijn wel te herleiden via de Persoonsvermelding(en) waarop de Persoonsreconstructie gebaseerd is.
+De eigenschappen prov:hadPrimarySource en pico:hasRole, worden niet gebruikt bij een Persoonsreconstructie. Deze zijn wel te herleiden via de Persoonsvermelding(en) waarop de Persoonsreconstructie gebaseerd is.
 
 ### 4. Relaties tussen Persoonsvermeldingen / Persoonsreconstructies
 Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Persoonsvermeldingen onderling en tussen Persoonsreconstructies onderling:
@@ -191,38 +191,34 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * schema:sibling (broer/zus)
 * schema:knows (kent, de meest generieke relatie)
 * schema:relatedTo (de meest generieke familierelatie)
-* cbgo:grandparent (grootouder)
-* cbgo:grandchild (kleinkind)
-* cbgo:godparent (peetouder)
-* cbgo:godchild (petekind)
-* cbgo:previousPartner (eerdere partner)
-* cbgo:wid (weduwe/weduwnaar)
-* cbgo:stepparent (stiefouder)
-* cbgo:stepchild (stiefkind) 
-* cbgo:child-in-law (schoonkind)
-* cbgo:parent-in-law (schoonouder)
-* cbgo:half-sibbling (halfbroer/halfzus)
-* cbgo:step-sibling (stiefbroer/stiefzus)
-* cbgo:sibling-in-law (schoonbroer/schoonzus)
-* cbgo:greatGrandparent (overgrootouder)
-* cbgo:greatGrandchild (overgrootkind)
-* cbgo:fosterParent (pleegouder)
-* cbgo:fosterChild (pleegkind)
-* cbgo:stepchild-in-law (tiefschoonkind)
-* cbgo:stepparent-in-law (stiefschoonouder)
-* cbgo:grandparent-in-law (schoongrootouder)
-* cbgo:grandchild-in-law (schoonkleinkind)
+* pico:grandparent (grootouder)
+* pico:grandchild (kleinkind)
+* pico:godparent (peetouder)
+* pico:godchild (petekind)
+* pico:previousPartner (eerdere partner)
+* pico:wid (weduwe/weduwnaar)
+* pico:stepparent (stiefouder)
+* pico:stepchild (stiefkind) 
+* pico:child-in-law (schoonkind)
+* pico:parent-in-law (schoonouder)
+* pico:half-sibbling (halfbroer/halfzus)
+* pico:step-sibling (stiefbroer/stiefzus)
+* pico:sibling-in-law (schoonbroer/schoonzus)
+* pico:greatGrandparent (overgrootouder)
+* pico:greatGrandchild (overgrootkind)
+* pico:fosterParent (pleegouder)
+* pico:fosterChild (pleegkind)
+* pico:stepchild-in-law (tiefschoonkind)
+* pico:stepparent-in-law (stiefschoonouder)
+* pico:grandparent-in-law (schoongrootouder)
+* pico:grandchild-in-law (schoonkleinkind)
+* pico:uncle_aunt (oom/tante)
+* pico:nephew_niece (neef/nicht (oomzegger/tantezegger))
+* pico:nephew_niece-in-law (stiefneef/stiefnicht (oomzegger/tantezegger))
+* pico:cousin (neef/nicht)
+* pico:cousin-in-law (stiefneef/stiefnicht)
+* pico:legitimizedChild (geligitimeerd kind)
 
-# TODO Deze relaties toevoegen (genderneutrale variant?)
-* cbgo:uncle (oom)
-* cbgo:aunt (tante)
-* Nephew 
-* Niece 
-* Cousin 
-* Cousin-in-law 
-* Niece-in-law
-* Nephew-in-law
-* legitimizedChild
 
 ### 5. Terminologiebron voor Rollen
 Een persoonsvermelding kan de volgende rollen hebben op een document:
