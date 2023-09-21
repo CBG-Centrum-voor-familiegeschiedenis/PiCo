@@ -5,7 +5,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix cbg:    <https://cbg.nl/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
@@ -76,5 +76,5 @@ dl:NL-HaCBG_1755_0341_142_person4 a pico:PersonObservation ;
 cbg:NL-HaCBG_1755_0341_142 a schema:ArchiveComponent ;
     schema:name "Persoonskaart Abe Bos" ;
     schema:locationCreated "Nederland" ;
-    schema:additionalType cbgt:persoonskaart ;
+    schema:additionalType picot:persoonskaart ;
     schema:holdingArchive <https://cbg.nl/> .

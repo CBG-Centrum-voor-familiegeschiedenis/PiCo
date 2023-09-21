@@ -5,7 +5,7 @@
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 

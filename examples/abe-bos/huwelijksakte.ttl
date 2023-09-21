@@ -5,7 +5,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
@@ -22,7 +22,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person1 a pico:PersonObservation ;
     schema:birthPlace "Joure" ;
     schema:hasOccupation "agent van politie" ;
     schema:gender schema:Male ;
-    pico:hasRole cbgt:huwelijkspartij ;
+    pico:hasRole picot:huwelijkspartij ;
     schema:spouse dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 ;
     schema:parent 
         dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person3,
@@ -37,7 +37,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person2 a pico:PersonObservation ;
     schema:birthPlace "Haarlem" ;
     schema:hasOccupation "dienstbode" ;
     schema:gender schema:Female ;
-    pico:hasRole cbgt:huwelijkspartij ;
+    pico:hasRole picot:huwelijkspartij ;
     schema:parent
         dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person5 ,
         dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_person6 .
@@ -98,7 +98,7 @@ dl:5ec8bcce-acd6-4107-8011-0ccd6b740e7c_event1
 
 # BRON
 nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c a schema:ArchiveComponent ;
-    schema:additionalType cbgt:huwelijksakte ;
+    schema:additionalType picot:huwelijksakte ;
     schema:name "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:url <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;

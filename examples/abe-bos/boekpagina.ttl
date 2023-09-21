@@ -4,7 +4,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
@@ -25,7 +25,7 @@ dl:jaarboekje105 a pico:PersonObservation ;
     dl-ont:functie "secretaris" .
 
 nha:jaarboekje13-p299 a schema:ArchiveComponent ;
-    schema:additionalType cbgt:boekpagina ;
+    schema:additionalType picot:boekpagina ;
     schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:dateCreated "1903"^^xsd:gYear ;

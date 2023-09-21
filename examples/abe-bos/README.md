@@ -6,18 +6,18 @@ This example contains several sources with data about and around one person. The
 * Use prov, pnv and schema.
 * CBG addition would be the relevant basic classes, "named individuals" and properties. 
 
-### Terms from examples (https://data.cbg.nl/terms#)
+### Terms from examples (https://data.cbg.nl/pico-terms#)
 
-- cbgt:belastingregistratie
-- cbgt:bevolkingsregistratie
-- cbgt:boekpagina
-- cbgt:dienstboderegistratie
-- cbgt:huwelijksakte
-- cbgt:personeelsregistratie
-- cbgt:persoonskaart
+- picot:belastingregistratie
+- picot:bevolkingsregistratie
+- picot:boekpagina
+- picot:dienstboderegistratie
+- picot:huwelijksakte
+- picot:personeelsregistratie
+- picot:persoonskaart
 
-- cbgt:hoofd
-- cbgt:huwelijkspartij
+- picot:hoofd
+- picot:huwelijkspartij
 
 ### Ontology from examples (https://data.cbg.nl/pico#)
 

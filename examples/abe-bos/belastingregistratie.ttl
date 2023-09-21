@@ -4,7 +4,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
@@ -31,7 +31,7 @@ dl:belkoh78 a pico:PersonObservation ;
 
 nha:NL-HlmNHA_1503_537_IVa_63 a schema:ArchiveComponent  ;
     schema:name "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
-    schema:additionalType cbgt:belastingregistratie ;
+    schema:additionalType picot:belastingregistratie ;
     schema:isPartOf <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:dateCreated "1902"^^xsd:gYear ;

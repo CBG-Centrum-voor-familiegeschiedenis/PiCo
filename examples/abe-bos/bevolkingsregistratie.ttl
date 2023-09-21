@@ -3,7 +3,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
@@ -95,4 +95,4 @@ dl:bevreg517 a pico:PersonObservation ;
 nha:NL-HlmNHA_1482_234_B_0006 a schema:ArchiveComponent ;
     schema:name "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl/> ;
-    schema:additionalType cbgt:bevolkingsregistratie .
+    schema:additionalType picot:bevolkingsregistratie .

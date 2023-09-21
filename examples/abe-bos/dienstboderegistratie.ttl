@@ -3,7 +3,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix cbgt:   <https://data.cbg.nl/terms#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
@@ -35,7 +35,7 @@ dl:dienstbodereg_person2 a pico:PersonObservation ;
     schema:gender schema:Female .
 
 <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> a schema:ArchiveComponent ;
-    schema:additionalType cbgt:dienstboderegistratie ;
+    schema:additionalType picot:dienstboderegistratie ;
     schema:name "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
     schema:holdingArchive <https://noord-hollandsarchief.nl> ;
     schema:locationCreated "Haarlem" ;
