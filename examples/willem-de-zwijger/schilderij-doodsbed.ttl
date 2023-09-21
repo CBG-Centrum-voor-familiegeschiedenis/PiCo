@@ -1,5 +1,5 @@
 @prefix schema: <http://schema.org/> .
-
+@prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix pico:   <https://data.cbg.nl/pico#> .
 
 # PERSOONSVERMELDING

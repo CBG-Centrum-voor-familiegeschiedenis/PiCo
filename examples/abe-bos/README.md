@@ -23,7 +23,7 @@ This example contains several sources with data about and around one person. The
 
 - pico:PersonObservation
 - pico:PersonReconstruction
-- pico:Document
+- schema:ArchiveComponent
 
 - pico:hasRole
 - pico:hasReligion
