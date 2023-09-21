@@ -217,9 +217,9 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * pico:grandchild-in-law (schoonkleinkind)
 * pico:uncle_aunt (oom/tante)
 * pico:nephew_niece (neef/nicht (oomzegger/tantezegger))
-* pico:nephew_niece-in-law (stiefneef/stiefnicht (oomzegger/tantezegger))
+* pico:nephew_niece-in-law (schoonneef/schoonnicht (oomzegger/tantezegger))
 * pico:cousin (neef/nicht)
-* pico:cousin-in-law (stiefneef/stiefnicht)
+* pico:cousin-in-law (schoonneef/schoonnicht)
 * pico:legitimizedChild (gelegitimeerd kind)
 
 
