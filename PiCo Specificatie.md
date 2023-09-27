@@ -162,16 +162,17 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
   * pnv:baseSurname
   * pnv:patronym
 * schema:birthDate
+* pico:hasAge
 * schema:birthPlace
-* schema:deathPlace
 * schema:deathDate
+* pico:deceased
+* schema:deathPlace
 * schema:address
 * schema:hasOccupation
 * schema:gender
 * schema:spouse
 * schema:parent
 * pico:hasRole
-* pico:hasAge
 * pico:hasReligion
 
 ### 3. Eigenschappen van Persoonsreconstructie
@@ -216,8 +217,8 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * pico:grandparent-in-law (schoongrootouder)
 * pico:grandchild-in-law (schoonkleinkind)
 * pico:uncle_aunt (oom/tante)
-* pico:nephew_niece (neef/nicht (oomzegger/tantezegger))
-* pico:nephew_niece-in-law (schoonneef/schoonnicht (oomzegger/tantezegger))
+* pico:nephew_niece (neef/nicht - oomzegger/tantezegger)
+* pico:nephew_niece-in-law (schoonneef/schoonnicht - oomzegger/tantezegger)
 * pico:cousin (neef/nicht)
 * pico:cousin-in-law (schoonneef/schoonnicht)
 * pico:legitimizedChild (gelegitimeerd kind)
