@@ -228,7 +228,7 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 Een persoonsvermelding kan de volgende rollen hebben op een bron:
 
 * deceased (overledene)
-* birthling (boreling)
+* child (kind)
 * spouse (huwelijkspartner)
 * traveler (reiziger)
 * baptized (dopeling)
