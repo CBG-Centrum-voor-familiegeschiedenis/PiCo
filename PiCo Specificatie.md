@@ -227,48 +227,81 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 ### 5. Terminologiebron voor Rollen
 Een persoonsvermelding kan de volgende rollen hebben op een bron:
 
-* deceased (overledene)
-* child (kind)
-* spouse (huwelijkspartner)
-* traveler (reiziger)
-* baptized (dopeling)
-* employee (werknemer, personeelslid)
-* notary (notaris)
-* seller (verkoper)
-* buyer (koper)
-* signatory (ondertekenaar)
-* declarant (aangever)
-* resident (bewoner)
-* conscript (dienstplichtige)
-* churchMember (lidmaat)
-* civilServant (ambtenaar)
-* soldier (militair)
-* decorated (gedecoreerde)
-* debtor (schuldenaar)
-* creditor (schuldeiser)
-* conscript (loteling)
-* personAppearing (comparant)
-* owner (eigenaar)
-* passenger (passagier)
-* buriedPerson (begravene)
-* tenant (huurder)
-* constituent (constituant, volmachtgever)
-* party (partij)
-* beneficiary (begunstigde)
-* defendant (gedaagde)
-* landlord (verhuurder)
-* heir (erfgenaam)
-* firstParty (eerste partij)
-* secondParty (tweede partij)
-* testator (testateur)
-* eligableVoter (kiesgerechtigde)
-* detainee (arrestant)
-* convicted (veroordeelde)
-* ??? (patentplichtige, aangeslagene)
-* ??? (geconstitueerde)
-* ??? (rechthebbende)
-* skipper (schipper)
-* getuige (witness)
+* aanbesteder
+* aanbrenger
+* aangever (declarant)
+* aannemer
+* acceptant
+* ambtenaar (civilServant)
+* arrestant (detainee)
+* attestant
+* begravene (buriedPerson)
+* begunstigde (beneficiary)
+* belanghebbende
+* bewoner (resident)
+* borg
+* bruid
+* bruidegom
+* cedent
+* cessionaris
+* comparant (personAppearing)
+* constituant, volmachtgever (constituent)
+* dienstplichtige (conscript)
+* donataris
+* donateur
+* dopeling (baptized)
+* eerste partij (firstParty)
+* eigenaar (owner)
+* erfgenaam (heir)
+* geconstitueerde (???)
+* gedaagde (defendant)
+* gedecoreerde (decorated)
+* geïnsinueerde
+* goedkeurder
+* herroeper
+* huurder (tenant)
+* huwelijkspartner (spouse)
+* insinuant
+* kiesgerechtigde (eligableVoter)
+* kind (child)
+* koper (buyer)
+* lidmaat (churchMember)
+* loteling (conscript)
+* militair (soldier)
+* notaris (notary)
+* ondertekenaar (signatory)
+* ontvanger
+* ontvanger van het ontslag
+* opdrachtgever
+* overdrager
+* overledene (deceased)
+* pachter
+* partij (party)
+* passagier (passenger)
+* patentplichtige, aangeslagene (???)
+* protesteerder
+* rechthebbende (???)
+* reiziger (traveler)
+* rekwirant
+* schipper (skipper)
+* schuldeiser (creditor)
+* schuldenaar (debtor)
+* suppliant
+* taxateur
+* testateur (testator)
+* tweede partij (secondParty)
+* uitkoper
+* verhuurder (landlord)
+* verklaarder
+* verkoper (seller)
+* verkrijger
+* verlener
+* verlener van het ontslag
+* veroordeelde (convicted)
+* verpachter
+* verwerper
+* werknemer, personeelslid (employee)
+* witness (getuige)
 
 ### 6. Terminologiebron voor Brontypes
 
