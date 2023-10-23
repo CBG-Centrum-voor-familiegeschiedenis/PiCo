@@ -281,7 +281,6 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * BS overlijden
 * bevolkingsregister
 * memories van successie
-* notariële archieven
 * onroerend goed registraties
 * familieadvertenties
 * militaire registraties
@@ -289,5 +288,64 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * registratie van vestiging en vertrek
 * bidprentjes
 * slavernijbronnen
+* notariële archieven
+  * notarieel - aanbesteding
+  * notarieel - aanbreng
+  * notarieel - aanneming
+  * notarieel - acceptatie
+  * notarieel - afstand
+  * notarieel - akkoord
+  * notarieel - akte (overig)
+  * notarieel - akte van inbewaringgeving
+  * notarieel - arbitersbenoeming
+  * notarieel - attestatie
+  * notarieel - boedelbeschrijving
+  * notarieel - borgtocht
+  * notarieel - cassatie
+  * notarieel - codicil
+  * notarieel - curatorsbenoeming
+  * notarieel - erfpacht
+  * notarieel - executeursbenoeming
+  * notarieel - garantie
+  * notarieel - goedkeuring
+  * notarieel - herroeping
+  * notarieel - huur en verhuur
+  * notarieel - huwelijkse voorwaarden
+  * notarieel - insinuatie
+  * notarieel - koop en verkoop
+  * notarieel - kwitantie
+  * notarieel - liquidatie
+  * notarieel - maatschap
+  * notarieel - ontslag
+  * notarieel - ontzegeling
+  * notarieel - openbare aanbesteding
+  * notarieel - openbare verhuring
+  * notarieel - openbare verkoping
+  * notarieel - openbare verpachting
+  * notarieel - opening
+  * notarieel - overdracht
+  * notarieel - overeenkomst
+  * notarieel - procuratie
+  * notarieel - protest
+  * notarieel - registratie
+  * notarieel - rekening en verantwoording
+  * notarieel - relaas
+  * notarieel - repudiatie
+  * notarieel - scheepshypotheek
+  * notarieel - scheiding
+  * notarieel - schenking
+  * notarieel - schuldbekentenis
+  * notarieel - superscriptie
+  * notarieel - taxatie
+  * notarieel - testament
+  * notarieel - toestemming
+  * notarieel - trouwbeloften
+  * notarieel - uitkoop
+  * notarieel - verklaring
+  * notarieel - verpachting
+  * notarieel - verzegeling
+  * notarieel - verzoekschrift
+  * notarieel - verzoening
+  * notarieel - voogdbenoeming
 
 [^1]: De [ROAR ontologie](https://leonvanwissen.nl/vocab/roar/docs/) is ontwikkeld door Leon van Wissen en Menno den Engelse.
