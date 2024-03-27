@@ -37,7 +37,8 @@ afr:deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9?person=c174c682-5c4b-f148-985f-42
     pico:hasAge "30"^^xsd:decimal ;
     schema:hasOccupation "klokmakersknecht" ;
     schema:address "Joure" ;
-    schema:gender schema:Male .
+    schema:gender schema:Male ;
+    pico:hasRole picot:aangever .
 
 afr:deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9?person=c174c682-5c4b-f148-985f-4286a9528fda a pico:PersonObservation ;
     prov:hadPrimarySource afr:deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9 ;
