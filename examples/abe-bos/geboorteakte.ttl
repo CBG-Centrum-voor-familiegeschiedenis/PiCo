@@ -11,11 +11,7 @@
 @prefix pico:   <https://data.cbg.nl/pico#> .
 @prefix picot:   <https://data.cbg.nl/pico-terms#> .
 
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix afr:    <https://allefriezen.nl/zoeken/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 # PERSOONSVERMELDINGEN
 # https://www.wiewaswie.nl/nl/detail/15720727
