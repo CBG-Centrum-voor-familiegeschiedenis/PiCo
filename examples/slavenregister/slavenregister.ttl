@@ -1,0 +1,54 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix schema: <http://schema.org/> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix pico:   <https://ontology.personsincontext.org/> .
+@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix sr-ont: <https://ontology.nationaalarchief.sr/> .
+@prefix nas:    <https://data.nationaalarchief.sr/> .
+
+nas:slavenregister_41_4890_po_1
+    a                       pico:PersonObservation ;
+    prov:hadPrimarySource   nas:slavenregister_41_4890 ;
+    schema:name             "Unico August Hoogberg" ;
+    schema:familyName       "Hoogberg" ;
+    schema:givenName        "Unico August" ;
+    schema:gender           schema:Male ;
+    sr-ont:slave-name       "Unico August" ;
+    sr-ont:owner            nas:slavenregister_41_4890_po_2 ;
+    sr-ont:manumission-date "1842-04-07"^^xsd:date .
+
+
+nas:slavenregister_41_4890_po_2
+    a                     pico:PersonObservation ;
+    prov:hadPrimarySource nas:slavenregister_41_4890 ;
+    schema:name           "Wed. J.L. Stugen geboren Bruining" ;
+    schema:familyName     "Bruining" ;
+    schema:spouse         nas:slavenregister_41_4890_po_3 ;
+    schema:gender         schema:Female .
+
+
+nas:slavenregister_41_4890_po_3
+    a                     pico:PersonObservation ;
+    prov:hadPrimarySource nas:slavenregister_41_4890 ;
+    schema:name           "J.L. Stugen" ;
+    schema:familyName     "Stugen" ;
+    schema:givenName      "J.L." ;
+    schema:spouse         nas:slavenregister_41_4890_po_2 ;
+    pico:deceased         true ;
+    schema:gender         schema:Male .
+
+
+nas:slavenregister_41_4890
+    a                      schema:ArchiveComponent ;
+    schema:name            "Nationaal Archief Suriname, Slavenregister, inv.nr. 41, fol. 4890" ;
+    schema:locationCreated "Suriname" ;
+    schema:additionalType  _:slavenregistratie ;
+    schema:url             "https://www.nationaalarchief.nl/onderzoeken/archief/NadereToegangen/invnr/NT00461.41/file/Slavenregister_InvNr_41_FolioNr_4890a" ;
+    schema:holdingArchive  <https://nationaalarchief.sr/> .
+
+
+_:slavenregistratie
+    rdfs:label "Slavenregistratie"@nl ;
+    rdfs:label "Slave Registration"@en .

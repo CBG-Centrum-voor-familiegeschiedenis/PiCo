@@ -1,7 +1,7 @@
 # Version: 20230921
 
-@prefix : <https://data.cbg.nl/pico#> .
-
+#@prefix : <https://data.cbg.nl/pico#> .
+@prefix :       <https://ontology.personsincontext.org/> .
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,198 +11,233 @@
 @prefix schema: <http://schema.org/> .
 
 # ontology
-<https://data.cbg.nl/pico> a owl:Ontology .
+<https://data.cbg.nl/pico>
+    a owl:Ontology .
 
 # Basic classes
-:Person a owl:Class ;
-    rdfs:label "Persoon"@nl ;
+:Person
+    a               owl:Class ;
+    rdfs:label      "Persoon"@nl ;
     rdfs:subClassOf pnv:Person ;
     rdfs:subClassOf prov:Entity .
 
-:PersonObservation a owl:Class ;
-    rdfs:label "Persoonsvermelding"@nl ;
+:PersonObservation
+    a               owl:Class ;
+    rdfs:label      "Persoonsvermelding"@nl ;
     rdfs:subClassOf :Person .
 
-:PersonReconstruction a owl:Class ;
-    rdfs:label "Persoonsreconstructie"@nl ;
+:PersonReconstruction
+    a               owl:Class ;
+    rdfs:label      "Persoonsreconstructie"@nl ;
     rdfs:subClassOf :Person .
 
 # Properties - observation dependent
-:hasAge a rdf:Property ;
-    rdfs:label "heeft leeftijd"@nl ;
+:hasAge
+    a           rdf:Property ;
+    rdfs:label  "heeft leeftijd"@nl ;
     rdfs:domain :PersonObservation .
 
-:hasRole a rdf:Property ;
-    rdfs:label "heeft rol"@nl ;
+:hasRole
+    a           rdf:Property ;
+    rdfs:label  "heeft rol"@nl ;
     rdfs:domain :PersonObservation .
 
-:deceased a rdf:Property ;
-    rdfs:label "overleden"@nl ;
+:deceased
+    a           rdf:Property ;
+    rdfs:label  "overleden"@nl ;
     rdfs:domain :PersonObservation .
 
-:hasReligion a rdf:Property ;
-    rdfs:label "heeft religie"@nl ;
+:hasReligion
+    a           rdf:Property ;
+    rdfs:label  "heeft religie"@nl ;
     rdfs:domain :Person .
 
 # Properties - Interpersonal relations
-:grandparent a rdf:Property ;
-    rdfs:label "heeft grootouder"@nl ;
+:grandparent
+    a                  rdf:Property ;
+    rdfs:label         "heeft grootouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:grandchild a rdf:Property ;
-    rdfs:label "heeft kleinkind"@nl ;
+:grandchild
+    a                  rdf:Property ;
+    rdfs:label         "heeft kleinkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:godparent a rdf:Property ;
-    rdfs:label "heeft peetouder"@nl ;
+:godparent
+    a                  rdf:Property ;
+    rdfs:label         "heeft peetouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:godchild a rdf:Property ;
-    rdfs:label "heeft petekind"@nl ;
+:godchild
+    a                  rdf:Property ;
+    rdfs:label         "heeft petekind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:previousPartner a rdf:Property ;
-    rdfs:label "heeft eerdere partner"@nl ;
+:previousPartner
+    a                  rdf:Property ;
+    rdfs:label         "heeft eerdere partner"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:wid a rdf:Property ;
-    rdfs:label "is weduwe/weduwnaar van"@nl ;
+:wid
+    a                  rdf:Property ;
+    rdfs:label         "is weduwe/weduwnaar van"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:stepparent a rdf:Property ;
-    rdfs:label "heeft stiefouder"@nl ;
+:stepparent
+    a                  rdf:Property ;
+    rdfs:label         "heeft stiefouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:stepchild a rdf:Property ;
-    rdfs:label "heeft stiefkind"@nl ;
+:stepchild
+    a                  rdf:Property ;
+    rdfs:label         "heeft stiefkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:child-in-law a rdf:Property ;
-    rdfs:label "heeft schoonkind"@nl ;
+:child-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoonkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:parent-in-law a rdf:Property ;
-    rdfs:label "heeft schoonouder"@nl ;
+:parent-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoonouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:half-sibling a rdf:Property ;
-    rdfs:label "heeft halfbroer/halfzus"@nl ;
+:half-sibling
+    a                  rdf:Property ;
+    rdfs:label         "heeft halfbroer/halfzus"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:stepsibling a rdf:Property ;
-    rdfs:label "heeft stiefbroer/stiefzus"@nl ;
+:stepsibling
+    a                  rdf:Property ;
+    rdfs:label         "heeft stiefbroer/stiefzus"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:sibling-in-law a rdf:Property ;
-    rdfs:label "heeft zwager/schoonzus"@nl ;
+:sibling-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft zwager/schoonzus"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:great-grandparent a rdf:Property ;
-    rdfs:label "heeft overgrootouder"@nl ;
+:great-grandparent
+    a                  rdf:Property ;
+    rdfs:label         "heeft overgrootouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:great-grandchild a rdf:Property ;
-    rdfs:label "heeft achterkleinkind"@nl ;
+:great-grandchild
+    a                  rdf:Property ;
+    rdfs:label         "heeft achterkleinkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:fosterParent a rdf:Property ;
-    rdfs:label "heeft pleegouder"@nl ;
+:fosterParent
+    a                  rdf:Property ;
+    rdfs:label         "heeft pleegouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:fosterChild a rdf:Property ;
-    rdfs:label "heeft pleegkind"@nl ;
+:fosterChild
+    a                  rdf:Property ;
+    rdfs:label         "heeft pleegkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:stepparent-in-law a rdf:Property ;
-    rdfs:label "heeft stiefschoonouder"@nl ;
+:stepparent-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft stiefschoonouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:stepchild-in-law a rdf:Property ;
-    rdfs:label "heeft stiefschoonkind"@nl ;
+:stepchild-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft stiefschoonkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:grandparent-in-law a rdf:Property ;
-    rdfs:label "heeft schoongrootouder"@nl ;
+:grandparent-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoongrootouder"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:grandchild-in-law a rdf:Property ;
-    rdfs:label "heeft schoonkleinkind"@nl ;
+:grandchild-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoonkleinkind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:uncle_aunt a rdf:Property ;
-    rdfs:label "heeft oom/tante"@nl ;
+:uncle_aunt
+    a                  rdf:Property ;
+    rdfs:label         "heeft oom/tante"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:nephew_niece a rdf:Property ;
-    rdfs:label "heeft neef/nicht (oomzegger/tantezegger)"@nl ;
+:nephew_niece
+    a                  rdf:Property ;
+    rdfs:label         "heeft neef/nicht (oomzegger/tantezegger)"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:nephew_niece-in-law a rdf:Property ;
-    rdfs:label "heeft schoonneef/schoonnicht (oomzegger/tantezegger)"@nl ;
+:nephew_niece-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoonneef/schoonnicht (oomzegger/tantezegger)"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:cousin a rdf:Property ;
-    rdfs:label "heeft neef/nicht"@nl ;
+:cousin
+    a                  rdf:Property ;
+    rdfs:label         "heeft neef/nicht"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:cousin-in-law a rdf:Property ;
-    rdfs:label "heeft schoonneef/schoonnicht"@nl ;
+:cousin-in-law
+    a                  rdf:Property ;
+    rdfs:label         "heeft schoonneef/schoonnicht"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .
 
-:legitimizedChild a rdf:Property ;
-    rdfs:label "heeft gelegitimeerd kind"@nl ;
+:legitimizedChild
+    a                  rdf:Property ;
+    rdfs:label         "heeft gelegitimeerd kind"@nl ;
     rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain :Person ;
-    rdfs:range :Person .
+    rdfs:domain        :Person ;
+    rdfs:range         :Person .

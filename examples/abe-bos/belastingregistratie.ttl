@@ -1,38 +1,38 @@
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix pnv:           <https://w3id.org/pnv#> .
+@prefix prov:          <http://www.w3.org/ns/prov#> .
+@prefix schema:        <http://schema.org/> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix picot:   <https://data.cbg.nl/pico-terms#> .
+@prefix pico:          <https://ontology.personsincontext.org/> .
+#@prefix picot:         <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix picot: <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
 
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
-@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
+@prefix nha:           <https://noord-hollandsarchief.nl/> .
+@prefix dl-ont:        <https://example.com/dwarsliggers/ont/> .
 
 
 # PERSOONSVERMELDING
-dl:belkoh78 a pico:PersonObservation ;
+# PERSOONSVERMELDING
+nha:NL-HlmNHA_1503_537_IVa_63_po_1
+    a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1503_537_IVa_63 ;
-    schema:name "Bos, A." ;
-    schema:familyName "Bos" ;
+    schema:name           "Bos, A." ;
+    schema:familyName     "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
-    schema:additionalName [
-        a pnv:PersonName ;
-        pnv:literalName "Bos, A." ;
-        pnv:initials "A." ;
-    ] ;
-    schema:address "Eendrachtstraat 3" ;
-    dl-ont:inkomen "550"^^xsd:integer ;
-    dl-ont:aftrek "500"^^xsd:integer ;
-    dl-ont:grondslag "50"^^xsd:integer ;
-    dl-ont:aanslag "1.95"^^xsd:decimal .
+    schema:additionalName [ a               pnv:PersonName ;
+                            pnv:literalName "Bos, A." ;
+                            pnv:initials    "A." ; ] ;
+    schema:address        "Eendrachtstraat 3" ;
+    dl-ont:inkomen        "550"^^xsd:integer ;
+    dl-ont:aftrek         "500"^^xsd:integer ;
+    dl-ont:grondslag      "50"^^xsd:integer ;
+    dl-ont:aanslag        "1.95"^^xsd:decimal .
 
-nha:NL-HlmNHA_1503_537_IVa_63 a schema:ArchiveComponent  ;
-    schema:name "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
-    schema:additionalType picot:belastingregistratie ;
-    schema:isPartOf <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
-    schema:holdingArchive <https://noord-hollandsarchief.nl> ;
-    schema:dateCreated "1902"^^xsd:gYear ;
+nha:NL-HlmNHA_1503_537_IVa_63
+    a                      schema:ArchiveComponent ;
+    schema:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
+    schema:additionalType  picot:537 ;  # fiscaal en financieel
+    schema:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
+    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    schema:dateCreated     "1902"^^xsd:gYear ;
     schema:locationCreated "Haarlem" .

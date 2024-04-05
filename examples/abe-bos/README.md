@@ -3,7 +3,7 @@
 This example contains several sources with data about and around one person. They refer to the same person, ie. the PersonReconstruction.
 
 ## Overview
-* Use prov, pnv and schema.
+* Use schema, prov, pnv and bio.
 * CBG addition would be the relevant basic classes, "named individuals" and properties. 
 
 ### Terms from examples (https://data.cbg.nl/pico-terms#)

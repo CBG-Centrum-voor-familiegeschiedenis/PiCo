@@ -2,36 +2,32 @@
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-
-@prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix picot:   <https://data.cbg.nl/pico-terms#> .
-
+@prefix pico:   <https://ontology.personsincontext.org/> .
+@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
-
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
-
-@prefix hua: <https://hetutrechtsarchief.nl/> .
+@prefix hua:    <https://hetutrechtsarchief.nl/> .
 
 # PERSOONSVERMELDING
-dl:persregind192 a pico:PersonObservation ;
+hua:NL-UtHUA_920_26-29_2430_po_1
+    a                     pico:PersonObservation ;
     prov:hadPrimarySource hua:NL-UtHUA_920_26-29_2430 ;
-    schema:name "Bos, A." ;
-    schema:familyName "Bos" ;
+    schema:name           "Bos, A." ;
+    schema:familyName     "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
-    schema:additionalName [
-        a pnv:PersonName ;
-        pnv:literalName "Bos, A." ;
-        pnv:initials "A." ;
-    ] ;
-    schema:hasOccupation "loc. Bankwr" .
+    schema:additionalName [ a               pnv:PersonName ;
+                            pnv:literalName "Bos, A." ;
+                            pnv:initials    "A." ; ] ;
+    schema:hasOccupation  "loc. Bankwr" .
 
-hua:NL-UtHUA_920_26-29_2430 a schema:ArchiveComponent ;
-    schema:name "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
-    schema:additionalType picot:personeelsregistratie ;
-    schema:isPartOf <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;
+hua:NL-UtHUA_920_26-29_2430
+    a                      schema:ArchiveComponent ;
+    schema:name            "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
+    schema:additionalType  picot:565 ;  # beroep en bedrijf
+    schema:isPartOf        <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;
     schema:locationCreated "Haarlem" ;
-    schema:holdingArchive <https://hetutrechtsarchief.nl> ;
-    dl-ont:deel "F"^^xsd:string ;
-    dl-ont:folio "245"^^xsd:integer .
+    schema:holdingArchive  <https://hetutrechtsarchief.nl> ;
+    dl-ont:deel            "F"^^xsd:string ;
+    dl-ont:folio           "245"^^xsd:integer .
 

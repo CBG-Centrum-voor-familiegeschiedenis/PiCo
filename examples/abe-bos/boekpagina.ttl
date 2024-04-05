@@ -2,32 +2,28 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-
-@prefix pico:   <https://data.cbg.nl/pico#> .
-@prefix picot:   <https://data.cbg.nl/pico-terms#> .
-
+@prefix pico:   <https://ontology.personsincontext.org/> .
+@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
-
-@prefix dl:     <https://example.com/dwarsliggers/ind/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 # PERSOONSVERMELDING
-dl:jaarboekje105 a pico:PersonObservation ;
-    prov:hadPrimarySource nha:jaarboekje13-p299 ;
-    schema:name "Bos, A." ;
-    pnv:additionalName [
-        a pnv:PersonName ;
-        pnv:initials "A." ;
-        pnv:literalName "Bos, A."
-    ] ;
-    schema:address "Eendrachtstraat 3" ;
-    dl-ont:bestuurderVan "Vereeniging de Dageraad" ;
-    dl-ont:functie "secretaris" .
+nha:NL-HlmNHA_1482_234_B_0006_po_1
+    a                     pico:PersonObservation ;
+    prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
+    schema:name           "Bos, A." ;
+    schema:additionalName [ a               pnv:PersonName ;
+                            pnv:initials    "A." ;
+                            pnv:literalName "Bos, A." ] ;
+    schema:address        "Eendrachtstraat 3" ;
+    dl-ont:bestuurderVan  "Vereeniging de Dageraad" ;
+    dl-ont:functie        "secretaris" .
 
-nha:jaarboekje13-p299 a schema:ArchiveComponent ;
-    schema:additionalType picot:boekpagina ;
-    schema:name "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
-    schema:holdingArchive <https://noord-hollandsarchief.nl> ;
-    schema:dateCreated "1903"^^xsd:gYear ;
+nha:bibliotheek_5008_13-p299
+    a                      schema:ArchiveComponent ;
+    schema:additionalType  picot:0 ;  # publicatie
+    schema:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
+    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    schema:dateCreated     "1903"^^xsd:gYear ;
     schema:locationCreated "Haarlem" ;
-    schema:isPartOf <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .
+    schema:isPartOf        <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .
