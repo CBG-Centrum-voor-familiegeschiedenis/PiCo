@@ -281,7 +281,6 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * BS overlijden
 * bevolkingsregister
 * memories van successie
-* notariële archieven
 * onroerend goed registraties
 * familieadvertenties
 * militaire registraties
@@ -289,5 +288,64 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * registratie van vestiging en vertrek
 * bidprentjes
 * slavernijbronnen
+* notariële archieven
+  * aanbesteding
+  * aanbreng
+  * aanneming
+  * acceptatie
+  * afstand
+  * akkoord
+  * akte (overig)
+  * akte van inbewaringgeving
+  * arbitersbenoeming
+  * attestatie
+  * boedelbeschrijving
+  * borgtocht
+  * cassatie
+  * codicil
+  * curatorsbenoeming
+  * erfpacht
+  * executeursbenoeming
+  * garantie
+  * goedkeuring
+  * herroeping
+  * huur en verhuur
+  * huwelijkse voorwaarden
+  * insinuatie
+  * koop en verkoop
+  * kwitantie
+  * liquidatie
+  * maatschap
+  * ontslag
+  * ontzegeling
+  * openbare aanbesteding
+  * openbare verhuring
+  * openbare verkoping
+  * openbare verpachting
+  * opening
+  * overdracht
+  * overeenkomst
+  * procuratie
+  * protest
+  * registratie
+  * rekening en verantwoording
+  * relaas
+  * repudiatie
+  * scheepshypotheek
+  * scheiding
+  * schenking
+  * schuldbekentenis
+  * superscriptie
+  * taxatie
+  * testament
+  * toestemming
+  * trouwbeloften
+  * uitkoop
+  * verklaring
+  * verpachting
+  * verzegeling
+  * verzoekschrift
+  * verzoening
+  * voogdbenoeming
 
 [^1]: De [ROAR ontologie](https://leonvanwissen.nl/vocab/roar/docs/) is ontwikkeld door Leon van Wissen en Menno den Engelse.
