@@ -288,6 +288,7 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * registratie van vestiging en vertrek
 * bidprentjes
 * slavernijbronnen
+* publicatie
 * notariële archieven
   * aanbesteding
   * aanbreng
