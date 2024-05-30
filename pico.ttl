@@ -1,243 +1,1127 @@
 # Version: 20230921
 
-#@prefix : <https://data.cbg.nl/pico#> .
-@prefix :       <https://ontology.personsincontext.org/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+#@prefix pico:    <https://personsincontext.org/ontology/pico.ttl> .
+@prefix :        <https://pico.woltjer.cc/ontology/> .
+#@prefix pico:    <file:///home/pieter/dev/cbg-nl/pico_docs/data/pico.ttl> .
+@prefix pico:    <https://pico.woltjer.cc/ontology> .
+@prefix picot:   <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .  # vocabulary for annotating vocabulary descriptions
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix pnv:     <https://w3id.org/pnv#> .
+@prefix sdo:     <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
 
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix schema: <http://schema.org/> .
-
+########################################################################################################################
 # ontology
-<https://data.cbg.nl/pico>
-    a owl:Ontology .
+########################################################################################################################
 
-# Basic classes
+pico:
+    a                             owl:Ontology ;
+    rdfs:label                    "Persons in Context"@en ;
+    sdo:publisher                 <https://cbg.nl> ;
+    dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
+                                  "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
+#    dcterms:creator               [ a                  sdo:Person ;
+#                                    sdo:name        "Pieter Woltjer" ;
+#                                    sdo:affiliation [ sdo:name "CBG|Center for familiy history"@en ;
+#                                                         sdo:url  "https://cbg.nl" ] ;
+#                                    sdo:email       "pieter.woltjer@cbg.nl" ] ;
+#    dcterms:creator               [ a                  sdo:Person ;
+#                                    sdo:name        "Jeroen Balkenende" ;
+#                                    sdo:affiliation [ sdo:name "CBG|Center for family history" ;
+#                                                         sdo:url  "https://cbg.nl" ] ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Bob Coret" ;
+#                                    sdo:url  <https://bob.coret.org/> ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Mark Lindeman" ;
+#                                    sdo:url  "https://lindeman.it/" ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Ivo Zandhuis" ;
+#                                    sdo:url  "https://ivozandhuis.nl/" ] ;
+    dcterms:contributor           "Rick Companje", "Rick Mourits", "Micon Schorsij", "Richard Zijdeman" ;  #
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Rick Companje" ;
+#                                    sdo:affiliation [ sdo:name "Het Utrechts Archief" ;
+#                                                         sdo:url  "https://hetutrechtsarchief.nl/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Rick Mourits" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "International Institute Of Social History (IISH)" ;
+#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Micon Schorsij" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
+#                                                         sdo:url "https://www.niod.nl/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Richard Zijdeman" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "International Institute Of Social History (IISH)" ;
+#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
+    dcterms:created               "2023-09-21"^^xsd:date ;
+    dcterms:modified              "2024-04-25"^^xsd:date ;
+    dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
+    dcterms:rights                <https://cbg.nl> ;
+#    owl:versionIRI                :0.9 ;  # Versions are currently defined as redirects from pico:ontology in the .htaccess of the web server
+    owl:versionInfo               "0.9 - First published version of the PiCo ontology."@en ;
+#    owl:priorVersion                "n.a."
+    vann:preferredNamespacePrefix "pico" ;
+    skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and
+                                     publishing person observations from historical sources.
+                                     A main characteristic of PiCo is the distinction between Person observations
+                                     (person data as found on a Source) and Person reconstructions
+                                     (groupings of Person observations, created by the process of matching Person
+                                     observations).
+                                     Pico makes use of existing ontologies where possible and adds it's own classes
+                                     and properties when required.
+                                  """@en ;
+    skos:historyNote              """
+                                     Persons in Context is developed by the CBG|Center for family
+                                     history as a successor of the XML standard A2A for annotating historical person
+                                     data. A2A is considered obsolete and cultural heritage institutions in the
+                                     Netherlands are encouraged to move to PiCo.
+                                     PiCo was developed in collaboration with technical and domain experts.
+                                     The first version of PiCo was reviewed by a selected group of Dutch archivist and
+                                     scientists. PiCo is maintained by the PiCo Maintenance Group.
+                                  """@en ;
+    sdo:codeRepository            "https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/"^^xsd:anyURI ;
+    sdo:workExample               [ a                  sdo:ImageObject ;
+                                    sh:order           0 ;
+                                    sdo:caption        "Schematic overview" ;
+                                    sdo:contentUrl     "../web_images/pico_overzicht_schema_en.svg"^^xsd:anyURI ;
+                                    sdo:description    "Schematic overview of the model." ;
+                                    sdo:encodingFormat "image/svg+xml" ;
+                                    sdo:name           "Model overview" ] ;
+.
+########################################################################################################################
+# Classes
+########################################################################################################################
+
+prov:Activity
+    a               owl:Class ;
+    rdfs:label      "Activity"@en ;
+    skos:definition "The Activity that generated a PersonReconstruction" ;
+    skos:scopeNote  """A Person Reconctruction can either be created by a human researcher or by a software algorithm.
+                       In case of a human-made reconstruction, provide information about the time, place and knowledge-
+                       input. In case of a software algorith, provide information about the name, version and
+                       configuration settings of the program.
+                    """@en
+.
+
+prov:Agent
+    a               owl:Class ;
+    rdfs:label      "Agent"@en ;
+    skos:definition "The agent (person or organisation) that is responsible for the creation of a person reconstruction." ;
+    sdo:workExample [ a                  sdo:TextObject ;
+                      sh:order           0 ;
+                      sdo:encodingFormat "text/turtle" ;
+                      sdo:name           "Example of an Agent responsible for an Activity" ;
+                      sdo:text           """
+                                             cbg:reconstruction_activity_01
+                                                a                      prov:Activity ;
+                                                prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                prov:startedAtTime     "2024-05-24T00:00:00"^^xsd:dateTime ;
+                                                prov:endedAtTime       "2024-05-24T00:00:00"^^xsd:dateTime .
+
+                                             cbg:reconstruction_agent_01
+                                                a             prov:Agent ;
+                                                schema:name   "CBG|Center for Family History" ;
+                                                schema:url    <https://cbg.nl> .
+                                          """ ]
+.
+
 :Person
     a               owl:Class ;
-    rdfs:label      "Persoon"@nl ;
+    rdfs:label      "Person"@en ;
+    skos:definition "A Person is a human being whose individual existence can somehow be documented."@en ;
+    skos:scopeNote  """Container class for Person observation and Person reconstruction. Not to be used directly in
+                       PiCo resources.
+                    """@en ;
     rdfs:subClassOf pnv:Person ;
     rdfs:subClassOf prov:Entity .
 
 :PersonObservation
     a               owl:Class ;
-    rdfs:label      "Persoonsvermelding"@nl ;
-    rdfs:subClassOf :Person .
+    rdfs:label      "PersonObservation"@en ;  #, "Persoonsvermelding"@nl ;
+    skos:definition "A Person observation is a person that can be observed on a Source"@en ;
+    skos:scopeNote  """A person observation represents how a person is recorded on a Source. Therefore, it must
+                       always be related to a source. Person observations closely reflect data as it appears in the
+                       source, that is, with the age, occupation, and spelling of the person's name recorded as in the
+                       record. A notable exception are dates where the creator of the person observation is encouraged
+                       to write down the date according to the YMD ISO 8601 date standard (for example: '1802-07-29'),
+                       even though the source probably lists the date in a DMY or MDY format or another calendar
+                       entirely. Information on the original entry can be stored using an optional Triple,
+                       so that the database still shows the original date.
+                    """@en ;
+    rdfs:subClassOf :Person ;
+#    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
+    sdo:workExample [ a                  sdo:ImageObject ;
+                      sh:order           0 ;
+                      sdo:caption        "Schematic overview of a PersonObservation" ;
+                      sdo:contentUrl     "../web_images/pico_persoonsvermelding_schema_en.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a person observation." ;
+                      sdo:encodingFormat "image/svg+xml" ;
+                      sdo:name           "PersonObservation overview" ] ;
+    sdo:workExample [ a                  sdo:TextObject ;
+                      sdo:description    "Example of two Person Observations from the same source" ;
+                      sdo:encodingFormat "text/turtle" ;
+                      sdo:name           "Person observation example" ;
+                      sdo:text           """
+                                            afr:geboorteregiser_1858_po_1
+                                               a                     pico:PersonObservation ;
+                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               sdo:name              "Abe Bos" ;
+                                               sdo:familyName        "Bos" ;
+                                               sdo:givenName         "Abe" ;
+                                               sdo:birthDate         "21 Junij 1858"^^xsd:string ;
+                                               sdo:birthDate         "1858-06-21"^^xsd:date ;
+                                               sdo:birthPlace        "Joure" ;
+                                               sdo:gender            sdo:Male ;
+                                               pico:hasRole          picot:575 ;  # child
+                                               sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
+
+                                            afr:geboorteregiser_1858_po_2
+                                               a                     pico:PersonObservation ;
+                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               sdo:name              "Sjouke Abes Bos" ;
+                                               sdo:familyName        "Bos" ;
+                                               sdo:givenName         "Sjouke" ;
+                                               pico:hasAge           "30"^^xsd:decimal ;
+                                               sdo:hasOccupation     "klokmakersknecht" ;
+                                               sdo:address           "Joure" ;
+                                               sdo:gender            sdo:Male ;
+                                               sdo:spouse            afr:geboorteregiser_1858_po_3 ;
+                                               sdo:children          afr:geboorteregiser_1858_po_1 ;
+                                               pico:hasRole          picot:489 .  # declarant
+                                         """ ] .
 
 :PersonReconstruction
     a               owl:Class ;
-    rdfs:label      "Persoonsreconstructie"@nl ;
-    rdfs:subClassOf :Person .
+    rdfs:label      "PersonReconstruction"@en ;  #, "Persoonsreconstructie"@nl ;
+    skos:definition """A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
+                           single resource."""@en ;
+    skos:scopeNote  """
+                            A Person reconstruction must always refer to one or more Person observations. For this,
+                            the prov:wasDerivedFrom property is used.
+                            Information about the creation should be documented with the prov:wasGeneratedBy property.
+                            Information about updates of a Person reconstruction should be documented with
+                            prov:wasRevisionOf
+                        """@en ;
+    rdfs:subClassOf :Person ;
+#    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
+    sdo:workExample [ a                  sdo:ImageObject ;
+                      sh:order           0 ;
+                      sdo:caption        "Schematic overview of a person reconstruction" ;
+                      sdo:contentUrl     "../web_images/pico_persoonsreconstructie_schema_en.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a person reconstruction." ;
+                      sdo:encodingFormat "image/svg+xml" ;
+                      sdo:name           "PersonReconstruction overview" ] ;
+    sdo:workExample [ a                  sdo:TextObject ;
+                      sdo:description    "Example of a Person Reconstruction" ;
+                      sdo:encodingFormat "text/turtle" ;
+                      sdo:name           "Person Reconstruction example" ;
+                      sdo:text           """
+                                                cbg:person_reconstruction_2
+                                                    a                   pico:PersonReconstruction ;
+                                                    sdo:name            "Anna Maria Koppen" ;
+                                                    sdo:familyName      "Koppen" ;
+                                                    sdo:givenName       "Anna" ;
+                                                    sdo:gender          sdo:Female ;
+                                                    sdo:birthPlace      "Haarlem" ;
+                                                    sdo:birthDate       "1860-03-31"^^xsd:date ;
+                                                    sdo:deathPlace      "Detroit, VSA" ;
+                                                    sdo:deathDate       "1926"^^xsd:gYear ;
+                                                    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
+                                                    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
-# Properties - observation dependent
-:hasAge
-    a           rdf:Property ;
-    rdfs:label  "heeft leeftijd"@nl ;
-    rdfs:domain :PersonObservation .
+                                                cbg:reconstruction_activity_01
+                                                    a                      prov:Activity ;
+                                                    prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
+                                                    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
+                                                """ ] .
 
-:hasRole
-    a           rdf:Property ;
-    rdfs:label  "heeft rol"@nl ;
-    rdfs:domain :PersonObservation .
+sdo:ArchiveComponent
+    a                owl:Class ;
+    rdfs:isDefinedBy sdo: ;
+    rdfs:subClassOf  sdo:CreativeWork ;
+    skos:definition  """An intangible type to be applied to any archive content, carrying with it a set of
+                            properties required to describe archival items and collections."""@en ;
+    rdfs:label       "Source"@en ;  #, "Bron"@nl ;
+    skos:scopeNote   """Person observations can appear on many types of historical documents. The PiCo ontology does
+                          not aim to describe these sources, as excellent data models, such as Records in Contexts and
+                          Dublin Core, already exist within the heritage domain. In order to model person observations,
+                          we require that institutions describe their sources with a single name property that combines
+                          identifying information about the source like its title and creation date. For example, a
+                          Marriage Certificate is then described as follows: "BS Marriage Haarlem, November 11, 1885,
+                          certificate number 321". As long as this description consists of various elements that
+                          identify the source, heritage institutions are free to use any authoritative domain-specific
+                          standard to describe their historical person records.
+                       """@nl ;
+    sdo:workExample  [ a                  sdo:TextObject ;
+                       sdo:description    "Example of a Source with a linked Scan" ;
+                       sdo:encodingFormat "text/turtle" ;
+                       sdo:name           "Source with a linked Scan" ;
+                       sdo:text           """
+                                                   afr:geboorteregiser_1858
+                                                       a                   sdo:ArchiveComponent ;
+                                                       sdo:additionalType  picot:551 ;  # civil registry: birth
+                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
+                                                       sdo:holdingArchive  <https://www.tresoar.nl/> ;
+                                                       sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
+                                                       sdo:dateCreated     "1885"^^xs:gYear ;
+                                                       sdo:locationCreated "Haskerland" ;
+                                                       sdo:associatedMedia [ a                sdo:ImageObject ;
+                                                                             sdo:position  51 ;
+                                                                             sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
+                                                                             sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
+                                               """ ] ;
+.
+
+sdo:ImageObject
+    a                owl:Class ;
+    rdfs:isDefinedBy sdo: ;
+    rdfs:subClassOf  sdo:CreativeWork ;
+    skos:definition  """An image file."""@en ;
+    rdfs:label       "Scan"@en ;  #, "Scan van de Bron"@nl ;
+    skos:scopeNote   """A link to the location of the scan at the HoldingArchive.
+                            A link to scan as it can be displayed online and a link to a thumbnail (for search results)
+                            should be provided."""@en .
+
+pnv:Name
+    a                owl:Class ;
+    rdfs:isDefinedBy pnv: ;
+    skos:definition  "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
+    rdfs:label       "PersonName"@en ;  #, "Naam van een persoon"@nl ;
+    skos:scopeNote   """In the Person Name Vocabulary, a name is considered to be a
+                        a resource type in its own right.
+                        A PersonName can consist of many different parts. The most common ones are mentioned here.
+                        See the full specification of the Person Name Vocabulary for more details.
+                        Alternatively to a pnv:Name, the properties sdo:literalName or sdo:givenName and sdo:familyName can be used.
+                      """@en .
+
+########################################################################################################################
+# Datatype Properties
+########################################################################################################################
+
+sdo:address
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Physical address of the Person." ;
+    rdfs:label         "address"@en ;
+    skos:scopeNote     "Address of a Person as mentioned on the Source."@en ;
+    sdo:domainIncludes :PersonObservation ;
+    sdo:rangeIncludes  sdo:Text .   # We should support both textual addresses as URI's, is sdo:address daar wel geschikt voor?
+
+pnv:baseSurname
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """A Base surname is a family name without any prefixes, if those prefixes need to be ignored
+                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
+                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
+                          """@en ;
+    rdfs:label         "baseSurname"@en ;
+    skos:scopeNote     "A2A:PersonNameLastName"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:birthDate
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The birth date of a persoon." ;
+    rdfs:label         "birthDate"@en ;
+#    skos:preflabel        "Geboortedatum"@nl ;
+    skos:scopeNote     """The birth date of a person. A date value in ISO 8601 format should be used.
+                          Incomplete dates are allowed, but only when truncated from small to large. For example:
+                          "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
+                          Sometimes, you may want use a string as birthDate. For example if you want to or have to
+                          record the date exactly as it was written on the Source. If possible use both the string
+                          format and the xsd:date format in this case.
+                       """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:date ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:birthPlace
+    a                  owl:DatatypeProperty ;  # rdf:Property wordt niet opgenomen in de HTML als een eigen paragraaf. Wat is daar aan te doen?
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The place where a person was born." ;
+    rdfs:label         "birthPlace"@en ;
+#    skos:preflabel        "geboorteplaats"@nl ;
+    skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
+                          If desired, both the literal place, as mentioned on the Source can be used together with
+                          the reconciled version.
+                       """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:string ;
+    sdo:rangeIncludes  xsd:anyURI .
+
+sdo:contentLocation
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    """The location depicted or described in the content.
+                          For example, the geographic coverage of an archival record.
+                          Or the location in a photograph or painting.
+                       """@en ;
+    rdfs:label         "contentLocation"@en ;
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  xsd:string ;
+    sdo:rangeIncludes  xsd:anyURI .
+
+sdo:dateCreated
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The date on which the Source was created." ;
+    rdfs:label         "dateCreated"@en ;
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  xsd:date .
+
+sdo:deathDate
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Date of death." ;
+    rdfs:label         "deathDate"@en ;
+#   rdfs:label            "datum van overlijden"@nl ;
+    skos:scopeNote     """The death date of a person. A date value in ISO 8601 format should be used.
+                             Incomplete dates are allowed, but only when truncated from small to large. For example:
+                             "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
+                             When the date of death is not known, but is known that a person is deceased, the
+                             property pico:deceased can be used.
+                             Sometimes, you may want use a string as birthDate. For example if you want to or have to
+                             record the date exactly as it was written on the Source. If possible use both the string
+                             format and the xsd:date format in this case.
+                          """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:date ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:deathPlace
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The place where the person died."@en ;
+    skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
+                          If desired, both the literal place, as mentioned on the Source can be used together with
+                          the reconciled version.
+                       """@en ;
+    rdfs:label         "deathPlace"@en ;
+    sdo:domainIncludes xsd:string ;
+    sdo:domainIncludes xsd:anyURI .
 
 :deceased
-    a           rdf:Property ;
-    rdfs:label  "overleden"@nl ;
-    rdfs:domain :PersonObservation .
+    a                  owl:DatatypeProperty ;
+    skos:definition    "Indication if a person is deceased." ;
+    rdfs:label         "deceased"@en ;
+#    rdfs:label           "overleden"@nl ;
+    skos:scopeNote     """Indication if a person is still alive or not. Only used when deathDate is unknown.
+                             A person without a deathDate and without the property deceased set to true,
+                             will be considered alive. This will have consequences for the publication
+                             of the person record and of any linked media items.
+                          """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:boolean  # true or false
+.
+
+prov:endedAtTime
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    "The end time of the activity that generated a Person Reconstruction." ;
+    rdfs:label         "endedAtTime" ;
+    sdo:domainIncludes prov:Activity ;
+    sdo:rangeIncludes  xsd:dateTime .
+
+sdo:familyName
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Family name. For Dutch names, this is the last name of a person." ;
+    rdfs:label         "familyName"@en ;  #, "Achternaam"@nl ;
+    skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the preferred method for
+                             describing person names. Use pnv:Name for more extensive name annotations.
+                          """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:string .
+
+pnv:literalName
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """Literal name designates a full personal name. This property may only be left blank if a
+                             person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
+                             being born), in which cases the property pnv:nameSpecification should state "unknown" or
+                             "unnamed".
+                          """ ;
+    rdfs:label         "literalName"@en ;
+    skos:scopeNote     "A2A:PersonNameLiteral"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:gender
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Gender of a Person." ;
+    rdfs:label         "gender"@en ;
+    skos:scopeNote     """Use one of: sdo:Male or sdo:Female."""@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  sdo:GenderType .
+
+pnv:givenName
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
+                       name-giving event.
+                       """@en ;
+    rdfs:label         "givenName (pnv)"@en ;
+    skos:scopeNote     "A2A:PersonFirstName"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:givenName
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Given name. For Dutch names, this is the first name of a person." ;
+    rdfs:label         "givenName (schema)" ;
+    skos:scopeNote     """The use of sdo:givenNamen and sdo:familyName is the preferred method for
+                             describing person names. Use pnv:Name for more extensive name annotations.
+                          """@en ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  xsd:string .
+
+:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
+         a                  owl:DatatypeProperty ;
+         skos:definition    "The age of a person."@en ;
+#         skos:definition       "De leeftijd van een persoon."@nl ;
+         rdfs:label         "hasAge"@en ;
+#         skos:preflabel        "leeftijd"@nl ;
+         skos:scopeNote     """Only used for Person observations, in case the birth date is not known,
+                                  but the age is. In combination with de date of the Source, a birth date range can
+                                  be derived, which can be used in the process of creating a Person reconstruction.
+                                  The age is considered to be in years, unless otherwise mentioned. So an age of
+                                  "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
+                                  Numerical ages ("4") are preferred above ages in text ("four").
+                               """@en ;
+         sdo:domainIncludes :PersonObservation ;
+#         rdfs:domain        :PersonObservation ;  # Zo stond het in PiCo 0.9. Maar rdfs:domain wordt niet gelezen door PyLODE. Dubbel annoteren, of kiezen voor één?
+         sdo:rangeIncludes  rdfs:Literal  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
+.
+
+sdo:hasOccupation
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The Person's occupation." ;
+    rdfs:label         "hasOccupation"@en ;
+    skos:scopeNote     """Todo"""@en ;
+    sdo:domainIncludes :PersonObservation ;
+    sdo:rangeIncludes  xsd:string ;
+    sdo:rangeIncludes  xsd:anyURI .
 
 :hasReligion
-    a           rdf:Property ;
-    rdfs:label  "heeft religie"@nl ;
-    rdfs:domain :Person .
+    a                 owl:DatatypeProperty ;
+    skos:definition   "Religious conviction of a person." ;
+    rdfs:label        "hasReligion" ;
+    skos:scopeNote    """Religion as mentioned on the Source.
+                         If desired, a SKOS thesaurus can be used to annotate religion.
+                      """@en ;  # Todo: Can we recommend a thesaurus for religions?
+    rdfs:domain       :Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
+    sdo:rangeIncludes xsd:string ;
+    sdo:rangeIncludes xsd:anyURI .
 
-# Properties - Interpersonal relations
-:grandparent
-    a                  rdf:Property ;
-    rdfs:label         "heeft grootouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+pnv:initials
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """An initial is the first letter of a person's given name (or sometimes a combination of
+                             letters). The Initials property can be used to separately record the initial(s) of a
+                             person's given name(s). Each initial should be followed by a dot. It is recommended to
+                             always use the Initials property to record initials, but if only the initials of a given
+                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
+                             Example 1: "Peter R. de Vries" would be modelled using pnv:initials "P.R." and
+                             pnv:givenName "Peter R.".
+                             Example 2: "C.Joh. Kieviet" would ideally be modelled using pnv:initials "C.Joh.",
+                             but pnv:givenName "C.Joh." is also possible.
+                             Example 3: "H.A.F.M.O. (Hans) van Mierlo" would be modelled using
+                             pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
+                          """@en ;
+    rdfs:label         "initials"@en ;
+    skos:scopeNote     "A2A:PersonNameInitials"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:name
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The name of a Person or a Source." ;
+    rdfs:label         "name"@en ;  #, "Volledige naam"@nl ;
+    skos:scopeNote     """For Persons: Use full name if the name can't be split into given name and family name.
+                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:Name.
+                       """@en ;
+    skos:scopeNote     """For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
+                          this may contain a combination of it's name, year of creation, creator, et cetera.
+                       """@en ;
+    sdo:domainIncludes :Person, sdo:ArchiveComponent ;
+    sdo:rangeIncludes  xsd:string .
+
+pnv:patronym
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """A Patronym is a name element based on the given name of one's father or grandfather.
+                             This is also the preferred property for a matronym (i.e. a name element based on the given
+                             name of one's mother or grandmother).
+                          """ ;
+    rdfs:label         "patronym"@en ;
+    skos:scopeNote     "A2A:PersonNamePatronym"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+sdo:position
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The position of the scan." ;
+    rdfs:label         "position"@en ;
+    skos:scopeNote     """The position defines the order in which scans are presented on the web.
+                          This feature is required when a Source has multiple scans.
+                       """@en ;
+    sdo:domainIncludes sdo:ImageObject ;
+    sdo:rangeIncludes  xsd:int .
+
+prov:startedAtTime
+    a                  owl:DatatypeProperty ;  # TODO: startedAtTime vereist een xsd:dateTime. Vaak is het tijdstip niet bekend, maar volstaat een date. Gebruiken we dan T00:00:00 of maken we een subclasse die alleen een date toestaat?
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    "The start time of the activity that generated a Person Reconstruction." ;
+    rdfs:label         "startedAtTime" ;
+    sdo:domainIncludes prov:Activity ;
+    sdo:rangeIncludes  xsd:dateTime .
+
+pnv:surnamePrefix
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   pnv: ;
+    skos:definition    """A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').
+                          """@en ;
+    rdfs:label         "surnamePrefix"@en ;
+    skos:scopeNote     "A2A:PersonNamePrefixLastName"@en ;
+    sdo:domainIncludes pnv:Name ;
+    sdo:rangeIncludes  xsd:string .
+
+prov:wasAssociatedWith
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    "Assignment of responsibility to an agent for the activity of creating a person reconstruction."@en ;
+    rdfs:label         "wasAssociatedWith" ;
+    sdo:domainIncludes prov:Activity ;
+    sdo:rangeIncludes  prov:Agent .
+
+########################################################################################################################
+# Object Properties
+########################################################################################################################
+
+sdo:additionalName
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The name of a Person, annotated according to the Person Name Vocabulary." ;
+    rdfs:label         "additionalName"@en ;
+#    skos:preflabel        "heeft naam"@nl
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  pnv:Name .
+
+sdo:additionalType
+    a                  qb:CodedProperty, owl:ObjectProperty ;
+    qb:codeList        picot:523 ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The type of the Source." ;
+    rdfs:label         "additionalType"@en ;
+    skos:scopeNote     "Use a term from the PiCo thesaurus for Soure types."@en ;
+    sdo:domainIncludes sdo:ArchiveComponent .
+#    sdo:rangeIncludes  :SourceType .
+
+#:SourceType
+#    a          owl:Class ;
+#    rdfs:label "SourceType" .
+
+sdo:associatedMedia
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    """A media object, usually a scan, that encodes the Source of a Person observation."""@en ;
+    rdfs:label         "associatedMedia"@en ;
+    skos:scopeNote     """scopeNote
+                             ...
+                          """@en ;
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  sdo:ImageObject .
+
+sdo:children
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    """A child of a person.
+                       """@en ;
+    rdfs:label         "child"@en ;
+    skos:scopeNote     """For Person observations, the child should always refer to another Person observation
+                             on the same Source.
+                          """@en ;
+    skos:scopeNote     """For Person reconstructions, the child should refer to another Person reconstruction.
+                          """@en ;
+    rdfs:subPropertyOf sdo:relatedTo, :hasDescendant ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  :Person ;
+    owl:inverseOf      sdo:parent ;
+.
+
+sdo:embedUrl
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    """A URL pointing to a viewer for a specific scan. In general, this is the information in the
+                             src element of an embed tag and should not be the same as the content of the loc tag.
+                          """@en ;
+    rdfs:label         "embedUrl"@en ;
+    sdo:domainIncludes sdo:ImageObject ;
+    sdo:rangeIncludes  sdo:URL .
+
+prov:hadPrimarySource
+    a                  owl:ObjectProperty ;  # Should be defined as a required property
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    """A primary source for a topic refers to something produced by some agent with direct
+                             experience and knowledge about the topic, at the time of the topic's study, without
+                             benefit from hindsight. Because of the directness of primary sources, they
+                             'speak for themselves' in ways that cannot be captured through the filter of secondary
+                             sources. As such, it is important for secondary sources to reference those primary
+                             sources from which they were derived, so that their reliability can be investigated.
+                             A primary source relation is a particular case of derivation of secondary materials from
+                             their primary sources. It is recognized that the determination of primary sources can be
+                             up to interpretation, and should be done according to conventions accepted within the
+                             application's domain.
+                          """@en ;
+    rdfs:label         "hadPrimarySource"@en ;
+    skos:scopeNote     "Linking a Source with the hadPrimarySource property is required for Person Observations." ;
+    sdo:domainIncludes :PersonObservation ;
+    sdo:rangeIncludes  sdo:ArchiveComponent .
+
+:hasAncestor
+    a                  owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label         "hasAncestor"@en ;
+#    rdfs:label         "heeftVoorouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    owl:inverseOf      :hasDescendant ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+.
+
+:hasDescendant
+    a                  owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label         "hasDescendant"@en ;
+#    rdfs:label "heeftAfstammeling"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    owl:inverseOf      :hasAncestor ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+.
+
+:hasChild-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasChild-in-law"@en ;
+#    rdfs:label         "heeftSchoonkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasParent-in-law .
+
+:hasCousin
+    a                  owl:SymmetricProperty, owl:ObjectProperty ;
+    rdfs:label         "hasCousin"@en ;
+#    rdfs:label         "heeftNeef/Nicht"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:grandchild
-    a                  rdf:Property ;
-    rdfs:label         "heeft kleinkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasCousin-in-law
+    a                  owl:SymmetricProperty, owl:ObjectProperty ;
+    rdfs:label         "hasCousin-in-law"@en ;
+#    rdfs:label         "heeftSchoonneef/Schoonnicht"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:godparent
-    a                  rdf:Property ;
-    rdfs:label         "heeft peetouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasFosterChild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasFosterChild"@en ;
+#    rdfs:label         "heeftPleegkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasFosterParent .
+
+:hasFosterParent
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasFosterParent"@en ;
+#    rdfs:label         "heeftPleegouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasFosterChild .
+
+:hasGodchild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGodchild"@en ;
+#    rdfs:label         "heeftPetekind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGodparent .
+
+:hasGodparent
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGodparent"@en ;
+#    rdfs:label         "heeftPeetouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGodchild .
+
+:hasGrandchild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGrandchild"@en ;
+#    rdfs:label         "heeftKleinkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGrandparent .
+
+:hasGrandchild-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGrandchild-in-law"@en ;
+#    rdfs:label         "heeftSchoonkleinkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGrandparent-in-law .
+
+:hasGrandparent
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGrandparent"@en ;
+#    rdfs:label         "heeftGrootouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGrandchild .
+
+
+:hasGrandparent-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGrandparent-in-law"@en ;
+#    rdfs:label         "heeftSchoongrootouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGrandchild-in-law .
+
+:hasGreat-grandchild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGreat-grandchild"@en ;
+#    rdfs:label         "heeftAchterkleinkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGreat-grandparent .
+
+:hasGreat-grandparent
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasGreat-grandparent"@en ;
+#    rdfs:label         "heeftOvergrootouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasGreat-grandchild .
+
+:hasHalf-sibling
+    a                  owl:SymmetricProperty, owl:ObjectProperty ;
+    rdfs:label         "hasHalf-sibling"@en ;
+#    rdfs:label         "halfbroer/halfzus"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:godchild
-    a                  rdf:Property ;
-    rdfs:label         "heeft petekind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasLegitimizedChild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasLegitimizedChild"@en ;
+#    rdfs:label         "heeftGewettigdKind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :isLegitimitezedChildOf .
+
+:isLegitimitezedChildOf
+    a                  owl:ObjectProperty ;
+    rdfs:label         "isLegitimitezedChildOf" ;
+#    rdfs:label         "isGewettigdKindVan"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasLegitimizedChild .
+
+
+:hasNephew_Niece-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasNephew-in-law/Niece-in-law"@en ;
+#    rdfs:label         "heeftSchoonneef/Schoonnicht (oomzegger/tantezegger)"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasUncle_Aunt-in-law .
+
+:hasNephew_Niece
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasNephew/Niece"@en ;
+#    rdfs:label         "heeftNeef/Nicht (oomzegger/tantezegger)"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasUncle_Aunt .
+
+:hasParent-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasParent-in-law"@en ;
+#    rdfs:label         "heeftSchoonouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasChild-in-law .
+
+:hasPreviousPartner
+    a                  owl:SymmetricProperty, owl:ObjectProperty ;
+    rdfs:label         "hasPreviousPartner"@en ;
+#    rdfs:label         "eerderePartner"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:previousPartner
-    a                  rdf:Property ;
-    rdfs:label         "heeft eerdere partner"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasSibling-in-law
+    a                  owl:SymmetricProperty, owl:ObjectProperty ;
+    rdfs:label         "hasSibling-in-law"@en ;
+#    rdfs:label         "heeftZwager/Schoonzus"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:wid
-    a                  rdf:Property ;
-    rdfs:label         "is weduwe/weduwnaar van"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasStepchild
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasStepchild"@en ;
+#    rdfs:label         "stiefkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasStepparent .
+
+:hasStepchild-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasStepchild-in-law"@en ;
+#    rdfs:label         "heeftStiefschoonkind"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasStepparent-in-law .
+
+:hasStepparent
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasStepparent"@en ;
+#    rdfs:label         "stiefouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasStepchild .
+
+:hasStepparent-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasStepparent-in-law"@en ;
+#    rdfs:label         "heeftStiefschoonouder"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasStepchild-in-law .
+
+:hasStepsibling
+    a                  owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label         "hasStepsibling"@en ;
+#    rdfs:label         "heeftStiefbroer/Stiefzus"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:stepparent
-    a                  rdf:Property ;
-    rdfs:label         "heeft stiefouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
+:hasUncle_Aunt
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasUncle/Aunt"@en ;
+#    rdfs:label         "heeftOom/Tante"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasNephew_Niece .
+
+:hasUncle_Aunt-in-law
+    a                  owl:ObjectProperty ;
+    rdfs:label         "hasUncle/Aunt-in-law" ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    rdfs:domain        :Person ;
+    rdfs:range         :Person ;
+    owl:inverseOf      :hasNephew_Niece-in-law .
+
+sdo:holdingArchive
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "Organization that holds, keeps or maintains the ArchiveComponent." ;
+    rdfs:label         "holdingArchive"@en ;
+    skos:scopeNote     "Todo" ;  # Of een voorbeeld geven
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  xsd:anyURI .
+
+:isWidOf
+    a                  owl:ObjectProperty ;
+    rdfs:label         "isWidow/WidowerOf"@en ;
+#    rdfs:label         "isWeduwe/WeduwnaarVan"@nl ;
+    rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:stepchild
-    a                  rdf:Property ;
-    rdfs:label         "heeft stiefkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+sdo:parent
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "A parent of a person." ;
+    rdfs:label         "parent"@en ;
+    skos:scopeNote     """For Person observations, the parent should always refer to another Person observation
+                             on the same Source.
+                          """@en ;
+    skos:scopeNote     """For Person reconstructions, the parent should refer to another Person reconstruction.
+                          """@en ;
+    rdfs:subPropertyOf sdo:relatedTo, :hasAncestor ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  :Person ;
+    owl:inverseOf      sdo:children .
 
-:child-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoonkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+sdo:sibling
+    a                  owl:ObjectProperty, owl:SymmetricProperty ;  # mag je sdo:spouse zomaar uitbreiden?
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "A person's brother or sister."@en ;
+    rdfs:label         "sibling"@en ; #, "broer/zus"@nl ;
+    skos:scopeNote     """For Person observations, the sibling should always refer to another Person observation
+                             on the same Source.
+                          """@en ;
+    skos:scopeNote     """For Person reconstructions, the sibling should refer to the Person reconstruction of
+                             the spouse.
+                          """@en ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  :Person .
 
-:parent-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoonouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+sdo:spouse
+    a                  owl:ObjectProperty, owl:SymmetricProperty ;  # mag je sdo:spouse zomaar uitbreiden?
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "The person's spouse."@en ;
+    rdfs:label         "spouse"@en ; #, "echtgenoot"@nl ;
+    skos:scopeNote     """For Person observations, the spouse should always refer to another Person observation
+                             on the same Source.
+                          """@en ;
+    skos:scopeNote     """For Person reconstructions, the spouse should refer to the Person reconstruction of
+                             the spouse.
+                          """@en ;
+    rdfs:subPropertyOf sdo:relatedTo ;
+    sdo:domainIncludes :Person ;
+    sdo:rangeIncludes  :Person .
 
-:half-sibling
-    a                  rdf:Property ;
-    rdfs:label         "heeft halfbroer/halfzus"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+sdo:thumbnail
+    a                  owl:ObjectProperty ;
+    skos:definition    """Thumbnail image of the Scan."""@en ;
+    rdfs:label         "thumbnail"@en ;
+    sdo:domainIncludes sdo:ImageObject ;
+    sdo:rangeIncludes  sdo:ImageObject .
 
-:stepsibling
-    a                  rdf:Property ;
-    rdfs:label         "heeft stiefbroer/stiefzus"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+sdo:url
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo: ;
+    skos:definition    "URL of the Source or Scan." ;
+    rdfs:label         "url"@en ;
+    skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
+    skos:scopeNote     """For Scans of Sources: a link to the scan of the Source at the holding archive.
+                             Preferably a link to a IIIF manifest.
+                           """@en ;
+    sdo:domainIncludes sdo:ImageObject, sdo:ArchiveComponent ;
+    sdo:rangeIncludes  sdo:URL .
 
-:sibling-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft zwager/schoonzus"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+:hasRole
+    a                  qb:CodedProperty, owl:ObjectProperty ;
+    qb:codeList        picot:44 ;
+    #    rdfs:range            :Role ;
+    skos:definition    "The role of a Person observation on the Source." ;
+    rdfs:label         "hasRole"@en ;
+    skos:scopeNote     """Use a term from the PiCo Roles thesaurus."""@en ;
+    sdo:domainIncludes :PersonObservation .
 
-:great-grandparent
-    a                  rdf:Property ;
-    rdfs:label         "heeft overgrootouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+#:Role
+#    a          owl:Class ;
+#    rdfs:label "Role" .
 
-:great-grandchild
-    a                  rdf:Property ;
-    rdfs:label         "heeft achterkleinkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+prov:wasDerivedFrom
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    """A derivation is a transformation of one or more Person observations
+                             in a Person reconstruction"""@en ;
+    rdfs:label         "wasDerivedFrom"@en ;
+    skos:scopeNote     """A PersonReconstruction is always derived from one or more PersonObservations.
+                             The wasDerivedFrom property is therefore required for PersonReconstructions.
+                          """@en ;
+    sdo:domainIncludes :PersonReconstruction ;
+    sdo:rangeIncludes  :PersonObservation .
 
-:fosterParent
-    a                  rdf:Property ;
-    rdfs:label         "heeft pleegouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+prov:wasGeneratedBy
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    """Generation is the completion of production of a new Person reconstruction by an activity.
+                          This Person reconstruction did not exist before generation and becomes available
+                          for usage after this generation.
+                       """@en ;  # TODO afgaande op deze definitie hebben we nog een prov property nodig voor updates: prov:wasRevisionOf
+    rdfs:label         "wasGeneratedBy"@en ;
+    skos:scopeNote     """Required for PersonReconstructions."""@en ;
+    sdo:domainIncludes :PersonReconstruction ;
+    sdo:rangeIncludes  prov:Activity .
 
-:fosterChild
-    a                  rdf:Property ;
-    rdfs:label         "heeft pleegkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+prov:wasRevisionOf
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   prov: ;
+    skos:definition    """A revision is a derivation for which the resulting entity is a revised version of some
+                          original.
+                       """@en ;  # TODO Deze is nieuw. Opnemen in de PiCo beschrijving.
+    rdfs:label         "wasRevisionOf"@en ;
+    skos:scopeNote     """The wasRevisionOf property is used for modifications made on Person
+                          reconstructions. It can be qualified with a prov:Revision.
+                       """@en ;  # TODO registratie van creatie en updates van Person reconstructions verder uitwerken
+    sdo:domainIncludes :PersonReconstruction ;
+    sdo:domainIncludes :PersonReconstruction .
 
-:stepparent-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft stiefschoonouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+########################################################################################################################
+# Vocabularies
+########################################################################################################################
 
-:stepchild-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft stiefschoonkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+picot:44
+    a          skos:ConceptScheme ;
+    rdfs:label 'Persons in Context role thesaurus' .
 
-:grandparent-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoongrootouder"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+picot:523
+    a          skos:ConceptScheme ;
+    rdfs:label 'Persons in Context sourceType thesaurus' .
 
-:grandchild-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoonkleinkind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+########################################################################################################################
+# TODO
+########################################################################################################################
 
-:uncle_aunt
-    a                  rdf:Property ;
-    rdfs:label         "heeft oom/tante"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+# ROAR attribution
+# PNV attribution (Voor de ontologie. En ik gebruik ook een aantal teksten uit hun documentatie.
+# LODE attribution. Dit gaat vanzelf goed in de ontpub versie, maar (nog?) niet in de nieuwe versie
+# Issue met namespace van PNV (staat nu als ns2: in de HTML output in plaats van als pnv:). Lijkt een issue in PNV?
+# Meertalig maken. Nu is alles in Engels. Moet ook in NL kunnen. En later mogelijk andere talen. Dit werkt nog niet in de supermodel versie van pyLODE
+# Versioning van de ontologie. Ook in de publicatie. Willen we oudere versies beschikbaar houden op eigen URL?
+# Alle pico-relaties tussen personen zijn van naam veranderd: prefix 'has' toegevoegd om ambiguiteit te voorkeomn ('granparent' kon geïnterpreteerd worden als 'hasGrandparent' of als 'grandparentOf'
 
-:nephew_niece
-    a                  rdf:Property ;
-    rdfs:label         "heeft neef/nicht (oomzegger/tantezegger)"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
-
-:nephew_niece-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoonneef/schoonnicht (oomzegger/tantezegger)"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
-
-:cousin
-    a                  rdf:Property ;
-    rdfs:label         "heeft neef/nicht"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
-
-:cousin-in-law
-    a                  rdf:Property ;
-    rdfs:label         "heeft schoonneef/schoonnicht"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
-
-:legitimizedChild
-    a                  rdf:Property ;
-    rdfs:label         "heeft gelegitimeerd kind"@nl ;
-    rdfs:subPropertyOf schema:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+# Documentation
+# Must-read for publishing ontologies: https://www.w3.org/TR/swbp-vocab-pub/
+# Consider defining a Class to represent all the skos:Concepts in your controlled list (this can facilitate declaration of properties that will use this list)
+## --> bovenstaande komt uit: https://www.w3.org/TR/ld-bp/
