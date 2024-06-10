@@ -220,7 +220,7 @@ prov:Agent
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
-                      sdo:contentUrl     "../web_images/personsreconstructioin.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "../web_images/pico_personreconstruction.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person reconstruction." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonReconstruction overview" ] ;

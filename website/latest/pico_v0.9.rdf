@@ -102,6 +102,49 @@
     <rdfs:subClassOf rdf:resource="https://w3id.org/pnv#Person"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb4">
+    <rdf:type rdf:resource="https://schema.org/TextObject"/>
+    <sdo:description>Example of two Person Observations from the same source</sdo:description>
+    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
+    <sdo:name>Person observation example</sdo:name>
+    <sdo:text>
+                                            afr:geboorteregiser_1858_po_1
+                                               a                     pico:PersonObservation ;
+                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               sdo:name              "Abe Bos" ;
+                                               sdo:familyName        "Bos" ;
+                                               sdo:givenName         "Abe" ;
+                                               sdo:birthDate         "21 Junij 1858"^^xsd:string ;
+                                               sdo:birthDate         "1858-06-21"^^xsd:date ;
+                                               sdo:birthPlace        "Joure" ;
+                                               sdo:gender            sdo:Male ;
+                                               pico:hasRole          picot:575 ;  # child
+                                               sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
+
+                                            afr:geboorteregiser_1858_po_2
+                                               a                     pico:PersonObservation ;
+                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               sdo:name              "Sjouke Abes Bos" ;
+                                               sdo:familyName        "Bos" ;
+                                               sdo:givenName         "Sjouke" ;
+                                               pico:hasAge           "30"^^xsd:decimal ;
+                                               sdo:hasOccupation     "klokmakersknecht" ;
+                                               sdo:address           "Joure" ;
+                                               sdo:gender            sdo:Male ;
+                                               sdo:spouse            afr:geboorteregiser_1858_po_3 ;
+                                               sdo:children          afr:geboorteregiser_1858_po_1 ;
+                                               pico:hasRole          picot:489 .  # declarant
+                                         </sdo:text>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb5">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview of a person reconstruction</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_personreconstruction.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a person reconstruction.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>PersonReconstruction overview</sdo:name>
+  </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/address">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
@@ -110,14 +153,6 @@
     <skos:scopeNote xml:lang="en">Address of a Person as mentioned on the Source.</skos:scopeNote>
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
     <sdo:rangeIncludes rdf:resource="https://schema.org/Text"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasSibling-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasSibling-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasChild-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -147,6 +182,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">hasHalf-sibling</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasSibling-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasSibling-in-law</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
@@ -181,15 +224,6 @@
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b1">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_overview.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of the model.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>Model overview</sdo:name>
-  </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/thumbnail">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <skos:definition xml:lang="en">Thumbnail image of the Scan.</skos:definition>
@@ -209,29 +243,6 @@
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
     <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/ArchiveComponent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-    <skos:definition xml:lang="en">An intangible type to be applied to any archive content, carrying with it a set of
-                            properties required to describe archival items and collections.</skos:definition>
-    <rdfs:label xml:lang="en">Source</rdfs:label>
-    <skos:scopeNote xml:lang="en">Person observations can appear on many types of historical documents. The PiCo ontology does
-                          not aim to describe these sources, as excellent data models, such as Records in Contexts and
-                          Dublin Core, already exist within the heritage domain. In order to model person observations,
-                          we require that institutions describe their sources at least with a single name property that
-                          combines identifying information about the source like its title and creation date.
-                          For example, a Marriage Certificate is then described as follows: "BS Marriage Haarlem,
-                          November 11, 1885, certificate number 321". As long as this description consists of various
-                          elements that identify the source, heritage institutions are free to use any authoritative
-                          domain-specific standard to describe their historical person records.
-                       </skos:scopeNote>
-    <skos:scopeNote xml:lang="en">For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       </skos:scopeNote>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b7"/>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b8"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isWidOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">isWidow/WidowerOf</rdfs:label>
@@ -246,6 +257,35 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepchild-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb1">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_overview.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of the model.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>Model overview</sdo:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb8">
+    <rdf:type rdf:resource="https://schema.org/TextObject"/>
+    <sdo:description>Example of a Source with a linked Scan</sdo:description>
+    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
+    <sdo:name>Source with a linked Scan</sdo:name>
+    <sdo:text>
+                                                   afr:geboorteregiser_1858
+                                                       a                   sdo:ArchiveComponent ;
+                                                       sdo:additionalType  picot:551 ;  # civil registry: birth
+                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
+                                                       sdo:holdingArchive  &lt;https://www.tresoar.nl/&gt; ;
+                                                       sdo:url             &lt;https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9&gt; ;
+                                                       sdo:dateCreated     "1885"^^xs:gYear ;
+                                                       sdo:locationCreated "Haskerland" ;
+                                                       sdo:associatedMedia [ a                sdo:ImageObject ;
+                                                                             sdo:position  51 ;
+                                                                             sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
+                                                                             sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
+                                               </sdo:text>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAncestor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -276,15 +316,6 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandchild"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b5">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview of a person reconstruction</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/personsreconstructioin.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of a person reconstruction.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>PersonReconstruction overview</sdo:name>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/url">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -393,6 +424,15 @@
     <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb3">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview of a PersonObservation</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_personobservation.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a person observation.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>PersonObservation overview</sdo:name>
+  </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasParent-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">hasParent-in-law</rdfs:label>
@@ -414,8 +454,8 @@
                        entirely. Information on the original entry can be stored using an optional triple.
                     </skos:scopeNote>
     <rdfs:subClassOf rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b3"/>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b4"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb3"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb4"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -444,6 +484,29 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/ArchiveComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+    <skos:definition xml:lang="en">An intangible type to be applied to any archive content, carrying with it a set of
+                            properties required to describe archival items and collections.</skos:definition>
+    <rdfs:label xml:lang="en">Source</rdfs:label>
+    <skos:scopeNote xml:lang="en">Person observations can appear on many types of historical documents. The PiCo ontology does
+                          not aim to describe these sources, as excellent data models, such as Records in Contexts and
+                          Dublin Core, already exist within the heritage domain. In order to model person observations,
+                          we require that institutions describe their sources at least with a single name property that
+                          combines identifying information about the source like its title and creation date.
+                          For example, a Marriage Certificate is then described as follows: "BS Marriage Haarlem,
+                          November 11, 1885, certificate number 321". As long as this description consists of various
+                          elements that identify the source, heritage institutions are free to use any authoritative
+                          domain-specific standard to describe their historical person records.
+                       </skos:scopeNote>
+    <skos:scopeNote xml:lang="en">For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       </skos:scopeNote>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb7"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb8"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/additionalName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
@@ -451,24 +514,6 @@
     <rdfs:label xml:lang="en">additionalName</rdfs:label>
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <sdo:rangeIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b2">
-    <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Example of an Agent responsible for an Activity</sdo:name>
-    <sdo:text>
-                                             cbg:reconstruction_activity_01
-                                                a                      prov:Activity ;
-                                                prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
-                                                prov:startedAtTime     "2024-05-24T00:00:00"^^xsd:dateTime ;
-                                                prov:endedAtTime       "2024-05-24T00:00:00"^^xsd:dateTime .
-
-                                             cbg:reconstruction_agent_01
-                                                a             prov:Agent ;
-                                                schema:name   "CBG|Center for Family History" ;
-                                                schema:url    &lt;https://cbg.nl&gt; .
-                                          </sdo:text>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasDescendant">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -599,7 +644,7 @@
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
                                   </skos:historyNote>
     <sdo:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/</sdo:codeRepository>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b1"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb1"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/hasOccupation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -740,39 +785,23 @@
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b4">
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb2">
     <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sdo:description>Example of two Person Observations from the same source</sdo:description>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
     <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Person observation example</sdo:name>
+    <sdo:name>Example of an Agent responsible for an Activity</sdo:name>
     <sdo:text>
-                                            afr:geboorteregiser_1858_po_1
-                                               a                     pico:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
-                                               sdo:name              "Abe Bos" ;
-                                               sdo:familyName        "Bos" ;
-                                               sdo:givenName         "Abe" ;
-                                               sdo:birthDate         "21 Junij 1858"^^xsd:string ;
-                                               sdo:birthDate         "1858-06-21"^^xsd:date ;
-                                               sdo:birthPlace        "Joure" ;
-                                               sdo:gender            sdo:Male ;
-                                               pico:hasRole          picot:575 ;  # child
-                                               sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
+                                             cbg:reconstruction_activity_01
+                                                a                      prov:Activity ;
+                                                prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                prov:startedAtTime     "2024-05-24T00:00:00"^^xsd:dateTime ;
+                                                prov:endedAtTime       "2024-05-24T00:00:00"^^xsd:dateTime .
 
-                                            afr:geboorteregiser_1858_po_2
-                                               a                     pico:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
-                                               sdo:name              "Sjouke Abes Bos" ;
-                                               sdo:familyName        "Bos" ;
-                                               sdo:givenName         "Sjouke" ;
-                                               pico:hasAge           "30"^^xsd:decimal ;
-                                               sdo:hasOccupation     "klokmakersknecht" ;
-                                               sdo:address           "Joure" ;
-                                               sdo:gender            sdo:Male ;
-                                               sdo:spouse            afr:geboorteregiser_1858_po_3 ;
-                                               sdo:children          afr:geboorteregiser_1858_po_1 ;
-                                               pico:hasRole          picot:489 .  # declarant
-                                         </sdo:text>
+                                             cbg:reconstruction_agent_01
+                                                a             prov:Agent ;
+                                                schema:name   "CBG|Center for Family History" ;
+                                                schema:url    &lt;https://cbg.nl&gt; .
+                                          </sdo:text>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -790,14 +819,40 @@
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b3">
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb6">
+    <rdf:type rdf:resource="https://schema.org/TextObject"/>
+    <sdo:description>Example of a Person Reconstruction</sdo:description>
+    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
+    <sdo:name>Person Reconstruction example</sdo:name>
+    <sdo:text>
+                                                cbg:person_reconstruction_2
+                                                    a                   pico:PersonReconstruction ;
+                                                    sdo:name            "Anna Maria Koppen" ;
+                                                    sdo:familyName      "Koppen" ;
+                                                    sdo:givenName       "Anna" ;
+                                                    sdo:gender          sdo:Female ;
+                                                    sdo:birthPlace      "Haarlem" ;
+                                                    sdo:birthDate       "1860-03-31"^^xsd:date ;
+                                                    sdo:deathPlace      "Detroit, VSA" ;
+                                                    sdo:deathDate       "1926"^^xsd:gYear ;
+                                                    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
+                                                    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
+
+                                                cbg:reconstruction_activity_01
+                                                    a                      prov:Activity ;
+                                                    prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
+                                                    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
+                                                </sdo:text>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb7">
     <rdf:type rdf:resource="https://schema.org/ImageObject"/>
     <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview of a PersonObservation</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_personobservation.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of a person observation.</sdo:description>
+    <sdo:caption>Schematic overview of a Source</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_source.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a Source.</sdo:description>
     <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>PersonObservation overview</sdo:name>
+    <sdo:name>Source</sdo:name>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isLegitimitezedChildOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -818,15 +873,6 @@
     <rdfs:label xml:lang="en">literalName</rdfs:label>
     <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b7">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview of a Source</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_source.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of a Source.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>Source</sdo:name>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAge">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -872,26 +918,6 @@
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b8">
-    <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sdo:description>Example of a Source with a linked Scan</sdo:description>
-    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Source with a linked Scan</sdo:name>
-    <sdo:text>
-                                                   afr:geboorteregiser_1858
-                                                       a                   sdo:ArchiveComponent ;
-                                                       sdo:additionalType  picot:551 ;  # civil registry: birth
-                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
-                                                       sdo:holdingArchive  &lt;https://www.tresoar.nl/&gt; ;
-                                                       sdo:url             &lt;https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9&gt; ;
-                                                       sdo:dateCreated     "1885"^^xs:gYear ;
-                                                       sdo:locationCreated "Haskerland" ;
-                                                       sdo:associatedMedia [ a                sdo:ImageObject ;
-                                                                             sdo:position  51 ;
-                                                                             sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
-                                                                             sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
-                                               </sdo:text>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/pnv#baseSurname">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
@@ -902,32 +928,6 @@
     <rdfs:label xml:lang="en">baseSurname</rdfs:label>
     <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b6">
-    <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sdo:description>Example of a Person Reconstruction</sdo:description>
-    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Person Reconstruction example</sdo:name>
-    <sdo:text>
-                                                cbg:person_reconstruction_2
-                                                    a                   pico:PersonReconstruction ;
-                                                    sdo:name            "Anna Maria Koppen" ;
-                                                    sdo:familyName      "Koppen" ;
-                                                    sdo:givenName       "Anna" ;
-                                                    sdo:gender          sdo:Female ;
-                                                    sdo:birthPlace      "Haarlem" ;
-                                                    sdo:birthDate       "1860-03-31"^^xsd:date ;
-                                                    sdo:deathPlace      "Detroit, VSA" ;
-                                                    sdo:deathDate       "1926"^^xsd:gYear ;
-                                                    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
-                                                    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
-
-                                                cbg:reconstruction_activity_01
-                                                    a                      prov:Activity ;
-                                                    prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
-                                                    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
-                                                    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
-                                                </sdo:text>
   </rdf:Description>
   <rdf:Description rdf:about="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/523">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -975,8 +975,8 @@
                             prov:wasRevisionOf
                         </skos:scopeNote>
     <rdfs:subClassOf rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b5"/>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b6"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb5"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb6"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/pnv#surnamePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -992,7 +992,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">Agent</rdfs:label>
     <skos:definition>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</skos:definition>
-    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b2"/>
+    <sdo:workExample rdf:nodeID="nf83159772c964fd2b9fb2ef1326621fdb2"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepchild-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
