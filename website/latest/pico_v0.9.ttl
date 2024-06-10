@@ -159,8 +159,7 @@ prov:Agent
                        record. A notable exception are dates where the creator of the person observation is encouraged
                        to write down the date according to the YMD ISO 8601 date standard (for example: '1802-07-29'),
                        even though the source probably lists the date in a DMY or MDY format or another calendar
-                       entirely. Information on the original entry can be stored using an optional Triple,
-                       so that the database still shows the original date.
+                       entirely. Information on the original entry can be stored using an optional triple.
                     """@en ;
     rdfs:subClassOf :Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
@@ -260,13 +259,16 @@ sdo:ArchiveComponent
     skos:scopeNote   """Person observations can appear on many types of historical documents. The PiCo ontology does
                           not aim to describe these sources, as excellent data models, such as Records in Contexts and
                           Dublin Core, already exist within the heritage domain. In order to model person observations,
-                          we require that institutions describe their sources with a single name property that combines
-                          identifying information about the source like its title and creation date. For example, a
-                          Marriage Certificate is then described as follows: "BS Marriage Haarlem, November 11, 1885,
-                          certificate number 321". As long as this description consists of various elements that
-                          identify the source, heritage institutions are free to use any authoritative domain-specific
-                          standard to describe their historical person records.
-                       """@nl ;
+                          we require that institutions describe their sources at least with a single name property that
+                          combines identifying information about the source like its title and creation date.
+                          For example, a Marriage Certificate is then described as follows: "BS Marriage Haarlem,
+                          November 11, 1885, certificate number 321". As long as this description consists of various
+                          elements that identify the source, heritage institutions are free to use any authoritative
+                          domain-specific standard to describe their historical person records.
+                       """@en ;
+    skos:scopeNote   """For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       """@en ;
     sdo:workExample  [ a                  sdo:TextObject ;
                        sdo:description    "Example of a Source with a linked Scan" ;
                        sdo:encodingFormat "text/turtle" ;
@@ -294,8 +296,9 @@ sdo:ImageObject
     skos:definition  """An image file."""@en ;
     rdfs:label       "Scan"@en ;  #, "Scan van de Bron"@nl ;
     skos:scopeNote   """A link to the location of the scan at the HoldingArchive.
-                            A link to scan as it can be displayed online and a link to a thumbnail (for search results)
-                            should be provided."""@en .
+                        A link to scan as it can be displayed online and a link to a thumbnail (for search results)
+                        should be provided.
+                     """@en .
 
 pnv:Name
     a                owl:Class ;
@@ -330,7 +333,6 @@ pnv:baseSurname
                              the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
                           """@en ;
     rdfs:label         "baseSurname"@en ;
-    skos:scopeNote     "A2A:PersonNameLastName"@en ;
     sdo:domainIncludes pnv:Name ;
     sdo:rangeIncludes  xsd:string .
 
@@ -443,9 +445,9 @@ sdo:familyName
     rdfs:isDefinedBy   sdo: ;
     skos:definition    "Family name. For Dutch names, this is the last name of a person." ;
     rdfs:label         "familyName"@en ;  #, "Achternaam"@nl ;
-    skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the preferred method for
-                             describing person names. Use pnv:Name for more extensive name annotations.
-                          """@en ;
+    skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the most straightforward method for
+                          describing person names. Use pnv:Name for more extensive name annotations.
+                       """@en ;
     sdo:domainIncludes :Person ;
     sdo:rangeIncludes  xsd:string .
 
@@ -453,12 +455,11 @@ pnv:literalName
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv: ;
     skos:definition    """Literal name designates a full personal name. This property may only be left blank if a
-                             person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
-                             being born), in which cases the property pnv:nameSpecification should state "unknown" or
-                             "unnamed".
-                          """ ;
+                          person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
+                          being born), in which cases the property pnv:nameSpecification should state "unknown" or
+                          "unnamed".
+                       """@en ;
     rdfs:label         "literalName"@en ;
-    skos:scopeNote     "A2A:PersonNameLiteral"@en ;
     sdo:domainIncludes pnv:Name ;
     sdo:rangeIncludes  xsd:string .
 
@@ -478,7 +479,6 @@ pnv:givenName
                        name-giving event.
                        """@en ;
     rdfs:label         "givenName (pnv)"@en ;
-    skos:scopeNote     "A2A:PersonFirstName"@en ;
     sdo:domainIncludes pnv:Name ;
     sdo:rangeIncludes  xsd:string .
 
@@ -548,7 +548,6 @@ pnv:initials
                              pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
                           """@en ;
     rdfs:label         "initials"@en ;
-    skos:scopeNote     "A2A:PersonNameInitials"@en ;
     sdo:domainIncludes pnv:Name ;
     sdo:rangeIncludes  xsd:string .
 
@@ -574,7 +573,6 @@ pnv:patronym
                              name of one's mother or grandmother).
                           """ ;
     rdfs:label         "patronym"@en ;
-    skos:scopeNote     "A2A:PersonNamePatronym"@en ;
     sdo:domainIncludes pnv:Name ;
     sdo:rangeIncludes  xsd:string .
 
@@ -634,7 +632,7 @@ sdo:additionalType
     rdfs:isDefinedBy   sdo: ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
-    skos:scopeNote     "Use a term from the PiCo thesaurus for Soure types."@en ;
+    skos:scopeNote     "Use a term from the PiCo thesaurus for Source types."@en ;
     sdo:domainIncludes sdo:ArchiveComponent .
 #    sdo:rangeIncludes  :SourceType .
 
@@ -673,9 +671,7 @@ sdo:children
 sdo:embedUrl
     a                  owl:ObjectProperty ;
     rdfs:isDefinedBy   sdo: ;
-    skos:definition    """A URL pointing to a viewer for a specific scan. In general, this is the information in the
-                             src element of an embed tag and should not be the same as the content of the loc tag.
-                          """@en ;
+    skos:definition    """A URL pointing to a viewer for a specific scan."""@en ;
     rdfs:label         "embedUrl"@en ;
     sdo:domainIncludes sdo:ImageObject ;
     sdo:rangeIncludes  sdo:URL .
@@ -703,6 +699,11 @@ prov:hadPrimarySource
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasAncestor"@en ;
 #    rdfs:label         "heeftVoorouder"@nl ;
+    skos:scopeNote     """hasAncestor is not meant to be used as a property for PersonObservations or
+                          PersonReconstructions.
+                          It is a superclass of hasParent. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          the parent of your parent into your ancestor.
+                       """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
     owl:inverseOf      :hasDescendant ;
     rdfs:domain        :Person ;
@@ -713,6 +714,11 @@ prov:hadPrimarySource
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasDescendant"@en ;
 #    rdfs:label "heeftAfstammeling"@nl ;
+    skos:scopeNote     """hasDescendant is not meant to be used as a property for PersonObservations or
+                          PersonReconstructions.
+                          It is a superclass of hasChild. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          the children of your children into your descendants.
+                       """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
     owl:inverseOf      :hasAncestor ;
     rdfs:domain        :Person ;
@@ -989,10 +995,9 @@ sdo:parent
     skos:definition    "A parent of a person." ;
     rdfs:label         "parent"@en ;
     skos:scopeNote     """For Person observations, the parent should always refer to another Person observation
-                             on the same Source.
-                          """@en ;
-    skos:scopeNote     """For Person reconstructions, the parent should refer to another Person reconstruction.
-                          """@en ;
+                          on the same Source. For Person reconstructions, the parent should refer to another Person
+                          reconstruction.
+                       """@en ;  # TODO: deze scopenote moet bij alle relaties worden geplaatst.
     rdfs:subPropertyOf sdo:relatedTo, :hasAncestor ;
     sdo:domainIncludes :Person ;
     sdo:rangeIncludes  :Person ;
@@ -1042,8 +1047,8 @@ sdo:url
     rdfs:label         "url"@en ;
     skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
     skos:scopeNote     """For Scans of Sources: a link to the scan of the Source at the holding archive.
-                             Preferably a link to a IIIF manifest.
-                           """@en ;
+                          Preferably a link to a IIIF manifest.
+                       """@en ;
     sdo:domainIncludes sdo:ImageObject, sdo:ArchiveComponent ;
     sdo:rangeIncludes  sdo:URL .
 
