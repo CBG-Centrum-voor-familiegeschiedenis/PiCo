@@ -494,14 +494,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
     <script id="schema.org" type="application/ld+json">
 [
   {
+    "@id": "https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Persons in Context role thesaurus"
+      }
+    ]
+  },
+  {
+    "@id": "https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/523",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Persons in Context sourceType thesaurus"
+      }
+    ]
+  },
+  {
     "@id": "https://pico.woltjer.cc/ontology",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
     "https://schema.org/contributor": [
-      {
-        "@value": "Rick Companje"
-      },
       {
         "@value": "Micon Schorsij"
       },
@@ -510,6 +529,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
       },
       {
         "@value": "Rick Mourits"
+      },
+      {
+        "@value": "Rick Companje"
       }
     ],
     "https://schema.org/copyrightNotice": [
@@ -522,16 +544,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@value": "Bob Coret"
       },
       {
-        "@value": "Pieter Woltjer"
-      },
-      {
         "@value": "Ivo Zandhuis"
       },
       {
-        "@value": "Mark Lindeman"
+        "@value": "Jeroen Balkenende"
       },
       {
-        "@value": "Jeroen Balkenende"
+        "@value": "Pieter Woltjer"
+      },
+      {
+        "@value": "Mark Lindeman"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -569,28 +591,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@id": "https://cbg.nl"
       }
     ]
-  },
-  {
-    "@id": "https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/523",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "Persons in Context sourceType thesaurus"
-      }
-    ]
-  },
-  {
-    "@id": "https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "Persons in Context role thesaurus"
-      }
-    ]
   }
 ]
 	</script>
@@ -608,7 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
               <a href="#Model-overview">1. Model overview</a>
             </li>
             <li>
-              <a href="#AilrKKDZ">2. Vocabularies</a>
+              <a href="#FVUlTeSS">2. Vocabularies</a>
             </li>
             <li>
               <a href="#Modules-and-Class-Hierarchy">3. Modules and Class Hierarchy</a>
@@ -917,12 +917,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Editors: Bob Coret, Pieter Woltjer, Ivo Zandhuis, Mark Lindeman, Jeroen Balkenende</p>
+                    <p class="tableblock">Editors: Bob Coret, Ivo Zandhuis, Jeroen Balkenende, Pieter Woltjer, Mark Lindeman</p>
                   </td>
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Contributors: Rick Companje, Micon Schorsij, Richard Zijdeman, Rick Mourits</p>
+                    <p class="tableblock">Contributors: Micon Schorsij, Richard Zijdeman, Rick Mourits, Rick Companje</p>
                   </td>
                 </tr>
                 <tr>
@@ -972,7 +972,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 <p>Schematic overview of the model.</p>
                 <div class="imageblock text-center">
                   <div class="content">
-                    <img alt="Schematic overview" src="../web_images/pico_overzicht_schema_en.svg">
+                    <img alt="Schematic overview" src="../web_images/pico_overview.svg">
                   </div>
                   <div class="title">Figure 1. Schematic overview</div>
                 </div>
@@ -980,8 +980,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             </div>
           </div>
         </div>
-        <h2 id="AilrKKDZ">
-          <a class="anchor" href="#AilrKKDZ"></a>
+        <h2 id="FVUlTeSS">
+          <a class="anchor" href="#FVUlTeSS"></a>
           <div>Vocabularies</div>
         </h2>
         <p>A summary of properties that have vocabularies as target values.</p>
@@ -1224,8 +1224,8 @@ for (let node of initialNodes) {
                   </tbody>
                 </table>
               </div>
-              <h5 id="ZQEAdQCg">
-                <a class="anchor" href="#ZQEAdQCg"></a>
+              <h5 id="iAFoo88Y">
+                <a class="anchor" href="#iAFoo88Y"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1323,8 +1323,8 @@ for (let node of initialNodes) {
               <div class="paragraph">
                 <p>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</p>
               </div>
-              <h5 id="51FK4krN">
-                <a class="anchor" href="#51FK4krN"></a>
+              <h5 id="kbkdnYcG">
+                <a class="anchor" href="#kbkdnYcG"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -1380,8 +1380,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="_9WfjEUK">
-                <a class="anchor" href="#_9WfjEUK"></a>
+              <h5 id="RU90SC3j">
+                <a class="anchor" href="#RU90SC3j"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -1400,8 +1400,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="whIDUPAP">
-                <a class="anchor" href="#whIDUPAP"></a>
+              <h5 id="0EsTRKko">
+                <a class="anchor" href="#0EsTRKko"></a>
                 <div>Superclass of</div>
               </h5>
               <div class="sect5">
@@ -1420,8 +1420,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="ViVs5uc2">
-                <a class="anchor" href="#ViVs5uc2"></a>
+              <h5 id="KmJaVi7c">
+                <a class="anchor" href="#KmJaVi7c"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1501,10 +1501,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -1551,10 +1551,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -1777,10 +1777,10 @@ cbg:reconstruction_agent_01
                 </table>
               </div>
               <p>Is defined by 
-                <a href="#https://w3id.org/pnv#">ns2:</a>
+                <a href="#https://w3id.org/pnv#">https://w3id.org/pnv#</a>
               </p>
-              <h5 id="gQC9dNGC">
-                <a class="anchor" href="#gQC9dNGC"></a>
+              <h5 id="hU1ZAonV">
+                <a class="anchor" href="#hU1ZAonV"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1990,8 +1990,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="LQNd0zJU">
-                <a class="anchor" href="#LQNd0zJU"></a>
+              <h5 id="CjDPUbMH">
+                <a class="anchor" href="#CjDPUbMH"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -2005,8 +2005,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="LMrKq9lv">
-                <a class="anchor" href="#LMrKq9lv"></a>
+              <h5 id="-5Meb_SD">
+                <a class="anchor" href="#-5Meb_SD"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2116,10 +2116,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2210,10 +2210,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2260,10 +2260,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2455,8 +2455,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="VUv2eofr">
-                <a class="anchor" href="#VUv2eofr"></a>
+              <h5 id="OZXeoByh">
+                <a class="anchor" href="#OZXeoByh"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -2470,7 +2470,7 @@ cbg:reconstruction_agent_01
                       <p>Schematic overview of a person observation.</p>
                       <div class="imageblock text-center">
                         <div class="content">
-                          <img alt="Schematic overview of a PersonObservation" src="../web_images/pico_persoonsvermelding_schema_en.svg">
+                          <img alt="Schematic overview of a PersonObservation" src="../web_images/pico_personobservation.svg">
                         </div>
                         <div class="title">Figure 2. Schematic overview of a PersonObservation</div>
                       </div>
@@ -2551,8 +2551,8 @@ afr:geboorteregiser_1858_po_2
                   </tbody>
                 </table>
               </div>
-              <h5 id="bC9QdgHJ">
-                <a class="anchor" href="#bC9QdgHJ"></a>
+              <h5 id="5Y6kEY0I">
+                <a class="anchor" href="#5Y6kEY0I"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -2566,8 +2566,8 @@ afr:geboorteregiser_1858_po_2
                   </ul>
                 </div>
               </div>
-              <h5 id="cg6Dk-bC">
-                <a class="anchor" href="#cg6Dk-bC"></a>
+              <h5 id="QKsA8HOX">
+                <a class="anchor" href="#QKsA8HOX"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2718,10 +2718,10 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2768,10 +2768,10 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2963,8 +2963,8 @@ afr:geboorteregiser_1858_po_2
                   </tbody>
                 </table>
               </div>
-              <h5 id="CRWbAwW3">
-                <a class="anchor" href="#CRWbAwW3"></a>
+              <h5 id="WabRft0J">
+                <a class="anchor" href="#WabRft0J"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -2978,7 +2978,7 @@ afr:geboorteregiser_1858_po_2
                       <p>Schematic overview of a person reconstruction.</p>
                       <div class="imageblock text-center">
                         <div class="content">
-                          <img alt="Schematic overview of a person reconstruction" src="../web_images/pico_persoonsreconstructie_schema_en.svg">
+                          <img alt="Schematic overview of a person reconstruction" src="../web_images/personsreconstructioin.svg">
                         </div>
                         <div class="title">Figure 3. Schematic overview of a person reconstruction</div>
                       </div>
@@ -3050,8 +3050,8 @@ cbg:reconstruction_activity_01
               <p>Is defined by 
                 <a href="#https://schema.org/">schema:</a>
               </p>
-              <h5 id="RSeaV27n">
-                <a class="anchor" href="#RSeaV27n"></a>
+              <h5 id="Bco_q2yP">
+                <a class="anchor" href="#Bco_q2yP"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3065,8 +3065,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="OS0-Jh1c">
-                <a class="anchor" href="#OS0-Jh1c"></a>
+              <h5 id="6tjIgKSG">
+                <a class="anchor" href="#6tjIgKSG"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3195,20 +3195,6 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
                       <td class="content">Person observations can appear on many types of historical documents. The PiCo ontology does
                           not aim to describe these sources, as excellent data models, such as Records in Contexts and
                           Dublin Core, already exist within the heritage domain. In order to model person observations,
@@ -3223,11 +3209,25 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Is defined by 
                 <a href="#https://schema.org/">schema:</a>
               </p>
-              <h5 id="yfw9-NKI">
-                <a class="anchor" href="#yfw9-NKI"></a>
+              <h5 id="yWP6B5Hl">
+                <a class="anchor" href="#yWP6B5Hl"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3241,8 +3241,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="CORKFo0N">
-                <a class="anchor" href="#CORKFo0N"></a>
+              <h5 id="fohUM928">
+                <a class="anchor" href="#fohUM928"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3421,11 +3421,28 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="ZqK6InIm">
-                <a class="anchor" href="#ZqK6InIm"></a>
+              <h5 id="rL1iQYpc">
+                <a class="anchor" href="#rL1iQYpc"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
+                <div>
+                  <h6 id="Source">
+                    <a class="anchor" href="#Source"></a>
+                    <div>Source</div>
+                  </h6>
+                  <div class="sect7">
+                    <div>
+                      <p>Schematic overview of a Source.</p>
+                      <div class="imageblock text-center">
+                        <div class="content">
+                          <img alt="Schematic overview of a Source" src="../web_images/pico_source.svg">
+                        </div>
+                        <div class="title">Figure 4. Schematic overview of a Source</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div>
                   <h6 id="Source-with-a-linked-Scan">
                     <a class="anchor" href="#Source-with-a-linked-Scan"></a>
@@ -3618,10 +3635,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Is defined by 
@@ -3731,10 +3748,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Is defined by 
@@ -4080,10 +4097,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Is defined by 
@@ -4240,10 +4257,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Person">Person</a>
                 </li>
                 <li>
-                  <a href="#Person">Person</a>
+                  <a href="#Source">Source</a>
                 </li>
               </ul>
               <p>Range includes:</p>
@@ -4557,7 +4574,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the child should refer to another Person reconstruction.
+                      <td class="content">For Person observations, the child should always refer to another Person observation
+                             on the same Source.
                           </td>
                     </tr>
                   </tbody>
@@ -4570,8 +4588,7 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the child should always refer to another Person observation
-                             on the same Source.
+                      <td class="content">For Person reconstructions, the child should refer to another Person reconstruction.
                           </td>
                     </tr>
                   </tbody>
@@ -4580,10 +4597,10 @@ cbg:reconstruction_activity_01
               <p>Sub property of:</p>
               <ul>
                 <li>
-                  <a href="https://pico.woltjer.cc/ontology/hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://pico.woltjer.cc/ontology/hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Domain includes:</p>
@@ -5309,10 +5326,10 @@ cbg:reconstruction_activity_01
               <p>Sub property of:</p>
               <ul>
                 <li>
-                  <a href="https://pico.woltjer.cc/ontology/hasAncestor" style="white-space: nowrap;" target="_blank">hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://pico.woltjer.cc/ontology/hasAncestor" style="white-space: nowrap;" target="_blank">hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Domain includes:</p>
@@ -5350,8 +5367,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the sibling should refer to the Person reconstruction of
-                             the spouse.
+                      <td class="content">For Person observations, the sibling should always refer to another Person observation
+                             on the same Source.
                           </td>
                     </tr>
                   </tbody>
@@ -5364,8 +5381,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the sibling should always refer to another Person observation
-                             on the same Source.
+                      <td class="content">For Person reconstructions, the sibling should refer to the Person reconstruction of
+                             the spouse.
                           </td>
                     </tr>
                   </tbody>
@@ -5499,9 +5516,7 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       </td>
+                      <td class="content">For Sources: a link to the Source at the holding archive. Preferably a permalink.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -5513,7 +5528,9 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Sources: a link to the Source at the holding archive. Preferably a permalink.</td>
+                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       </td>
                     </tr>
                   </tbody>
                 </table>
@@ -5521,10 +5538,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Scan">Scan</a>
+                  <a href="#Source">Source</a>
                 </li>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Scan">Scan</a>
                 </li>
               </ul>
               <p>Range includes:</p>

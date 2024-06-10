@@ -97,7 +97,7 @@ pico:
     sdo:workExample               [ a                  sdo:ImageObject ;
                                     sh:order           0 ;
                                     sdo:caption        "Schematic overview" ;
-                                    sdo:contentUrl     "../web_images/pico_overzicht_schema_en.svg"^^xsd:anyURI ;
+                                    sdo:contentUrl     "../web_images/pico_overview.svg"^^xsd:anyURI ;
                                     sdo:description    "Schematic overview of the model." ;
                                     sdo:encodingFormat "image/svg+xml" ;
                                     sdo:name           "Model overview" ] ;
@@ -166,7 +166,7 @@ prov:Agent
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a PersonObservation" ;
-                      sdo:contentUrl     "../web_images/pico_persoonsvermelding_schema_en.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "../web_images/pico_personobservation.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person observation." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonObservation overview" ] ;
@@ -220,7 +220,7 @@ prov:Agent
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
-                      sdo:contentUrl     "../web_images/pico_persoonsreconstructie_schema_en.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "../web_images/personsreconstructioin.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person reconstruction." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonReconstruction overview" ] ;
@@ -269,6 +269,13 @@ sdo:ArchiveComponent
     skos:scopeNote   """For Scans of Sources: a link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        """@en ;
+    sdo:workExample [ a                  sdo:ImageObject ;
+                      sh:order           0 ;
+                      sdo:caption        "Schematic overview of a Source" ;
+                      sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a Source." ;
+                      sdo:encodingFormat "image/svg+xml" ;
+                      sdo:name           "Source" ] ;
     sdo:workExample  [ a                  sdo:TextObject ;
                        sdo:description    "Example of a Source with a linked Scan" ;
                        sdo:encodingFormat "text/turtle" ;

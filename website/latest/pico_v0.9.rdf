@@ -10,6 +10,14 @@
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepchild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasStepchild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepparent"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/position">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
@@ -20,30 +28,6 @@
                        </skos:scopeNote>
     <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition>The end time of the activity that generated a Person Reconstruction.</skos:definition>
-    <rdfs:label>endedAtTime</rdfs:label>
-    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/birthDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The birth date of a persoon.</skos:definition>
-    <rdfs:label xml:lang="en">birthDate</rdfs:label>
-    <skos:scopeNote xml:lang="en">The birth date of a person. A date value in ISO 8601 format should be used.
-                          Incomplete dates are allowed, but only when truncated from small to large. For example:
-                          "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
-                          Sometimes, you may want use a string as birthDate. For example if you want to or have to
-                          record the date exactly as it was written on the Source. If possible use both the string
-                          format and the xsd:date format in this case.
-                       </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasReligion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -56,28 +40,45 @@
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#baseSurname">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">A Base surname is a family name without any prefixes, if those prefixes need to be ignored
-                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
-                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
-                          </skos:definition>
-    <rdfs:label xml:lang="en">baseSurname</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasFosterParent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition xml:lang="en">A revision is a derivation for which the resulting entity is a revised version of some
-                          original.
-                       </skos:definition>
-    <rdfs:label xml:lang="en">wasRevisionOf</rdfs:label>
-    <skos:scopeNote xml:lang="en">The wasRevisionOf property is used for modifications made on Person
-                          reconstructions. It can be qualified with a prov:Revision.
+    <rdfs:label xml:lang="en">hasFosterParent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasFosterChild"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/parent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>A parent of a person.</skos:definition>
+    <rdfs:label xml:lang="en">parent</rdfs:label>
+    <skos:scopeNote xml:lang="en">For Person observations, the parent should always refer to another Person observation
+                          on the same Source. For Person reconstructions, the parent should refer to another Person
+                          reconstruction.
                        </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:subPropertyOf rdf:resource="https://pico.woltjer.cc/ontology/hasAncestor"/>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://schema.org/children"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasRole">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#CodedProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <qb:codeList rdf:resource="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44"/>
+    <skos:definition>The role of a Person observation on the Source.</skos:definition>
+    <rdfs:label xml:lang="en">hasRole</rdfs:label>
+    <skos:scopeNote xml:lang="en">Use a term from the PiCo Roles thesaurus.</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition>The start time of the activity that generated a Person Reconstruction.</skos:definition>
+    <rdfs:label>startedAtTime</rdfs:label>
+    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/contentLocation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -91,79 +92,83 @@
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b6">
-    <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sdo:description>Example of a Person Reconstruction</sdo:description>
-    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Person Reconstruction example</sdo:name>
-    <sdo:text>
-                                                cbg:person_reconstruction_2
-                                                    a                   pico:PersonReconstruction ;
-                                                    sdo:name            "Anna Maria Koppen" ;
-                                                    sdo:familyName      "Koppen" ;
-                                                    sdo:givenName       "Anna" ;
-                                                    sdo:gender          sdo:Female ;
-                                                    sdo:birthPlace      "Haarlem" ;
-                                                    sdo:birthDate       "1860-03-31"^^xsd:date ;
-                                                    sdo:deathPlace      "Detroit, VSA" ;
-                                                    sdo:deathDate       "1926"^^xsd:gYear ;
-                                                    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
-                                                    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
-
-                                                cbg:reconstruction_activity_01
-                                                    a                      prov:Activity ;
-                                                    prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
-                                                    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
-                                                    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
-                                                </sdo:text>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <skos:definition xml:lang="en">A Person is a human being whose individual existence can somehow be documented.</skos:definition>
+    <skos:scopeNote xml:lang="en">Container class for Person observation and Person reconstruction. Not to be used directly in
+                       PiCo resources.
+                    </skos:scopeNote>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/pnv#Person"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b2">
-    <rdf:type rdf:resource="https://schema.org/TextObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
-    <sdo:name>Example of an Agent responsible for an Activity</sdo:name>
-    <sdo:text>
-                                             cbg:reconstruction_activity_01
-                                                a                      prov:Activity ;
-                                                prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
-                                                prov:startedAtTime     "2024-05-24T00:00:00"^^xsd:dateTime ;
-                                                prov:endedAtTime       "2024-05-24T00:00:00"^^xsd:dateTime .
-
-                                             cbg:reconstruction_agent_01
-                                                a             prov:Agent ;
-                                                schema:name   "CBG|Center for Family History" ;
-                                                schema:url    &lt;https://cbg.nl&gt; .
-                                          </sdo:text>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/name">
+  <rdf:Description rdf:about="https://schema.org/address">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The name of a Person or a Source.</skos:definition>
-    <rdfs:label xml:lang="en">name</rdfs:label>
-    <skos:scopeNote xml:lang="en">For Persons: Use full name if the name can't be split into given name and family name.
-                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:Name.
-                       </skos:scopeNote>
-    <skos:scopeNote xml:lang="en">For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
-                          this may contain a combination of it's name, year of creation, creator, et cetera.
-                       </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <skos:definition>Physical address of the Person.</skos:definition>
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <skos:scopeNote xml:lang="en">Address of a Person as mentioned on the Source.</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/Text"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepchild-in-law">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasSibling-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasStepchild-in-law</rdfs:label>
+    <rdfs:label xml:lang="en">hasSibling-in-law</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepparent-in-law"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/thumbnail">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasChild-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <skos:definition xml:lang="en">Thumbnail image of the Scan.</skos:definition>
-    <rdfs:label xml:lang="en">thumbnail</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/ImageObject"/>
+    <rdfs:label xml:lang="en">hasChild-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasParent-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGreat-grandchild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasGreat-grandchild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGreat-grandparent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition>The end time of the activity that generated a Person Reconstruction.</skos:definition>
+    <rdfs:label>endedAtTime</rdfs:label>
+    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasHalf-sibling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasHalf-sibling</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/pnv#initials">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">An initial is the first letter of a person's given name (or sometimes a combination of
+                             letters). The Initials property can be used to separately record the initial(s) of a
+                             person's given name(s). Each initial should be followed by a dot. It is recommended to
+                             always use the Initials property to record initials, but if only the initials of a given
+                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
+                             Example 1: "Peter R. de Vries" would be modelled using pnv:initials "P.R." and
+                             pnv:givenName "Peter R.".
+                             Example 2: "C.Joh. Kieviet" would ideally be modelled using pnv:initials "C.Joh.",
+                             but pnv:givenName "C.Joh." is also possible.
+                             Example 3: "H.A.F.M.O. (Hans) van Mierlo" would be modelled using
+                             pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
+                          </skos:definition>
+    <rdfs:label xml:lang="en">initials</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/familyName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -176,52 +181,33 @@
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/gender">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>Gender of a Person.</skos:definition>
-    <rdfs:label xml:lang="en">gender</rdfs:label>
-    <skos:scopeNote xml:lang="en">Use one of: sdo:Male or sdo:Female.</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/GenderType"/>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b1">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_overview.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of the model.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>Model overview</sdo:name>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/givenName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>Given name. For Dutch names, this is the first name of a person.</skos:definition>
-    <rdfs:label>givenName (schema)</rdfs:label>
-    <skos:scopeNote xml:lang="en">The use of sdo:givenNamen and sdo:familyName is the preferred method for
-                             describing person names. Use pnv:Name for more extensive name annotations.
-                          </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/embedUrl">
+  <rdf:Description rdf:about="https://schema.org/thumbnail">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition xml:lang="en">A URL pointing to a viewer for a specific scan.</skos:definition>
-    <rdfs:label xml:lang="en">embedUrl</rdfs:label>
+    <skos:definition xml:lang="en">Thumbnail image of the Scan.</skos:definition>
+    <rdfs:label xml:lang="en">thumbnail</rdfs:label>
     <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/URL"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/ImageObject"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasHalf-sibling">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasHalf-sibling</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/ImageObject">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-    <skos:definition xml:lang="en">An image file.</skos:definition>
-    <rdfs:label xml:lang="en">Scan</rdfs:label>
-    <skos:scopeNote xml:lang="en">A link to the location of the scan at the HoldingArchive.
-                        A link to scan as it can be displayed online and a link to a thumbnail (for search results)
-                        should be provided.
-                     </skos:scopeNote>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition xml:lang="en">A derivation is a transformation of one or more Person observations
+                             in a Person reconstruction</skos:definition>
+    <rdfs:label xml:lang="en">wasDerivedFrom</rdfs:label>
+    <skos:scopeNote xml:lang="en">A PersonReconstruction is always derived from one or more PersonObservations.
+                             The wasDerivedFrom property is therefore required for PersonReconstructions.
+                          </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
+    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/ArchiveComponent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -243,7 +229,201 @@
     <skos:scopeNote xml:lang="en">For Scans of Sources: a link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        </skos:scopeNote>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b7"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b7"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isWidOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">isWidow/WidowerOf</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepparent-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasStepparent-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepchild-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAncestor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">hasAncestor</rdfs:label>
+    <skos:scopeNote xml:lang="en">hasAncestor is not meant to be used as a property for PersonObservations or
+                          PersonReconstructions.
+                          It is a superclass of hasParent. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          the parent of your parent into your ancestor.
+                       </skos:scopeNote>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasDescendant"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/embedUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition xml:lang="en">A URL pointing to a viewer for a specific scan.</skos:definition>
+    <rdfs:label xml:lang="en">embedUrl</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/URL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandparent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasGrandparent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandchild"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b5">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview of a person reconstruction</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/personsreconstructioin.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a person reconstruction.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>PersonReconstruction overview</sdo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/url">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>URL of the Source or Scan.</skos:definition>
+    <rdfs:label xml:lang="en">url</rdfs:label>
+    <skos:scopeNote xml:lang="en">For Sources: a link to the Source at the holding archive. Preferably a permalink.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/URL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/pnv#Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">Name of a person, expressed in Person Name Vocabulary (PNV)</skos:definition>
+    <rdfs:label xml:lang="en">PersonName</rdfs:label>
+    <skos:scopeNote xml:lang="en">In the Person Name Vocabulary, a name is considered to be a
+                        a resource type in its own right.
+                        A PersonName can consist of many different parts. The most common ones are mentioned here.
+                        See the full specification of the Person Name Vocabulary for more details.
+                        Alternatively to a pnv:Name, the properties sdo:literalName or sdo:givenName and sdo:familyName can be used.
+                      </skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#hadPrimarySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition xml:lang="en">A primary source for a topic refers to something produced by some agent with direct
+                             experience and knowledge about the topic, at the time of the topic's study, without
+                             benefit from hindsight. Because of the directness of primary sources, they
+                             'speak for themselves' in ways that cannot be captured through the filter of secondary
+                             sources. As such, it is important for secondary sources to reference those primary
+                             sources from which they were derived, so that their reliability can be investigated.
+                             A primary source relation is a particular case of derivation of secondary materials from
+                             their primary sources. It is recognized that the determination of primary sources can be
+                             up to interpretation, and should be done according to conventions accepted within the
+                             application's domain.
+                          </skos:definition>
+    <rdfs:label xml:lang="en">hadPrimarySource</rdfs:label>
+    <skos:scopeNote>Linking a Source with the hadPrimarySource property is required for Person Observations.</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasFosterChild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasFosterChild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasFosterParent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/pnv#givenName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
+                       name-giving event.
+                       </skos:definition>
+    <rdfs:label xml:lang="en">givenName (pnv)</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasLegitimizedChild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasLegitimizedChild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/isLegitimitezedChildOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/spouse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition xml:lang="en">The person's spouse.</skos:definition>
+    <rdfs:label xml:lang="en">spouse</rdfs:label>
+    <skos:scopeNote xml:lang="en">For Person observations, the spouse should always refer to another Person observation
+                             on the same Source.
+                          </skos:scopeNote>
+    <skos:scopeNote xml:lang="en">For Person reconstructions, the spouse should refer to the Person reconstruction of
+                             the spouse.
+                          </skos:scopeNote>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/birthPlace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>The place where a person was born.</skos:definition>
+    <rdfs:label xml:lang="en">birthPlace</rdfs:label>
+    <skos:scopeNote xml:lang="en">Preferably, use a link to an existing thesaurus like geonames or wikidata.
+                          If desired, both the literal place, as mentioned on the Source can be used together with
+                          the reconciled version.
+                       </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/dateCreated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>The date on which the Source was created.</skos:definition>
+    <rdfs:label xml:lang="en">dateCreated</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasParent-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasParent-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasChild-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/PersonObservation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">PersonObservation</rdfs:label>
+    <skos:definition xml:lang="en">A Person observation is a person that can be observed on a Source</skos:definition>
+    <skos:scopeNote xml:lang="en">A person observation represents how a person is recorded on a Source. Therefore, it must
+                       always be related to a source. Person observations closely reflect data as it appears in the
+                       source, that is, with the age, occupation, and spelling of the person's name recorded as in the
+                       record. A notable exception are dates where the creator of the person observation is encouraged
+                       to write down the date according to the YMD ISO 8601 date standard (for example: '1802-07-29'),
+                       even though the source probably lists the date in a DMY or MDY format or another calendar
+                       entirely. Information on the original entry can be stored using an optional triple.
+                    </skos:scopeNote>
+    <rdfs:subClassOf rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b3"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasUncle/Aunt-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasNephew_Niece-in-law"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/pnv#patronym">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -264,13 +444,31 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isLegitimitezedChildOf">
+  <rdf:Description rdf:about="https://schema.org/additionalName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>isLegitimitezedChildOf</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasLegitimizedChild"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>The name of a Person, annotated according to the Person Name Vocabulary.</skos:definition>
+    <rdfs:label xml:lang="en">additionalName</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b2">
+    <rdf:type rdf:resource="https://schema.org/TextObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
+    <sdo:name>Example of an Agent responsible for an Activity</sdo:name>
+    <sdo:text>
+                                             cbg:reconstruction_activity_01
+                                                a                      prov:Activity ;
+                                                prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                prov:startedAtTime     "2024-05-24T00:00:00"^^xsd:dateTime ;
+                                                prov:endedAtTime       "2024-05-24T00:00:00"^^xsd:dateTime .
+
+                                             cbg:reconstruction_agent_01
+                                                a             prov:Agent ;
+                                                schema:name   "CBG|Center for Family History" ;
+                                                schema:url    &lt;https://cbg.nl&gt; .
+                                          </sdo:text>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasDescendant">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -286,81 +484,72 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/parent">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGreat-grandparent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>A parent of a person.</skos:definition>
-    <rdfs:label xml:lang="en">parent</rdfs:label>
-    <skos:scopeNote xml:lang="en">For Person observations, the parent should always refer to another Person observation
-                          on the same Source. For Person reconstructions, the parent should refer to another Person
-                          reconstruction.
-                       </skos:scopeNote>
+    <rdfs:label xml:lang="en">hasGreat-grandparent</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:subPropertyOf rdf:resource="https://pico.woltjer.cc/ontology/hasAncestor"/>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://schema.org/children"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGreat-grandchild"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/deceased">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasUncle_Aunt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasUncle/Aunt</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasNephew_Niece"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/deathPlace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <skos:definition>Indication if a person is deceased.</skos:definition>
-    <rdfs:label xml:lang="en">deceased</rdfs:label>
-    <skos:scopeNote xml:lang="en">Indication if a person is still alive or not. Only used when deathDate is unknown.
-                             A person without a deathDate and without the property deceased set to true,
-                             will be considered alive. This will have consequences for the publication
-                             of the person record and of any linked media items.
-                          </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/children">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition xml:lang="en">A child of a person.
-                       </skos:definition>
-    <rdfs:label xml:lang="en">child</rdfs:label>
-    <skos:scopeNote xml:lang="en">For Person observations, the child should always refer to another Person observation
-                             on the same Source.
-                          </skos:scopeNote>
-    <skos:scopeNote xml:lang="en">For Person reconstructions, the child should refer to another Person reconstruction.
-                          </skos:scopeNote>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:subPropertyOf rdf:resource="https://pico.woltjer.cc/ontology/hasDescendant"/>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://schema.org/parent"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b1">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_overzicht_schema_en.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of the model.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>Model overview</sdo:name>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/Person">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Person</rdfs:label>
-    <skos:definition xml:lang="en">A Person is a human being whose individual existence can somehow be documented.</skos:definition>
-    <skos:scopeNote xml:lang="en">Container class for Person observation and Person reconstruction. Not to be used directly in
-                       PiCo resources.
-                    </skos:scopeNote>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/pnv#Person"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/url">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>URL of the Source or Scan.</skos:definition>
-    <rdfs:label xml:lang="en">url</rdfs:label>
-    <skos:scopeNote xml:lang="en">For Sources: a link to the Source at the holding archive. Preferably a permalink.</skos:scopeNote>
-    <skos:scopeNote xml:lang="en">For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
+    <skos:definition xml:lang="en">The place where the person died.</skos:definition>
+    <skos:scopeNote xml:lang="en">Preferably, use a link to an existing thesaurus like geonames or wikidata.
+                          If desired, both the literal place, as mentioned on the Source can be used together with
+                          the reconciled version.
                        </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ImageObject"/>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/URL"/>
+    <rdfs:label xml:lang="en">deathPlace</rdfs:label>
+    <sdo:domainIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <sdo:domainIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasCousin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasCousin</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasNephew_Niece">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasNephew/Niece</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasUncle_Aunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/givenName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>Given name. For Dutch names, this is the first name of a person.</skos:definition>
+    <rdfs:label>givenName (schema)</rdfs:label>
+    <skos:scopeNote xml:lang="en">The use of sdo:givenNamen and sdo:familyName is the preferred method for
+                             describing person names. Use pnv:Name for more extensive name annotations.
+                          </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition xml:lang="en">A revision is a derivation for which the resulting entity is a revised version of some
+                          original.
+                       </skos:definition>
+    <rdfs:label xml:lang="en">wasRevisionOf</rdfs:label>
+    <skos:scopeNote xml:lang="en">The wasRevisionOf property is used for modifications made on Person
+                          reconstructions. It can be qualified with a prov:Revision.
+                       </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/additionalType">
     <rdf:type rdf:resource="http://purl.org/linked-data/cube#CodedProperty"/>
@@ -371,47 +560,6 @@
     <rdfs:label xml:lang="en">additionalType</rdfs:label>
     <skos:scopeNote xml:lang="en">Use a term from the PiCo thesaurus for Source types.</skos:scopeNote>
     <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/birthPlace">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The place where a person was born.</skos:definition>
-    <rdfs:label xml:lang="en">birthPlace</rdfs:label>
-    <skos:scopeNote xml:lang="en">Preferably, use a link to an existing thesaurus like geonames or wikidata.
-                          If desired, both the literal place, as mentioned on the Source can be used together with
-                          the reconciled version.
-                       </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>hasUncle/Aunt-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasNephew_Niece-in-law"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasParent-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasParent-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasChild-in-law"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#literalName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">Literal name designates a full personal name. This property may only be left blank if a
-                          person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
-                          being born), in which cases the property pnv:nameSpecification should state "unknown" or
-                          "unnamed".
-                       </skos:definition>
-    <rdfs:label xml:lang="en">literalName</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -451,139 +599,78 @@
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
                                   </skos:historyNote>
     <sdo:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/</sdo:codeRepository>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b1"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/spouse">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition xml:lang="en">The person's spouse.</skos:definition>
-    <rdfs:label xml:lang="en">spouse</rdfs:label>
-    <skos:scopeNote xml:lang="en">For Person observations, the spouse should always refer to another Person observation
-                             on the same Source.
-                          </skos:scopeNote>
-    <skos:scopeNote xml:lang="en">For Person reconstructions, the spouse should refer to the Person reconstruction of
-                             the spouse.
-                          </skos:scopeNote>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition xml:lang="en">Assignment of responsibility to an agent for the activity of creating a person reconstruction.</skos:definition>
-    <rdfs:label>wasAssociatedWith</rdfs:label>
-    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/deathPlace">
+  <rdf:Description rdf:about="https://schema.org/hasOccupation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition xml:lang="en">The place where the person died.</skos:definition>
-    <skos:scopeNote xml:lang="en">Preferably, use a link to an existing thesaurus like geonames or wikidata.
-                          If desired, both the literal place, as mentioned on the Source can be used together with
-                          the reconciled version.
+    <skos:definition>The Person's occupation.</skos:definition>
+    <rdfs:label xml:lang="en">hasOccupation</rdfs:label>
+    <skos:scopeNote xml:lang="en">Todo</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>The name of a Person or a Source.</skos:definition>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <skos:scopeNote xml:lang="en">For Persons: Use full name if the name can't be split into given name and family name.
+                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:Name.
                        </skos:scopeNote>
-    <rdfs:label xml:lang="en">deathPlace</rdfs:label>
-    <sdo:domainIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <sdo:domainIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition>The start time of the activity that generated a Person Reconstruction.</skos:definition>
-    <rdfs:label>startedAtTime</rdfs:label>
-    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAge">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <skos:definition xml:lang="en">The age of a person.</skos:definition>
-    <rdfs:label xml:lang="en">hasAge</rdfs:label>
-    <skos:scopeNote xml:lang="en">Only used for Person observations, in case the birth date is not known,
-                                  but the age is. In combination with de date of the Source, a birth date range can
-                                  be derived, which can be used in the process of creating a Person reconstruction.
-                                  The age is considered to be in years, unless otherwise mentioned. So an age of
-                                  "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
-                                  Numerical ages ("4") are preferred above ages in text ("four").
-                               </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition xml:lang="en">Generation is the completion of production of a new Person reconstruction by an activity.
-                          This Person reconstruction did not exist before generation and becomes available
-                          for usage after this generation.
-                       </skos:definition>
-    <rdfs:label xml:lang="en">wasGeneratedBy</rdfs:label>
-    <skos:scopeNote xml:lang="en">Required for PersonReconstructions.</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#hadPrimarySource">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition xml:lang="en">A primary source for a topic refers to something produced by some agent with direct
-                             experience and knowledge about the topic, at the time of the topic's study, without
-                             benefit from hindsight. Because of the directness of primary sources, they
-                             'speak for themselves' in ways that cannot be captured through the filter of secondary
-                             sources. As such, it is important for secondary sources to reference those primary
-                             sources from which they were derived, so that their reliability can be investigated.
-                             A primary source relation is a particular case of derivation of secondary materials from
-                             their primary sources. It is recognized that the determination of primary sources can be
-                             up to interpretation, and should be done according to conventions accepted within the
-                             application's domain.
-                          </skos:definition>
-    <rdfs:label xml:lang="en">hadPrimarySource</rdfs:label>
-    <skos:scopeNote>Linking a Source with the hadPrimarySource property is required for Person Observations.</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#initials">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">An initial is the first letter of a person's given name (or sometimes a combination of
-                             letters). The Initials property can be used to separately record the initial(s) of a
-                             person's given name(s). Each initial should be followed by a dot. It is recommended to
-                             always use the Initials property to record initials, but if only the initials of a given
-                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
-                             Example 1: "Peter R. de Vries" would be modelled using pnv:initials "P.R." and
-                             pnv:givenName "Peter R.".
-                             Example 2: "C.Joh. Kieviet" would ideally be modelled using pnv:initials "C.Joh.",
-                             but pnv:givenName "C.Joh." is also possible.
-                             Example 3: "H.A.F.M.O. (Hans) van Mierlo" would be modelled using
-                             pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
-                          </skos:definition>
-    <rdfs:label xml:lang="en">initials</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+    <skos:scopeNote xml:lang="en">For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
+                          this may contain a combination of it's name, year of creation, creator, et cetera.
+                       </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGreat-grandparent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGreat-grandparent</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGreat-grandchild"/>
+  <rdf:Description rdf:about="https://schema.org/gender">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>Gender of a Person.</skos:definition>
+    <rdfs:label xml:lang="en">gender</rdfs:label>
+    <skos:scopeNote xml:lang="en">Use one of: sdo:Male or sdo:Female.</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/GenderType"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasNephew_Niece">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasNephew/Niece</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasUncle_Aunt"/>
+  <rdf:Description rdf:about="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:label>Persons in Context role thesaurus</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasNephew_Niece-in-law">
+  <rdf:Description rdf:about="https://schema.org/children">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasNephew-in-law/Niece-in-law</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition xml:lang="en">A child of a person.
+                       </skos:definition>
+    <rdfs:label xml:lang="en">child</rdfs:label>
+    <skos:scopeNote xml:lang="en">For Person observations, the child should always refer to another Person observation
+                             on the same Source.
+                          </skos:scopeNote>
+    <skos:scopeNote xml:lang="en">For Person reconstructions, the child should refer to another Person reconstruction.
+                          </skos:scopeNote>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:subPropertyOf rdf:resource="https://pico.woltjer.cc/ontology/hasDescendant"/>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://schema.org/parent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGodchild">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasGodchild</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGodparent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasPreviousPartner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasPreviousPartner</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/sibling">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -601,115 +688,14 @@
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/deathDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:about="https://schema.org/holdingArchive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>Date of death.</skos:definition>
-    <rdfs:label xml:lang="en">deathDate</rdfs:label>
-    <skos:scopeNote xml:lang="en">The death date of a person. A date value in ISO 8601 format should be used.
-                             Incomplete dates are allowed, but only when truncated from small to large. For example:
-                             "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
-                             When the date of death is not known, but is known that a person is deceased, the
-                             property pico:deceased can be used.
-                             Sometimes, you may want use a string as birthDate. For example if you want to or have to
-                             record the date exactly as it was written on the Source. If possible use both the string
-                             format and the xsd:date format in this case.
-                          </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandparent-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGrandparent-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandchild-in-law"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepchild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasStepchild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepparent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasFosterParent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasFosterParent</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasFosterChild"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/address">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>Physical address of the Person.</skos:definition>
-    <rdfs:label xml:lang="en">address</rdfs:label>
-    <skos:scopeNote xml:lang="en">Address of a Person as mentioned on the Source.</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/Text"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasPreviousPartner">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasPreviousPartner</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasUncle_Aunt">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasUncle/Aunt</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasNephew_Niece"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/dateCreated">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The date on which the Source was created.</skos:definition>
-    <rdfs:label xml:lang="en">dateCreated</rdfs:label>
+    <skos:definition>Organization that holds, keeps or maintains the ArchiveComponent.</skos:definition>
+    <rdfs:label xml:lang="en">holdingArchive</rdfs:label>
+    <skos:scopeNote>Todo</skos:scopeNote>
     <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/additionalName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The name of a Person, annotated according to the Person Name Vocabulary.</skos:definition>
-    <rdfs:label xml:lang="en">additionalName</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:rangeIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasRole">
-    <rdf:type rdf:resource="http://purl.org/linked-data/cube#CodedProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <qb:codeList rdf:resource="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44"/>
-    <skos:definition>The role of a Person observation on the Source.</skos:definition>
-    <rdfs:label xml:lang="en">hasRole</rdfs:label>
-    <skos:scopeNote xml:lang="en">Use a term from the PiCo Roles thesaurus.</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGodchild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGodchild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGodparent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#givenName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
-                       name-giving event.
-                       </skos:definition>
-    <rdfs:label xml:lang="en">givenName (pnv)</rdfs:label>
-    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGodparent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -719,7 +705,42 @@
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGodchild"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b4">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandparent-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasGrandparent-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandchild-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/associatedMedia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition xml:lang="en">A media object, usually a scan, that encodes the Source of a Person observation.</skos:definition>
+    <rdfs:label xml:lang="en">associatedMedia</rdfs:label>
+    <skos:scopeNote xml:lang="en">scopeNote
+                             ...
+                          </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
+    <sdo:rangeIncludes rdf:resource="https://schema.org/ImageObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/birthDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>The birth date of a persoon.</skos:definition>
+    <rdfs:label xml:lang="en">birthDate</rdfs:label>
+    <skos:scopeNote xml:lang="en">The birth date of a person. A date value in ISO 8601 format should be used.
+                          Incomplete dates are allowed, but only when truncated from small to large. For example:
+                          "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
+                          Sometimes, you may want use a string as birthDate. For example if you want to or have to
+                          record the date exactly as it was written on the Source. If possible use both the string
+                          format and the xsd:date format in this case.
+                       </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b4">
     <rdf:type rdf:resource="https://schema.org/TextObject"/>
     <sdo:description>Example of two Person Observations from the same source</sdo:description>
     <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
@@ -753,16 +774,105 @@
                                                pico:hasRole          picot:489 .  # declarant
                                          </sdo:text>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/holdingArchive">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>Organization that holds, keeps or maintains the ArchiveComponent.</skos:definition>
-    <rdfs:label xml:lang="en">holdingArchive</rdfs:label>
-    <skos:scopeNote>Todo</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+    <skos:definition xml:lang="en">Assignment of responsibility to an agent for the activity of creating a person reconstruction.</skos:definition>
+    <rdfs:label>wasAssociatedWith</rdfs:label>
+    <sdo:domainIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Agent"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b7">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasNephew_Niece-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasNephew-in-law/Niece-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasUncle_Aunt-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b3">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview of a PersonObservation</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_personobservation.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a person observation.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>PersonObservation overview</sdo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isLegitimitezedChildOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>isLegitimitezedChildOf</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasLegitimizedChild"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/pnv#literalName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">Literal name designates a full personal name. This property may only be left blank if a
+                          person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
+                          being born), in which cases the property pnv:nameSpecification should state "unknown" or
+                          "unnamed".
+                       </skos:definition>
+    <rdfs:label xml:lang="en">literalName</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b7">
+    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
+    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
+    <sdo:caption>Schematic overview of a Source</sdo:caption>
+    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_source.svg</sdo:contentUrl>
+    <sdo:description>Schematic overview of a Source.</sdo:description>
+    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
+    <sdo:name>Source</sdo:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:definition xml:lang="en">The age of a person.</skos:definition>
+    <rdfs:label xml:lang="en">hasAge</rdfs:label>
+    <skos:scopeNote xml:lang="en">Only used for Person observations, in case the birth date is not known,
+                                  but the age is. In combination with de date of the Source, a birth date range can
+                                  be derived, which can be used in the process of creating a Person reconstruction.
+                                  The age is considered to be in years, unless otherwise mentioned. So an age of
+                                  "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
+                                  Numerical ages ("4") are preferred above ages in text ("four").
+                               </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/deathDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <skos:definition>Date of death.</skos:definition>
+    <rdfs:label xml:lang="en">deathDate</rdfs:label>
+    <skos:scopeNote xml:lang="en">The death date of a person. A date value in ISO 8601 format should be used.
+                             Incomplete dates are allowed, but only when truncated from small to large. For example:
+                             "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
+                             When the date of death is not known, but is known that a person is deceased, the
+                             property pico:deceased can be used.
+                             Sometimes, you may want use a string as birthDate. For example if you want to or have to
+                             record the date exactly as it was written on the Source. If possible use both the string
+                             format and the xsd:date format in this case.
+                          </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/deceased">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:definition>Indication if a person is deceased.</skos:definition>
+    <rdfs:label xml:lang="en">deceased</rdfs:label>
+    <skos:scopeNote xml:lang="en">Indication if a person is still alive or not. Only used when deathDate is unknown.
+                             A person without a deathDate and without the property deceased set to true,
+                             will be considered alive. This will have consequences for the publication
+                             of the person record and of any linked media items.
+                          </skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b8">
     <rdf:type rdf:resource="https://schema.org/TextObject"/>
     <sdo:description>Example of a Source with a linked Scan</sdo:description>
     <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
@@ -782,42 +892,75 @@
                                                                              sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
                                                </sdo:text>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasChild-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasChild-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasParent-in-law"/>
+  <rdf:Description rdf:about="https://w3id.org/pnv#baseSurname">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">A Base surname is a family name without any prefixes, if those prefixes need to be ignored
+                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
+                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
+                          </skos:definition>
+    <rdfs:label xml:lang="en">baseSurname</rdfs:label>
+    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandparent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGrandparent</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandchild"/>
+  <rdf:Description rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b6">
+    <rdf:type rdf:resource="https://schema.org/TextObject"/>
+    <sdo:description>Example of a Person Reconstruction</sdo:description>
+    <sdo:encodingFormat>text/turtle</sdo:encodingFormat>
+    <sdo:name>Person Reconstruction example</sdo:name>
+    <sdo:text>
+                                                cbg:person_reconstruction_2
+                                                    a                   pico:PersonReconstruction ;
+                                                    sdo:name            "Anna Maria Koppen" ;
+                                                    sdo:familyName      "Koppen" ;
+                                                    sdo:givenName       "Anna" ;
+                                                    sdo:gender          sdo:Female ;
+                                                    sdo:birthPlace      "Haarlem" ;
+                                                    sdo:birthDate       "1860-03-31"^^xsd:date ;
+                                                    sdo:deathPlace      "Detroit, VSA" ;
+                                                    sdo:deathDate       "1926"^^xsd:gYear ;
+                                                    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
+                                                    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
+
+                                                cbg:reconstruction_activity_01
+                                                    a                      prov:Activity ;
+                                                    prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
+                                                    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
+                                                    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
+                                                </sdo:text>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasAncestor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdfs:label xml:lang="en">hasAncestor</rdfs:label>
-    <skos:scopeNote xml:lang="en">hasAncestor is not meant to be used as a property for PersonObservations or
-                          PersonReconstructions.
-                          It is a superclass of hasParent. Since hasAncestor is a owl:TransitiveProperty, this will make
-                          the parent of your parent into your ancestor.
-                       </skos:scopeNote>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasDescendant"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+  <rdf:Description rdf:about="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/523">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:label>Persons in Context sourceType thesaurus</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/isWidOf">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandchild-in-law">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">isWidow/WidowerOf</rdfs:label>
+    <rdfs:label xml:lang="en">hasGrandchild-in-law</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandparent-in-law"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/ImageObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+    <skos:definition xml:lang="en">An image file.</skos:definition>
+    <rdfs:label xml:lang="en">Scan</rdfs:label>
+    <skos:scopeNote xml:lang="en">A link to the location of the scan at the HoldingArchive.
+                        A link to scan as it can be displayed online and a link to a thumbnail (for search results)
+                        should be provided.
+                     </skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+    <skos:definition>The Activity that generated a PersonReconstruction</skos:definition>
+    <skos:scopeNote xml:lang="en">A Person Reconctruction can either be created by a human researcher or by a software algorithm.
+                       In case of a human-made reconstruction, provide information about the time, place and knowledge-
+                       input. In case of a software algorith, provide information about the name, version and
+                       configuration settings of the program.
+                    </skos:scopeNote>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/PersonReconstruction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -832,101 +975,32 @@
                             prov:wasRevisionOf
                         </skos:scopeNote>
     <rdfs:subClassOf rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b5"/>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b6"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b5"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b6"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/PersonObservation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">PersonObservation</rdfs:label>
-    <skos:definition xml:lang="en">A Person observation is a person that can be observed on a Source</skos:definition>
-    <skos:scopeNote xml:lang="en">A person observation represents how a person is recorded on a Source. Therefore, it must
-                       always be related to a source. Person observations closely reflect data as it appears in the
-                       source, that is, with the age, occupation, and spelling of the person's name recorded as in the
-                       record. A notable exception are dates where the creator of the person observation is encouraged
-                       to write down the date according to the YMD ISO 8601 date standard (for example: '1802-07-29'),
-                       even though the source probably lists the date in a DMY or MDY format or another calendar
-                       entirely. Information on the original entry can be stored using an optional triple.
-                    </skos:scopeNote>
-    <rdfs:subClassOf rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b3"/>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b4"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGreat-grandchild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGreat-grandchild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGreat-grandparent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/523">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    <rdfs:label>Persons in Context sourceType thesaurus</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasLegitimizedChild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasLegitimizedChild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/isLegitimitezedChildOf"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandchild-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGrandchild-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandparent-in-law"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/hasOccupation">
+  <rdf:Description rdf:about="https://w3id.org/pnv#surnamePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition>The Person's occupation.</skos:definition>
-    <rdfs:label xml:lang="en">hasOccupation</rdfs:label>
-    <skos:scopeNote xml:lang="en">Todo</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
+    <skos:definition xml:lang="en">A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').
+                          </skos:definition>
+    <rdfs:label xml:lang="en">surnamePrefix</rdfs:label>
+    <skos:scopeNote xml:lang="en">A2A:PersonNamePrefixLastName</skos:scopeNote>
+    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
     <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasCousin">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasCousin</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandchild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasGrandchild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandparent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasSibling-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasSibling-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">Agent</rdfs:label>
     <skos:definition>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</skos:definition>
-    <sdo:workExample rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b2"/>
+    <sdo:workExample rdf:nodeID="n49d9fd970e0c476796e4053e4fff9c72b2"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b3">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview of a PersonObservation</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_persoonsvermelding_schema_en.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of a person observation.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>PersonObservation overview</sdo:name>
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepchild-in-law">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">hasStepchild-in-law</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepparent-in-law"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepparent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -944,88 +1018,24 @@
     <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
     <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://schema.org/associatedMedia">
+  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasGrandchild">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <skos:definition xml:lang="en">A media object, usually a scan, that encodes the Source of a Person observation.</skos:definition>
-    <rdfs:label xml:lang="en">associatedMedia</rdfs:label>
-    <skos:scopeNote xml:lang="en">scopeNote
-                             ...
-                          </skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://schema.org/ArchiveComponent"/>
-    <sdo:rangeIncludes rdf:resource="https://schema.org/ImageObject"/>
+    <rdfs:label xml:lang="en">hasGrandchild</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
+    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
+    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasGrandparent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    <skos:definition xml:lang="en">A derivation is a transformation of one or more Person observations
-                             in a Person reconstruction</skos:definition>
-    <rdfs:label xml:lang="en">wasDerivedFrom</rdfs:label>
-    <skos:scopeNote xml:lang="en">A PersonReconstruction is always derived from one or more PersonObservations.
-                             The wasDerivedFrom property is therefore required for PersonReconstructions.
-                          </skos:scopeNote>
+    <skos:definition xml:lang="en">Generation is the completion of production of a new Person reconstruction by an activity.
+                          This Person reconstruction did not exist before generation and becomes available
+                          for usage after this generation.
+                       </skos:definition>
+    <rdfs:label xml:lang="en">wasGeneratedBy</rdfs:label>
+    <skos:scopeNote xml:lang="en">Required for PersonReconstructions.</skos:scopeNote>
     <sdo:domainIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonReconstruction"/>
-    <sdo:rangeIncludes rdf:resource="https://pico.woltjer.cc/ontology/PersonObservation"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="nd405993439294d0c8a49d9e4e9915f65b5">
-    <rdf:type rdf:resource="https://schema.org/ImageObject"/>
-    <sh:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:order>
-    <sdo:caption>Schematic overview of a person reconstruction</sdo:caption>
-    <sdo:contentUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">../web_images/pico_persoonsreconstructie_schema_en.svg</sdo:contentUrl>
-    <sdo:description>Schematic overview of a person reconstruction.</sdo:description>
-    <sdo:encodingFormat>image/svg+xml</sdo:encodingFormat>
-    <sdo:name>PersonReconstruction overview</sdo:name>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasStepparent-in-law">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasStepparent-in-law</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasStepchild-in-law"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#Name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">Name of a person, expressed in Person Name Vocabulary (PNV)</skos:definition>
-    <rdfs:label xml:lang="en">PersonName</rdfs:label>
-    <skos:scopeNote xml:lang="en">In the Person Name Vocabulary, a name is considered to be a
-                        a resource type in its own right.
-                        A PersonName can consist of many different parts. The most common ones are mentioned here.
-                        See the full specification of the Person Name Vocabulary for more details.
-                        Alternatively to a pnv:Name, the properties sdo:literalName or sdo:givenName and sdo:familyName can be used.
-                      </skos:scopeNote>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Activity</rdfs:label>
-    <skos:definition>The Activity that generated a PersonReconstruction</skos:definition>
-    <skos:scopeNote xml:lang="en">A Person Reconctruction can either be created by a human researcher or by a software algorithm.
-                       In case of a human-made reconstruction, provide information about the time, place and knowledge-
-                       input. In case of a software algorith, provide information about the name, version and
-                       configuration settings of the program.
-                    </skos:scopeNote>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/44">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    <rdfs:label>Persons in Context role thesaurus</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://pico.woltjer.cc/ontology/hasFosterChild">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">hasFosterChild</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://schema.org/relatedTo"/>
-    <rdfs:domain rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <rdfs:range rdf:resource="https://pico.woltjer.cc/ontology/Person"/>
-    <owl:inverseOf rdf:resource="https://pico.woltjer.cc/ontology/hasFosterParent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/pnv#surnamePrefix">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/pnv#"/>
-    <skos:definition xml:lang="en">A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').
-                          </skos:definition>
-    <rdfs:label xml:lang="en">surnamePrefix</rdfs:label>
-    <skos:scopeNote xml:lang="en">A2A:PersonNamePrefixLastName</skos:scopeNote>
-    <sdo:domainIncludes rdf:resource="https://w3id.org/pnv#Name"/>
-    <sdo:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <sdo:rangeIncludes rdf:resource="http://www.w3.org/ns/prov#Activity"/>
   </rdf:Description>
 </rdf:RDF>
