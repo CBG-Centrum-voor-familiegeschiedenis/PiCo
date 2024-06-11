@@ -28,7 +28,7 @@ _:NAS_Slavenregister_41_4890_person3 a pico:PersonObservation ;
     schema:familyName "Stugen" ;
     schema:givenName "J.L." ;
     schema:spouse _:NAS_Slavenregister_41_4890_person2 ;
-    picot:deceased True ;
+    pico:deceased True ;
     schema:gender schema:Male .
 
 _:NAS_Slavenregister_41_4890 a schema:ArchiveComponent ;
