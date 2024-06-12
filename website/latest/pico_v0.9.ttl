@@ -439,7 +439,7 @@ sdo:deathPlace
     skos:definition    "Indication if a person is deceased." ;
     rdfs:label         "deceased"@en ;
 #    rdfs:label           "overleden"@nl ;
-    skos:scopeNote     """Indication if a person is still alive or not at time of the source of the observation. 
+    skos:scopeNote     """Indication if a person is still alive or not at time of the source of the observation.
                              Only used when deathDate is unknown.
                              A person without a deathDate and without the property deceased set to true,
                              will be considered alive. This will have consequences for the publication
@@ -1083,7 +1083,7 @@ sdo:sibling
 .
 
 sdo:spouse
-    a                  owl:ObjectProperty, owl:SymmetricProperty ; 
+    a                  owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:isDefinedBy   sdo: ;
     skos:definition    "The person's spouse."@en ;
     rdfs:label         "spouse"@en ; #, "echtgenoot"@nl ;
