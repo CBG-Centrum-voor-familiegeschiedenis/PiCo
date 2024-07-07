@@ -1,5 +1,6 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/blob/main/README.md)
 [![nl](https://img.shields.io/badge/lang-nl-blue.svg)](https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/blob/main/README.nl.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/blob/main/README.md)
+
 
 ## PiCo
 
