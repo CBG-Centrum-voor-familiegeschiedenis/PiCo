@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/blob/main/README.md)
+[![nl](https://img.shields.io/badge/lang-nl-blue.svg)](https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/blob/main/README.nl.md)
+
 ## PiCo
 This is the repository for **Persons in Context (PiCo)**, the intended successor to the *Archive to Archive* (A2A) data model. PiCo will be a new standard based on the principles of Linked Open Data. 
 
