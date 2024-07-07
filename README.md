@@ -1,5 +1,4 @@
-#PiCo
-
+## PiCO
 This is the repository for **Persons in Context (PiCo)**, the intended successor to the *Archive to Archive* (A2A) data model. PiCo will be a new standard based on the principles of Linked Open Data. 
 
 ## Purpose
