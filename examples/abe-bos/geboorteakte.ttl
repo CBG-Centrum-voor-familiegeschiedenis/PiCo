@@ -58,7 +58,7 @@ afr:geboorteregiser_1858_po_3
 
 afr:geboorteregiser_1858
     a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:551 ;  # birth certificate
+    schema:additionalType  picot:551 ;  # civil registry: birth
     schema:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
     schema:holdingArchive  <https://www.tresoar.nl/> ;
     schema:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
