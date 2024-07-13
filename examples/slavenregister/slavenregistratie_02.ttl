@@ -1,0 +1,43 @@
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix pico:   <https://data.cbg.nl/pico#> .
+@prefix picot:   <https://data.cbg.nl/pico-terms#> .
+@prefix sr-ont: <https://example.com/slavenregister/ont/> .
+
+_:NAS_Slavenregister_41_4890_person1 a pico:PersonObservation ;
+    prov:hadPrimarySource _:NAS_Slavenregister_41_4890 ;
+    schema:name "Unico August Hoogberg" ;
+    schema:familyName "Hoogberg" ;
+    schema:givenName "Unico August" ;
+    schema:gender schema:Male ;
+    sr-ont:slave-name "Unico August" ;
+    sr-ont:owner _:NAS_Slavenregister_41_4890_person2 ;
+    sr-ont:manumission-date "1842-04-07"^^xsd:date .
+
+_:NAS_Slavenregister_41_4890_person2 a pico:PersonObservation ;
+    prov:hadPrimarySource _:NAS_Slavenregister_41_4890 ;
+    schema:name "Wed. J.L. Stugen geboren Bruining" ;
+    schema:familyName "Bruining" ;
+    schema:spouse _:NAS_Slavenregister_41_4890_person3 ;
+    schema:gender schema:Female .
+
+_:NAS_Slavenregister_41_4890_person3 a pico:PersonObservation ;
+    prov:hadPrimarySource _:NAS_Slavenregister_41_4890 ;
+    schema:name "J.L. Stugen" ;
+    schema:familyName "Stugen" ;
+    schema:givenName "J.L." ;
+    schema:spouse _:NAS_Slavenregister_41_4890_person2 ;
+    pico:deceased True ;
+    schema:gender schema:Male .
+
+_:NAS_Slavenregister_41_4890 a schema:ArchiveComponent ;
+    schema:name "Nationaal Archief Suriname, Slavenregister, inv.nr. 41, fol. 4890" ;
+    schema:locationCreated "Suriname" ;
+    schema:additionalType _:slavenregistratie ;
+    schema:url "https://www.nationaalarchief.nl/onderzoeken/archief/NadereToegangen/invnr/NT00461.41/file/Slavenregister_InvNr_41_FolioNr_4890a" ;
+    schema:holdingArchive <https://nationaalarchief.sr/> .
+
+_:slavenregistratie 
+    rdfs:label "Slavenregistratie"@nl ;
+    rdfs:label "Slave Registration"@en .
