@@ -52,10 +52,10 @@ cbg:person_reconstruction_2
 cbg:reconstruction_activity_01
     a                      prov:Activity ;
     prov:wasAssociatedWith cbg:reconstruction_agent_01 ;
-    prov:startedAtTime     "2024-01-08T13:00:00"^^xsd:dateTime ;
-    prov:endedAtTime       "2020-01-08T14:00:00"^^xsd:dateTime .
+    prov:startedAtTime     "2015-08-07T00:00:00"^^xsd:dateTime ;
+    prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
 
 cbg:reconstruction_agent_01
-    a             prov:Agent, schema:Person ;
+    a             prov:Agent ;
     schema:name   "Ivo Zandhuis" ;
     schema:sameAs <https://orcid.org/0000-0003-0165-8341> .
