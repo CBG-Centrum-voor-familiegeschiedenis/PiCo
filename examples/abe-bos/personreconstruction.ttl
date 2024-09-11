@@ -33,7 +33,7 @@ cbg:person_reconstruction_1
                             nha:NL-HlmNHA_1482_234_B_0006_po_1 ,    # jaarboekje
                             nha:huwelijksakte_1885_321_po_1 ,       # huwelijksakte
                             hua:NL-UtHUA_920_26-29_2430_po_1 ,      # personeelsregistratie
-                            cbg:NL-HaCBG_1755_0341_142_po_1 ;       # pesoonskaart
+                            cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
     prov:wasGeneratedBy     cbg:reconstruction_activity_01 .
 
 cbg:person_reconstruction_2
