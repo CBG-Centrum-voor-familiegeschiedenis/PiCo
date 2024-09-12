@@ -121,7 +121,7 @@ prov:Activity
 prov:Agent
     a               owl:Class ;
     rdfs:label      "Agent"@en ;
-    rdfs:isDefinedBy prov: ;
+#    rdfs:isDefinedBy prov: ;
     skos:definition "The agent (person or organisation) that is responsible for the creation of a person reconstruction." ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sh:order           0 ;
