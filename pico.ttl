@@ -13,6 +13,7 @@
 @prefix sh:      <http://www.w3.org/ns/shacl#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix pnv:     <https://w3id.org/pnv#> .
+#@prefix pnv:     <https://www.lodewijkpetram.nl/vocab/pnv/doc/#> .
 @prefix sdo:     <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qb:      <http://purl.org/linked-data/cube#> .
@@ -108,6 +109,7 @@ pico:
 prov:Activity
     a               owl:Class ;
     rdfs:label      "Activity"@en ;
+#    rdfs:isDefinedBy prov: ;  # pyLODE does not seem to render isDefinedBy correctly for classes, so I leave it out
     skos:definition "The Activity that generated a PersonReconstruction" ;
     skos:scopeNote  """A Person Reconstruction can either be created by a human researcher or by a software algorithm.
                        In case of a human-made reconstruction, provide information about the time, place and knowledge-
@@ -119,6 +121,7 @@ prov:Activity
 prov:Agent
     a               owl:Class ;
     rdfs:label      "Agent"@en ;
+    rdfs:isDefinedBy prov: ;
     skos:definition "The agent (person or organisation) that is responsible for the creation of a person reconstruction." ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sh:order           0 ;
@@ -253,7 +256,6 @@ prov:Agent
 
 sdo:ArchiveComponent
     a                owl:Class ;
-    rdfs:isDefinedBy sdo: ;
     rdfs:subClassOf  sdo:CreativeWork ;
     skos:definition  """An intangible type to be applied to any archive content, carrying with it a set of
                             properties required to describe archival items and collections."""@en ;
@@ -300,7 +302,6 @@ sdo:ArchiveComponent
 
 sdo:ImageObject
     a                owl:Class ;
-    rdfs:isDefinedBy sdo: ;
     rdfs:subClassOf  sdo:CreativeWork ;
     skos:definition  """An image file."""@en ;
     rdfs:label       "Scan"@en ;  #, "Scan van de Bron"@nl ;
@@ -312,7 +313,6 @@ sdo:ImageObject
 
 pnv:Name
     a                owl:Class ;
-    rdfs:isDefinedBy pnv: ;
     skos:definition  "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
     rdfs:label       "PersonName"@en ;  #, "Naam van een persoon"@nl ;
     skos:scopeNote   """In the Person Name Vocabulary, a name is considered to be a
@@ -329,7 +329,7 @@ pnv:Name
 
 sdo:address
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:address ;
     skos:definition    "Physical address of the Person." ;
     rdfs:label         "address"@en ;
     skos:scopeNote     "Address of a Person as mentioned on the Source."@en ;
@@ -339,7 +339,7 @@ sdo:address
 
 pnv:baseSurname
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:baseSurname ;
     skos:definition    """A Base surname is a family name without any prefixes, if those prefixes need to be ignored
                              in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
                              the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
@@ -351,7 +351,7 @@ pnv:baseSurname
 
 sdo:birthDate
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:birthDate ;
     skos:definition    "The birth date of a persoon." ;
     rdfs:label         "birthDate"@en ;
 #    rdfs:label        "Geboortedatum"@nl ;
@@ -368,7 +368,7 @@ sdo:birthDate
 
 sdo:birthPlace
     a                  owl:DatatypeProperty ;  # rdf:Property wordt niet opgenomen in de HTML als een eigen paragraaf. Wat is daar aan te doen?
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:birthPlace ;
     skos:definition    "The place where a person was born." ;
     rdfs:label         "birthPlace"@en ;
 #    rdfs:label        "geboorteplaats"@nl ;
@@ -382,7 +382,7 @@ sdo:birthPlace
 
 sdo:contentLocation
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:contentLocation ;
     skos:definition    """The location depicted or described in the content.
                           For example, the geographic coverage of an archival record.
                           Or the location in a photograph or painting.
@@ -394,7 +394,7 @@ sdo:contentLocation
 
 sdo:dateCreated
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:dateCreated ;
     skos:definition    "The date on which the Source was created." ;
     rdfs:label         "dateCreated"@en ;
     sdo:domainIncludes sdo:ArchiveComponent ;
@@ -403,7 +403,7 @@ sdo:dateCreated
 
 sdo:deathDate
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:deathDate ;
     skos:definition    "Date of death." ;
     rdfs:label         "deathDate"@en ;
 #   rdfs:label            "datum van overlijden"@nl ;
@@ -422,7 +422,7 @@ sdo:deathDate
 
 sdo:deathPlace
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:deathPlace ;
     skos:definition    "The place where the person died."@en ;
     skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
                           If desired, both the literal place, as mentioned on the Source can be used together with
@@ -450,7 +450,7 @@ sdo:deathPlace
 
 prov:endedAtTime
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:endedAtTime ;
     skos:definition    "The end time of the activity that generated a Person Reconstruction." ;
     rdfs:label         "endedAtTime" ;
     sdo:domainIncludes prov:Activity ;
@@ -459,7 +459,7 @@ prov:endedAtTime
 
 sdo:familyName
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:familyName ;
     skos:definition    "Family name. For Dutch names, this is the last name of a person." ;
     rdfs:label         "familyName"@en ;  #, "Achternaam"@nl ;
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the most straightforward method for
@@ -471,7 +471,7 @@ sdo:familyName
 
 pnv:literalName
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:literalName ;
     skos:definition    """Literal name designates a full personal name. This property may only be left blank if a
                           person's name was unknown or if a person was unnamed (e.g. a child that died shortly after
                           being born), in which cases the property pnv:nameSpecification should state "unknown" or
@@ -484,7 +484,7 @@ pnv:literalName
 
 sdo:gender
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:gender ;
     skos:definition    "Gender of a Person." ;
     rdfs:label         "gender"@en ;
     skos:scopeNote     """Use one of: sdo:Male or sdo:Female."""@en ;
@@ -494,7 +494,7 @@ sdo:gender
 
 pnv:givenName
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:givenName ;
     skos:definition    """The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
                        name-giving event.
                        """@en ;
@@ -505,7 +505,7 @@ pnv:givenName
 
 sdo:givenName
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:givenName ;
     skos:definition    "Given name. For Dutch names, this could be multiple given names of a person." ;
     rdfs:label         "givenName (schema)" ;
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the preferred method for
@@ -535,7 +535,7 @@ sdo:givenName
 
 sdo:hasOccupation
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:hasOccupation ;
     skos:definition    "The occupational title related to a person in an observation." ;
     rdfs:label         "hasOccupation"@en ;
     skos:scopeNote     """Todo"""@en ;
@@ -556,7 +556,7 @@ sdo:hasOccupation
 
 pnv:initials
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:initials ;
     skos:definition    """An initial is the first letter of a person's given name (or sometimes a combination of
                              letters). The Initials property can be used to separately record the initial(s) of a
                              person's given name(s). Each initial should be followed by a dot. It is recommended to
@@ -576,7 +576,7 @@ pnv:initials
 
 sdo:name
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:name ;
     skos:definition    "The name of a Person or a Source." ;
     rdfs:label         "name"@en ;  #, "Volledige naam"@nl ;
     skos:scopeNote     """For Persons: Use full name if the name can't be split into given name and family name.
@@ -591,7 +591,7 @@ sdo:name
 
 pnv:patronym
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:patronym ;
     skos:definition    """A Patronym is a name element based on the given name of one's father or grandfather.
                              This is also the preferred property for a matronym (i.e. a name element based on the given
                              name of one's mother or grandmother).
@@ -603,7 +603,7 @@ pnv:patronym
 
 sdo:position
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:position ;
     skos:definition    "The position of the scan in the order of a set of scans" ;
     rdfs:label         "position"@en ;
     skos:scopeNote     """The position defines the order in which scans are presented on the web.
@@ -615,7 +615,7 @@ sdo:position
 
 prov:startedAtTime
     a                  owl:DatatypeProperty ;  # TODO: startedAtTime vereist een xsd:dateTime. Vaak is het tijdstip niet bekend, maar volstaat een date. Gebruiken we dan T00:00:00 of maken we een subclasse die alleen een date toestaat?
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:startedAtTime ;
     skos:definition    "The start time of the activity that generated a Person Reconstruction." ;
     rdfs:label         "startedAtTime" ;
     sdo:domainIncludes prov:Activity ;
@@ -624,7 +624,7 @@ prov:startedAtTime
 
 pnv:surnamePrefix
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   pnv: ;
+    rdfs:isDefinedBy   pnv:surnamePrefix ;
     skos:definition    """A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').
                           """@en ;
     rdfs:label         "surnamePrefix"@en ;
@@ -635,7 +635,7 @@ pnv:surnamePrefix
 
 prov:wasAssociatedWith
     a                  owl:DatatypeProperty ;
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:wasAssociatedWith ;
     skos:definition    "Assignment of responsibility to an agent for the activity of creating a person reconstruction."@en ;
     rdfs:label         "wasAssociatedWith" ;
     sdo:domainIncludes prov:Activity ;
@@ -648,7 +648,7 @@ prov:wasAssociatedWith
 
 sdo:additionalName
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:additionalName ;
     skos:definition    "The name of a Person, annotated according to the Person Name Vocabulary." ;
     rdfs:label         "additionalName"@en ;
 #    rdfs:label        "heeft naam"@nl ;
@@ -659,7 +659,7 @@ sdo:additionalName
 sdo:additionalType
     a                  qb:CodedProperty, owl:ObjectProperty ;
     qb:codeList        picot:sourcetypes ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:additionalType ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
     skos:scopeNote     "Use a term from the PiCo thesaurus for Source types."@en ;
@@ -673,7 +673,7 @@ sdo:additionalType
 
 sdo:associatedMedia
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:associatedMedia ;
     skos:definition    """A media object, usually a scan, that encodes the Source of a Person observation."""@en ;
     rdfs:label         "associatedMedia"@en ;
     skos:scopeNote     """scopeNote
@@ -685,7 +685,7 @@ sdo:associatedMedia
 
 sdo:children
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:children ;
     skos:definition    """A child of a person.
                        """@en ;
     rdfs:label         "child"@en ;
@@ -702,7 +702,7 @@ sdo:children
 
 sdo:embedUrl
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:embedUrl ;
     skos:definition    """A URL pointing to a viewer for a specific scan."""@en ;
     rdfs:label         "embedUrl"@en ;
     sdo:domainIncludes sdo:ImageObject ;
@@ -711,7 +711,7 @@ sdo:embedUrl
 
 prov:hadPrimarySource
     a                  owl:ObjectProperty ;  # Should be defined as a required property
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:hadPrimarySource ;
     skos:definition    """A primary source for a topic refers to something produced by some agent with direct
                              experience and knowledge about the topic, at the time of the topic's study, without
                              benefit from hindsight. Because of the directness of primary sources, they
@@ -1033,7 +1033,7 @@ prov:hadPrimarySource
 
 sdo:holdingArchive
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:holdingArchive ;
     skos:definition    "Organization that holds, keeps or maintains the ArchiveComponent." ;
     rdfs:label         "holdingArchive"@en ;
     skos:scopeNote     "Todo" ;  # Of een voorbeeld geven
@@ -1052,7 +1052,7 @@ sdo:holdingArchive
 
 sdo:parent
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:parent ;
     skos:definition    "A parent of a person." ;
     rdfs:label         "parent"@en ;
     skos:scopeNote     """For Person observations, the parent should always refer to another Person observation
@@ -1067,7 +1067,7 @@ sdo:parent
 
 sdo:sibling
     a                  owl:ObjectProperty, owl:SymmetricProperty ;  # mag je sdo:spouse zomaar uitbreiden?
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:sibling ;
     skos:definition    "A person's brother or sister."@en ;
     rdfs:label         "sibling"@en ; #, "broer/zus"@nl ;
     skos:scopeNote     """For Person observations, the sibling should always refer to another Person observation
@@ -1083,7 +1083,7 @@ sdo:sibling
 
 sdo:spouse
     a                  owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:spouse ;
     skos:definition    "The person's spouse."@en ;
     rdfs:label         "spouse"@en ; #, "echtgenoot"@nl ;
     skos:scopeNote     """For Person observations, the spouse should always refer to another Person observation
@@ -1107,7 +1107,7 @@ sdo:thumbnail
 
 sdo:url
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo: ;
+    rdfs:isDefinedBy   sdo:url ;
     skos:definition    "URL of the Source or Scan." ;
     rdfs:label         "url"@en ;
     skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
@@ -1134,7 +1134,7 @@ sdo:url
 
 prov:wasDerivedFrom
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:wasDerivedFrom ;
     skos:definition    """A derivation is a combination of one or more Person observations
                              in a Person reconstruction"""@en ;
     rdfs:label         "wasDerivedFrom"@en ;
@@ -1147,7 +1147,7 @@ prov:wasDerivedFrom
 
 prov:wasGeneratedBy
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:wasGeneratedBy ;
     skos:definition    """Generation is the completion of production of a new Person reconstruction by an activity.
                           This Person reconstruction did not exist before generation and becomes available
                           for usage after this generation.
@@ -1159,7 +1159,7 @@ prov:wasGeneratedBy
 
 prov:wasRevisionOf
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   prov: ;
+    rdfs:isDefinedBy   prov:wasRevisionOf ;
     skos:definition    """A revision is a derivation for which the resulting entity is a revised version of some
                           original.
                        """@en ;  # TODO Deze is nieuw. Opnemen in de PiCo beschrijving.
