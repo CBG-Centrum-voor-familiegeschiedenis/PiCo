@@ -1,6 +1,6 @@
 @prefix schema: <http://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
+@prefix pico:   <https://personsincontext.org/model/> .
 
 # PERSOONSVERMELDING
 <> a pico:PersonObservation ;

@@ -3,8 +3,8 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
-@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix pico:   <https://personsincontext.org/model/> .
+@prefix picot:  <https://terms.personsincontext.org/> .
 @prefix sr-ont: <https://ontology.nationaalarchief.sr/> .
 @prefix nas:    <https://data.nationaalarchief.sr/> .
 

@@ -4,8 +4,8 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix cbg:    <https://data.cbg.nl/> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
-@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix pico:   <https://personsincontext.org/model/> .
+@prefix picot:  <https://terms.personsincontext.org/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix hua:    <https://hetutrechtsarchief.nl/> .
 

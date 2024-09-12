@@ -1,10 +1,9 @@
 # Version: 20230921
 
 #@prefix pico:    <https://personsincontext.org/ontology/pico.ttl> .
-@prefix :        <https://pico.woltjer.cc/ontology/> .
-#@prefix pico:    <file:///home/pieter/dev/cbg-nl/pico_docs/data/pico.ttl> .
-@prefix pico:    <https://pico.woltjer.cc/ontology> .
-@prefix picot:   <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix :        <https://personsincontext.org/model/> .
+@prefix pico:    <https://personsincontext.org/model> .
+@prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -72,7 +71,7 @@ pico:
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
 #    owl:versionIRI                :0.9 ;  # Versions are currently defined as redirects from pico:ontology in the .htaccess of the web server
-    owl:versionInfo               "0.9 - First published version of the PiCo ontology."@en ;
+    owl:versionInfo               "0.9 - First published version of the PiCo model."@en ;
 #    owl:priorVersion                "n.a."
     vann:preferredNamespacePrefix "pico" ;
     skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and
@@ -87,8 +86,8 @@ pico:
     skos:historyNote              """
                                      Persons in Context is developed by the CBG|Center for family
                                      history as a successor of the XML standard A2A for annotating historical person
-                                     data. A2A is considered obsolete and cultural heritage institutions in the
-                                     Netherlands are encouraged to move to PiCo.
+                                     data. Cultural heritage institutions in the Netherlands are encouraged to move to
+                                     PiCo.
                                      PiCo was developed in collaboration with technical and domain experts.
                                      The first version of PiCo was reviewed by a selected group of Dutch archivists and
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
@@ -186,7 +185,7 @@ prov:Agent
                                                sdo:birthDate         "1858-06-21"^^xsd:date ;
                                                sdo:birthPlace        "Joure" ;
                                                sdo:gender            sdo:Male ;
-                                               pico:hasRole          picot:575 ;  # child
+                                               pico:hasRole          picot:roles/575 ;  # child
                                                sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
                                             afr:geboorteregiser_1858_po_2
@@ -201,7 +200,7 @@ prov:Agent
                                                sdo:gender            sdo:Male ;
                                                sdo:spouse            afr:geboorteregiser_1858_po_3 ;
                                                sdo:children          afr:geboorteregiser_1858_po_1 ;
-                                               pico:hasRole          picot:489 .  # declarant
+                                               pico:hasRole          picot:roles/489 .  # declarant
                                          """ ] ;
 .
 
@@ -259,7 +258,7 @@ sdo:ArchiveComponent
     skos:definition  """An intangible type to be applied to any archive content, carrying with it a set of
                             properties required to describe archival items and collections."""@en ;
     rdfs:label       "Source"@en ;  #, "Bron"@nl ;
-    skos:scopeNote   """Person observations can appear on many types of historical documents. The PiCo ontology does
+    skos:scopeNote   """Person observations can appear on many types of historical documents. The PiCo model does
                           not aim to describe these sources, as excellent data models, such as Records in Contexts and
                           Dublin Core, already exist within the heritage domain. In order to model person observations,
                           we require that institutions describe their sources at least with a single name property that
@@ -272,13 +271,13 @@ sdo:ArchiveComponent
     skos:scopeNote   """For Scans of Sources: a link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        """@en ;
-    sdo:workExample [ a                  sdo:ImageObject ;
-                      sh:order           0 ;
-                      sdo:caption        "Schematic overview of a Source" ;
-                      sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a Source." ;
-                      sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "Source" ] ;
+    sdo:workExample  [ a                  sdo:ImageObject ;
+                       sh:order           0 ;
+                       sdo:caption        "Schematic overview of a Source" ;
+                       sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
+                       sdo:description    "Schematic overview of a Source." ;
+                       sdo:encodingFormat "image/svg+xml" ;
+                       sdo:name           "Source" ] ;
     sdo:workExample  [ a                  sdo:TextObject ;
                        sdo:description    "Example of a Source with a linked Scan" ;
                        sdo:encodingFormat "text/turtle" ;
@@ -286,7 +285,7 @@ sdo:ArchiveComponent
                        sdo:text           """
                                                    afr:geboorteregiser_1858
                                                        a                   sdo:ArchiveComponent ;
-                                                       sdo:additionalType  picot:551 ;  # civil registry: birth
+                                                       sdo:additionalType  picot:sourcetypes/551 ;  # civil registry: birth
                                                        sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
                                                        sdo:holdingArchive  <https://www.tresoar.nl/> ;
                                                        sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
@@ -364,7 +363,7 @@ sdo:birthDate
                           format and the xsd:date format in this case.
                        """@en ;
     sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  xsd:date , xsd:string ;
+    sdo:rangeIncludes  xsd:date, xsd:string ;
 .
 
 sdo:birthPlace
@@ -378,7 +377,7 @@ sdo:birthPlace
                           the reconciled version.
                        """@en ;
     sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  xsd:string , xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 sdo:contentLocation
@@ -390,7 +389,7 @@ sdo:contentLocation
                        """@en ;
     rdfs:label         "contentLocation"@en ;
     sdo:domainIncludes sdo:ArchiveComponent ;
-    sdo:rangeIncludes  xsd:string , xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 sdo:dateCreated
@@ -418,7 +417,7 @@ sdo:deathDate
                              format and the xsd:date format in this case.
                           """@en ;
     sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  xsd:date , xsd:string ;
+    sdo:rangeIncludes  xsd:date, xsd:string ;
 .
 
 sdo:deathPlace
@@ -431,7 +430,7 @@ sdo:deathPlace
                        """@en ;
     rdfs:label         "deathPlace"@en ;
     sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  xsd:string , xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 :deceased
@@ -541,7 +540,7 @@ sdo:hasOccupation
     rdfs:label         "hasOccupation"@en ;
     skos:scopeNote     """Todo"""@en ;
     sdo:domainIncludes :PersonObservation ;
-    sdo:rangeIncludes  xsd:string , xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 :hasReligion
@@ -552,7 +551,7 @@ sdo:hasOccupation
                          If desired, a SKOS thesaurus can be used to annotate religion.
                       """@en ;  # Todo: Can we recommend a thesaurus for religions?
     rdfs:domain       :Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
-    sdo:rangeIncludes xsd:string , xsd:anyURI ;
+    sdo:rangeIncludes xsd:string, xsd:anyURI ;
 .
 
 pnv:initials
@@ -659,7 +658,7 @@ sdo:additionalName
 
 sdo:additionalType
     a                  qb:CodedProperty, owl:ObjectProperty ;
-    qb:codeList        picot:523 ;
+    qb:codeList        picot:sourcetypes ;
     rdfs:isDefinedBy   sdo: ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
@@ -1121,7 +1120,7 @@ sdo:url
 
 :hasRole
     a                  qb:CodedProperty, owl:ObjectProperty ;
-    qb:codeList        picot:44 ;
+    qb:codeList        picot:roles ;
     #    rdfs:range            :Role ;
     skos:definition    "The role of a Person observation on the Source." ;
     rdfs:label         "hasRole"@en ;
@@ -1175,11 +1174,11 @@ prov:wasRevisionOf
 # Vocabularies
 ########################################################################################################################
 
-picot:44
+picot:roles
     a          skos:ConceptScheme ;
     rdfs:label 'Persons in Context role thesaurus' .
 
-picot:523
+picot:sourectypes
     a          skos:ConceptScheme ;
     rdfs:label 'Persons in Context sourceType thesaurus' .
 

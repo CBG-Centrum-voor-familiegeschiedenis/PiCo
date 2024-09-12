@@ -6,20 +6,20 @@ This example contains several sources with data about and around one person. The
 * Use schema, prov, pnv and bio.
 * CBG addition would be the relevant basic classes, "named individuals" and properties. 
 
-### Terms from examples (https://data.cbg.nl/pico-terms#)
+### Terms from examples (https://terms.personsincontext.org/)
 
-- picot:belastingregistratie
-- picot:bevolkingsregistratie
-- picot:boekpagina
-- picot:dienstboderegistratie
-- picot:huwelijksakte
-- picot:personeelsregistratie
-- picot:persoonskaart
+- picot:sourcetypes/belastingregistratie
+- picot:sourcetypes/bevolkingsregistratie
+- picot:sourcetypes/boekpagina
+- picot:sourcetypes/dienstboderegistratie
+- picot:sourcetypes/huwelijksakte
+- picot:sourcetypes/personeelsregistratie
+- picot:sourcetypes/persoonskaart
 
-- picot:hoofd
-- picot:huwelijkspartij
+- picot:roles/hoofd
+- picot:roles/huwelijkspartij
 
-### Ontology from examples (https://data.cbg.nl/pico#)
+### Ontology from examples (https://personsincontext.org/model/)
 
 - pico:PersonObservation
 - pico:PersonReconstruction
