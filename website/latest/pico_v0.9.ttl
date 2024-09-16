@@ -109,7 +109,7 @@ pico:
 prov:Activity
     a               owl:Class ;
     rdfs:label      "Activity"@en ;
-    rdfs:isDefinedBy prov: ;
+#    rdfs:isDefinedBy prov: ;  # pyLODE does not seem to render isDefinedBy correctly for classes, so I leave it out
     skos:definition "The Activity that generated a PersonReconstruction" ;
     skos:scopeNote  """A Person Reconstruction can either be created by a human researcher or by a software algorithm.
                        In case of a human-made reconstruction, provide information about the time, place and knowledge-
@@ -121,7 +121,7 @@ prov:Activity
 prov:Agent
     a               owl:Class ;
     rdfs:label      "Agent"@en ;
-    rdfs:isDefinedBy prov: ;
+#    rdfs:isDefinedBy prov: ;
     skos:definition "The agent (person or organisation) that is responsible for the creation of a person reconstruction." ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sh:order           0 ;
@@ -148,7 +148,8 @@ prov:Agent
     skos:scopeNote  """Container class for Person observation and Person reconstruction. Not to be used directly in
                        PiCo resources.
                     """@en ;
-    rdfs:subClassOf pnv:Person ;
+#    rdfs:subClassOf pnv:Person ;
+    rdfs:subClassOf <https://www.lodewijkpetram.nl/vocab/pnv/doc/#Person> ;
     rdfs:subClassOf prov:Entity ;
 .
 
