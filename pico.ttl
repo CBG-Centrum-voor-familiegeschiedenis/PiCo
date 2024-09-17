@@ -685,7 +685,7 @@ sdo:children
     rdfs:isDefinedBy   sdo:children ;
     skos:definition    """A child of a person.
                        """@en ;
-    rdfs:label         "child"@en ;
+    rdfs:label         "children"@en ;
     skos:scopeNote     """For Person observations, the child should always refer to another Person observation
                              on the same Source.
                           """@en ;
