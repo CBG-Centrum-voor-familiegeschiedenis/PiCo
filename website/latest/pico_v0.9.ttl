@@ -148,8 +148,7 @@ prov:Agent
     skos:scopeNote  """Container class for Person observation and Person reconstruction. Not to be used directly in
                        PiCo resources.
                     """@en ;
-#    rdfs:subClassOf pnv:Person ;
-    rdfs:subClassOf <https://www.lodewijkpetram.nl/vocab/pnv/doc/#Person> ;
+    rdfs:subClassOf pnv:Person ;
     rdfs:subClassOf prov:Entity ;
 .
 
@@ -271,9 +270,6 @@ sdo:ArchiveComponent
                           elements that identify the source, heritage institutions are free to use any authoritative
                           domain-specific standard to describe their historical person records.
                        """@en ;
-    skos:scopeNote   """For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       """@en ;
     sdo:workExample  [ a                  sdo:ImageObject ;
                        sh:order           0 ;
                        sdo:caption        "Schematic overview of a Source" ;
@@ -308,8 +304,8 @@ sdo:ImageObject
     rdfs:label       "Scan"@en ;  #, "Scan van de Bron"@nl ;
     skos:scopeNote   """A link to the location of the scan at the HoldingArchive.
                         A link to scan as it can be displayed online and a link to a thumbnail (for search results)
-                        should be provided.
-                     """@en ;
+                        should be provided. Preferably a link to a IIIF manifest.
+                       """@en ;
 .
 
 pnv:Name
@@ -689,7 +685,7 @@ sdo:children
     rdfs:isDefinedBy   sdo:children ;
     skos:definition    """A child of a person.
                        """@en ;
-    rdfs:label         "child"@en ;
+    rdfs:label         "children"@en ;
     skos:scopeNote     """For Person observations, the child should always refer to another Person observation
                              on the same Source.
                           """@en ;
