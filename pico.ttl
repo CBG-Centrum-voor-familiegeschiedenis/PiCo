@@ -27,43 +27,46 @@ pico:
     a                             owl:Ontology ;
     rdfs:label                    "Persons in Context"@en ;
     sdo:publisher                 <https://cbg.nl> ;
-    dcterms:creator               [ a                  sdo:Person ;
-                                    sdo:name        "Pieter Woltjer" ;
-                                    sdo:affiliation [ sdo:name "CBG|Center for familiy history"@en ;
-                                                         sdo:url  "https://cbg.nl" ] ;
-                                    sdo:email       "pieter.woltjer@cbg.nl" ] ;
-    dcterms:creator               [ a                  sdo:Person ;
-                                    sdo:name        "Jeroen Balkenende" ;
-                                    sdo:affiliation [ sdo:name "CBG|Center for family history" ;
-                                                         sdo:url  "https://cbg.nl" ] ] ;
-    dcterms:creator               [ a           sdo:Person ;
-                                    sdo:name "Bob Coret" ;
-                                    sdo:url  <https://bob.coret.org/> ] ;
-    dcterms:creator               [ a           sdo:Person ;
-                                    sdo:name "Mark Lindeman" ;
-                                    sdo:url  "https://lindeman.it/" ] ;
-    dcterms:creator               [ a           sdo:Person ;
-                                    sdo:name "Ivo Zandhuis" ;
-                                    sdo:url  "https://ivozandhuis.nl/" ] ;
-    dcterms:contributor           [ a                  sdo:Person ;
-                                    sdo:Name        "Rick Companje" ;
-                                    sdo:affiliation [ sdo:name "Het Utrechts Archief" ;
-                                                         sdo:url  "https://hetutrechtsarchief.nl/" ] ] ;
-    dcterms:contributor           [ a                  sdo:Person ;
-                                    sdo:Name        "Rick Mourits" ;
-                                    sdo:affiliation [ sdo:name
-                                                                    "International Institute Of Social History (IISH)" ;
-                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
-    dcterms:contributor           [ a                  sdo:Person ;
-                                    sdo:Name        "Micon Schorsij" ;
-                                    sdo:affiliation [ sdo:name
-                                                                    "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
-                                                         sdo:url "https://www.niod.nl/" ] ] ;
-    dcterms:contributor           [ a                  sdo:Person ;
-                                    sdo:Name        "Richard Zijdeman" ;
-                                    sdo:affiliation [ sdo:name
-                                                                    "International Institute Of Social History (IISH)" ;
-                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
+    dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
+                                  "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
+#    dcterms:creator               [ a                  sdo:Person ;
+#                                    sdo:name        "Pieter Woltjer" ;
+#                                    sdo:affiliation [ sdo:name "CBG|Center for familiy history"@en ;
+#                                                         sdo:url  "https://cbg.nl" ] ;
+#                                    sdo:email       "pieter.woltjer@cbg.nl" ] ;
+#    dcterms:creator               [ a                  sdo:Person ;
+#                                    sdo:name        "Jeroen Balkenende" ;
+#                                    sdo:affiliation [ sdo:name "CBG|Center for family history" ;
+#                                                         sdo:url  "https://cbg.nl" ] ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Bob Coret" ;
+#                                    sdo:url  <https://bob.coret.org/> ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Mark Lindeman" ;
+#                                    sdo:url  "https://lindeman.it/" ] ;
+#    dcterms:creator               [ a           sdo:Person ;
+#                                    sdo:name "Ivo Zandhuis" ;
+#                                    sdo:url  "https://ivozandhuis.nl/" ] ;
+    dcterms:contributor           "Rick Companje", "Rick Mourits", "Micon Schorsij", "Richard Zijdeman" ;  #
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Rick Companje" ;
+#                                    sdo:affiliation [ sdo:name "Het Utrechts Archief" ;
+#                                                         sdo:url  "https://hetutrechtsarchief.nl/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Rick Mourits" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "International Institute Of Social History (IISH)" ;
+#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Micon Schorsij" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
+#                                                         sdo:url "https://www.niod.nl/" ] ] ;
+#    dcterms:contributor           [ a                  sdo:Person ;
+#                                    sdo:Name        "Richard Zijdeman" ;
+#                                    sdo:affiliation [ sdo:name
+#                                                                    "International Institute Of Social History (IISH)" ;
+#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
     dcterms:created               "2023-09-21"^^xsd:date ;
     dcterms:modified              "2024-04-25"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
