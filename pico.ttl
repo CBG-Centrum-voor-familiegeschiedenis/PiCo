@@ -255,12 +255,12 @@ prov:Agent
 .
 
 sdo:ArchiveComponent
-    a                owl:Class ;
-    rdfs:subClassOf  sdo:CreativeWork ;
-    skos:definition  """An intangible type to be applied to any archive content, carrying with it a set of
+    a               owl:Class ;
+    rdfs:subClassOf sdo:CreativeWork ;
+    skos:definition """An intangible type to be applied to any archive content, carrying with it a set of
                             properties required to describe archival items and collections."""@en ;
-    rdfs:label       "Source"@en ;  #, "Bron"@nl ;
-    skos:scopeNote   """Person observations can appear on many types of historical documents. The PiCo model does
+    rdfs:label      "Source"@en ;  #, "Bron"@nl ;
+    skos:scopeNote  """Person observations can appear on many types of historical documents. The PiCo model does
                           not aim to describe these sources, as excellent data models, such as Records in Contexts and
                           Dublin Core, already exist within the heritage domain. In order to model person observations,
                           we require that institutions describe their sources at least with a single name property that
@@ -270,18 +270,18 @@ sdo:ArchiveComponent
                           elements that identify the source, heritage institutions are free to use any authoritative
                           domain-specific standard to describe their historical person records.
                        """@en ;
-    sdo:workExample  [ a                  sdo:ImageObject ;
-                       sh:order           0 ;
-                       sdo:caption        "Schematic overview of a Source" ;
-                       sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
-                       sdo:description    "Schematic overview of a Source." ;
-                       sdo:encodingFormat "image/svg+xml" ;
-                       sdo:name           "Source" ] ;
-    sdo:workExample  [ a                  sdo:TextObject ;
-                       sdo:description    "Example of a Source with a linked Scan" ;
-                       sdo:encodingFormat "text/turtle" ;
-                       sdo:name           "Source with a linked Scan" ;
-                       sdo:text           """
+    sdo:workExample [ a                  sdo:ImageObject ;
+                      sh:order           0 ;
+                      sdo:caption        "Schematic overview of a Source" ;
+                      sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a Source." ;
+                      sdo:encodingFormat "image/svg+xml" ;
+                      sdo:name           "Source" ] ;
+    sdo:workExample [ a                  sdo:TextObject ;
+                      sdo:description    "Example of a Source with a linked Scan" ;
+                      sdo:encodingFormat "text/turtle" ;
+                      sdo:name           "Source with a linked Scan" ;
+                      sdo:text           """
                                                    afr:geboorteregiser_1858
                                                        a                   sdo:ArchiveComponent ;
                                                        sdo:additionalType  picot:sourcetypes/551 ;  # civil registry: birth
@@ -298,21 +298,21 @@ sdo:ArchiveComponent
 .
 
 sdo:ImageObject
-    a                owl:Class ;
-    rdfs:subClassOf  sdo:CreativeWork ;
-    skos:definition  """An image file."""@en ;
-    rdfs:label       "Scan"@en ;  #, "Scan van de Bron"@nl ;
-    skos:scopeNote   """A link to the location of the scan at the HoldingArchive.
+    a               owl:Class ;
+    rdfs:subClassOf sdo:CreativeWork ;
+    skos:definition """An image file."""@en ;
+    rdfs:label      "Scan"@en ;  #, "Scan van de Bron"@nl ;
+    skos:scopeNote  """A link to the location of the scan at the HoldingArchive.
                         A link to scan as it can be displayed online and a link to a thumbnail (for search results)
                         should be provided. Preferably a link to a IIIF manifest.
                        """@en ;
 .
 
 pnv:Name
-    a                owl:Class ;
-    skos:definition  "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
-    rdfs:label       "PersonName"@en ;  #, "Naam van een persoon"@nl ;
-    skos:scopeNote   """In the Person Name Vocabulary, a name is considered to be a
+    a               owl:Class ;
+    skos:definition "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
+    rdfs:label      "PersonName"@en ;  #, "Naam van een persoon"@nl ;
+    skos:scopeNote  """In the Person Name Vocabulary, a name is considered to be a
                         a resource type in its own right.
                         A PersonName can consist of many different parts. The most common ones are mentioned here.
                         See the full specification of the Person Name Vocabulary for more details.
@@ -623,7 +623,7 @@ pnv:surnamePrefix
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:surnamePrefix ;
     skos:definition    """A Surname prefix is a name part prefixing the surname (e.g. 'van' or 'van den').
-                          """@en ;
+                       """@en ;
     rdfs:label         "surnamePrefix"@en ;
     skos:scopeNote     "A2A:PersonNamePrefixLastName"@en ;
     sdo:domainIncludes pnv:Name ;
@@ -659,7 +659,9 @@ sdo:additionalType
     rdfs:isDefinedBy   sdo:additionalType ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
-    skos:scopeNote     "Use a term from the PiCo thesaurus for Source types."@en ;
+    skos:scopeNote     """Use a term from the PiCo thesaurus for Source types:
+                          https://terms.personsincontext.org/sourcetypes
+                       """@en ;
     sdo:domainIncludes sdo:ArchiveComponent ;
 .
 #    sdo:rangeIncludes  :SourceType .
@@ -1121,7 +1123,9 @@ sdo:url
     #    rdfs:range            :Role ;
     skos:definition    "The role of a Person observation on the Source." ;
     rdfs:label         "hasRole"@en ;
-    skos:scopeNote     """Use a term from the PiCo Roles thesaurus."""@en ;
+    skos:scopeNote     """Use a term from the PiCo Roles thesaurus:
+                          https://terms.personsincontext.org/roles
+                       """@en ;
     sdo:domainIncludes :PersonObservation ;
 .
 
