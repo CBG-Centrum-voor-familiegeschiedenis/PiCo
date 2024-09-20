@@ -6,8 +6,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix bio:    <http://purl.org/vocab/bio/0.1/> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
-@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix pico:   <https://personsincontext.org/model/> .
+@prefix picot:  <https://terms.personsincontext.org/> .
 @prefix afr:    <https://allefriezen.nl/zoeken/> .
 
 # PERSOONSVERMELDINGEN
@@ -22,7 +22,7 @@ afr:geboorteregiser_1858_po_1
     schema:birthDate      "1858-06-21"^^xsd:date ;
     schema:birthPlace     "Joure" ;
     schema:gender         schema:Male ;
-    pico:hasRole          picot:575 ;  # child
+    pico:hasRole          picot:roles/575 ;  # child
     schema:parent         afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
 
@@ -38,7 +38,7 @@ afr:geboorteregiser_1858_po_2
     schema:gender         schema:Male ;
     schema:spouse         afr:geboorteregiser_1858_po_3 ;
     schema:children       afr:geboorteregiser_1858_po_1 ;
-    pico:hasRole          picot:489 .  # declarant
+    pico:hasRole          picot:roles/489 .  # declarant
 
 
 afr:geboorteregiser_1858_po_3
@@ -58,7 +58,7 @@ afr:geboorteregiser_1858_po_3
 
 afr:geboorteregiser_1858
     a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:551 ;  # civil registry: birth
+    schema:additionalType  picot:sourcetypes/551 ;  # civil registry: birth
     schema:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
     schema:holdingArchive  <https://www.tresoar.nl/> ;
     schema:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;

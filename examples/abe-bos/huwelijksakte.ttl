@@ -4,8 +4,8 @@
 @prefix bio:    <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
-@prefix picot:  <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
+@prefix pico:   <https://personsincontext.org/model/> .
+@prefix picot:  <https://terms.personsincontext.org/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
@@ -19,7 +19,7 @@ nha:huwelijksakte_1885_321_po_1
     schema:birthPlace     "Joure" ;
     schema:hasOccupation  "agent van politie" ;
     schema:gender         schema:Male ;
-    pico:hasRole          picot:574 ;  # spouse
+    pico:hasRole          picot:roles/574 ;  # spouse
     schema:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_2 ;
                             schema:startDate "1885-11-11"^^xsd:date ; ] ;
     schema:parent         nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
@@ -34,7 +34,7 @@ nha:huwelijksakte_1885_321_po_2
     schema:birthPlace     "Haarlem" ;
     schema:hasOccupation  "dienstbode" ;
     schema:gender         schema:Female ;
-    pico:hasRole          picot:574 ;  # spouse
+    pico:hasRole          picot:roles/574 ;  # spouse
     schema:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_1 ;
                             schema:startDate "1885-11-11"^^xsd:date ; ] ;
     schema:parent         nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
@@ -97,7 +97,7 @@ nha:huwelijksakte_1885_321_event_1
 # BRON
 nha:huwelijksakte_1885_321
     a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:552 ; # civil registry: marriage
+    schema:additionalType  picot:sourcetypes/552 ; # civil registry: marriage
     schema:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
     schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
     schema:url             <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
