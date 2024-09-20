@@ -1,17 +1,17 @@
 relationtype	count	a2a	rol	relatie
 Geregistreerde	64576435	*	--	--
 Overledene	47118891	*	overledene	--
-Vader	35869119	*	--	schema:parent
-Moeder	35312207	*	--	schema:parent
-Kind	21069169	*	boreling	schema:children
-Bruid	9804806	*	bruid	schema:spouse
-Bruidegom	9796097	*	bruidegom	schema:spouse
-Moeder van de bruidegom	6279608	*		schema:parent
-Moeder van de bruid	6279576	*		schema:parent
-Vader van de bruidegom	6213201	*		schema:parent
-Vader van de bruid	6195839	*		schema:parent
-Partner	4423576	*		schema:knows
-Relatie	3036971			schema:knows
+Vader	35869119	*	--	sdo:parent
+Moeder	35312207	*	--	sdo:parent
+Kind	21069169	*	boreling	sdo:children
+Bruid	9804806	*	bruid	sdo:spouse
+Bruidegom	9796097	*	bruidegom	sdo:spouse
+Moeder van de bruidegom	6279608	*		sdo:parent
+Moeder van de bruid	6279576	*		sdo:parent
+Vader van de bruidegom	6213201	*		sdo:parent
+Vader van de bruid	6195839	*		sdo:parent
+Partner	4423576	*		sdo:knows
+Relatie	3036971			sdo:knows
 Reiziger	2596159		reiziger	--
 Dopeling	2094086		dopeling	--
 Vermeld	1278248		--	--
@@ -21,7 +21,7 @@ Werknemer	773818		werknemer	--
 Notaris	762645		notaris	--
 Verkoper	754112		verkoper	--
 Koper	691970		koper	--
-Bruidegom/bruid	494961		???	schema:spouse
+Bruidegom/bruid	494961		???	sdo:spouse
 Ondertekenaar	470565		ondertekenaar	--
 Persoon in bevolkingsregister	448612		--	--
 Aangever	405146		aangever	--
@@ -41,7 +41,7 @@ Comparant	229327		comparant	--
 Notarieel geregistreerde	228644		--	--
 Eigenaar	226239		eigenaar	--
 Eerdere partner	222735			eerderePartnerVan --> schema?
-Vader/moeder	196457			schema:parent
+Vader/moeder	196457			sdo:parent
 Weduwe	194677			weduweVan --> schema?
 Persoon	188173		--	--
 Passagier	179221		passagier	--
@@ -50,16 +50,16 @@ Aangeslagene	151365		aangeslagene	--
 Begravene	128482		begravene	--
 Huurder	126704		huurder	--
 Meter	126365		meter	--
-Gewettigd kind	126344			schema:children
+Gewettigd kind	126344			sdo:children
 Constituant	125074		constituant	--
 Bruids zijde	122880			--
 Andere naam dan overledene	117977			--
-Vader bruidegom/bruid	117845			schema:parent
+Vader bruidegom/bruid	117845			sdo:parent
 Vorige partner bruidegom	116578			schema???
 Partij	116394		partij	--
 handelt voor zich	114898			--
 Begunstigde	111741		begunstigde	--
-Echtgenote	108398			schema:spouse
+Echtgenote	108398			sdo:spouse
 Peter	107864			schema?
 Bruidegoms zijde	105408			--
 Personeelslid	104849		personeelslid	--
@@ -69,14 +69,14 @@ Eerdere vrouw	97926			schema?
 Geconstitueerde	97718		geconstitueerde	--
 Genoemd	96375			--
 Verhuurder	93092		verhuurder	--
-Vrouw	92418			schema:spouse
-Man	87888			schema:spouse
+Vrouw	92418			sdo:spouse
+Man	87888			sdo:spouse
 Overige belanghebbenden	85247		overige belanghebbende	--
 Persoon in ra	82359			--
 Eerdere man	82123			schema?
 Vorige partner bruid	78496			schema?
 Militieregister geregistreerde	76664			--
-Echtgenoot	75945			schema:spouse
+Echtgenoot	75945			sdo:spouse
 Hoofdpersoon	75231			--
 Borg	69849			--
 Wederpartij	64285			--
@@ -93,22 +93,22 @@ Kiesgerechtigde	41290		kiesgerechtigde	--
 Arrestant	40732		arrestant	--
 Veroordeelde	40456		veroordeelde	--
 Patentplichtige	39411		patentplichtige	--
-Moeder kind	38405			schema:parent
+Moeder kind	38405			sdo:parent
 Eerdere relatie	36770			schema?
-Vader kind	36482			schema:parent
+Vader kind	36482			sdo:parent
 Persoon in lidmatenregister	36364			--
 Lid	36170			--
-Moeder overledene	36149			schema:parent
-Vader overledene	35377			schema:parent
+Moeder overledene	36149			sdo:parent
+Vader overledene	35377			sdo:parent
 Zitplaatsregister geregistreerde	34234			--
 Laatste partner van de bruidegom	33002			--
 Erflater	32935			--
 Afzender	32569			--
 Beluid	32392			--
-Buur	32198			schema:knows
+Buur	32198			sdo:knows
 Overdrager	31687			--
 Ontvanger	29183			--
-Verwant	28322			schema:related
+Verwant	28322			sdo:related
 Curator	28054			
 Poorter	27152			
 anderszins vermeld	26937			
@@ -202,7 +202,7 @@ Grootouder	4128
 Collateraal subject	4090			
 Overleden/Erflater	4037			
 Uitkoper	3930			
-Broer	3904		""	schema:sibbling
+Broer	3904		""	sdo:sibbling
 Comparante	3903			
 Pachter	3888			
 Gescheidene	3831			
@@ -223,7 +223,7 @@ Donataris	2893
 Bestuurslid	2675			
 echtgenote	2629			
 Eiser	2626			
-echtgenoot	2604			schema:spouse
+echtgenoot	2604			sdo:spouse
 Provisionele koper	2501			
 Goedkeurder	2456			
 Eigenaar en gebruiker	2370			

@@ -1,13 +1,13 @@
-@prefix pnv:           <https://w3id.org/pnv#> .
-@prefix prov:          <http://www.w3.org/ns/prov#> .
-@prefix schema:        <http://schema.org/> .
-@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix pnv:    <https://w3id.org/pnv#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix sdo:    <https://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix pico:          <https://personsincontext.org/model/> .
-@prefix picot: <https://terms.personsincontext.org/> .
+@prefix pico:   <https://personsincontext.org/model/> .
+@prefix picot:  <https://terms.personsincontext.org/> .
 
-@prefix nha:           <https://noord-hollandsarchief.nl/> .
-@prefix dl-ont:        <https://example.com/dwarsliggers/ont/> .
+@prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
 
 # PERSOONSVERMELDING
@@ -15,23 +15,23 @@
 nha:NL-HlmNHA_1503_537_IVa_63_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1503_537_IVa_63 ;
-    schema:name           "Bos, A." ;
-    schema:familyName     "Bos" ;
+    sdo:name              "Bos, A." ;
+    sdo:familyName        "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
-    schema:additionalName [ a               pnv:PersonName ;
+    sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:literalName "Bos, A." ;
                             pnv:initials    "A." ; ] ;
-    schema:address        "Eendrachtstraat 3" ;
+    sdo:address           "Eendrachtstraat 3" ;
     dl-ont:inkomen        "550"^^xsd:integer ;
     dl-ont:aftrek         "500"^^xsd:integer ;
     dl-ont:grondslag      "50"^^xsd:integer ;
     dl-ont:aanslag        "1.95"^^xsd:decimal .
 
 nha:NL-HlmNHA_1503_537_IVa_63
-    a                      schema:ArchiveComponent ;
-    schema:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
-    schema:additionalType  picot:sourcetypes/537 ;  # fiscaal en financieel
-    schema:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
-    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
-    schema:dateCreated     "1902"^^xsd:gYear ;
-    schema:locationCreated "Haarlem" .
+    a                   sdo:ArchiveComponent ;
+    sdo:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
+    sdo:additionalType  picot:sourcetypes/537 ;  # fiscaal en financieel
+    sdo:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
+    sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    sdo:dateCreated     "1902"^^xsd:gYear ;
+    sdo:locationCreated "Haarlem" .

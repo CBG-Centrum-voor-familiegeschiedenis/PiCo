@@ -1,51 +1,59 @@
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix cbg:    <https://data.cbg.nl/> .
-@prefix pico:   <https://personsincontext.org/model/> .
-@prefix picot:  <https://terms.personsincontext.org/> .
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-@prefix hua:    <https://hetutrechtsarchief.nl/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sdo:   <https://schema.org/> .
+@prefix pnv:   <https://w3id.org/pnv#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cbg:   <https://data.cbg.nl/> .
+@prefix pico:  <https://personsincontext.org/model/> .
+@prefix picot: <https://terms.personsincontext.org/> .
+@prefix nha:   <https://noord-hollandsarchief.nl/> .
+@prefix hua:   <https://hetutrechtsarchief.nl/> .
 
 cbg:person_reconstruction_1
-    a                       pico:PersonReconstruction ;
-    schema:name             "Abe Bos" ;
-    schema:familyName       "Bos" ;
-    schema:givenName        "Abe" ;
-    schema:gender           schema:Male ;
-    schema:hasOccupation    [ rdf:value         "agent van politie" ;
-                              schema:endDate      "1892"^^xsd:gYear ] ,
-                            [ rdf:value         "locomotief bankwerker" ;
-                              schema:startDate    "1892"^^xsd:gYear ],
-                            [ rdf:value         "zonder" ;
-                              schema:endDate    "1954"^^xsd:gYear ] ;
-    schema:birthPlace       "Joure, gemeente Haskerland" ;
-    schema:birthDate        "1858-01-21"^^xsd:date ;
-    schema:deathPlace       "Haarlem" ;
-    schema:deathDate        "1954-02-28"^^xsd:date ;
-    schema:spouse           [ rdf:value         cbg:person_reconstruction_2 ;
-                              schema:startDate  "1885-11-11"^^xsd:date ;
-                              schema:endDate    "1926"^^xsd:gYear ] ;
-    prov:wasDerivedFrom     nha:NL-HlmNHA_1503_537_IVa_63_po_1 ,    # belastingregisratie
-                            nha:NL-HlmNHA_1482_234_B_0006_po_1 ,    # bevolkingregistatie
-                            nha:NL-HlmNHA_1482_234_B_0006_po_1 ,    # jaarboekje
-                            nha:huwelijksakte_1885_321_po_1 ,       # huwelijksakte
-                            hua:NL-UtHUA_920_26-29_2430_po_1 ,      # personeelsregistratie
-                            cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
-    prov:wasGeneratedBy     cbg:reconstruction_activity_01 .
+    a                   pico:PersonReconstruction ;
+    sdo:name            "Abe Bos" ;
+    sdo:familyName      "Bos" ;
+    sdo:givenName       "Abe" ;
+    sdo:gender          sdo:Male ;
+    sdo:hasOccupation   [ rdf:value
+                                  "agent van politie" ;
+                          sdo:endDate
+                                  "1892"^^xsd:gYear ],
+                        [ rdf:value
+                                  "locomotief bankwerker" ;
+                          sdo:startDate
+                                  "1892"^^xsd:gYear ],
+                        [ rdf:value "zonder" ;
+                          sdo:endDate
+                                  "1954"^^xsd:gYear ] ;
+    sdo:birthPlace      "Joure, gemeente Haskerland" ;
+    sdo:birthDate       "1858-01-21"^^xsd:date ;
+    sdo:deathPlace      "Haarlem" ;
+    sdo:deathDate       "1954-02-28"^^xsd:date ;
+    sdo:spouse          [ rdf:value
+                                  cbg:person_reconstruction_2 ;
+                          sdo:startDate
+                                  "1885-11-11"^^xsd:date ;
+                          sdo:endDate
+                                  "1926"^^xsd:gYear ] ;
+    prov:wasDerivedFrom nha:NL-HlmNHA_1503_537_IVa_63_po_1,    # belastingregisratie
+                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # bevolkingregistatie
+                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # jaarboekje
+                        nha:huwelijksakte_1885_321_po_1,       # huwelijksakte
+                        hua:NL-UtHUA_920_26-29_2430_po_1,      # personeelsregistratie
+                        cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
+    prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
 cbg:person_reconstruction_2
     a                   pico:PersonReconstruction ;
-    schema:name         "Anna Maria Koppen" ;
-    schema:familyName   "Koppen" ;
-    schema:givenName    "Anna" ;
-    schema:gender       schema:Female ;
-    schema:birthPlace   "Haarlem" ;
-    schema:birthDate    "1860-03-31"^^xsd:date ;
-    schema:deathPlace   "Detroit, VSA" ;
-    schema:deathDate    "1926"^^xsd:gYear ;
+    sdo:name            "Anna Maria Koppen" ;
+    sdo:familyName      "Koppen" ;
+    sdo:givenName       "Anna" ;
+    sdo:gender          sdo:Female ;
+    sdo:birthPlace      "Haarlem" ;
+    sdo:birthDate       "1860-03-31"^^xsd:date ;
+    sdo:deathPlace      "Detroit, VSA" ;
+    sdo:deathDate       "1926"^^xsd:gYear ;
     prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
     prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
@@ -56,6 +64,6 @@ cbg:reconstruction_activity_01
     prov:endedAtTime       "2020-01-08T00:00:00"^^xsd:dateTime .
 
 cbg:reconstruction_agent_01
-    a             prov:Agent ;
-    schema:name   "Ivo Zandhuis" ;
-    schema:sameAs <https://orcid.org/0000-0003-0165-8341> .
+    a          prov:Agent ;
+    sdo:name   "Ivo Zandhuis" ;
+    sdo:sameAs <https://orcid.org/0000-0003-0165-8341> .

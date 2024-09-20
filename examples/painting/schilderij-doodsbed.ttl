@@ -1,14 +1,14 @@
-@prefix schema: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix pico:   <https://personsincontext.org/model/> .
 
 # PERSOONSVERMELDING
 <> a pico:PersonObservation ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
-    schema:name "DEN PRINSCHE DORANGE" ;
-    schema:deathDate "DEN TIENDEN IVLI" ;
-    schema:deathPlace "DELFT" ;
+    sdo:name "DEN PRINSCHE DORANGE" ;
+    sdo:deathDate "DEN TIENDEN IVLI" ;
+    sdo:deathPlace "DELFT" ;
     pico:hasAge "51" .
 
-<https://data.rkd.nl/images/170975> a schema:Painting ;
-    schema:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)" .
+<https://data.rkd.nl/images/170975> a sdo:Painting ;
+    sdo:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)" .

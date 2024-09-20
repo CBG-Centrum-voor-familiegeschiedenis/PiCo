@@ -1,43 +1,43 @@
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix bio:    <http://purl.org/vocab/bio/0.1/> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sdo:   <https://schema.org/> .
+@prefix pnv:   <https://w3id.org/pnv#> .
+@prefix bio:   <http://purl.org/vocab/bio/0.1/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix pico:   <https://personsincontext.org/model/> .
-@prefix picot:  <https://terms.personsincontext.org/> .
+@prefix pico:  <https://personsincontext.org/model/> .
+@prefix picot: <https://terms.personsincontext.org/> .
 
-@prefix cbg:    <https://data.cbg.nl/> .
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
-@prefix hua:    <https://hetutrechtsarchief.nl/> .
+@prefix cbg:   <https://data.cbg.nl/> .
+@prefix nha:   <https://noord-hollandsarchief.nl/> .
+@prefix hua:   <https://hetutrechtsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
 cbg:NL-HaCBG_1755_0341_142_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    schema:name           "Abe Bos" ;
-    schema:familyName     "Bos" ;
-    schema:givenName      "Abe" ;
-    schema:gender         schema:Male ;
-    schema:hasOccupation  "zonder" ;
-    schema:birthPlace     "Joure, gemeente Haskerland" ;
-    schema:birthDate      "1858-01-21"^^xsd:date ;
-    schema:deathPlace     "Haarlem" ;
-    schema:deathDate      "1954-02-28"^^xsd:date ;
-    schema:parent         cbg:NL-HaCBG_1755_0341_142_po_3, cbg:NL-HaCBG_1755_0341_142_po_4 ;
-    schema:spouse         cbg:NL-HaCBG_1755_0341_142_po_2 .
+    sdo:name              "Abe Bos" ;
+    sdo:familyName        "Bos" ;
+    sdo:givenName         "Abe" ;
+    sdo:gender            sdo:Male ;
+    sdo:hasOccupation     "zonder" ;
+    sdo:birthPlace        "Joure, gemeente Haskerland" ;
+    sdo:birthDate         "1858-01-21"^^xsd:date ;
+    sdo:deathPlace        "Haarlem" ;
+    sdo:deathDate         "1954-02-28"^^xsd:date ;
+    sdo:parent            cbg:NL-HaCBG_1755_0341_142_po_3, cbg:NL-HaCBG_1755_0341_142_po_4 ;
+    sdo:spouse            cbg:NL-HaCBG_1755_0341_142_po_2 .
 
 cbg:NL-HaCBG_1755_0341_142_po_2
     a                     pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    schema:name           "Anna Maria Koppen" ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Anna" ;
-    schema:birthPlace     "Haarlem" ;
-    schema:birthDate      "1860-03-31"^^xsd:date ;
-    schema:deathPlace     "Detroit, VSA" ;
-    schema:spouse         cbg:NL-HaCBG_1755_0341_142_po_1 ;
-    schema:deathDate      "1926"^^xsd:gYear .
+    sdo:name              "Anna Maria Koppen" ;
+    sdo:familyName        "Koppen" ;
+    sdo:givenName         "Anna" ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:birthDate         "1860-03-31"^^xsd:date ;
+    sdo:deathPlace        "Detroit, VSA" ;
+    sdo:spouse            cbg:NL-HaCBG_1755_0341_142_po_1 ;
+    sdo:deathDate         "1926"^^xsd:gYear .
 
 cbg:NL-HaCBG_1755_0341_142_event_1
     a                     bio:Marriage ;
@@ -49,31 +49,31 @@ cbg:NL-HaCBG_1755_0341_142_event_1
 cbg:NL-HaCBG_1755_0341_142_po_3
     a                     pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    schema:name           "Sjouke Abes Bos" ;
-    schema:familyName     "Bos" ;
-    schema:givenName      "Sjouke" ;
-    schema:additionalName [ a               pnv:PersonName ;
+    sdo:name              "Sjouke Abes Bos" ;
+    sdo:familyName        "Bos" ;
+    sdo:givenName         "Sjouke" ;
+    sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:literalName "Sjouke Abes Bos" ;
                             pnv:patronym    "Abes" ; ] ;
-    schema:children       cbg:NL-HaCBG_1755_0341_142_po_1 .
+    sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 cbg:NL-HaCBG_1755_0341_142_po_4
     a                     pico:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    schema:name           "Geertruida van der Wijk" ;
-    schema:familyName     "van der Wijk" ;
-    schema:givenName      "Geertruida" ;
-    schema:additionalName [ a                 pnv:PersonName ;
+    sdo:name              "Geertruida van der Wijk" ;
+    sdo:familyName        "van der Wijk" ;
+    sdo:givenName         "Geertruida" ;
+    sdo:additionalName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk" ;
                             pnv:baseSurname   "Wijk" ;
                             pnv:surnamePrefix "van der" ; ] ;
-    schema:children       cbg:NL-HaCBG_1755_0341_142_po_1 .
+    sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 
 # BRON
 cbg:NL-HaCBG_1755_0341_142
-    a                      schema:ArchiveComponent ;
-    schema:name            "Persoonskaart Abe Bos" ;
-    schema:locationCreated "Nederland" ;
-    schema:additionalType  picot:sourcetypes/554 ;  # bevolkingsregister
-    schema:holdingArchive  <https://cbg.nl/> .
+    a                   sdo:ArchiveComponent ;
+    sdo:name            "Persoonskaart Abe Bos" ;
+    sdo:locationCreated "Nederland" ;
+    sdo:additionalType  picot:sourcetypes/554 ;  # bevolkingsregister
+    sdo:holdingArchive  <https://cbg.nl/> .

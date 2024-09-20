@@ -1,111 +1,111 @@
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico:   <https://personsincontext.org/model/> .
-@prefix picot:  <https://terms.personsincontext.org/> .
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sdo:   <https://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix pico:  <https://personsincontext.org/model/> .
+@prefix picot: <https://terms.personsincontext.org/> .
+@prefix nha:   <https://noord-hollandsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
 nha:NL-HlmNHA_1482_234_B_0006_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:name           "Abe Bos" ;
-    schema:familyName     "Bos" ;
-    schema:givenName      "Abe" ;
+    sdo:name              "Abe Bos" ;
+    sdo:familyName        "Bos" ;
+    sdo:givenName         "Abe" ;
     pico:hasRole          "hoofd" ;
-    schema:birthDate      "1858-01-21"^^xsd:date ;
-    schema:birthPlace     "Joure" ;
-    schema:address        "Eendrachtstraat 3" ;
+    sdo:birthDate         "1858-01-21"^^xsd:date ;
+    sdo:birthPlace        "Joure" ;
+    sdo:address           "Eendrachtstraat 3" ;
     pico:hasReligion      "rk" ;
-    schema:hasOccupation  "smid" ;
-    schema:gender         schema:Male ;
-    schema:spouse         nha:NL-HlmNHA_1482_234_B_0006_po_2 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_3 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_4 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_5 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_6 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_7 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_8 ;
-    schema:children       nha:NL-HlmNHA_1482_234_B_0006_po_9 .
+    sdo:hasOccupation     "smid" ;
+    sdo:gender            sdo:Male ;
+    sdo:spouse            nha:NL-HlmNHA_1482_234_B_0006_po_2 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_3 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_4 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_5 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_6 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_7 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_8 ;
+    sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_9 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_2
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Anna Maria" ;
-    schema:name           "Anna Maria Koppen" ;
-    schema:birthDate      "1860-03-31"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
+    sdo:familyName        "Koppen" ;
+    sdo:givenName         "Anna Maria" ;
+    sdo:name              "Anna Maria Koppen" ;
+    sdo:birthDate         "1860-03-31"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
     pico:hasReligion      "rk" ;
-    schema:gender         schema:Female ;
-    schema:spouse         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:gender            sdo:Female ;
+    sdo:spouse            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_3
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1887-06-07"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Female ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1887-06-07"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Female ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_4
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1888-08-11"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Female ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1888-08-11"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Female ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_5
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1891-04-13"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Female ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1891-04-13"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Female ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_6
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1892-12-25"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Female ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1892-12-25"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Female ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_7
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1894-10-04"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Male ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1894-10-04"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Male ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_8
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1900-08-27"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Male ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1900-08-27"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Male ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_9
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    schema:birthDate      "1900-08-27"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Eendrachtstraat 3" ;
-    schema:gender         schema:Female ;
-    schema:parent         nha:NL-HlmNHA_1482_234_B_0006_po_1 .
+    sdo:birthDate         "1900-08-27"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Eendrachtstraat 3" ;
+    sdo:gender            sdo:Female ;
+    sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006
-    a                     schema:ArchiveComponent ;
-    schema:name           "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
-    schema:holdingArchive <https://noord-hollandsarchief.nl/> ;
-    schema:additionalType picot:sourcetypes/554 .  # bevolkingsregister
+    a                  sdo:ArchiveComponent ;
+    sdo:name           "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
+    sdo:holdingArchive <https://noord-hollandsarchief.nl/> ;
+    sdo:additionalType picot:sourcetypes/554 .  # bevolkingsregister

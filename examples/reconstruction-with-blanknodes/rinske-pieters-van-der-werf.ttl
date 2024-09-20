@@ -1,10 +1,10 @@
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pico:   <https://personsincontext.org/model/> .
-@prefix schema: <http://schema.org/> .
-@prefix pnv:    <https://w3id.org/pnv#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pico: <https://personsincontext.org/model/> .
+@prefix sdo:  <https://schema.org/> .
+@prefix pnv:  <https://w3id.org/pnv#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 # In PiCo a prov:wasDerivedFrom relating a pico:PersonObservation is required.
 # What if you do not have a proper PersonObservation, but only a URL pointing to a source 
@@ -12,37 +12,32 @@
 # Advise is to introduce a 'blank' PersonObservation. See following example.
 
 _:person_reconstruction_1
-    a pico:PersonReconstruction ;
-    schema:name             "Rinske Pieters van der Werf" ;
-    schema:familyName       "van der Werf" ;
-    schema:givenName        "Rinske" ;
-    schema:additionalName [ 
-      a pnv:PersonName ;
-      pnv:literalName   "Rinske Pieters van der Werf" ;
-      pnv:baseSurname   "Werf" ;
-      pnv:surnamePrefix "van der" ; 
-      pnv:patronym      "Pieters" 
-    ] ;
-    schema:gender         schema:Female ;
-    schema:birthPlace     "Gorredijk, gemeente Opsterland" ;
-    schema:birthDate      "1816-10-11"^^xsd:date ;
-    prov:wasDerivedFrom [
-      a pico:PersonObservation ;
-      schema:identifier "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
-      prov:hadPrimarySource [
-        a schema:ArchiveComponent ;
-        schema:url <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> 
-      ] ;
-    ] ;
+    a                   pico:PersonReconstruction ;
+    sdo:name            "Rinske Pieters van der Werf" ;
+    sdo:familyName      "van der Werf" ;
+    sdo:givenName       "Rinske" ;
+    sdo:additionalName  [ a                 pnv:PersonName ;
+                          pnv:literalName   "Rinske Pieters van der Werf" ;
+                          pnv:baseSurname   "Werf" ;
+                          pnv:surnamePrefix "van der" ;
+                          pnv:patronym      "Pieters" ] ;
+    sdo:gender          sdo:Female ;
+    sdo:birthPlace      "Gorredijk, gemeente Opsterland" ;
+    sdo:birthDate       "1816-10-11"^^xsd:date ;
+    prov:wasDerivedFrom [ a                     pico:PersonObservation ;
+                          sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
+                          prov:hadPrimarySource [ a sdo:ArchiveComponent ;
+                                                  sdo:url
+                                                    <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .
 
 _:reconstruction_activity_01
-    a prov:Activity ;
-    rdfs:label "Genealogical research" ;
+    a                      prov:Activity ;
+    rdfs:label             "Genealogical research" ;
     prov:wasAssociatedWith _:reconstruction_agent_01 ;
     prov:startedAtTime     "1990-01-01T00:00:00"^^xsd:dateTime .
 
 _:reconstruction_agent_01
-    a prov:Agent ;
-    schema:name   "Ivo Zandhuis" ;
-    schema:sameAs <https://orcid.org/0000-0003-0165-8341> .
+    a          prov:Agent ;
+    sdo:name   "Ivo Zandhuis" ;
+    sdo:sameAs <https://orcid.org/0000-0003-0165-8341> .

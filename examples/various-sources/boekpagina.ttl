@@ -1,6 +1,6 @@
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
+@prefix sdo:    <https://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix pico:   <https://personsincontext.org/model/> .
 @prefix picot:  <https://terms.personsincontext.org/> .
@@ -11,19 +11,19 @@
 nha:NL-HlmNHA_1482_234_B_0006_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
-    schema:name           "Bos, A." ;
-    schema:additionalName [ a               pnv:PersonName ;
+    sdo:name              "Bos, A." ;
+    sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:initials    "A." ;
                             pnv:literalName "Bos, A." ] ;
-    schema:address        "Eendrachtstraat 3" ;
+    sdo:address           "Eendrachtstraat 3" ;
     dl-ont:bestuurderVan  "Vereeniging de Dageraad" ;
     dl-ont:functie        "secretaris" .
 
 nha:bibliotheek_5008_13-p299
-    a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:sourcetypes/0 ;  # publicatie
-    schema:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
-    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
-    schema:dateCreated     "1903"^^xsd:gYear ;
-    schema:locationCreated "Haarlem" ;
-    schema:isPartOf        <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .
+    a                   sdo:ArchiveComponent ;
+    sdo:additionalType  picot:sourcetypes/0 ;  # publicatie
+    sdo:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
+    sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    sdo:dateCreated     "1903"^^xsd:gYear ;
+    sdo:locationCreated "Haarlem" ;
+    sdo:isPartOf        <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .

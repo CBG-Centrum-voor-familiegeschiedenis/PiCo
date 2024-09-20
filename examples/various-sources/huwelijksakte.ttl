@@ -1,5 +1,5 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix bio:    <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -12,80 +12,80 @@
 nha:huwelijksakte_1885_321_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Abe Bos" ;
-    schema:familyName     "Bos" ;
-    schema:givenName      "Abe" ;
+    sdo:name           "Abe Bos" ;
+    sdo:familyName     "Bos" ;
+    sdo:givenName      "Abe" ;
     pico:hasAge           "27"^^xsd:decimal ;
-    schema:birthPlace     "Joure" ;
-    schema:hasOccupation  "agent van politie" ;
-    schema:gender         schema:Male ;
+    sdo:birthPlace     "Joure" ;
+    sdo:hasOccupation  "agent van politie" ;
+    sdo:gender         sdo:Male ;
     pico:hasRole          picot:roles/574 ;  # spouse
-    schema:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_2 ;
-                            schema:startDate "1885-11-11"^^xsd:date ; ] ;
-    schema:parent         nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
+    sdo:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_2 ;
+                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    sdo:parent         nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
 nha:huwelijksakte_1885_321_po_2
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Anna Maria Koppen" ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
+    sdo:name           "Anna Maria Koppen" ;
+    sdo:familyName     "Koppen" ;
+    sdo:givenName      "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
     pico:hasAge           "25"^^xsd:decimal ;
-    schema:birthPlace     "Haarlem" ;
-    schema:hasOccupation  "dienstbode" ;
-    schema:gender         schema:Female ;
+    sdo:birthPlace     "Haarlem" ;
+    sdo:hasOccupation  "dienstbode" ;
+    sdo:gender         sdo:Female ;
     pico:hasRole          picot:roles/574 ;  # spouse
-    schema:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_1 ;
-                            schema:startDate "1885-11-11"^^xsd:date ; ] ;
-    schema:parent         nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
+    sdo:spouse         [ rdf:value        nha:huwelijksakte_1885_321_po_1 ;
+                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    sdo:parent         nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
 nha:huwelijksakte_1885_321_po_3
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Sjouke Abes Bos" ;
-    schema:familyName     "Bos" ;
-    schema:givenName      "Sjouke" ;
-    schema:additionalName [ a               pnv:PersonName ;
+    sdo:name           "Sjouke Abes Bos" ;
+    sdo:familyName     "Bos" ;
+    sdo:givenName      "Sjouke" ;
+    sdo:additionalName [ a               pnv:PersonName ;
                             pnv:literalName "Sjouke Abes Bos" ;
                             pnv:patronym    "Abes" ; ] ;
-    schema:gender         schema:Male ;
-    schema:children       nha:huwelijksakte_1885_321_po_1 .
+    sdo:gender         sdo:Male ;
+    sdo:children       nha:huwelijksakte_1885_321_po_1 .
 
 nha:huwelijksakte_1885_321_po_4
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Geertruida van der Wijk" ;
-    schema:familyName     "van der Wijk" ;
-    schema:givenName      "Geertruida" ;
-    schema:additionalName [ a                 pnv:PersonName ;
+    sdo:name           "Geertruida van der Wijk" ;
+    sdo:familyName     "van der Wijk" ;
+    sdo:givenName      "Geertruida" ;
+    sdo:additionalName [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk" ;
                             pnv:baseSurname   "Wijk" ;
                             pnv:surnamePrefix "van der" ; ] ;
-    schema:gender         schema:Female ;
-    schema:children       nha:huwelijksakte_1885_321_po_1 .
+    sdo:gender         sdo:Female ;
+    sdo:children       nha:huwelijksakte_1885_321_po_1 .
 
 
 nha:huwelijksakte_1885_321_po_5
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Johannes Koppen" ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Johannes" ;
-    schema:gender         schema:Male ;
-    schema:children       nha:huwelijksakte_1885_321_po_2 .
+    sdo:name           "Johannes Koppen" ;
+    sdo:familyName     "Koppen" ;
+    sdo:givenName      "Johannes" ;
+    sdo:gender         sdo:Male ;
+    sdo:children       nha:huwelijksakte_1885_321_po_2 .
 
 nha:huwelijksakte_1885_321_po_6
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    schema:name           "Helena Catharina van Zijl" ;
-    schema:familyName     "van Zijl" ;
-    schema:givenName      "Helena Catharina" ;
-    schema:additionalName [ a                 pnv:PersonName ;
+    sdo:name           "Helena Catharina van Zijl" ;
+    sdo:familyName     "van Zijl" ;
+    sdo:givenName      "Helena Catharina" ;
+    sdo:additionalName [ a                 pnv:PersonName ;
                             pnv:literalName   "Helena Catharina van Zijl" ;
                             pnv:baseSurname   "Zijl" ;
                             pnv:surnamePrefix "van" ; ] ;
-    schema:gender         schema:Female ;
-    schema:children       nha:huwelijksakte_1885_321_po_2 .
+    sdo:gender         sdo:Female ;
+    sdo:children       nha:huwelijksakte_1885_321_po_2 .
 
 nha:huwelijksakte_1885_321_event_1
     a                     bio:Marriage ;
@@ -96,15 +96,15 @@ nha:huwelijksakte_1885_321_event_1
 
 # BRON
 nha:huwelijksakte_1885_321
-    a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:sourcetypes/552 ; # civil registry: marriage
-    schema:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
-    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
-    schema:url             <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
-    schema:dateCreated     "1885-11-11"^^xsd:date ;
-    schema:locationCreated "Haarlem" ;
-    schema:associatedMedia [ a                schema:ImageObject ;
-                             schema:position  1 ;
-                             schema:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC" ;
-                             schema:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC" ;
-                             schema:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC" ; ] .
+    a                      sdo:ArchiveComponent ;
+    sdo:additionalType  picot:sourcetypes/552 ; # civil registry: marriage
+    sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+    sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    sdo:url             <https://www.openarch.nl/nha:5ec8bcce-acd6-4107-8011-0ccd6b740e7c> ;
+    sdo:dateCreated     "1885-11-11"^^xsd:date ;
+    sdo:locationCreated "Haarlem" ;
+    sdo:associatedMedia [ a                sdo:ImageObject ;
+                             sdo:position  1 ;
+                             sdo:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC" ;
+                             sdo:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC" ;
+                             sdo:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC" ; ] .

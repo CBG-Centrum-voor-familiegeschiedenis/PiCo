@@ -1,42 +1,42 @@
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico:   <https://personsincontext.org/model/> .
-@prefix picot:  <https://terms.personsincontext.org/> .
-@prefix nha:    <https://noord-hollandsarchief.nl/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sdo:   <https://schema.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix pico:  <https://personsincontext.org/model/> .
+@prefix picot: <https://terms.personsincontext.org/> .
+@prefix nha:   <https://noord-hollandsarchief.nl/> .
 
 nha:dienstboderegister_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    schema:name           "Anna Maria Koppen" ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Anna Maria" ;
-    schema:birthDate      "1860-03-31"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "Gr. Houtstr 104" ;
+    sdo:name              "Anna Maria Koppen" ;
+    sdo:familyName        "Koppen" ;
+    sdo:givenName         "Anna Maria" ;
+    sdo:birthDate         "1860-03-31"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "Gr. Houtstr 104" ;
     pico:hasReligion      "rk" ;
-    schema:hasOccupation  "dienstbode" ;
-    schema:gender         schema:Female .
+    sdo:hasOccupation     "dienstbode" ;
+    sdo:gender            sdo:Female .
 
 nha:dienstboderegister_po_2
     a                     pico:PersonObservation ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    schema:name           "Anna Maria Koppen" ;
-    schema:familyName     "Koppen" ;
-    schema:givenName      "Anna Maria" ;
-    schema:birthDate      "1860-03-31"^^xsd:date ;
-    schema:birthPlace     "Haarlem" ;
-    schema:address        "L. Vaart 6" ;
+    sdo:name              "Anna Maria Koppen" ;
+    sdo:familyName        "Koppen" ;
+    sdo:givenName         "Anna Maria" ;
+    sdo:birthDate         "1860-03-31"^^xsd:date ;
+    sdo:birthPlace        "Haarlem" ;
+    sdo:address           "L. Vaart 6" ;
     pico:hasReligion      "rk" ;
-    schema:hasOccupation  "dienstbode" ;
-    schema:gender         schema:Female .
+    sdo:hasOccupation     "dienstbode" ;
+    sdo:gender            sdo:Female .
 
 <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123>
-    a                      schema:ArchiveComponent ;
-    schema:additionalType  picot:sourcetypes/565 ;  # beroep en bedrijf
-    schema:name            "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
-    schema:holdingArchive  <https://noord-hollandsarchief.nl> ;
-    schema:locationCreated "Haarlem" ;
-    schema:associatedMedia [ a               schema:ImageObject ;
-                             schema:position 1 ;
-                             schema:embedUrl "https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380" ; ] .
+    a                   sdo:ArchiveComponent ;
+    sdo:additionalType  picot:sourcetypes/565 ;  # beroep en bedrijf
+    sdo:name            "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
+    sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
+    sdo:locationCreated "Haarlem" ;
+    sdo:associatedMedia [ a            sdo:ImageObject ;
+                          sdo:position 1 ;
+                          sdo:embedUrl "https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380" ; ] .

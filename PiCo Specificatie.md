@@ -45,7 +45,7 @@ Bij de Persoonsvermeldingen wordt data zo veel mogelijk opgenomen zoals deze in 
 Eén of meer Persoonsvermeldingen kunnen worden gecombineerd tot een uniek identificeerbaar persoon. We noemen dit een Persoonsreconstructie. Deze kan zowel geautomatiseerd worden geconstrueerd of door (meer klassiek) genealogisch onderzoek. Bij het maken van een Persoonsreconstructie kan de onderzoeker data preciezer hebben gemaakt, bijvoorbeeld door plaatsnamen te relateren aan gestandaardiseerde plaatsnaamlijsten (zoals Geonames). Bij elke Persoonsreconstructie moeten verwijzingen zijn opgenomen naar de Persoonsvermeldingen waarop deze is gebaseerd.
 
 ### Bron
-Elke Persoonsvermelding is aangetroffen in een Bron. Behalve formele aktes en registraties kunnen dit ook boeken of persoonlijke documenten zijn, zoals brieven, dagboeken of e-mails. Van een Bron is altijd weergegeven in welke erfgoedinstelling de Bron wordt bewaard en hopelijk ook een link naar het webadres waarmee de Bron online beschikbaar is gesteld. In PiCo wordt het type bron met het juiste schema-type aangeduid, vaak schema:ArchiveComponent, maar soms ook schema:Book, schema:Photograph of zelfs schema:Painting.
+Elke Persoonsvermelding is aangetroffen in een Bron. Behalve formele aktes en registraties kunnen dit ook boeken of persoonlijke documenten zijn, zoals brieven, dagboeken of e-mails. Van een Bron is altijd weergegeven in welke erfgoedinstelling de Bron wordt bewaard en hopelijk ook een link naar het webadres waarmee de Bron online beschikbaar is gesteld. In PiCo wordt het type bron met het juiste schema-type aangeduid, vaak sdo:ArchiveComponent, maar soms ook sdo:Book, sdo:Photograph of zelfs sdo:Painting.
 
 ## Eigenschappen van de concepten
 De concepten die in het voorgaande hoofdstuk zijn gedefinieerd hebben verschillende eigenschappen die we willen vastleggen.
@@ -79,7 +79,7 @@ Persoonsvermeldingen hebben als eigenschap dat zij zijn overgenomen uit een bepa
 ## Ontologieën
 We maken zoveel mogelijk gebruik van classes en properties uit verschillende bestaande ontologieën, waarbij we proberen het aantal ontologieën zo laag mogelijk te houden. Daarmee houden we het gebruik zo eenvoudig mogelijk. Ook proberen we - om de toepassing van PiCo eenvoudig te houden, resources zonder eigen URI (blank nodes) zoveel mogelijk te voorkomen.
 
-Als het nodig is, zullen we eigenschappen uit de gebruikte ontologieën uitbreiden met extra kenmerken. Bijvoorbeeld: de relatie schema:spouse is in Schema.org niet als wederkerig gedefinieerd. Dat willen we wel. Daarom voegen we in de ontologie deze wederkerigheid toe.
+Als het nodig is, zullen we eigenschappen uit de gebruikte ontologieën uitbreiden met extra kenmerken. Bijvoorbeeld: de relatie sdo:spouse is in Schema.org niet als wederkerig gedefinieerd. Dat willen we wel. Daarom voegen we in de ontologie deze wederkerigheid toe.
 
 ### PiCo-ontologie
 De basisstructuur van PiCo is geïnspireerd door de ontologie Reconstructions and Observations in Archival Resources (ROAR). In deze ontologie zijn de concepten Persoonsvermelding (roar:PersonObservation) en Persoonsreconstructie (roar:PersonReconstruction) gedefinieerd. We hebben ervoor gekozen voor deze concepten zelf classes te definiëren in een eigen ontologie, om de complexiteit van de verschillende definities te beperken.
@@ -90,12 +90,12 @@ Behalve de definities van Persoonsvermelding en Persoonsreconstructie, onderkenn
 De structuur van namen in de Nederlandstalige cultuur wordt vastgelegd met behulp van de Person Name Vocabulary ([PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/)). Daarbij kan een pnv:PersonName - als de bron het toestaat - opgeknipt worden weergegeven met voornamen (pnv:givenName), tussenvoegsel (pnv:surnamePrefix) en achternaam (pnv:baseSurname). Om potentiële vergissingen in het opknippen te ondervangen is een pnv:literalName verplicht, waarin de gehele naam wordt opgenomen in zijn oorspronkelijke weergave op de bron.
 
 ### Schema.org - personen
-Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in [Schema.org](https://schema.org/). Het gaat daarbij onder meer om schema:birthDate, schema:birthPlace, schema:hasOccupation en schema:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class schema:Person kunnen worden gebruikt. 
+Bijna alle eigenschappen van personen die we willen kunnen vastleggen zijn gedefinieerd in [Schema.org](https://schema.org/). Het gaat daarbij onder meer om sdo:birthDate, sdo:birthPlace, sdo:hasOccupation en sdo:address. Alle eigenschappen die in Schema.org zijn gedefinieerd bij de class sdo:Person kunnen worden gebruikt. 
 
-In Schema.org zijn voor de relaties tussen personen onder meer schema:parent, schema:children en schema:spouse beschikbaar. Deze relaties zijn gender-neutraal. Het is daarom gewenst om ook de eigenschap schema:gender aan een persoon toe te voegen.
+In Schema.org zijn voor de relaties tussen personen onder meer sdo:parent, sdo:children en sdo:spouse beschikbaar. Deze relaties zijn gender-neutraal. Het is daarom gewenst om ook de eigenschap sdo:gender aan een persoon toe te voegen.
 
 ### Schema.org - bronnen
-Ook voor bronnen kunnen eigenschappen worden gebruikt uit [Schema.org](https://schema.org/). De belangrijkste eigenschap is het type bron. Deze eigenschap wordt vastgelegd met de property schema:additionalType. Verder kunnen allerlei properties worden gebruikt die horen bij de class schema:ArchiveComponent.
+Ook voor bronnen kunnen eigenschappen worden gebruikt uit [Schema.org](https://schema.org/). De belangrijkste eigenschap is het type bron. Deze eigenschap wordt vastgelegd met de property sdo:additionalType. Verder kunnen allerlei properties worden gebruikt die horen bij de class sdo:ArchiveComponent.
 
 ### PROV-O
 Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebaseerd, wordt de property prov:wasDerivedFrom voorgeschreven. Deze is afkomstig uit de [PROV-O](https://www.w3.org/TR/prov-o/) ontologie.
@@ -105,7 +105,7 @@ Voor een aantal life events die meerdere keren kunnen voorkomen in een leven, zo
 
 ## Termen
 ### Rollen en Relaties
-Relaties tussen personen worden vastgelegd met behulp van eigenschappen, waarin de aard van de relatie is vastgelegd (bijvoorbeeld schema:parent). Rollen daarentegen zijn eigenschappen van de persoonsvermelding in de context van de bron waarin de vermelding is aangetroffen. Onderdeel van PiCo is een lijst van mogelijke rollen. Hierin staan onder meer overledene, getuige, aangever, testateur, koper, verkoper en hoofd van het gezin.
+Relaties tussen personen worden vastgelegd met behulp van eigenschappen, waarin de aard van de relatie is vastgelegd (bijvoorbeeld sdo:parent). Rollen daarentegen zijn eigenschappen van de persoonsvermelding in de context van de bron waarin de vermelding is aangetroffen. Onderdeel van PiCo is een lijst van mogelijke rollen. Hierin staan onder meer overledene, getuige, aangever, testateur, koper, verkoper en hoofd van het gezin.
 
 Voor een overzicht van de mogelijke rollen, zie [Bijlage 5](#5-terminologiebron-voor-rollen). Voor een overzicht van de mogelijke relaties tussen Persoonsvermeldingen onderling of Persoonsreconstructies onderling, zie [Bijlage 4](#4-relaties-tussen-persoonsvermeldingen--persoonsreconstructies).
 
@@ -127,33 +127,33 @@ Deze documenten zijn nog in ontwikkeling.
 ## Bijlages
 
 ### 1. Eigenschappen van Bron
-Class: eg. schema:ArchiveComponent
+Class: eg. sdo:ArchiveComponent
 
 Eigenschappen van een Bron:
-* schema:name
-* schema:additionalType
-* schema:isPartOf
-* schema:holdingArchive
-* schema:dateCreated
-* schema:contentLocation
-* schema:associatedMedia
-  * schema:position
-  * schema:url
-  * schema:embedUrl
-  * schema:thumbnail
-* schema:url
+* sdo:name
+* sdo:additionalType
+* sdo:isPartOf
+* sdo:holdingArchive
+* sdo:dateCreated
+* sdo:contentLocation
+* sdo:associatedMedia
+  * sdo:position
+  * sdo:url
+  * sdo:embedUrl
+  * sdo:thumbnail
+* sdo:url
 
 ### 2. Eigenschappen van Persoonsvermelding
 Class: pico:PersonObservation
 
-Een persoonsvermelding moet altijd gekoppeld zijn aan een bron via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van schema:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de PiCo-Ontologie.
+Een persoonsvermelding moet altijd gekoppeld zijn aan een bron via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van sdo:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de PiCo-Ontologie.
 
 Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
 
 * prov:hadPrimarySource (verplicht)
-* schema:name
-* schema:familyName
-* schema:givenName
+* sdo:name
+* sdo:familyName
+* sdo:givenName
 * pnv:hasName
   * pnv:literalName
   * pnv:initials
@@ -161,17 +161,17 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
   * pnv:prefix
   * pnv:baseSurname
   * pnv:patronym
-* schema:birthDate
+* sdo:birthDate
 * pico:hasAge
-* schema:birthPlace
-* schema:deathDate
+* sdo:birthPlace
+* sdo:deathDate
 * pico:deceased
-* schema:deathPlace
-* schema:address
-* schema:hasOccupation
-* schema:gender
-* schema:spouse
-* schema:parent
+* sdo:deathPlace
+* sdo:address
+* sdo:hasOccupation
+* sdo:gender
+* sdo:spouse
+* sdo:parent
 * pico:hasRole
 * pico:hasReligion
 
@@ -189,12 +189,12 @@ De eigenschappen prov:hadPrimarySource en pico:hasRole, worden niet gebruikt bij
 ### 4. Relaties tussen Persoonsvermeldingen / Persoonsreconstructies
 Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Persoonsvermeldingen onderling en tussen Persoonsreconstructies onderling:
 
-* schema:parent (ouder)
-* schema:children (kind)
-* schema:spouse (echtgenoot)
-* schema:sibling (broer/zus)
-* schema:knows (kent, de meest generieke relatie)
-* schema:relatedTo (de meest generieke familierelatie)
+* sdo:parent (ouder)
+* sdo:children (kind)
+* sdo:spouse (echtgenoot)
+* sdo:sibling (broer/zus)
+* sdo:knows (kent, de meest generieke relatie)
+* sdo:relatedTo (de meest generieke familierelatie)
 * pico:grandparent (grootouder)
 * pico:grandchild (kleinkind)
 * pico:godparent (peetouder)
