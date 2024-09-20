@@ -29,7 +29,7 @@ _:person_reconstruction_1
     prov:wasDerivedFrom [
       a pico:PersonObservation ;
       schema:identifier "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
-      prov:hasPrimarySource [
+      prov:hadPrimarySource [
         a schema:ArchiveComponent ;
         schema:url <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> 
       ] ;
