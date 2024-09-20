@@ -2,7 +2,7 @@
 
 #@prefix pico:    <https://personsincontext.org/ontology/pico.ttl> .
 @prefix :        <https://personsincontext.org/model/> .
-@prefix pico:    <https://personsincontext.org/model> .
+@prefix pico:    <https://personsincontext.org/model/> .
 @prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
