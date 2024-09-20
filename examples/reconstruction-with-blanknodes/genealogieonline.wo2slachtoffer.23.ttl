@@ -1,0 +1,72 @@
+@prefix pico: <https://personsincontext.org/ontology/> .
+@prefix sdo: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.genealogieonline.nl/id/person_595_I000342>
+  a pico:PersonReconstruction ;
+  sdo:name "Willem Hermanus Brizee" ;
+  sdo:givenName "Willem Hermanus" ;
+  sdo:familyName "Brizee" ;
+  sdo:birthDate "1914-06-14" ;
+  sdo:deathDate "1945-05-03" ;
+  sdo:deathPlace <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
+  sdo:mainEntityOfPage "https://www.genealogieonline.nl/595/I000342" .
+
+<https://data.niod.nl/WO2_Thesaurus/kampen/3697>
+  a sdo:Place ;
+  sdo:name "Ravensbrück" .
+
+<https://www.genealogieonline.nl/wo2slachtoffers/23>
+  a pico:PersonReconstruction ;
+  sdo:name "Willem Hermanus Brizee" ;
+  sdo:givenName "Willem Hermanus" ;
+  sdo:familyName "Brizee" ;
+  sdo:birthDate "1914-06-14" ;
+  sdo:deathDate "1945-05-03" ;
+  sdo:deathPlace <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
+  rdfs:label "Willem Hermanus Brizee (1914-1945)" ;
+  prov:wasDerivedFrom <https://www.genealogieonline.nl/id/595_I000342>, [
+    a pico:PersonObservation ;
+    sdo:name "Willem Hermanus Brizee" ;
+    sdo:givenName "Willem Hermanus" ;
+    sdo:familyName "Brizee" ;
+    prov:hadPrimarySource [
+      a sdo:ArchiveComponent ;
+      sdo:name "Digitaal Monument Neuengamme"@nl ;
+      sdo:url <https://monument.vriendenkringneuengamme.nl/person/400674>
+    ]
+  ], [
+    a pico:PersonObservation ;
+    sdo:name "Willem Hermanus Brizee" ;
+    sdo:givenName "Willem Hermanus" ;
+    sdo:familyName "Brizee" ;
+    prov:hadPrimarySource [
+      a sdo:ArchiveComponent ;
+      sdo:name "Arolsen Archives"@en ;
+      sdo:url <https://collections.arolsen-archives.org/en/search/people/3772230/?p=1&amp;s_lastName=asc>
+    ]
+  ], [
+    a pico:PersonObservation ;
+    sdo:name "Willem Hermanus Brizee" ;
+    sdo:givenName "Willem Hermanus" ;
+    sdo:familyName "Brizee" ;
+    prov:hadPrimarySource [
+      a sdo:ArchiveComponent ;
+      sdo:name "Oorlogsgravenstiching"@nl ;
+      sdo:url <https://www.oorlogsgravenstichting.nl/personen/225645/willem-hermanus-brizee>
+    ]
+  ] ;
+  prov:wasGeneratedBy <https://www.genealogieonline.nl/id/reconstruction_activity_23> .
+
+<https://www.genealogieonline.nl/>
+  a prov:Agent ;
+  sdo:name "Genealogie Online"@nl, "Genealogy Online"@en .
+
+<https://www.genealogieonline.nl/id/reconstruction_activity_23>
+  a prov:Activity ;
+  prov:wasAssociatedWith <https://www.genealogieonline.nl/> ;
+  prov:startedAtTime "2023-12-15T16:57:51"^^xsd:dateTime ;
+  rdfs:label "WO2slachtoffer matching with curation"@en .
+
