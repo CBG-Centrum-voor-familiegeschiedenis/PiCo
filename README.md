@@ -5,7 +5,7 @@
 This is the repository for **Persons in Context (PiCo)**, the intended successor to the *Archive to Archive* (A2A) data model. PiCo will be a new standard based on the principles of Linked Open Data. 
 
 ## Purpose
-The [CBG](https://cbg.nl) wants to achieve an **applicable application profile** for persons and events. For its **own collections**, but also as a new standard for **[WhoWasWie](https://wiewaswie.nl)**.
+The [CBG](https://cbg.nl) wants to achieve an **applicable application profile** for persons and events. For its **own collections**, but also as a new standard for **[WieWasWie](https://wiewaswie.nl)**.
 
 What does the CBG want from the new standard?
 - The primary goal is to be able to search for people. People must be uniquely identifiable and linked to one or more sources and events.	

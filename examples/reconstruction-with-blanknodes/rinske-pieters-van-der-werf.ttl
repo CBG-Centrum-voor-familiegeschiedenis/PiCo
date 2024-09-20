@@ -1,6 +1,6 @@
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pico:   <https://ontology.personsincontext.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pico:   <https://personsincontext.org/model/> .
 @prefix schema: <http://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
@@ -28,6 +28,7 @@ _:person_reconstruction_1
     schema:birthDate      "1816-10-11"^^xsd:date ;
     prov:wasDerivedFrom [
       a pico:PersonObservation ;
+      schema:identifier "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
       prov:hasPrimarySource [
         a schema:ArchiveComponent ;
         schema:url <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> 
