@@ -1,8 +1,6 @@
 # Version: 20230921
 
-#@prefix pico:    <https://personsincontext.org/ontology/pico.ttl> .
-@prefix :        <https://personsincontext.org/model/> .
-@prefix pico:    <https://personsincontext.org/model> .
+@prefix pico:    <https://personsincontext.org/model/> .
 @prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -23,7 +21,7 @@
 # ontology
 ########################################################################################################################
 
-pico:
+<https://personsincontext.org/model>
     a                             owl:Ontology ;
     rdfs:label                    "Persons in Context"@en ;
     sdo:publisher                 <https://cbg.nl> ;
@@ -141,7 +139,7 @@ prov:Agent
                                           """ ] ;
 .
 
-:Person
+pico:Person
     a               owl:Class ;
     rdfs:label      "Person"@en ;
     skos:definition "A Person is a human being whose individual existence can somehow be documented."@en ;
@@ -152,7 +150,7 @@ prov:Agent
     rdfs:subClassOf prov:Entity ;
 .
 
-:PersonObservation
+pico:PersonObservation
     a               owl:Class ;
     rdfs:label      "PersonObservation"@en ;  #, "Persoonsvermelding"@nl ;
     skos:definition "A Person observation is a person that can be observed on a Source"@en ;
@@ -207,7 +205,7 @@ prov:Agent
                                          """ ] ;
 .
 
-:PersonReconstruction
+pico:PersonReconstruction
     a               owl:Class ;
     rdfs:label      "PersonReconstruction"@en ;  #, "Persoonsreconstructie"@nl ;
     skos:definition """A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
@@ -430,7 +428,7 @@ sdo:deathPlace
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
-:deceased
+pico:deceased
     a                  owl:DatatypeProperty ;
     skos:definition    "Indication if a person is deceased." ;
     rdfs:label         "deceased"@en ;
@@ -512,7 +510,7 @@ sdo:givenName
     sdo:rangeIncludes  xsd:string ;
 .
 
-:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
+pico:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
          a                  owl:DatatypeProperty ;
          skos:definition    "The age of a person."@en ;
 #         skos:definition       "De leeftijd van een persoon."@nl ;
@@ -540,7 +538,7 @@ sdo:hasOccupation
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
-:hasReligion
+pico:hasReligion
     a                 owl:DatatypeProperty ;
     skos:definition   "Religious conviction related to a person in an observation." ;
     rdfs:label        "hasReligion" ;
@@ -728,7 +726,7 @@ prov:hadPrimarySource
     sdo:rangeIncludes  sdo:ArchiveComponent ;
 .
 
-:hasAncestor
+pico:hasAncestor
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasAncestor"@en ;
 #    rdfs:label         "heeftVoorouder"@nl ;
@@ -743,7 +741,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasDescendant
+pico:hasDescendant
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasDescendant"@en ;
 #    rdfs:label "heeftAfstammeling"@nl ;
@@ -758,7 +756,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasChild-in-law
+pico:hasChild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasChild-in-law"@en ;
 #    rdfs:label         "heeftSchoonkind"@nl ;
@@ -768,7 +766,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasParent-in-law ;
 .
 
-:hasCousin
+pico:hasCousin
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasCousin"@en ;
 #    rdfs:label         "heeftNeef/Nicht"@nl ;
@@ -777,7 +775,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasCousin-in-law
+pico:hasCousin-in-law
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasCousin-in-law"@en ;
 #    rdfs:label         "heeftSchoonneef/Schoonnicht"@nl ;
@@ -786,7 +784,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasFosterChild
+pico:hasFosterChild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasFosterChild"@en ;
 #    rdfs:label         "heeftPleegkind"@nl ;
@@ -796,7 +794,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasFosterParent ;
 .
 
-:hasFosterParent
+pico:hasFosterParent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasFosterParent"@en ;
 #    rdfs:label         "heeftPleegouder"@nl ;
@@ -806,7 +804,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasFosterChild ;
 .
 
-:hasGodchild
+pico:hasGodchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGodchild"@en ;
 #    rdfs:label         "heeftPetekind"@nl ;
@@ -816,7 +814,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGodparent ;
 .
 
-:hasGodparent
+pico:hasGodparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGodparent"@en ;
 #    rdfs:label         "heeftPeetouder"@nl ;
@@ -826,7 +824,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGodchild ;
 .
 
-:hasGrandchild
+pico:hasGrandchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandchild"@en ;
 #    rdfs:label         "heeftKleinkind"@nl ;
@@ -836,7 +834,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGrandparent ;
 .
 
-:hasGrandchild-in-law
+pico:hasGrandchild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandchild-in-law"@en ;
 #    rdfs:label         "heeftSchoonkleinkind"@nl ;
@@ -846,7 +844,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGrandparent-in-law ;
 .
 
-:hasGrandparent
+pico:hasGrandparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandparent"@en ;
 #    rdfs:label         "heeftGrootouder"@nl ;
@@ -856,7 +854,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGrandchild ;
 .
 
-:hasGrandparent-in-law
+pico:hasGrandparent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandparent-in-law"@en ;
 #    rdfs:label         "heeftSchoongrootouder"@nl ;
@@ -866,7 +864,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGrandchild-in-law ;
 .
 
-:hasGreat-grandchild
+pico:hasGreat-grandchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGreat-grandchild"@en ;
 #    rdfs:label         "heeftAchterkleinkind"@nl ;
@@ -876,7 +874,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGreat-grandparent ;
 .
 
-:hasGreat-grandparent
+pico:hasGreat-grandparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGreat-grandparent"@en ;
 #    rdfs:label         "heeftOvergrootouder"@nl ;
@@ -886,7 +884,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasGreat-grandchild ;
 .
 
-:hasHalf-sibling
+pico:hasHalf-sibling
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasHalf-sibling"@en ;
 #    rdfs:label         "halfbroer/halfzus"@nl ;
@@ -895,7 +893,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasLegitimizedChild
+pico:hasLegitimizedChild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasLegitimizedChild"@en ;
 #    rdfs:label         "heeftGewettigdKind"@nl ;
@@ -905,7 +903,7 @@ prov:hadPrimarySource
     owl:inverseOf      :isLegitimitezedChildOf ;
 .
 
-:isLegitimitezedChildOf
+pico:isLegitimitezedChildOf
     a                  owl:ObjectProperty ;
     rdfs:label         "isLegitimitezedChildOf" ;
 #    rdfs:label         "isGewettigdKindVan"@nl ;
@@ -915,7 +913,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasLegitimizedChild ;
 .
 
-:hasNephew_Niece-in-law
+pico:hasNephew_Niece-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasNephew-in-law/Niece-in-law"@en ;
 #    rdfs:label         "heeftSchoonneef/Schoonnicht (oomzegger/tantezegger)"@nl ;
@@ -925,7 +923,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasUncle_Aunt-in-law ;
 .
 
-:hasNephew_Niece
+pico:hasNephew_Niece
     a                  owl:ObjectProperty ;
     rdfs:label         "hasNephew/Niece"@en ;
 #    rdfs:label         "heeftNeef/Nicht (oomzegger/tantezegger)"@nl ;
@@ -935,7 +933,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasUncle_Aunt ;
 .
 
-:hasParent-in-law
+pico:hasParent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasParent-in-law"@en ;
 #    rdfs:label         "heeftSchoonouder"@nl ;
@@ -945,7 +943,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasChild-in-law ;
 .
 
-:hasPreviousPartner
+pico:hasPreviousPartner
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasPreviousPartner"@en ;
 #    rdfs:label         "eerderePartner"@nl ;
@@ -953,7 +951,7 @@ prov:hadPrimarySource
     rdfs:domain        :Person ;
     rdfs:range         :Person .
 
-:hasSibling-in-law
+pico:hasSibling-in-law
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasSibling-in-law"@en ;
 #    rdfs:label         "heeftZwager/Schoonzus"@nl ;
@@ -962,7 +960,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasStepchild
+pico:hasStepchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepchild"@en ;
 #    rdfs:label         "stiefkind"@nl ;
@@ -972,7 +970,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasStepparent ;
 .
 
-:hasStepchild-in-law
+pico:hasStepchild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepchild-in-law"@en ;
 #    rdfs:label         "heeftStiefschoonkind"@nl ;
@@ -982,7 +980,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasStepparent-in-law ;
 .
 
-:hasStepparent
+pico:hasStepparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepparent"@en ;
 #    rdfs:label         "stiefouder"@nl ;
@@ -992,7 +990,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasStepchild ;
 .
 
-:hasStepparent-in-law
+pico:hasStepparent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepparent-in-law"@en ;
 #    rdfs:label         "heeftStiefschoonouder"@nl ;
@@ -1002,7 +1000,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasStepchild-in-law ;
 .
 
-:hasStepsibling
+pico:hasStepsibling
     a                  owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label         "hasStepsibling"@en ;
 #    rdfs:label         "heeftStiefbroer/Stiefzus"@nl ;
@@ -1011,7 +1009,7 @@ prov:hadPrimarySource
     rdfs:range         :Person ;
 .
 
-:hasUncle_Aunt
+pico:hasUncle_Aunt
     a                  owl:ObjectProperty ;
     rdfs:label         "hasUncle/Aunt"@en ;
 #    rdfs:label         "heeftOom/Tante"@nl ;
@@ -1021,7 +1019,7 @@ prov:hadPrimarySource
     owl:inverseOf      :hasNephew_Niece ;
 .
 
-:hasUncle_Aunt-in-law
+pico:hasUncle_Aunt-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasUncle/Aunt-in-law" ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -1040,7 +1038,7 @@ sdo:holdingArchive
     sdo:rangeIncludes  xsd:anyURI ;
 .
 
-:isWidOf
+pico:isWidOf
     a                  owl:ObjectProperty ;
     rdfs:label         "isWidow/WidowerOf"@en ;
 #    rdfs:label         "isWeduwe/WeduwnaarVan"@nl ;
@@ -1117,7 +1115,7 @@ sdo:url
     sdo:rangeIncludes  sdo:URL ;
 .
 
-:hasRole
+pico:hasRole
     a                  qb:CodedProperty, owl:ObjectProperty ;
     qb:codeList        picot:roles ;
     #    rdfs:range            :Role ;
