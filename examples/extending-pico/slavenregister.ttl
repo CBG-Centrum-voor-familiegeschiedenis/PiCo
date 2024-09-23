@@ -51,4 +51,5 @@ nas:slavenregister_41_4890
 
 _:slavenregistratie
     rdfs:label "Slavenregistratie"@nl ;
-    rdfs:label "Slave Registration"@en .
+    rdfs:label "Slave Registration"@en
+.
