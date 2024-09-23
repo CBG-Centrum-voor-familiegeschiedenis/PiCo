@@ -18,10 +18,10 @@ The `--shapes` and `--data` parameters can be an oflline file or an URL of an on
 	shacl validate --shapes pico_shacl_v0.1.ttl \ 
           --data https://www.genealogieonline.nl/wo2slachtoffers/23.ttl
 
-    shacl validate --shapes pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/shacl/pico_shacl_v0.1.ttl \ 
           --data https://raw.githubusercontent.com/ivozandhuis/a2a-to-pico/refs/heads/main/examples/output/allefriezen_8f998b40-9d13-1861-62fe-feb667283688.ttl
 
-    shacl validate --shapes pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/shacl/pico_shacl_v0.1.ttl \ 
           --data https://raw.githubusercontent.com/ivozandhuis/a2a-to-pico/refs/heads/main/examples/output/NL-HlmNHA_3586-667_54_A2A.rdf
 
     shacl validate --shapes pico_shacl_v0.1.ttl \ 
