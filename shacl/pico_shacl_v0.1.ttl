@@ -35,13 +35,6 @@ pico:PersonObservationShape
         sh:maxCount  1 ;
         sh:message   "A Person observation can have only one age." ;
     ] ;
-    
-    sh:property [
-        sh:path      sdo:hasOccupation ;
-        sh:datatype  xsd:string ;
-        sh:maxCount  1 ;
-        sh:message   "A Person observation can have only one occupation." ;
-    ] ;
         
     sh:property [
         sh:path      prov:hadPrimarySource ;
