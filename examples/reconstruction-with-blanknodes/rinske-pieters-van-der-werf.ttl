@@ -26,9 +26,9 @@ _:person_reconstruction_1
     sdo:birthDate       "1816-10-11"^^xsd:date ;
     prov:wasDerivedFrom [ a                     pico:PersonObservation ;
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
-                          prov:hadPrimarySource [ a sdo:ArchiveComponent ;
-                                                  sdo:url
-                                                    <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
+                          prov:hadPrimarySource [ a        sdo:ArchiveComponent ;
+                                                  sdo:name "Geboorteregister 1816 Gorredijk" ;
+                                                  sdo:url  <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .
 
 _:reconstruction_activity_01
