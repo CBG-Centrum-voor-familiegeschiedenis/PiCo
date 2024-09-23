@@ -27,7 +27,7 @@ _:person_reconstruction_1
     prov:wasDerivedFrom [ a                     pico:PersonObservation ;
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
                           prov:hadPrimarySource [ a        sdo:ArchiveComponent ;
-                                                  sdo:name "Geboorteregister 1816 Gorredijk" ;
+                                                  sdo:name "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021" ;
                                                   sdo:url  <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .
 
