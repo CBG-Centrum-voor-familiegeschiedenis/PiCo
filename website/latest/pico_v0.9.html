@@ -494,19 +494,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
     <script id="schema.org" type="application/ld+json">
 [
   {
+    "@id": "https://terms.personsincontext.org/sourectypes",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Persons in Context sourceType thesaurus"
+      }
+    ]
+  },
+  {
     "@id": "https://personsincontext.org/model",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
     "https://schema.org/contributor": [
       {
+        "@value": "Rick Mourits"
+      },
+      {
         "@value": "Micon Schorsij"
       },
       {
         "@value": "Rick Companje"
-      },
-      {
-        "@value": "Rick Mourits"
       },
       {
         "@value": "Richard Zijdeman"
@@ -522,16 +533,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@value": "Mark Lindeman"
       },
       {
-        "@value": "Bob Coret"
-      },
-      {
         "@value": "Ivo Zandhuis"
       },
       {
-        "@value": "Pieter Woltjer"
+        "@value": "Jeroen Balkenende"
       },
       {
-        "@value": "Jeroen Balkenende"
+        "@value": "Bob Coret"
+      },
+      {
+        "@value": "Pieter Woltjer"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -580,17 +591,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@value": "Persons in Context role thesaurus"
       }
     ]
-  },
-  {
-    "@id": "https://terms.personsincontext.org/sourectypes",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "Persons in Context sourceType thesaurus"
-      }
-    ]
   }
 ]
 	</script>
@@ -608,7 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
               <a href="#Model-overview">1. Model overview</a>
             </li>
             <li>
-              <a href="#4HUC5Gj7">2. Vocabularies</a>
+              <a href="#3CHuhFAc">2. Vocabularies</a>
             </li>
             <li>
               <a href="#Modules-and-Class-Hierarchy">3. Modules and Class Hierarchy</a>
@@ -629,7 +629,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                       <a href="#https://personsincontext.org/model/Person">4.1.3. Person</a>
                     </li>
                     <li>
-                      <a href="#https://w3id.org/pnv#Name">4.1.4. PersonName</a>
+                      <a href="#https://w3id.org/pnv#PersonName">4.1.4. PersonName</a>
                     </li>
                     <li>
                       <a href="#https://personsincontext.org/model/PersonObservation">4.1.5. PersonObservation</a>
@@ -917,12 +917,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Editors: Mark Lindeman, Bob Coret, Ivo Zandhuis, Pieter Woltjer, Jeroen Balkenende</p>
+                    <p class="tableblock">Editors: Mark Lindeman, Ivo Zandhuis, Jeroen Balkenende, Bob Coret, Pieter Woltjer</p>
                   </td>
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Contributors: Micon Schorsij, Rick Companje, Rick Mourits, Richard Zijdeman</p>
+                    <p class="tableblock">Contributors: Rick Mourits, Micon Schorsij, Rick Companje, Richard Zijdeman</p>
                   </td>
                 </tr>
                 <tr>
@@ -980,8 +980,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             </div>
           </div>
         </div>
-        <h2 id="4HUC5Gj7">
-          <a class="anchor" href="#4HUC5Gj7"></a>
+        <h2 id="3CHuhFAc">
+          <a class="anchor" href="#3CHuhFAc"></a>
           <div>Vocabularies</div>
         </h2>
         <p>A summary of properties that have vocabularies as target values.</p>
@@ -1079,7 +1079,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                   </li>
                   <li>
                     <span class="hierarchy-node-leaf"></span>
-                    <a href="#https://w3id.org/pnv#Name">PersonName</a>
+                    <a href="#https://w3id.org/pnv#PersonName">PersonName</a>
                   </li>
                   <li>
                     <span class="hierarchy-node-leaf"></span>
@@ -1224,8 +1224,8 @@ for (let node of initialNodes) {
                   </tbody>
                 </table>
               </div>
-              <h5 id="K_PC55f_">
-                <a class="anchor" href="#K_PC55f_"></a>
+              <h5 id="mDjBpOjr">
+                <a class="anchor" href="#mDjBpOjr"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1323,8 +1323,8 @@ for (let node of initialNodes) {
               <div class="paragraph">
                 <p>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</p>
               </div>
-              <h5 id="AwAoDOrn">
-                <a class="anchor" href="#AwAoDOrn"></a>
+              <h5 id="-RH88fbr">
+                <a class="anchor" href="#-RH88fbr"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -1380,8 +1380,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="y89hluFr">
-                <a class="anchor" href="#y89hluFr"></a>
+              <h5 id="41W4JXq-">
+                <a class="anchor" href="#41W4JXq-"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -1400,8 +1400,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="0gkH2b8L">
-                <a class="anchor" href="#0gkH2b8L"></a>
+              <h5 id="xALI4ocr">
+                <a class="anchor" href="#xALI4ocr"></a>
                 <div>Superclass of</div>
               </h5>
               <div class="sect5">
@@ -1420,8 +1420,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="4HwzcPHo">
-                <a class="anchor" href="#4HwzcPHo"></a>
+              <h5 id="uOdzT-2R">
+                <a class="anchor" href="#uOdzT-2R"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1452,7 +1452,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://w3id.org/pnv#Name">PersonName</a>
+                            <a href="#https://w3id.org/pnv#PersonName">PersonName</a>
                           </p>
                         </p>
                       </td>
@@ -1752,12 +1752,12 @@ cbg:reconstruction_agent_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://w3id.org/pnv#Name">
-                <a class="anchor" href="#https://w3id.org/pnv#Name"></a>
+              <h4 id="https://w3id.org/pnv#PersonName">
+                <a class="anchor" href="#https://w3id.org/pnv#PersonName"></a>
                 <div>PersonName</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://w3id.org/pnv#Name" style="white-space: nowrap;" target="_blank">https://w3id.org/pnv#Name<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://w3id.org/pnv#PersonName" style="white-space: nowrap;" target="_blank">https://w3id.org/pnv#PersonName<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>Name of a person, expressed in Person Name Vocabulary (PNV)</p>
@@ -1773,14 +1773,14 @@ cbg:reconstruction_agent_01
                         a resource type in its own right.
                         A PersonName can consist of many different parts. The most common ones are mentioned here.
                         See the full specification of the Person Name Vocabulary for more details.
-                        Additionally to a pnv:Name, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
+                        Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <h5 id="GFHwdHqm">
-                <a class="anchor" href="#GFHwdHqm"></a>
+              <h5 id="cM9Wt60N">
+                <a class="anchor" href="#cM9Wt60N"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1832,7 +1832,7 @@ cbg:reconstruction_agent_01
                         <p>givenName (pnv)</p>
                       </td>
                       <td class="tableblock halign-left valign-top">
-                        <p>The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
+                        <p>The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
                        name-giving event.
                        </p>
                       </td>
@@ -1990,8 +1990,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="eW-aO7bZ">
-                <a class="anchor" href="#eW-aO7bZ"></a>
+              <h5 id="KPchppM6">
+                <a class="anchor" href="#KPchppM6"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -2005,8 +2005,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="uecIP43R">
-                <a class="anchor" href="#uecIP43R"></a>
+              <h5 id="gRRfh_Pk">
+                <a class="anchor" href="#gRRfh_Pk"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2184,7 +2184,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://w3id.org/pnv#Name">PersonName</a>
+                            <a href="#https://w3id.org/pnv#PersonName">PersonName</a>
                           </p>
                         </p>
                       </td>
@@ -2481,8 +2481,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="YDGnQhOH">
-                <a class="anchor" href="#YDGnQhOH"></a>
+              <h5 id="UO_cL07t">
+                <a class="anchor" href="#UO_cL07t"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -2514,7 +2514,7 @@ cbg:reconstruction_agent_01
                       <div class="listingblock">
                         <div class="content">
                           <pre class="highlight"><code data-lang="text/turtle">afr:geboorteregiser_1858_po_1
-   a                     pico:PersonObservation ;
+   a                     :PersonObservation ;
    prov:hadPrimarySource afr:geboorteregiser_1858 ;
    sdo:name              &quot;Abe Bos&quot; ;
    sdo:familyName        &quot;Bos&quot; ;
@@ -2523,22 +2523,22 @@ cbg:reconstruction_agent_01
    sdo:birthDate         &quot;1858-06-21&quot;^^xsd:date ;
    sdo:birthPlace        &quot;Joure&quot; ;
    sdo:gender            sdo:Male ;
-   pico:hasRole          picot:roles/575 ;  # child
+   :hasRole          picot:roles/575 ;  # child
    sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
 afr:geboorteregiser_1858_po_2
-   a                     pico:PersonObservation ;
+   a                     :PersonObservation ;
    prov:hadPrimarySource afr:geboorteregiser_1858 ;
    sdo:name              &quot;Sjouke Abes Bos&quot; ;
    sdo:familyName        &quot;Bos&quot; ;
    sdo:givenName         &quot;Sjouke&quot; ;
-   pico:hasAge           &quot;30&quot;^^xsd:decimal ;
+   :hasAge           &quot;30&quot;^^xsd:decimal ;
    sdo:hasOccupation     &quot;klokmakersknecht&quot; ;
    sdo:address           &quot;Joure&quot; ;
    sdo:gender            sdo:Male ;
    sdo:spouse            afr:geboorteregiser_1858_po_3 ;
    sdo:children          afr:geboorteregiser_1858_po_1 ;
-   pico:hasRole          picot:roles/489 .  # declarant</code></pre>
+   :hasRole          picot:roles/489 .  # declarant</code></pre>
                         </div>
                       </div>
                     </div>
@@ -2577,8 +2577,8 @@ afr:geboorteregiser_1858_po_2
                   </tbody>
                 </table>
               </div>
-              <h5 id="s4uiVL4s">
-                <a class="anchor" href="#s4uiVL4s"></a>
+              <h5 id="X1dw-JgI">
+                <a class="anchor" href="#X1dw-JgI"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -2592,8 +2592,8 @@ afr:geboorteregiser_1858_po_2
                   </ul>
                 </div>
               </div>
-              <h5 id="iXGSKCGH">
-                <a class="anchor" href="#iXGSKCGH"></a>
+              <h5 id="HFjxG_OD">
+                <a class="anchor" href="#HFjxG_OD"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2699,7 +2699,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://w3id.org/pnv#Name">PersonName</a>
+                            <a href="#https://w3id.org/pnv#PersonName">PersonName</a>
                           </p>
                         </p>
                       </td>
@@ -2996,8 +2996,8 @@ afr:geboorteregiser_1858_po_2
                   </tbody>
                 </table>
               </div>
-              <h5 id="MbVPfiXB">
-                <a class="anchor" href="#MbVPfiXB"></a>
+              <h5 id="IuNH0zXu">
+                <a class="anchor" href="#IuNH0zXu"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -3029,7 +3029,7 @@ afr:geboorteregiser_1858_po_2
                       <div class="listingblock">
                         <div class="content">
                           <pre class="highlight"><code data-lang="text/turtle">cbg:person_reconstruction_2
-    a                   pico:PersonReconstruction ;
+    a                   :PersonReconstruction ;
     sdo:name            &quot;Anna Maria Koppen&quot; ;
     sdo:familyName      &quot;Koppen&quot; ;
     sdo:givenName       &quot;Anna&quot; ;
@@ -3080,8 +3080,8 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="cVyNHhPN">
-                <a class="anchor" href="#cVyNHhPN"></a>
+              <h5 id="CQphTkyT">
+                <a class="anchor" href="#CQphTkyT"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3095,8 +3095,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="ied_ccMV">
-                <a class="anchor" href="#ied_ccMV"></a>
+              <h5 id="w_28StC3">
+                <a class="anchor" href="#w_28StC3"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3239,8 +3239,8 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="r8OB3NLx">
-                <a class="anchor" href="#r8OB3NLx"></a>
+              <h5 id="MsPkcjuu">
+                <a class="anchor" href="#MsPkcjuu"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3254,8 +3254,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="VAzem-we">
-                <a class="anchor" href="#VAzem-we"></a>
+              <h5 id="YpoCxhQq">
+                <a class="anchor" href="#YpoCxhQq"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3331,10 +3331,10 @@ cbg:reconstruction_activity_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -3434,8 +3434,8 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="cHjDK_6C">
-                <a class="anchor" href="#cHjDK_6C"></a>
+              <h5 id="wbGFf1Wd">
+                <a class="anchor" href="#wbGFf1Wd"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -3682,10 +3682,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Is defined by 
@@ -3743,7 +3743,7 @@ cbg:reconstruction_activity_01
                           Incomplete dates are allowed, but only when truncated from small to large. For example:
                           &quot;1970-08-15&quot;, &quot;1970-08&quot; and &quot;1970&quot; are all allowed, but &quot;1970-00-15&quot; or &quot;08-15&quot; are not.
                           When the date of death is not known, but is known that a person is deceased, the
-                          property pico:deceased can be used.
+                          property :deceased can be used.
                           Sometimes, you may want to use a string as deathDate. For example if you want to or have to
                           record the date exactly as it was written on the Source. If possible use both the string
                           format and the xsd:date format in this case.
@@ -3907,7 +3907,7 @@ cbg:reconstruction_activity_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">The use of sdo:givenName and sdo:familyName is the most straightforward method for
-                          describing person names. Use pnv:Name for more extensive name annotations.
+                          describing person names. Use pnv:PersonName for more extensive name annotations.
                        </td>
                     </tr>
                   </tbody>
@@ -3979,7 +3979,7 @@ cbg:reconstruction_activity_01
                 <a href="https://w3id.org/pnv#givenName" style="white-space: nowrap;" target="_blank">https://w3id.org/pnv#givenName<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
-                <p>The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
+                <p>The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
                        name-giving event.
                        </p>
               </div>
@@ -4019,7 +4019,7 @@ cbg:reconstruction_activity_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">The use of sdo:givenName and sdo:familyName is the preferred method for
-                          describing person names. Use pnv:Name for more extensive name annotations.
+                          describing person names. Use pnv:PersonName for more extensive name annotations.
                        </td>
                     </tr>
                   </tbody>
@@ -4253,8 +4253,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Persons: Use full name if the name can't be split into given name and family name.
-                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:Name.
+                      <td class="content">For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
+                          this may contain a combination of it's name, year of creation, creator, et cetera.
                        </td>
                     </tr>
                   </tbody>
@@ -4267,8 +4267,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
-                          this may contain a combination of it's name, year of creation, creator, et cetera.
+                      <td class="content">For Persons: Use full name if the name can't be split into given name and family name.
+                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:PersonName.
                        </td>
                     </tr>
                   </tbody>
@@ -4277,10 +4277,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Person">Person</a>
                 </li>
                 <li>
-                  <a href="#Person">Person</a>
+                  <a href="#Source">Source</a>
                 </li>
               </ul>
               <p>Range includes:</p>
@@ -4618,10 +4618,10 @@ cbg:reconstruction_activity_01
               <p>Sub property of:</p>
               <ul>
                 <li>
-                  <a href="https://personsincontext.org/model/hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://personsincontext.org/model/hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Domain includes:</p>
@@ -4766,8 +4766,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasChild-in-law property should always refer to another Person
-                          observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasChild-in-law property should refer to another
+                          Person reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -4780,8 +4780,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasChild-in-law property should refer to another
-                          Person reconstruction.
+                      <td class="content">For Person observations, the hasChild-in-law property should always refer to another Person
+                          observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -4810,8 +4810,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasCousin property should always refer to another Person
-                          observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasCousin property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -4824,8 +4824,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasCousin property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasCousin property should always refer to another Person
+                          observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -4854,8 +4854,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasCousin-in-law property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasCousin-in-law property should always refer to another Person
+                          observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -4868,8 +4868,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasCousin-in-law property should always refer to another Person
-                          observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasCousin-in-law property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5062,8 +5062,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasGodparent property should always refer to another Person
-                          observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasGodparent property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5076,8 +5076,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasGodparent property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasGodparent property should always refer to another Person
+                          observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5150,8 +5150,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasGrandchild-in-law property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasGrandchild-in-law property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5164,8 +5164,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasGrandchild-in-law property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasGrandchild-in-law property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5282,8 +5282,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasGreat-grandchild property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasGreat-grandchild property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5296,8 +5296,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasGreat-grandchild property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasGreat-grandchild property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5414,8 +5414,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasLegitimizedChild property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasLegitimizedChild property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5428,8 +5428,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasLegitimizedChild property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasLegitimizedChild property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5458,8 +5458,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasNephew_Niece-in-law property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasNephew_Niece-in-law property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5472,8 +5472,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasNephew_Niece-in-law property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasNephew_Niece-in-law property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5667,8 +5667,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasSibling-in-law property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasSibling-in-law property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5681,8 +5681,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasSibling-in-law property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasSibling-in-law property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5711,8 +5711,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasStepchild property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasStepchild property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5725,8 +5725,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasStepchild property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasStepchild property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5843,8 +5843,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasStepparent-in-law property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasStepparent-in-law property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -5857,8 +5857,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasStepparent-in-law property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasStepparent-in-law property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5931,8 +5931,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasUncle_Aunt property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the hasUncle_Aunt property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -5945,8 +5945,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasUncle_Aunt property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the hasUncle_Aunt property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -6138,8 +6138,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the parent property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the parent property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -6152,8 +6152,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the parent property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the parent property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -6374,10 +6374,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Scan">Scan</a>
                 </li>
                 <li>
-                  <a href="#Scan">Scan</a>
+                  <a href="#Source">Source</a>
                 </li>
               </ul>
               <p>Range includes:</p>

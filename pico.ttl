@@ -306,7 +306,7 @@ sdo:ImageObject
                     """@en ;
 .
 
-pnv:Name
+pnv:PersonName
     a               owl:Class ;
     skos:definition "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
     rdfs:label      "PersonName"@en ;  #, "Naam van een persoon"@nl ;
@@ -314,7 +314,7 @@ pnv:Name
                         a resource type in its own right.
                         A PersonName can consist of many different parts. The most common ones are mentioned here.
                         See the full specification of the Person Name Vocabulary for more details.
-                        Additionally to a pnv:Name, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
+                        Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
                       """@en ;
 .
 
@@ -340,7 +340,7 @@ pnv:baseSurname
                              the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
                           """@en ;
     rdfs:label         "baseSurname"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -458,7 +458,7 @@ sdo:familyName
     skos:definition    "Family name. For Dutch names, this is the last name of a person." ;
     rdfs:label         "familyName"@en ;  #, "Achternaam"@nl ;
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the most straightforward method for
-                          describing person names. Use pnv:Name for more extensive name annotations.
+                          describing person names. Use pnv:PersonName for more extensive name annotations.
                        """@en ;
     sdo:domainIncludes :Person ;
     sdo:rangeIncludes  xsd:string ;
@@ -473,7 +473,7 @@ pnv:literalName
                           "unnamed".
                        """@en ;
     rdfs:label         "literalName"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -490,11 +490,11 @@ sdo:gender
 pnv:givenName
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:givenName ;
-    skos:definition    """The given name of a pnv:Name. Designates the name(s) given to someone at birth or any other
+    skos:definition    """The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
                        name-giving event.
                        """@en ;
     rdfs:label         "givenName (pnv)"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -504,7 +504,7 @@ sdo:givenName
     skos:definition    "Given name. For Dutch names, this could be multiple given names of a person." ;
     rdfs:label         "givenName (schema)" ;
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the preferred method for
-                          describing person names. Use pnv:Name for more extensive name annotations.
+                          describing person names. Use pnv:PersonName for more extensive name annotations.
                        """@en ;
     sdo:domainIncludes :Person ;
     sdo:rangeIncludes  xsd:string ;
@@ -564,7 +564,7 @@ pnv:initials
                              pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
                           """@en ;
     rdfs:label         "initials"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -574,7 +574,7 @@ sdo:name
     skos:definition    "The name of a Person or a Source." ;
     rdfs:label         "name"@en ;  #, "Volledige naam"@nl ;
     skos:scopeNote     """For Persons: Use full name if the name can't be split into given name and family name.
-                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:Name.
+                          Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:PersonName.
                        """@en ;
     skos:scopeNote     """For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
                           this may contain a combination of it's name, year of creation, creator, et cetera.
@@ -591,7 +591,7 @@ pnv:patronym
                              name of one's mother or grandmother).
                           """ ;
     rdfs:label         "patronym"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -623,7 +623,7 @@ pnv:surnamePrefix
                        """@en ;
     rdfs:label         "surnamePrefix"@en ;
     skos:scopeNote     "A2A:PersonNamePrefixLastName"@en ;
-    sdo:domainIncludes pnv:Name ;
+    sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -647,7 +647,7 @@ sdo:additionalName
     rdfs:label         "additionalName"@en ;
 #    rdfs:label        "heeft naam"@nl ;
     sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  pnv:Name ;
+    sdo:rangeIncludes  pnv:PersonName ;
 .
 
 sdo:additionalType
