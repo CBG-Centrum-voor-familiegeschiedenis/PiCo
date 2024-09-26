@@ -1,6 +1,6 @@
 # Version: 20230921
 
-@prefix :        <https://personsincontext.org/model/> .
+@prefix :        <https://personsincontext.org/model#> .
 @prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -26,51 +26,67 @@
     sdo:publisher                 <https://cbg.nl> ;
     dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
                                   "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
-#    dcterms:creator               [ a                  sdo:Person ;
-#                                    sdo:name        "Pieter Woltjer" ;
-#                                    sdo:affiliation [ sdo:name "CBG|Center for familiy history"@en ;
-#                                                         sdo:url  "https://cbg.nl" ] ;
-#                                    sdo:email       "pieter.woltjer@cbg.nl" ] ;
-#    dcterms:creator               [ a                  sdo:Person ;
-#                                    sdo:name        "Jeroen Balkenende" ;
-#                                    sdo:affiliation [ sdo:name "CBG|Center for family history" ;
-#                                                         sdo:url  "https://cbg.nl" ] ] ;
-#    dcterms:creator               [ a           sdo:Person ;
-#                                    sdo:name "Bob Coret" ;
-#                                    sdo:url  <https://bob.coret.org/> ] ;
-#    dcterms:creator               [ a           sdo:Person ;
-#                                    sdo:name "Mark Lindeman" ;
-#                                    sdo:url  "https://lindeman.it/" ] ;
-#    dcterms:creator               [ a           sdo:Person ;
-#                                    sdo:name "Ivo Zandhuis" ;
-#                                    sdo:url  "https://ivozandhuis.nl/" ] ;
+#    dcterms:creator [
+#                        sdo:name  "Pieter Woltjer"@en ;
+#                        sdo:affiliation
+#                                [
+#                                    sdo:name "CBG|Center for familiy history"@en ;
+#                                    sdo:url  "https://cbg.nl"
+#                                ] ;
+#                        sdo:email "pieter.woltjer@cbg.nl"
+#                    ] ,
+#                    [
+#                        sdo:name   "Jeroen Balkenende"@en ;
+#                        sdo:affiliation
+#                                [
+#                                    sdo:name "CBG|Center for familiy history"@en ;
+#                                    sdo:url  "https://cbg.nl"
+#                                ] ;
+#                    ] ,
+#                    [
+#                        sdo:name  "Bob Coret"@en ;
+#                        sdo:url   <https://bob.coret.org/>
+#                    ] ,
+#                    [
+#                        sdo:name   "Mark Lindeman"@en ;
+#                        sdo:url "https://lindeman.it/"
+#                    ] ,
+#                    [
+#                        sdo:name "Ivo Zandhuis"@en ;
+#                        sdo:url "https://ivozandhuis.nl/"
+#                    ] ;
     dcterms:contributor           "Rick Companje", "Rick Mourits", "Micon Schorsij", "Richard Zijdeman" ;
-#    dcterms:contributor           [ a                  sdo:Person ;
-#                                    sdo:Name        "Rick Companje" ;
-#                                    sdo:affiliation [ sdo:name "Het Utrechts Archief" ;
-#                                                         sdo:url  "https://hetutrechtsarchief.nl/" ] ] ;
-#    dcterms:contributor           [ a                  sdo:Person ;
-#                                    sdo:Name        "Rick Mourits" ;
-#                                    sdo:affiliation [ sdo:name
-#                                                                    "International Institute Of Social History (IISH)" ;
-#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
-#    dcterms:contributor           [ a                  sdo:Person ;
-#                                    sdo:Name        "Micon Schorsij" ;
-#                                    sdo:affiliation [ sdo:name
-#                                                                    "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
-#                                                         sdo:url "https://www.niod.nl/" ] ] ;
-#    dcterms:contributor           [ a                  sdo:Person ;
-#                                    sdo:Name        "Richard Zijdeman" ;
-#                                    sdo:affiliation [ sdo:name
-#                                                                    "International Institute Of Social History (IISH)" ;
-#                                                         sdo:url "https://iisg.amsterdam/" ] ] ;
+
+#    dcterms:contributor [
+#                            sdo:Name "Rick Companje"@en
+#                        ] ,
+#                        [
+#                            sdo:Name "Rick Mourits"@en ;
+#                            sdo:affiliation
+#                                  [
+#                                      sdo:name "International Institute Of Social History (IISH)" ;
+#                                      sdo:url "https://iisg.amsterdam/"
+#                                  ]
+#                        ] ,
+#                        [
+#                            sdo:Name "Micon Schorsij"@en ;
+#                            sdo:affiliation
+#                                    [
+#                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
+#                                        sdo:url "https://www.niod.nl/"
+#                                    ]
+#                        ] ,
+#                        [
+#                            sdo:Name "Richard Zijdeman"@en ;
+#                            sdo:affiliation
+#                                    [ sdo:name "International Institute Of Social History (IISH)" ;
+#                                      sdo:url "https://iisg.amsterdam/"
+#                                    ]
+#                        ] ;
     dcterms:created               "2023-09-21"^^xsd:date ;
     dcterms:modified              "2024-04-25"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
-#    owl:versionIRI               :0.9 ;  # Versions are currently defined as redirects from :ontology in the .htaccess of the web server
-    owl:versionInfo               "0.9 - First published version of the PiCo model."@en ;
-#    owl:priorVersion                "n.a."
     vann:preferredNamespacePrefix "pico" ;
     skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and
                                      publishing person observations from historical sources.
@@ -81,8 +97,7 @@
                                      PiCo makes use of existing ontologies where possible and adds its own classes
                                      and properties when required.
                                   """@en ;
-    skos:historyNote              """
-                                     Persons in Context is developed by the CBG|Center for family
+    skos:historyNote              """Persons in Context is developed by the CBG|Center for family
                                      history as a successor of the XML standard A2A for annotating historical person
                                      data. Cultural heritage institutions in the Netherlands are encouraged to move to
                                      PiCo.
@@ -210,13 +225,12 @@ prov:Agent
     rdfs:label      "PersonReconstruction"@en ;  #, "Persoonsreconstructie"@nl ;
     skos:definition """A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
                            single resource."""@en ;
-    skos:scopeNote  """
-                            A Person reconstruction must always refer to one or more Person observations. For this,
-                            the prov:wasDerivedFrom property is used.
-                            Information about the creation should be documented with the prov:wasGeneratedBy property.
-                            Information about updates of a Person reconstruction should be documented with
-                            prov:wasRevisionOf
-                        """@en ;
+    skos:scopeNote  """A Person reconstruction must always refer to one or more Person observations. For this,
+                       the prov:wasDerivedFrom property is used.
+                       Information about the creation should be documented with the prov:wasGeneratedBy property.
+                       Information about updates of a Person reconstruction should be documented with
+                       prov:wasRevisionOf
+                    """@en ;
     rdfs:subClassOf :Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
     sdo:workExample [ a                  sdo:ImageObject ;
@@ -259,15 +273,15 @@ sdo:ArchiveComponent
                             properties required to describe archival items and collections."""@en ;
     rdfs:label      "Source"@en ;  #, "Bron"@nl ;
     skos:scopeNote  """Person observations can appear on many types of historical documents. The PiCo model does
-                          not aim to describe these sources, as excellent data models, such as Records in Contexts and
-                          Dublin Core, already exist within the heritage domain. In order to model person observations,
-                          we require that institutions describe their sources at least with a single name property that
-                          combines identifying information about the source like its title and creation date.
-                          For example, a Marriage Certificate is then described as follows: "BS Marriage Haarlem,
-                          November 11, 1885, certificate number 321". As long as this description consists of various
-                          elements that identify the source, heritage institutions are free to use any authoritative
-                          domain-specific standard to describe their historical person records.
-                       """@en ;
+                       not aim to describe these sources, as excellent data models, such as Records in Contexts and
+                       Dublin Core, already exist within the heritage domain. In order to model person observations,
+                       we require that institutions describe their sources at least with a single name property that
+                       combines identifying information about the source like its title and creation date.
+                       For example, a Marriage Certificate is then described as follows: "BS Marriage Haarlem,
+                       November 11, 1885, certificate number 321". As long as this description consists of various
+                       elements that identify the source, heritage institutions are free to use any authoritative
+                       domain-specific standard to describe their historical person records.
+                    """@en ;
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a Source" ;
@@ -311,11 +325,11 @@ pnv:PersonName
     skos:definition "Name of a person, expressed in Person Name Vocabulary (PNV)"@en ;
     rdfs:label      "PersonName"@en ;  #, "Naam van een persoon"@nl ;
     skos:scopeNote  """In the Person Name Vocabulary, a name is considered to be a
-                        a resource type in its own right.
-                        A PersonName can consist of many different parts. The most common ones are mentioned here.
-                        See the full specification of the Person Name Vocabulary for more details.
-                        Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
-                      """@en ;
+                       a resource type in its own right.
+                       A PersonName can consist of many different parts. The most common ones are mentioned here.
+                       See the full specification of the Person Name Vocabulary for more details.
+                       Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
+                    """@en ;
 .
 
 ########################################################################################################################
@@ -336,9 +350,9 @@ pnv:baseSurname
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:baseSurname ;
     skos:definition    """A Base surname is a family name without any prefixes, if those prefixes need to be ignored
-                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
-                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
-                          """@en ;
+                          in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
+                          the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
+                       """@en ;
     rdfs:label         "baseSurname"@en ;
     sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
@@ -491,7 +505,7 @@ pnv:givenName
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:givenName ;
     skos:definition    """The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
-                       name-giving event.
+                          name-giving event.
                        """@en ;
     rdfs:label         "givenName (pnv)"@en ;
     sdo:domainIncludes pnv:PersonName ;
@@ -517,12 +531,12 @@ sdo:givenName
          rdfs:label         "hasAge"@en ;
 #         rdfs:label        "leeftijd"@nl ;
          skos:scopeNote     """Only used for Person observations, in case the birth date is not known,
-                                   but the age is. In combination with de date of the Source, a birth date range can
-                                   be derived, which can be used in the process of creating a Person reconstruction.
-                                   The age is considered to be in years, unless otherwise mentioned. So an age of
-                                   "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
-                                   Numerical ages ("4") are preferred above ages in text ("four").
-                                """@en ;
+                               but the age is. In combination with de date of the Source, a birth date range can
+                               be derived, which can be used in the process of creating a Person reconstruction.
+                               The age is considered to be in years, unless otherwise mentioned. So an age of
+                               "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
+                               Numerical ages ("4") are preferred above ages in text ("four").
+                            """@en ;
          sdo:domainIncludes :PersonObservation ;
          sdo:rangeIncludes  xsd:string ;  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
 .
@@ -542,8 +556,8 @@ sdo:hasOccupation
     skos:definition     "Religious conviction related to a person in an observation." ;
     rdfs:label          "hasReligion" ;
     skos:scopeNote      """Religion as mentioned on the Source.
-                         If desired, a SKOS thesaurus can be used to annotate religion.
-                      """@en ;  # Todo: Can we recommend a thesaurus for religions?
+                           If desired, a SKOS thesaurus can be used to annotate religion.
+                        """@en ;  # Todo: Can we recommend a thesaurus for religions?
     rdfs:domainIncludes :Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
     sdo:rangeIncludes   xsd:string, xsd:anyURI ;
 .
@@ -552,17 +566,17 @@ pnv:initials
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:initials ;
     skos:definition    """An initial is the first letter of a person's given name (or sometimes a combination of
-                             letters). The Initials property can be used to separately record the initial(s) of a
-                             person's given name(s). Each initial should be followed by a dot. It is recommended to
-                             always use the Initials property to record initials, but if only the initials of a given
-                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
-                             Example 1: "Peter R. de Vries" would be modelled using pnv:initials "P.R." and
-                             pnv:givenName "Peter R.".
-                             Example 2: "C.Joh. Kieviet" would ideally be modelled using pnv:initials "C.Joh.",
-                             but pnv:givenName "C.Joh." is also possible.
-                             Example 3: "H.A.F.M.O. (Hans) van Mierlo" would be modelled using
-                             pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
-                          """@en ;
+                          letters). The Initials property can be used to separately record the initial(s) of a
+                          person's given name(s). Each initial should be followed by a dot. It is recommended to
+                          always use the Initials property to record initials, but if only the initials of a given
+                          name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
+                          Example 1: "Peter R. de Vries" would be modelled using pnv:initials "P.R." and
+                          pnv:givenName "Peter R.".
+                          Example 2: "C.Joh. Kieviet" would ideally be modelled using pnv:initials "C.Joh.",
+                          but pnv:givenName "C.Joh." is also possible.
+                          Example 3: "H.A.F.M.O. (Hans) van Mierlo" would be modelled using
+                          pnv:initials "H.A.F.M.O." and pnv:givenName "Hans".
+                       """@en ;
     rdfs:label         "initials"@en ;
     sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
@@ -587,9 +601,9 @@ pnv:patronym
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   pnv:patronym ;
     skos:definition    """A Patronym is a name element based on the given name of one's father or grandfather.
-                             This is also the preferred property for a matronym (i.e. a name element based on the given
-                             name of one's mother or grandmother).
-                          """ ;
+                          This is also the preferred property for a matronym (i.e. a name element based on the given
+                          name of one's mother or grandmother).
+                       """ ;
     rdfs:label         "patronym"@en ;
     sdo:domainIncludes pnv:PersonName ;
     sdo:rangeIncludes  xsd:string ;
@@ -708,16 +722,16 @@ prov:hadPrimarySource
     a                  owl:ObjectProperty ;  # Should be defined as a required property
     rdfs:isDefinedBy   prov:hadPrimarySource ;
     skos:definition    """A primary source for a topic refers to something produced by some agent with direct
-                             experience and knowledge about the topic, at the time of the topic's study, without
-                             benefit from hindsight. Because of the directness of primary sources, they
-                             'speak for themselves' in ways that cannot be captured through the filter of secondary
-                             sources. As such, it is important for secondary sources to reference those primary
-                             sources from which they were derived, so that their reliability can be investigated.
-                             A primary source relation is a particular case of derivation of secondary materials from
-                             their primary sources. It is recognized that the determination of primary sources can be
-                             up to interpretation, and should be done according to conventions accepted within the
-                             application's domain.
-                          """@en ;
+                          experience and knowledge about the topic, at the time of the topic's study, without
+                          benefit from hindsight. Because of the directness of primary sources, they
+                          'speak for themselves' in ways that cannot be captured through the filter of secondary
+                          sources. As such, it is important for secondary sources to reference those primary
+                          sources from which they were derived, so that their reliability can be investigated.
+                          A primary source relation is a particular case of derivation of secondary materials from
+                          their primary sources. It is recognized that the determination of primary sources can be
+                          up to interpretation, and should be done according to conventions accepted within the
+                          application's domain.
+                       """@en ;
     rdfs:label         "hadPrimarySource"@en ;
     skos:scopeNote     "Linking a Source with the hadPrimarySource property is required for Person Observations." ;
     sdo:domainIncludes :PersonObservation ;
