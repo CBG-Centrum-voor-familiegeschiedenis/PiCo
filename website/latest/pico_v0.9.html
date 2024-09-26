@@ -494,6 +494,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
     <script id="schema.org" type="application/ld+json">
 [
   {
+    "@id": "https://terms.personsincontext.org/roles",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Persons in Context role thesaurus"
+      }
+    ]
+  },
+  {
     "@id": "https://terms.personsincontext.org/sourectypes",
     "@type": [
       "https://schema.org/DefinedTermSet"
@@ -514,10 +525,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@value": "Rick Companje"
       },
       {
-        "@value": "Rick Mourits"
+        "@value": "Richard Zijdeman"
       },
       {
-        "@value": "Richard Zijdeman"
+        "@value": "Rick Mourits"
       },
       {
         "@value": "Micon Schorsij"
@@ -530,19 +541,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
     ],
     "https://schema.org/creator": [
       {
-        "@value": "Bob Coret"
+        "@value": "Mark Lindeman"
       },
       {
         "@value": "Jeroen Balkenende"
       },
       {
-        "@value": "Ivo Zandhuis"
-      },
-      {
-        "@value": "Mark Lindeman"
-      },
-      {
         "@value": "Pieter Woltjer"
+      },
+      {
+        "@value": "Bob Coret"
+      },
+      {
+        "@value": "Ivo Zandhuis"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -580,17 +591,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         "@id": "https://cbg.nl"
       }
     ]
-  },
-  {
-    "@id": "https://terms.personsincontext.org/roles",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "Persons in Context role thesaurus"
-      }
-    ]
   }
 ]
 	</script>
@@ -608,7 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
               <a href="#Model-overview">1. Model overview</a>
             </li>
             <li>
-              <a href="#FFlxZX_x">2. Vocabularies</a>
+              <a href="#4FX8p5_z">2. Vocabularies</a>
             </li>
             <li>
               <a href="#Modules-and-Class-Hierarchy">3. Modules and Class Hierarchy</a>
@@ -626,16 +626,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                       <a href="#http://www.w3.org/ns/prov#Agent">4.1.2. Agent</a>
                     </li>
                     <li>
-                      <a href="#https://personsincontext.org/model/Person">4.1.3. Person</a>
+                      <a href="#https://personsincontext.org/model#Person">4.1.3. Person</a>
                     </li>
                     <li>
                       <a href="#https://w3id.org/pnv#PersonName">4.1.4. PersonName</a>
                     </li>
                     <li>
-                      <a href="#https://personsincontext.org/model/PersonObservation">4.1.5. PersonObservation</a>
+                      <a href="#https://personsincontext.org/model#PersonObservation">4.1.5. PersonObservation</a>
                     </li>
                     <li>
-                      <a href="#https://personsincontext.org/model/PersonReconstruction">4.1.6. PersonReconstruction</a>
+                      <a href="#https://personsincontext.org/model#PersonReconstruction">4.1.6. PersonReconstruction</a>
                     </li>
                     <li>
                       <a href="#https://schema.org/ImageObject">4.1.7. Scan</a>
@@ -672,7 +672,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                         <a href="#https://schema.org/deathPlace">4.2.8. deathPlace</a>
                       </li>
                       <li>
-                        <a href="#https://personsincontext.org/model/deceased">4.2.9. deceased</a>
+                        <a href="#https://personsincontext.org/model#deceased">4.2.9. deceased</a>
                       </li>
                       <li>
                         <a href="#http://www.w3.org/ns/prov#endedAtTime">4.2.10. endedAtTime</a>
@@ -690,13 +690,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                         <a href="#https://schema.org/givenName">4.2.14. givenName (schema)</a>
                       </li>
                       <li>
-                        <a href="#https://personsincontext.org/model/hasAge">4.2.15. hasAge</a>
+                        <a href="#https://personsincontext.org/model#hasAge">4.2.15. hasAge</a>
                       </li>
                       <li>
                         <a href="#https://schema.org/hasOccupation">4.2.16. hasOccupation</a>
                       </li>
                       <li>
-                        <a href="#https://personsincontext.org/model/hasReligion">4.2.17. hasReligion</a>
+                        <a href="#https://personsincontext.org/model#hasReligion">4.2.17. hasReligion</a>
                       </li>
                       <li>
                         <a href="#https://w3id.org/pnv#initials">4.2.18. initials</a>
@@ -745,103 +745,103 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                           <a href="#http://www.w3.org/ns/prov#hadPrimarySource">4.3.6. hadPrimarySource</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasAncestor">4.3.7. hasAncestor</a>
+                          <a href="#https://personsincontext.org/model#hasAncestor">4.3.7. hasAncestor</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasChild-in-law">4.3.8. hasChild-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasChild-in-law">4.3.8. hasChild-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasCousin">4.3.9. hasCousin</a>
+                          <a href="#https://personsincontext.org/model#hasCousin">4.3.9. hasCousin</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasCousin-in-law">4.3.10. hasCousin-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasCousin-in-law">4.3.10. hasCousin-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasDescendant">4.3.11. hasDescendant</a>
+                          <a href="#https://personsincontext.org/model#hasDescendant">4.3.11. hasDescendant</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasFosterChild">4.3.12. hasFosterChild</a>
+                          <a href="#https://personsincontext.org/model#hasFosterChild">4.3.12. hasFosterChild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasFosterParent">4.3.13. hasFosterParent</a>
+                          <a href="#https://personsincontext.org/model#hasFosterParent">4.3.13. hasFosterParent</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGodchild">4.3.14. hasGodchild</a>
+                          <a href="#https://personsincontext.org/model#hasGodchild">4.3.14. hasGodchild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGodparent">4.3.15. hasGodparent</a>
+                          <a href="#https://personsincontext.org/model#hasGodparent">4.3.15. hasGodparent</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGrandchild">4.3.16. hasGrandchild</a>
+                          <a href="#https://personsincontext.org/model#hasGrandchild">4.3.16. hasGrandchild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGrandchild-in-law">4.3.17. hasGrandchild-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasGrandchild-in-law">4.3.17. hasGrandchild-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGrandparent">4.3.18. hasGrandparent</a>
+                          <a href="#https://personsincontext.org/model#hasGrandparent">4.3.18. hasGrandparent</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGrandparent-in-law">4.3.19. hasGrandparent-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasGrandparent-in-law">4.3.19. hasGrandparent-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGreat-grandchild">4.3.20. hasGreat-grandchild</a>
+                          <a href="#https://personsincontext.org/model#hasGreat-grandchild">4.3.20. hasGreat-grandchild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasGreat-grandparent">4.3.21. hasGreat-grandparent</a>
+                          <a href="#https://personsincontext.org/model#hasGreat-grandparent">4.3.21. hasGreat-grandparent</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasHalf-sibling">4.3.22. hasHalf-sibling</a>
+                          <a href="#https://personsincontext.org/model#hasHalf-sibling">4.3.22. hasHalf-sibling</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasLegitimizedChild">4.3.23. hasLegitimizedChild</a>
+                          <a href="#https://personsincontext.org/model#hasLegitimizedChild">4.3.23. hasLegitimizedChild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasNephew_Niece-in-law">4.3.24. hasNephew-in-law/Niece-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasNephew_Niece-in-law">4.3.24. hasNephew-in-law/Niece-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasNephew_Niece">4.3.25. hasNephew/Niece</a>
+                          <a href="#https://personsincontext.org/model#hasNephew_Niece">4.3.25. hasNephew/Niece</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasParent-in-law">4.3.26. hasParent-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasParent-in-law">4.3.26. hasParent-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasPreviousPartner">4.3.27. hasPreviousPartner</a>
+                          <a href="#https://personsincontext.org/model#hasPreviousPartner">4.3.27. hasPreviousPartner</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasRole">4.3.28. hasRole</a>
+                          <a href="#https://personsincontext.org/model#hasRole">4.3.28. hasRole</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasSibling-in-law">4.3.29. hasSibling-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasSibling-in-law">4.3.29. hasSibling-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasStepchild">4.3.30. hasStepchild</a>
+                          <a href="#https://personsincontext.org/model#hasStepchild">4.3.30. hasStepchild</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasStepchild-in-law">4.3.31. hasStepchild-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasStepchild-in-law">4.3.31. hasStepchild-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasStepparent">4.3.32. hasStepparent</a>
+                          <a href="#https://personsincontext.org/model#hasStepparent">4.3.32. hasStepparent</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasStepparent-in-law">4.3.33. hasStepparent-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasStepparent-in-law">4.3.33. hasStepparent-in-law</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasStepsibling">4.3.34. hasStepsibling</a>
+                          <a href="#https://personsincontext.org/model#hasStepsibling">4.3.34. hasStepsibling</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasUncle_Aunt">4.3.35. hasUncle/Aunt</a>
+                          <a href="#https://personsincontext.org/model#hasUncle_Aunt">4.3.35. hasUncle/Aunt</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/hasUncle_Aunt-in-law">4.3.36. hasUncle/Aunt-in-law</a>
+                          <a href="#https://personsincontext.org/model#hasUncle_Aunt-in-law">4.3.36. hasUncle/Aunt-in-law</a>
                         </li>
                         <li>
                           <a href="#https://schema.org/holdingArchive">4.3.37. holdingArchive</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/isLegitimitezedChildOf">4.3.38. isLegitimitezedChildOf</a>
+                          <a href="#https://personsincontext.org/model#isLegitimitezedChildOf">4.3.38. isLegitimitezedChildOf</a>
                         </li>
                         <li>
-                          <a href="#https://personsincontext.org/model/isWidOf">4.3.39. isWidow/WidowerOf</a>
+                          <a href="#https://personsincontext.org/model#isWidOf">4.3.39. isWidow/WidowerOf</a>
                         </li>
                         <li>
                           <a href="#https://schema.org/parent">4.3.40. parent</a>
@@ -912,12 +912,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Editors: Bob Coret, Jeroen Balkenende, Ivo Zandhuis, Mark Lindeman, Pieter Woltjer</p>
+                    <p class="tableblock">Editors: Mark Lindeman, Jeroen Balkenende, Pieter Woltjer, Bob Coret, Ivo Zandhuis</p>
                   </td>
                 </tr>
                 <tr>
                   <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;">
-                    <p class="tableblock">Contributors: Rick Companje, Rick Mourits, Richard Zijdeman, Micon Schorsij</p>
+                    <p class="tableblock">Contributors: Rick Companje, Richard Zijdeman, Rick Mourits, Micon Schorsij</p>
                   </td>
                 </tr>
                 <tr>
@@ -974,8 +974,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             </div>
           </div>
         </div>
-        <h2 id="FFlxZX_x">
-          <a class="anchor" href="#FFlxZX_x"></a>
+        <h2 id="4FX8p5_z">
+          <a class="anchor" href="#4FX8p5_z"></a>
           <div>Vocabularies</div>
         </h2>
         <p>A summary of properties that have vocabularies as target values.</p>
@@ -1015,7 +1015,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
               <tr class="property-row-header">
                 <td class="tableblock halign-left valign-top" colspan="3" style="background-color: #f7f8f7;">
                   <p class="tableblock font-bold">
-                    <a href="#https://personsincontext.org/model/hasRole">https://personsincontext.org/model/hasRole</a>
+                    <a href="#https://personsincontext.org/model#hasRole">https://personsincontext.org/model#hasRole</a>
                   </p>
                 </td>
               </tr>
@@ -1059,15 +1059,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                   </li>
                   <li>
                     <span class="hierarchy-node"></span>
-                    <a href="#https://personsincontext.org/model/Person">Person</a>
+                    <a href="#https://personsincontext.org/model#Person">Person</a>
                     <ul class="nested-hierarchy-list">
                       <li>
                         <span class="hierarchy-node-leaf"></span>
-                        <a href="#https://personsincontext.org/model/PersonObservation">PersonObservation</a>
+                        <a href="#https://personsincontext.org/model#PersonObservation">PersonObservation</a>
                       </li>
                       <li>
                         <span class="hierarchy-node-leaf"></span>
-                        <a href="#https://personsincontext.org/model/PersonReconstruction">PersonReconstruction</a>
+                        <a href="#https://personsincontext.org/model#PersonReconstruction">PersonReconstruction</a>
                       </li>
                     </ul>
                   </li>
@@ -1218,8 +1218,8 @@ for (let node of initialNodes) {
                   </tbody>
                 </table>
               </div>
-              <h5 id="Sf18jd9O">
-                <a class="anchor" href="#Sf18jd9O"></a>
+              <h5 id="A8nSchl5">
+                <a class="anchor" href="#A8nSchl5"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1317,8 +1317,8 @@ for (let node of initialNodes) {
               <div class="paragraph">
                 <p>The agent (person or organisation) that is responsible for the creation of a person reconstruction.</p>
               </div>
-              <h5 id="ZuEHxv8K">
-                <a class="anchor" href="#ZuEHxv8K"></a>
+              <h5 id="NOx2BxWa">
+                <a class="anchor" href="#NOx2BxWa"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -1350,12 +1350,12 @@ cbg:reconstruction_agent_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/Person">
-                <a class="anchor" href="#https://personsincontext.org/model/Person"></a>
+              <h4 id="https://personsincontext.org/model#Person">
+                <a class="anchor" href="#https://personsincontext.org/model#Person"></a>
                 <div>Person</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/Person" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/Person<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#Person" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#Person<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>A Person is a human being whose individual existence can somehow be documented.</p>
@@ -1374,8 +1374,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="MVm6KXca">
-                <a class="anchor" href="#MVm6KXca"></a>
+              <h5 id="N0_o69Tw">
+                <a class="anchor" href="#N0_o69Tw"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -1394,8 +1394,8 @@ cbg:reconstruction_agent_01
                   </ul>
                 </div>
               </div>
-              <h5 id="-FKeqiOL">
-                <a class="anchor" href="#-FKeqiOL"></a>
+              <h5 id="8viLPHBE">
+                <a class="anchor" href="#8viLPHBE"></a>
                 <div>Superclass of</div>
               </h5>
               <div class="sect5">
@@ -1403,19 +1403,19 @@ cbg:reconstruction_agent_01
                   <ul>
                     <li>
                       <p>
-                        <a href="#https://personsincontext.org/model/PersonObservation">PersonObservation</a>
+                        <a href="#https://personsincontext.org/model#PersonObservation">PersonObservation</a>
                       </p>
                     </li>
                     <li>
                       <p>
-                        <a href="#https://personsincontext.org/model/PersonReconstruction">PersonReconstruction</a>
+                        <a href="#https://personsincontext.org/model#PersonReconstruction">PersonReconstruction</a>
                       </p>
                     </li>
                   </ul>
                 </div>
               </div>
-              <h5 id="T4oPS253">
-                <a class="anchor" href="#T4oPS253"></a>
+              <h5 id="7COBlVm_">
+                <a class="anchor" href="#7COBlVm_"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1522,7 +1522,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -1545,10 +1545,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -1689,7 +1689,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -1712,7 +1712,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -1735,7 +1735,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -1764,17 +1764,17 @@ cbg:reconstruction_agent_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">In the Person Name Vocabulary, a name is considered to be a
-                        a resource type in its own right.
-                        A PersonName can consist of many different parts. The most common ones are mentioned here.
-                        See the full specification of the Person Name Vocabulary for more details.
-                        Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
-                      </td>
+                       a resource type in its own right.
+                       A PersonName can consist of many different parts. The most common ones are mentioned here.
+                       See the full specification of the Person Name Vocabulary for more details.
+                       Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
+                    </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <h5 id="vc55KlD2">
-                <a class="anchor" href="#vc55KlD2"></a>
+              <h5 id="NYdN7Yhe">
+                <a class="anchor" href="#NYdN7Yhe"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -1801,9 +1801,9 @@ cbg:reconstruction_agent_01
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p>A Base surname is a family name without any prefixes, if those prefixes need to be ignored
-                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
-                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
-                          </p>
+                          in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
+                          the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
+                       </p>
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
@@ -1827,7 +1827,7 @@ cbg:reconstruction_agent_01
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p>The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
-                       name-giving event.
+                          name-giving event.
                        </p>
                       </td>
                       <td class="tableblock halign-left valign-top">
@@ -1852,17 +1852,17 @@ cbg:reconstruction_agent_01
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p>An initial is the first letter of a person's given name (or sometimes a combination of
-                             letters). The Initials property can be used to separately record the initial(s) of a
-                             person's given name(s). Each initial should be followed by a dot. It is recommended to
-                             always use the Initials property to record initials, but if only the initials of a given
-                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
-                             Example 1: &quot;Peter R. de Vries&quot; would be modelled using pnv:initials &quot;P.R.&quot; and
-                             pnv:givenName &quot;Peter R.&quot;.
-                             Example 2: &quot;C.Joh. Kieviet&quot; would ideally be modelled using pnv:initials &quot;C.Joh.&quot;,
-                             but pnv:givenName &quot;C.Joh.&quot; is also possible.
-                             Example 3: &quot;H.A.F.M.O. (Hans) van Mierlo&quot; would be modelled using
-                             pnv:initials &quot;H.A.F.M.O.&quot; and pnv:givenName &quot;Hans&quot;.
-                          </p>
+                          letters). The Initials property can be used to separately record the initial(s) of a
+                          person's given name(s). Each initial should be followed by a dot. It is recommended to
+                          always use the Initials property to record initials, but if only the initials of a given
+                          name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
+                          Example 1: &quot;Peter R. de Vries&quot; would be modelled using pnv:initials &quot;P.R.&quot; and
+                          pnv:givenName &quot;Peter R.&quot;.
+                          Example 2: &quot;C.Joh. Kieviet&quot; would ideally be modelled using pnv:initials &quot;C.Joh.&quot;,
+                          but pnv:givenName &quot;C.Joh.&quot; is also possible.
+                          Example 3: &quot;H.A.F.M.O. (Hans) van Mierlo&quot; would be modelled using
+                          pnv:initials &quot;H.A.F.M.O.&quot; and pnv:givenName &quot;Hans&quot;.
+                       </p>
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
@@ -1913,9 +1913,9 @@ cbg:reconstruction_agent_01
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p>A Patronym is a name element based on the given name of one's father or grandfather.
-                             This is also the preferred property for a matronym (i.e. a name element based on the given
-                             name of one's mother or grandmother).
-                          </p>
+                          This is also the preferred property for a matronym (i.e. a name element based on the given
+                          name of one's mother or grandmother).
+                       </p>
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
@@ -1955,12 +1955,12 @@ cbg:reconstruction_agent_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/PersonObservation">
-                <a class="anchor" href="#https://personsincontext.org/model/PersonObservation"></a>
+              <h4 id="https://personsincontext.org/model#PersonObservation">
+                <a class="anchor" href="#https://personsincontext.org/model#PersonObservation"></a>
                 <div>PersonObservation</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/PersonObservation" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/PersonObservation<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#PersonObservation" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#PersonObservation<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>A Person observation is a person that can be observed on a Source</p>
@@ -1984,8 +1984,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="W7gBxJTD">
-                <a class="anchor" href="#W7gBxJTD"></a>
+              <h5 id="D7FXU62v">
+                <a class="anchor" href="#D7FXU62v"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -1993,14 +1993,14 @@ cbg:reconstruction_agent_01
                   <ul>
                     <li>
                       <p>
-                        <a href="#https://personsincontext.org/model/Person">Person</a>
+                        <a href="#https://personsincontext.org/model#Person">Person</a>
                       </p>
                     </li>
                   </ul>
                 </div>
               </div>
-              <h5 id="FHksadXc">
-                <a class="anchor" href="#FHksadXc"></a>
+              <h5 id="EgkeHRbE">
+                <a class="anchor" href="#EgkeHRbE"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2039,7 +2039,7 @@ cbg:reconstruction_agent_01
                     <tr class="property-row-header">
                       <td class="tableblock halign-left valign-top" style="background-color: #f7f8f7;">
                         <p class="tableblock font-bold">
-                          <a href="#https://personsincontext.org/model/deceased">deceased</a>
+                          <a href="#https://personsincontext.org/model#deceased">deceased</a>
                         </p>
                       </td>
                       <td class="tableblock halign-left valign-top" colspan="4" style="background-color: #f7f8f7;"></td>
@@ -2073,16 +2073,16 @@ cbg:reconstruction_agent_01
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p>A primary source for a topic refers to something produced by some agent with direct
-                             experience and knowledge about the topic, at the time of the topic's study, without
-                             benefit from hindsight. Because of the directness of primary sources, they
-                             'speak for themselves' in ways that cannot be captured through the filter of secondary
-                             sources. As such, it is important for secondary sources to reference those primary
-                             sources from which they were derived, so that their reliability can be investigated.
-                             A primary source relation is a particular case of derivation of secondary materials from
-                             their primary sources. It is recognized that the determination of primary sources can be
-                             up to interpretation, and should be done according to conventions accepted within the
-                             application's domain.
-                          </p>
+                          experience and knowledge about the topic, at the time of the topic's study, without
+                          benefit from hindsight. Because of the directness of primary sources, they
+                          'speak for themselves' in ways that cannot be captured through the filter of secondary
+                          sources. As such, it is important for secondary sources to reference those primary
+                          sources from which they were derived, so that their reliability can be investigated.
+                          A primary source relation is a particular case of derivation of secondary materials from
+                          their primary sources. It is recognized that the determination of primary sources can be
+                          up to interpretation, and should be done according to conventions accepted within the
+                          application's domain.
+                       </p>
                       </td>
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
@@ -2095,7 +2095,7 @@ cbg:reconstruction_agent_01
                     <tr class="property-row-header">
                       <td class="tableblock halign-left valign-top" style="background-color: #f7f8f7;">
                         <p class="tableblock font-bold">
-                          <a href="#https://personsincontext.org/model/hasAge">hasAge</a>
+                          <a href="#https://personsincontext.org/model#hasAge">hasAge</a>
                         </p>
                       </td>
                       <td class="tableblock halign-left valign-top" colspan="4" style="background-color: #f7f8f7;"></td>
@@ -2144,7 +2144,7 @@ cbg:reconstruction_agent_01
                     <tr class="property-row-header">
                       <td class="tableblock halign-left valign-top" style="background-color: #f7f8f7;">
                         <p class="tableblock font-bold">
-                          <a href="#https://personsincontext.org/model/hasRole">hasRole</a>
+                          <a href="#https://personsincontext.org/model#hasRole">hasRole</a>
                         </p>
                       </td>
                       <td class="tableblock halign-left valign-top" colspan="4" style="background-color: #f7f8f7;"></td>
@@ -2254,7 +2254,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2277,10 +2277,10 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2421,7 +2421,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2444,7 +2444,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2467,7 +2467,7 @@ cbg:reconstruction_agent_01
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2475,8 +2475,8 @@ cbg:reconstruction_agent_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="OXFXpyS2">
-                <a class="anchor" href="#OXFXpyS2"></a>
+              <h5 id="qoxuG-W-">
+                <a class="anchor" href="#qoxuG-W-"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -2542,12 +2542,12 @@ afr:geboorteregiser_1858_po_2
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/PersonReconstruction">
-                <a class="anchor" href="#https://personsincontext.org/model/PersonReconstruction"></a>
+              <h4 id="https://personsincontext.org/model#PersonReconstruction">
+                <a class="anchor" href="#https://personsincontext.org/model#PersonReconstruction"></a>
                 <div>PersonReconstruction</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/PersonReconstruction" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/PersonReconstruction<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#PersonReconstruction" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#PersonReconstruction<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
@@ -2560,19 +2560,18 @@ afr:geboorteregiser_1858_po_2
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">
-                            A Person reconstruction must always refer to one or more Person observations. For this,
-                            the prov:wasDerivedFrom property is used.
-                            Information about the creation should be documented with the prov:wasGeneratedBy property.
-                            Information about updates of a Person reconstruction should be documented with
-                            prov:wasRevisionOf
-                        </td>
+                      <td class="content">A Person reconstruction must always refer to one or more Person observations. For this,
+                       the prov:wasDerivedFrom property is used.
+                       Information about the creation should be documented with the prov:wasGeneratedBy property.
+                       Information about updates of a Person reconstruction should be documented with
+                       prov:wasRevisionOf
+                    </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <h5 id="d3BOLLxG">
-                <a class="anchor" href="#d3BOLLxG"></a>
+              <h5 id="jNM1jRqf">
+                <a class="anchor" href="#jNM1jRqf"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -2580,14 +2579,14 @@ afr:geboorteregiser_1858_po_2
                   <ul>
                     <li>
                       <p>
-                        <a href="#https://personsincontext.org/model/Person">Person</a>
+                        <a href="#https://personsincontext.org/model#Person">Person</a>
                       </p>
                     </li>
                   </ul>
                 </div>
               </div>
-              <h5 id="sJTnTddz">
-                <a class="anchor" href="#sJTnTddz"></a>
+              <h5 id="OwOH2Odx">
+                <a class="anchor" href="#OwOH2Odx"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -2619,7 +2618,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/PersonObservation">PersonObservation</a>
+                            <a href="#https://personsincontext.org/model#PersonObservation">PersonObservation</a>
                           </p>
                         </p>
                       </td>
@@ -2670,7 +2669,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/PersonReconstruction">PersonReconstruction</a>
+                            <a href="#https://personsincontext.org/model#PersonReconstruction">PersonReconstruction</a>
                           </p>
                         </p>
                       </td>
@@ -2769,7 +2768,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2792,10 +2791,10 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                           <p>Expected class type 
-                            <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                            <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                           </p>
                         </p>
                       </td>
@@ -2936,7 +2935,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2959,7 +2958,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2982,7 +2981,7 @@ afr:geboorteregiser_1858_po_2
                       <td class="tableblock halign-left valign-top">
                         <p class="tableblock">
                           <p>Expected class type 
-                            <a href="#https://personsincontext.org/model/Person">Person</a>
+                            <a href="#https://personsincontext.org/model#Person">Person</a>
                           </p>
                         </p>
                       </td>
@@ -2990,8 +2989,8 @@ afr:geboorteregiser_1858_po_2
                   </tbody>
                 </table>
               </div>
-              <h5 id="u96jwlJn">
-                <a class="anchor" href="#u96jwlJn"></a>
+              <h5 id="-YV5SdAp">
+                <a class="anchor" href="#-YV5SdAp"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -3074,8 +3073,8 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="BA8EhcTr">
-                <a class="anchor" href="#BA8EhcTr"></a>
+              <h5 id="uwlPiRVO">
+                <a class="anchor" href="#uwlPiRVO"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3089,8 +3088,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="k431mjru">
-                <a class="anchor" href="#k431mjru"></a>
+              <h5 id="9u2-033q">
+                <a class="anchor" href="#9u2-033q"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3220,21 +3219,21 @@ cbg:reconstruction_activity_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">Person observations can appear on many types of historical documents. The PiCo model does
-                          not aim to describe these sources, as excellent data models, such as Records in Contexts and
-                          Dublin Core, already exist within the heritage domain. In order to model person observations,
-                          we require that institutions describe their sources at least with a single name property that
-                          combines identifying information about the source like its title and creation date.
-                          For example, a Marriage Certificate is then described as follows: &quot;BS Marriage Haarlem,
-                          November 11, 1885, certificate number 321&quot;. As long as this description consists of various
-                          elements that identify the source, heritage institutions are free to use any authoritative
-                          domain-specific standard to describe their historical person records.
-                       </td>
+                       not aim to describe these sources, as excellent data models, such as Records in Contexts and
+                       Dublin Core, already exist within the heritage domain. In order to model person observations,
+                       we require that institutions describe their sources at least with a single name property that
+                       combines identifying information about the source like its title and creation date.
+                       For example, a Marriage Certificate is then described as follows: &quot;BS Marriage Haarlem,
+                       November 11, 1885, certificate number 321&quot;. As long as this description consists of various
+                       elements that identify the source, heritage institutions are free to use any authoritative
+                       domain-specific standard to describe their historical person records.
+                    </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <h5 id="NXPuHrLw">
-                <a class="anchor" href="#NXPuHrLw"></a>
+              <h5 id="Ejmw_Vnc">
+                <a class="anchor" href="#Ejmw_Vnc"></a>
                 <div>Subclass of</div>
               </h5>
               <div class="sect5">
@@ -3248,8 +3247,8 @@ cbg:reconstruction_activity_01
                   </ul>
                 </div>
               </div>
-              <h5 id="MYWlC-nz">
-                <a class="anchor" href="#MYWlC-nz"></a>
+              <h5 id="z7kmBahf">
+                <a class="anchor" href="#z7kmBahf"></a>
                 <div>Properties</div>
               </h5>
               <div class="sect5 overflow-x-auto">
@@ -3428,8 +3427,8 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <h5 id="50KUfZHN">
-                <a class="anchor" href="#50KUfZHN"></a>
+              <h5 id="2SpEx-mI">
+                <a class="anchor" href="#2SpEx-mI"></a>
                 <div>Examples</div>
               </h5>
               <div class="sect5">
@@ -3537,9 +3536,9 @@ cbg:reconstruction_activity_01
               </p>
               <div class="paragraph">
                 <p>A Base surname is a family name without any prefixes, if those prefixes need to be ignored
-                             in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
-                             the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
-                          </p>
+                          in sorting. If the family name is e.g. 'de Vries' and it needs to be sorted under 'V',
+                          the Base surname is 'Vries'. Base surname is equivalent to BioDes:geslachtsnaam.
+                       </p>
               </div>
               <p>Domain includes:</p>
               <ul>
@@ -3755,10 +3754,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#date" style="white-space: nowrap;" target="_blank">xsd:date<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Is defined by 
@@ -3813,12 +3812,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/deceased">
-                <a class="anchor" href="#https://personsincontext.org/model/deceased"></a>
+              <h4 id="https://personsincontext.org/model#deceased">
+                <a class="anchor" href="#https://personsincontext.org/model#deceased"></a>
                 <div>deceased</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/deceased" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/deceased<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#deceased" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#deceased<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>Indication if a person is deceased.</p>
@@ -3974,7 +3973,7 @@ cbg:reconstruction_activity_01
               </p>
               <div class="paragraph">
                 <p>The given name of a pnv:PersonName. Designates the name(s) given to someone at birth or any other
-                       name-giving event.
+                          name-giving event.
                        </p>
               </div>
               <p>Domain includes:</p>
@@ -4037,12 +4036,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasAge">
-                <a class="anchor" href="#https://personsincontext.org/model/hasAge"></a>
+              <h4 id="https://personsincontext.org/model#hasAge">
+                <a class="anchor" href="#https://personsincontext.org/model#hasAge"></a>
                 <div>hasAge</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasAge" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasAge<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasAge" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasAge<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>The age of a person.</p>
@@ -4055,12 +4054,12 @@ cbg:reconstruction_activity_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">Only used for Person observations, in case the birth date is not known,
-                                   but the age is. In combination with de date of the Source, a birth date range can
-                                   be derived, which can be used in the process of creating a Person reconstruction.
-                                   The age is considered to be in years, unless otherwise mentioned. So an age of
-                                   &quot;4&quot; is considered to be 4 years, where &quot;4 months&quot; is interpreted as 4 months.
-                                   Numerical ages (&quot;4&quot;) are preferred above ages in text (&quot;four&quot;).
-                                </td>
+                               but the age is. In combination with de date of the Source, a birth date range can
+                               be derived, which can be used in the process of creating a Person reconstruction.
+                               The age is considered to be in years, unless otherwise mentioned. So an age of
+                               &quot;4&quot; is considered to be 4 years, where &quot;4 months&quot; is interpreted as 4 months.
+                               Numerical ages (&quot;4&quot;) are preferred above ages in text (&quot;four&quot;).
+                            </td>
                     </tr>
                   </tbody>
                 </table>
@@ -4123,12 +4122,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasReligion">
-                <a class="anchor" href="#https://personsincontext.org/model/hasReligion"></a>
+              <h4 id="https://personsincontext.org/model#hasReligion">
+                <a class="anchor" href="#https://personsincontext.org/model#hasReligion"></a>
                 <div>hasReligion</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasReligion" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasReligion<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasReligion" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasReligion<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>Religious conviction related to a person in an observation.</p>
@@ -4141,8 +4140,8 @@ cbg:reconstruction_activity_01
                         <div class="title">Scope Note</div>
                       </td>
                       <td class="content">Religion as mentioned on the Source.
-                         If desired, a SKOS thesaurus can be used to annotate religion.
-                      </td>
+                           If desired, a SKOS thesaurus can be used to annotate religion.
+                        </td>
                     </tr>
                   </tbody>
                 </table>
@@ -4150,10 +4149,10 @@ cbg:reconstruction_activity_01
               <p>Range includes:</p>
               <ul>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="http://www.w3.org/2001/XMLSchema#string" style="white-space: nowrap;" target="_blank">xsd:string<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="http://www.w3.org/2001/XMLSchema#anyURI" style="white-space: nowrap;" target="_blank">xsd:anyURI<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
             </div>
@@ -4168,17 +4167,17 @@ cbg:reconstruction_activity_01
               </p>
               <div class="paragraph">
                 <p>An initial is the first letter of a person's given name (or sometimes a combination of
-                             letters). The Initials property can be used to separately record the initial(s) of a
-                             person's given name(s). Each initial should be followed by a dot. It is recommended to
-                             always use the Initials property to record initials, but if only the initials of a given
-                             name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
-                             Example 1: &quot;Peter R. de Vries&quot; would be modelled using pnv:initials &quot;P.R.&quot; and
-                             pnv:givenName &quot;Peter R.&quot;.
-                             Example 2: &quot;C.Joh. Kieviet&quot; would ideally be modelled using pnv:initials &quot;C.Joh.&quot;,
-                             but pnv:givenName &quot;C.Joh.&quot; is also possible.
-                             Example 3: &quot;H.A.F.M.O. (Hans) van Mierlo&quot; would be modelled using
-                             pnv:initials &quot;H.A.F.M.O.&quot; and pnv:givenName &quot;Hans&quot;.
-                          </p>
+                          letters). The Initials property can be used to separately record the initial(s) of a
+                          person's given name(s). Each initial should be followed by a dot. It is recommended to
+                          always use the Initials property to record initials, but if only the initials of a given
+                          name are known, they may also be recorded using pnv:givenName (or pnv:firstName).
+                          Example 1: &quot;Peter R. de Vries&quot; would be modelled using pnv:initials &quot;P.R.&quot; and
+                          pnv:givenName &quot;Peter R.&quot;.
+                          Example 2: &quot;C.Joh. Kieviet&quot; would ideally be modelled using pnv:initials &quot;C.Joh.&quot;,
+                          but pnv:givenName &quot;C.Joh.&quot; is also possible.
+                          Example 3: &quot;H.A.F.M.O. (Hans) van Mierlo&quot; would be modelled using
+                          pnv:initials &quot;H.A.F.M.O.&quot; and pnv:givenName &quot;Hans&quot;.
+                       </p>
               </div>
               <p>Domain includes:</p>
               <ul>
@@ -4271,10 +4270,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Person">Person</a>
                 </li>
                 <li>
-                  <a href="#Person">Person</a>
+                  <a href="#Source">Source</a>
                 </li>
               </ul>
               <p>Range includes:</p>
@@ -4298,9 +4297,9 @@ cbg:reconstruction_activity_01
               </p>
               <div class="paragraph">
                 <p>A Patronym is a name element based on the given name of one's father or grandfather.
-                             This is also the preferred property for a matronym (i.e. a name element based on the given
-                             name of one's mother or grandmother).
-                          </p>
+                          This is also the preferred property for a matronym (i.e. a name element based on the given
+                          name of one's mother or grandmother).
+                       </p>
               </div>
               <p>Domain includes:</p>
               <ul>
@@ -4612,10 +4611,10 @@ cbg:reconstruction_activity_01
               <p>Sub property of:</p>
               <ul>
                 <li>
-                  <a href="https://personsincontext.org/model/hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://personsincontext.org/model#hasDescendant" style="white-space: nowrap;" target="_blank">hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Domain includes:</p>
@@ -4673,16 +4672,16 @@ cbg:reconstruction_activity_01
               </p>
               <div class="paragraph">
                 <p>A primary source for a topic refers to something produced by some agent with direct
-                             experience and knowledge about the topic, at the time of the topic's study, without
-                             benefit from hindsight. Because of the directness of primary sources, they
-                             'speak for themselves' in ways that cannot be captured through the filter of secondary
-                             sources. As such, it is important for secondary sources to reference those primary
-                             sources from which they were derived, so that their reliability can be investigated.
-                             A primary source relation is a particular case of derivation of secondary materials from
-                             their primary sources. It is recognized that the determination of primary sources can be
-                             up to interpretation, and should be done according to conventions accepted within the
-                             application's domain.
-                          </p>
+                          experience and knowledge about the topic, at the time of the topic's study, without
+                          benefit from hindsight. Because of the directness of primary sources, they
+                          'speak for themselves' in ways that cannot be captured through the filter of secondary
+                          sources. As such, it is important for secondary sources to reference those primary
+                          sources from which they were derived, so that their reliability can be investigated.
+                          A primary source relation is a particular case of derivation of secondary materials from
+                          their primary sources. It is recognized that the determination of primary sources can be
+                          up to interpretation, and should be done according to conventions accepted within the
+                          application's domain.
+                       </p>
               </div>
               <div class="admonitionblock note">
                 <table>
@@ -4714,12 +4713,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasAncestor">
-                <a class="anchor" href="#https://personsincontext.org/model/hasAncestor"></a>
+              <h4 id="https://personsincontext.org/model#hasAncestor">
+                <a class="anchor" href="#https://personsincontext.org/model#hasAncestor"></a>
                 <div>hasAncestor</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasAncestor" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasAncestor" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -4746,27 +4745,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasChild-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasChild-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasChild-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasChild-in-law"></a>
                 <div>hasChild-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasChild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasChild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasChild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasChild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person reconstructions, the hasChild-in-law property should refer to another
-                          Person reconstruction.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -4781,6 +4766,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person reconstructions, the hasChild-in-law property should refer to another
+                          Person reconstruction.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -4790,27 +4789,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasCousin">
-                <a class="anchor" href="#https://personsincontext.org/model/hasCousin"></a>
+              <h4 id="https://personsincontext.org/model#hasCousin">
+                <a class="anchor" href="#https://personsincontext.org/model#hasCousin"></a>
                 <div>hasCousin</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasCousin" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasCousin<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasCousin" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasCousin<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person reconstructions, the hasCousin property should refer to another Person
-                          reconstruction.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -4825,22 +4810,6 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <p>Sub property of:</p>
-              <ul>
-                <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
-                </li>
-              </ul>
-            </div>
-            <hr>
-            <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasCousin-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasCousin-in-law"></a>
-                <div>hasCousin-in-law</div>
-              </h4>
-              <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasCousin-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasCousin-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
-              </p>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -4848,21 +4817,7 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the hasCousin-in-law property should always refer to another Person
-                          observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person reconstructions, the hasCousin-in-law property should refer to another Person
+                      <td class="content">For Person reconstructions, the hasCousin property should refer to another Person
                           reconstruction.
                        </td>
                     </tr>
@@ -4878,12 +4833,56 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasDescendant">
-                <a class="anchor" href="#https://personsincontext.org/model/hasDescendant"></a>
+              <h4 id="https://personsincontext.org/model#hasCousin-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasCousin-in-law"></a>
+                <div>hasCousin-in-law</div>
+              </h4>
+              <p class="overflow-x-auto">IRI:
+                <a href="https://personsincontext.org/model#hasCousin-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasCousin-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+              </p>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person reconstructions, the hasCousin-in-law property should refer to another Person
+                          reconstruction.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasCousin-in-law property should always refer to another Person
+                          observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Sub property of:</p>
+              <ul>
+                <li>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="sect3">
+              <h4 id="https://personsincontext.org/model#hasDescendant">
+                <a class="anchor" href="#https://personsincontext.org/model#hasDescendant"></a>
                 <div>hasDescendant</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasDescendant" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasDescendant" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasDescendant<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -4910,12 +4909,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasFosterChild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasFosterChild"></a>
+              <h4 id="https://personsincontext.org/model#hasFosterChild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasFosterChild"></a>
                 <div>hasFosterChild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasFosterChild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasFosterChild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasFosterChild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasFosterChild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -4954,12 +4953,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasFosterParent">
-                <a class="anchor" href="#https://personsincontext.org/model/hasFosterParent"></a>
+              <h4 id="https://personsincontext.org/model#hasFosterParent">
+                <a class="anchor" href="#https://personsincontext.org/model#hasFosterParent"></a>
                 <div>hasFosterParent</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasFosterParent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasFosterParent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasFosterParent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasFosterParent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -4998,27 +4997,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGodchild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGodchild"></a>
+              <h4 id="https://personsincontext.org/model#hasGodchild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGodchild"></a>
                 <div>hasGodchild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGodchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGodchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGodchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGodchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasGodchild property should always refer to another Person
-                          observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5033,6 +5018,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasGodchild property should always refer to another Person
+                          observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5042,12 +5041,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGodparent">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGodparent"></a>
+              <h4 id="https://personsincontext.org/model#hasGodparent">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGodparent"></a>
                 <div>hasGodparent</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGodparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGodparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGodparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGodparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5086,27 +5085,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGrandchild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGrandchild"></a>
+              <h4 id="https://personsincontext.org/model#hasGrandchild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGrandchild"></a>
                 <div>hasGrandchild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGrandchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGrandchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGrandchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGrandchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasGrandchild property should always refer to another Person
-                          observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5121,6 +5106,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasGrandchild property should always refer to another Person
+                          observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5130,27 +5129,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGrandchild-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGrandchild-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasGrandchild-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGrandchild-in-law"></a>
                 <div>hasGrandchild-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGrandchild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGrandchild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGrandchild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGrandchild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasGrandchild-in-law property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5165,6 +5150,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasGrandchild-in-law property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5174,12 +5173,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGrandparent">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGrandparent"></a>
+              <h4 id="https://personsincontext.org/model#hasGrandparent">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGrandparent"></a>
                 <div>hasGrandparent</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGrandparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGrandparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGrandparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGrandparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5218,27 +5217,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGrandparent-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGrandparent-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasGrandparent-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGrandparent-in-law"></a>
                 <div>hasGrandparent-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGrandparent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGrandparent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGrandparent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGrandparent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person reconstructions, the hasGrandparent-in-law property should refer to another Person
-                          reconstruction.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5253,6 +5238,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person reconstructions, the hasGrandparent-in-law property should refer to another Person
+                          reconstruction.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5262,12 +5261,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGreat-grandchild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGreat-grandchild"></a>
+              <h4 id="https://personsincontext.org/model#hasGreat-grandchild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGreat-grandchild"></a>
                 <div>hasGreat-grandchild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGreat-grandchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGreat-grandchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGreat-grandchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGreat-grandchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5306,12 +5305,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasGreat-grandparent">
-                <a class="anchor" href="#https://personsincontext.org/model/hasGreat-grandparent"></a>
+              <h4 id="https://personsincontext.org/model#hasGreat-grandparent">
+                <a class="anchor" href="#https://personsincontext.org/model#hasGreat-grandparent"></a>
                 <div>hasGreat-grandparent</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasGreat-grandparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasGreat-grandparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasGreat-grandparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasGreat-grandparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5350,12 +5349,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasHalf-sibling">
-                <a class="anchor" href="#https://personsincontext.org/model/hasHalf-sibling"></a>
+              <h4 id="https://personsincontext.org/model#hasHalf-sibling">
+                <a class="anchor" href="#https://personsincontext.org/model#hasHalf-sibling"></a>
                 <div>hasHalf-sibling</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasHalf-sibling" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasHalf-sibling<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasHalf-sibling" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasHalf-sibling<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5394,12 +5393,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasLegitimizedChild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasLegitimizedChild"></a>
+              <h4 id="https://personsincontext.org/model#hasLegitimizedChild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasLegitimizedChild"></a>
                 <div>hasLegitimizedChild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasLegitimizedChild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasLegitimizedChild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasLegitimizedChild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasLegitimizedChild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5438,27 +5437,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasNephew_Niece-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasNephew_Niece-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasNephew_Niece-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasNephew_Niece-in-law"></a>
                 <div>hasNephew-in-law/Niece-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasNephew_Niece-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasNephew_Niece-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasNephew_Niece-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasNephew_Niece-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasNephew_Niece-in-law property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5473,6 +5458,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasNephew_Niece-in-law property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5482,12 +5481,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasNephew_Niece">
-                <a class="anchor" href="#https://personsincontext.org/model/hasNephew_Niece"></a>
+              <h4 id="https://personsincontext.org/model#hasNephew_Niece">
+                <a class="anchor" href="#https://personsincontext.org/model#hasNephew_Niece"></a>
                 <div>hasNephew/Niece</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasNephew_Niece" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasNephew_Niece<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasNephew_Niece" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasNephew_Niece<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5526,27 +5525,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasParent-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasParent-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasParent-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasParent-in-law"></a>
                 <div>hasParent-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasParent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasParent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasParent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasParent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasNephew_Niece property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5561,6 +5546,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasNephew_Niece property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5570,12 +5569,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasPreviousPartner">
-                <a class="anchor" href="#https://personsincontext.org/model/hasPreviousPartner"></a>
+              <h4 id="https://personsincontext.org/model#hasPreviousPartner">
+                <a class="anchor" href="#https://personsincontext.org/model#hasPreviousPartner"></a>
                 <div>hasPreviousPartner</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasPreviousPartner" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasPreviousPartner<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasPreviousPartner" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasPreviousPartner<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5614,12 +5613,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasRole">
-                <a class="anchor" href="#https://personsincontext.org/model/hasRole"></a>
+              <h4 id="https://personsincontext.org/model#hasRole">
+                <a class="anchor" href="#https://personsincontext.org/model#hasRole"></a>
                 <div>hasRole</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasRole" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasRole<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasRole" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasRole<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="paragraph">
                 <p>The role of a Person observation on the Source.</p>
@@ -5647,27 +5646,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasSibling-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasSibling-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasSibling-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasSibling-in-law"></a>
                 <div>hasSibling-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasSibling-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasSibling-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasSibling-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasSibling-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasSibling-in-law property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5682,6 +5667,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasSibling-in-law property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5691,27 +5690,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasStepchild">
-                <a class="anchor" href="#https://personsincontext.org/model/hasStepchild"></a>
+              <h4 id="https://personsincontext.org/model#hasStepchild">
+                <a class="anchor" href="#https://personsincontext.org/model#hasStepchild"></a>
                 <div>hasStepchild</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasStepchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasStepchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasStepchild" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasStepchild<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasStepchild property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5726,6 +5711,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasStepchild property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -5735,27 +5734,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasStepchild-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasStepchild-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasStepchild-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasStepchild-in-law"></a>
                 <div>hasStepchild-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasStepchild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasStepchild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasStepchild-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasStepchild-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasStepchild-in-law property should always refer to another
-                          Person observation on the same Source.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5770,22 +5755,6 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
-              <p>Sub property of:</p>
-              <ul>
-                <li>
-                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
-                </li>
-              </ul>
-            </div>
-            <hr>
-            <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasStepparent">
-                <a class="anchor" href="#https://personsincontext.org/model/hasStepparent"></a>
-                <div>hasStepparent</div>
-              </h4>
-              <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasStepparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasStepparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
-              </p>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -5793,21 +5762,7 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the hasStepparent property should refer to another Person
-                          reconstruction.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person observations, the hasStepparent property should always refer to another
+                      <td class="content">For Person observations, the hasStepchild-in-law property should always refer to another
                           Person observation on the same Source.
                        </td>
                     </tr>
@@ -5823,12 +5778,56 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasStepparent-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasStepparent-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasStepparent">
+                <a class="anchor" href="#https://personsincontext.org/model#hasStepparent"></a>
+                <div>hasStepparent</div>
+              </h4>
+              <p class="overflow-x-auto">IRI:
+                <a href="https://personsincontext.org/model#hasStepparent" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasStepparent<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+              </p>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person observations, the hasStepparent property should always refer to another
+                          Person observation on the same Source.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person reconstructions, the hasStepparent property should refer to another Person
+                          reconstruction.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Sub property of:</p>
+              <ul>
+                <li>
+                  <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="sect3">
+              <h4 id="https://personsincontext.org/model#hasStepparent-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasStepparent-in-law"></a>
                 <div>hasStepparent-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasStepparent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasStepparent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasStepparent-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasStepparent-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5867,12 +5866,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasStepsibling">
-                <a class="anchor" href="#https://personsincontext.org/model/hasStepsibling"></a>
+              <h4 id="https://personsincontext.org/model#hasStepsibling">
+                <a class="anchor" href="#https://personsincontext.org/model#hasStepsibling"></a>
                 <div>hasStepsibling</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasStepsibling" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasStepsibling<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasStepsibling" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasStepsibling<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5911,12 +5910,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasUncle_Aunt">
-                <a class="anchor" href="#https://personsincontext.org/model/hasUncle_Aunt"></a>
+              <h4 id="https://personsincontext.org/model#hasUncle_Aunt">
+                <a class="anchor" href="#https://personsincontext.org/model#hasUncle_Aunt"></a>
                 <div>hasUncle/Aunt</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasUncle_Aunt" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasUncle_Aunt<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasUncle_Aunt" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasUncle_Aunt<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -5955,12 +5954,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/hasUncle_Aunt-in-law">
-                <a class="anchor" href="#https://personsincontext.org/model/hasUncle_Aunt-in-law"></a>
+              <h4 id="https://personsincontext.org/model#hasUncle_Aunt-in-law">
+                <a class="anchor" href="#https://personsincontext.org/model#hasUncle_Aunt-in-law"></a>
                 <div>hasUncle/Aunt-in-law</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/hasUncle_Aunt-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/hasUncle_Aunt-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#hasUncle_Aunt-in-law" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#hasUncle_Aunt-in-law<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -6027,27 +6026,13 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/isLegitimitezedChildOf">
-                <a class="anchor" href="#https://personsincontext.org/model/isLegitimitezedChildOf"></a>
+              <h4 id="https://personsincontext.org/model#isLegitimitezedChildOf">
+                <a class="anchor" href="#https://personsincontext.org/model#isLegitimitezedChildOf"></a>
                 <div>isLegitimitezedChildOf</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/isLegitimitezedChildOf" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/isLegitimitezedChildOf<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#isLegitimitezedChildOf" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#isLegitimitezedChildOf<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
-              <div class="admonitionblock note">
-                <table>
-                  <tbody>
-                    <tr>
-                      <td class="icon">
-                        <div class="title">Scope Note</div>
-                      </td>
-                      <td class="content">For Person reconstructions, the isLegitimitezedChildOf property should refer to another Person
-                          reconstruction.
-                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
               <div class="admonitionblock note">
                 <table>
                   <tbody>
@@ -6062,6 +6047,20 @@ cbg:reconstruction_activity_01
                   </tbody>
                 </table>
               </div>
+              <div class="admonitionblock note">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="icon">
+                        <div class="title">Scope Note</div>
+                      </td>
+                      <td class="content">For Person reconstructions, the isLegitimitezedChildOf property should refer to another Person
+                          reconstruction.
+                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <p>Sub property of:</p>
               <ul>
                 <li>
@@ -6071,12 +6070,12 @@ cbg:reconstruction_activity_01
             </div>
             <hr>
             <div class="sect3">
-              <h4 id="https://personsincontext.org/model/isWidOf">
-                <a class="anchor" href="#https://personsincontext.org/model/isWidOf"></a>
+              <h4 id="https://personsincontext.org/model#isWidOf">
+                <a class="anchor" href="#https://personsincontext.org/model#isWidOf"></a>
                 <div>isWidow/WidowerOf</div>
               </h4>
               <p class="overflow-x-auto">IRI:
-                <a href="https://personsincontext.org/model/isWidOf" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model/isWidOf<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                <a href="https://personsincontext.org/model#isWidOf" style="white-space: nowrap;" target="_blank">https://personsincontext.org/model#isWidOf<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
               </p>
               <div class="admonitionblock note">
                 <table>
@@ -6085,8 +6084,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the isWidOf property should always refer to another
-                          Person observation on the same Source.
+                      <td class="content">For Person reconstructions, the isWidOf property should refer to another Person
+                          reconstruction.
                        </td>
                     </tr>
                   </tbody>
@@ -6099,8 +6098,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the isWidOf property should refer to another Person
-                          reconstruction.
+                      <td class="content">For Person observations, the isWidOf property should always refer to another
+                          Person observation on the same Source.
                        </td>
                     </tr>
                   </tbody>
@@ -6159,7 +6158,7 @@ cbg:reconstruction_activity_01
                   <a href="https://schema.org/relatedTo" style="white-space: nowrap;" target="_blank">schema:relatedTo<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
                 <li>
-                  <a href="https://personsincontext.org/model/hasAncestor" style="white-space: nowrap;" target="_blank">hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
+                  <a href="https://personsincontext.org/model#hasAncestor" style="white-space: nowrap;" target="_blank">hasAncestor<i class="fa fa-external-link" style="margin-left: 4px;"></i></a>
                 </li>
               </ul>
               <p>Domain includes:</p>
@@ -6259,8 +6258,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person reconstructions, the spouse should refer to the Person reconstruction of
-                             the spouse.
+                      <td class="content">For Person observations, the spouse should always refer to another Person observation
+                             on the same Source.
                           </td>
                     </tr>
                   </tbody>
@@ -6273,8 +6272,8 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Person observations, the spouse should always refer to another Person observation
-                             on the same Source.
+                      <td class="content">For Person reconstructions, the spouse should refer to the Person reconstruction of
+                             the spouse.
                           </td>
                     </tr>
                   </tbody>
@@ -6346,7 +6345,9 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Sources: a link to the Source at the holding archive. Preferably a permalink.</td>
+                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       </td>
                     </tr>
                   </tbody>
                 </table>
@@ -6358,9 +6359,7 @@ cbg:reconstruction_activity_01
                       <td class="icon">
                         <div class="title">Scope Note</div>
                       </td>
-                      <td class="content">For Scans of Sources: a link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       </td>
+                      <td class="content">For Sources: a link to the Source at the holding archive. Preferably a permalink.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -6368,10 +6367,10 @@ cbg:reconstruction_activity_01
               <p>Domain includes:</p>
               <ul>
                 <li>
-                  <a href="#Source">Source</a>
+                  <a href="#Scan">Scan</a>
                 </li>
                 <li>
-                  <a href="#Scan">Scan</a>
+                  <a href="#Source">Source</a>
                 </li>
               </ul>
               <p>Range includes:</p>
