@@ -50,6 +50,7 @@ ROAR was developed by
 * Menno den Engelse, ([Islands of Meaning, The Netherlands](https://islandsofmeaning.nl/))
 * Leon van Wissen, ([University of Amsterdam, The Netherlands](https://www.uva.nl/over-de-uva/organisatie/faculteiten/faculteit-der-geesteswetenschappen/faculteit-der-geesteswetenschappen.html))
 
+
 ## License
 
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa].
