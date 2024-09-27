@@ -1,7 +1,7 @@
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix sdo:   <https://schema.org/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico:  <https://personsincontext.org/model/> .
+@prefix pico:  <https://personsincontext.org/model#> .
 @prefix picot: <https://terms.personsincontext.org/> .
 @prefix nha:   <https://noord-hollandsarchief.nl/> .
 
@@ -107,5 +107,5 @@ nha:NL-HlmNHA_1482_234_B_0006_po_9
 nha:NL-HlmNHA_1482_234_B_0006
     a                  sdo:ArchiveComponent ;
     sdo:name           "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006" ;
-    sdo:holdingArchive <https://noord-hollandsarchief.nl/> ;
+    sdo:holdingArchive nha: ;
     sdo:additionalType picot:sourcetypes/554 .  # bevolkingsregister

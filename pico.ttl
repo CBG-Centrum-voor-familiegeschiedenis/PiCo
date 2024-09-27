@@ -1,6 +1,6 @@
 # Version: 20230921
 
-@prefix :        <https://personsincontext.org/model/> .  # TODO: Or change to hash namespace in stead of slash namespace?
+@prefix :        <https://personsincontext.org/model#> .  # TODO: Or change to hash namespace in stead of slash namespace?
 @prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

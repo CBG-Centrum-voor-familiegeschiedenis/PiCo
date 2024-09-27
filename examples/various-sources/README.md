@@ -1,6 +1,6 @@
 # Example data about Abe Bos (Joure 1858 - Haarlem 1954), strike leader Railwaystrike 1903
 
-This example contains several sources with data about and around one person. They refer to the same person, ie. the
+This example contains several sources with data about and around one person. They refer to the same person, i.e. the
 PersonReconstruction.
 
 ## Overview

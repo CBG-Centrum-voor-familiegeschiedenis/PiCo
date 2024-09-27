@@ -1,6 +1,6 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pico: <https://personsincontext.org/model/> .
+@prefix pico: <https://personsincontext.org/model#> .
 @prefix sdo:  <https://schema.org/> .
 @prefix pnv:  <https://w3id.org/pnv#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -26,9 +26,11 @@ _:person_reconstruction_1
     sdo:birthDate       "1816-10-11"^^xsd:date ;
     prov:wasDerivedFrom [ a                     pico:PersonObservation ;
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
-                          prov:hadPrimarySource [ a        sdo:ArchiveComponent ;
-                                                  sdo:name "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021" ;
-                                                  sdo:url  <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
+                          prov:hadPrimarySource [ a sdo:ArchiveComponent ;
+                                                  sdo:name
+                                                    "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021" ;
+                                                  sdo:url
+                                                    <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .
 
 _:reconstruction_activity_01

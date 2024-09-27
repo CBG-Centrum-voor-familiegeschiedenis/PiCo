@@ -1,72 +1,51 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico: <https://personsincontext.org/model/> .
-@prefix sdo: <https://schema.org/> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix pico: <https://personsincontext.org/model#> .
+@prefix sdo:  <https://schema.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 pico:PersonReconstructionShape
-    a                sh:NodeShape ;
-    sh:targetClass   pico:PersonReconstruction  ;
-    
-    sh:property [
-        sh:path      prov:wasDerivedFrom ;
-        sh:class     pico:PersonObservation ;
-        sh:minCount  1 ;
-        sh:message   "A Person reconstruction must always refer to one or more Person observations via prov:wasDerivedFrom." ;
-    ] ;
-	
-    sh:property [
-        sh:path      prov:wasGeneratedBy ;
-        sh:class     prov:Activity ;
-        sh:minCount  1 ;
-        sh:message   "Information about the creation of a Person reconstruction should be documented via prov:wasGeneratedBy." ;
-    ] ;
+    a              sh:NodeShape ;
+    sh:targetClass pico:PersonReconstruction ;
+    sh:property    [ sh:path     prov:wasDerivedFrom ;
+                     sh:class    pico:PersonObservation ;
+                     sh:minCount 1 ;
+                     sh:message  "A PersonReconstruction must always refer to one or more PersonObservations via prov:wasDerivedFrom." ; ] ;
+    sh:property    [ sh:path     prov:wasGeneratedBy ;
+                     sh:class    prov:Activity ;
+                     sh:minCount 1 ;
+                     sh:message  "Information about the creation of a PersonReconstruction should be documented via prov:wasGeneratedBy." ; ] ;
 .
 
 pico:PersonObservationShape
-    a                sh:NodeShape ;
-    sh:targetClass   pico:PersonObservation ;
-        
-    sh:property [
-        sh:path      pico:hasAge ;
-        sh:datatype  xsd:string ;
-        sh:maxCount  1 ;
-        sh:message   "A Person observation can have only one age." ;
-    ] ;
-        
-    sh:property [
-        sh:path      prov:hadPrimarySource ;
-        sh:node      sdo:ArchiveComponent ;
-        sh:minCount  1 ;
-        sh:message   "A Person observation must have at least one primary source which is related to a archive component." ;
-    ] ;
+    a              sh:NodeShape ;
+    sh:targetClass pico:PersonObservation ;
+    sh:property    [ sh:path     pico:hasAge ;
+                     sh:datatype xsd:string ;
+                     sh:maxCount 1 ;
+                     sh:message  "A PersonObservation can have only one age." ; ] ;
+    sh:property    [ sh:path     prov:hadPrimarySource ;
+                     sh:node     sdo:ArchiveComponent ;
+                     sh:minCount 1 ;
+                     sh:message  "A PersonObservation must have at least one PrimarySource which is related to a ArchiveComponent." ; ] ;
 .
 
 sdo:ArchiveComponentShape
-    a                sh:NodeShape ;
-    sh:targetClass   sdo:ArchiveComponent ;
-    
-    sh:property [
-        sh:path sdo:name ;
-        sh:or (
-				 [ sh:datatype xsd:string ]
-				 [ sh:datatype rdf:langString ]
-        ) ;
-        sh:minCount 1 ;
-        sh:message "An archive component must have a name." ;
-    ] ;
+    a              sh:NodeShape ;
+    sh:targetClass sdo:ArchiveComponent ;
+    sh:property    [ sh:path     sdo:name ;
+                     sh:or       ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
+                     sh:minCount 1 ;
+                     sh:message  "An ArchiveComponent must have a name." ; ] ;
 .
 
 prov:ActivityShape
-    a                sh:NodeShape ;
-    sh:targetClass   prov:Activity ;
-
-    sh:property [
-        sh:path      prov:wasAssociatedWith ;
-        sh:class     prov:Agent ;
-        sh:minCount  1 ;
-        sh:message   "An avtivity must be associated with an agent." ;
-    ] ;
+    a              sh:NodeShape ;
+    sh:targetClass prov:Activity ;
+    sh:property    [ sh:path     prov:wasAssociatedWith ;
+                     sh:class    prov:Agent ;
+                     sh:minCount 1 ;
+                     sh:message  "An Activity must be associated with an Agent." ; ] ;
 .

@@ -4,7 +4,7 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix cbg:   <https://data.cbg.nl/> .
-@prefix pico:  <https://personsincontext.org/model/> .
+@prefix pico:  <https://personsincontext.org/model#> .
 @prefix picot: <https://terms.personsincontext.org/> .
 @prefix nha:   <https://noord-hollandsarchief.nl/> .
 @prefix hua:   <https://hetutrechtsarchief.nl/> .
@@ -15,32 +15,24 @@ cbg:person_reconstruction_1
     sdo:familyName      "Bos" ;
     sdo:givenName       "Abe" ;
     sdo:gender          sdo:Male ;
-    sdo:hasOccupation   [ rdf:value
-                                  "agent van politie" ;
-                          sdo:endDate
-                                  "1892"^^xsd:gYear ],
-                        [ rdf:value
-                                  "locomotief bankwerker" ;
-                          sdo:startDate
-                                  "1892"^^xsd:gYear ],
+    sdo:hasOccupation   [ rdf:value "agent van politie" ;
+                          sdo:endDate "1892"^^xsd:gYear ; ] ,
+                        [ rdf:value "locomotief bankwerker" ;
+                          sdo:startDate "1892"^^xsd:gYear ; ] ,
                         [ rdf:value "zonder" ;
-                          sdo:endDate
-                                  "1954"^^xsd:gYear ] ;
+                          sdo:endDate "1954"^^xsd:gYear ; ] ;
     sdo:birthPlace      "Joure, gemeente Haskerland" ;
     sdo:birthDate       "1858-01-21"^^xsd:date ;
     sdo:deathPlace      "Haarlem" ;
     sdo:deathDate       "1954-02-28"^^xsd:date ;
-    sdo:spouse          [ rdf:value
-                                  cbg:person_reconstruction_2 ;
-                          sdo:startDate
-                                  "1885-11-11"^^xsd:date ;
-                          sdo:endDate
-                                  "1926"^^xsd:gYear ] ;
-    prov:wasDerivedFrom nha:NL-HlmNHA_1503_537_IVa_63_po_1,    # belastingregisratie
-                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # bevolkingregistatie
-                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # jaarboekje
-                        nha:huwelijksakte_1885_321_po_1,       # huwelijksakte
-                        hua:NL-UtHUA_920_26-29_2430_po_1,      # personeelsregistratie
+    sdo:spouse          [ rdf:value cbg:person_reconstruction_2 ;
+                          sdo:startDate "1885-11-11"^^xsd:date ;
+                          sdo:endDate "1926"^^xsd:gYear ; ] ;
+    prov:wasDerivedFrom nha:NL-HlmNHA_1503_537_IVa_63_po_1 ,    # belastingregistratie
+                        nha:NL-HlmNHA_1482_234_B_0006_po_1 ,    # bevolkingregistratie
+                        nha:NL-HlmNHA_1482_234_B_0006_po_1 ,    # jaarboekje
+                        nha:huwelijksakte_1885_321_po_1 ,       # huwelijksakte
+                        hua:NL-UtHUA_920_26-29_2430_po_1 ,      # personeelsregistratie
                         cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
     prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
