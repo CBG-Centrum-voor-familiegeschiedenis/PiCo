@@ -43,6 +43,10 @@ Het huidige A2A-model schiet op een aantal punten te kort. Een aantal knelpunten
 
 Alle deliverables worden in eerste instantie in het Nederlands opgesteld. Indien nodig, kunnen deze later vertaald worden naar het Engels. 
 
+
+## PiCo Documentation
+Utigebreide documentatie van het Persons in Context model is beschikbaar op: https://personsincontext.org.
+
 ## Erkenning
 PiCo is geïnspireerd op de [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) ontologie voor Reconstructions and Observations in Archival Resources.\
 ROAR is ontwikkeld door:

@@ -41,12 +41,14 @@ The current A2A model falls short in a number of ways. Some of the model's bottl
 
 All deliverables will initially be produced in Dutch. If necessary, they can later be translated into English. 
 
+## PiCo Documentation
+More extensive documentation of the Persons in Context model can be found at: https://personsincontext.org.
+
 ## Acknowledgements
 PiCo is inspired by the [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) ontology for Reconstructions and Observations in Archival Resources.
 ROAR was developed by
 * Menno den Engelse, ([Islands of Meaning, The Netherlands](https://islandsofmeaning.nl/))
 * Leon van Wissen, ([University of Amsterdam, The Netherlands](https://www.uva.nl/over-de-uva/organisatie/faculteiten/faculteit-der-geesteswetenschappen/faculteit-der-geesteswetenschappen.html))
-
 
 ## License
 
