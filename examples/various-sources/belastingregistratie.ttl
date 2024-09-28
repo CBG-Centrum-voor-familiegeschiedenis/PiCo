@@ -16,7 +16,7 @@ nha:NL-HlmNHA_1503_537_IVa_63_po_1
     sdo:name              "Bos, A." ;
     sdo:familyName        "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
-    sdo:additionalName    [ a               pnv:PersonName ;
+    sdo:alternateName    [ a               pnv:PersonName ;
                             pnv:literalName "Bos, A." ;
                             pnv:initials    "A." ; ] ;
     sdo:address           "Eendrachtstraat 3" ;

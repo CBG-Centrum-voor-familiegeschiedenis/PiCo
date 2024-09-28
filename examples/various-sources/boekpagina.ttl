@@ -12,7 +12,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_1
     a                     pico:PersonObservation ;
     prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
     sdo:name              "Bos, A." ;
-    sdo:additionalName    [ a               pnv:PersonName ;
+    sdo:alternateName    [ a               pnv:PersonName ;
                             pnv:initials    "A." ;
                             pnv:literalName "Bos, A." ] ;
     sdo:address           "Eendrachtstraat 3" ;

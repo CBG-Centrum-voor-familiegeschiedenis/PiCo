@@ -16,7 +16,7 @@ hua:NL-UtHUA_920_26-29_2430_po_1
     sdo:name              "Bos, A." ;
     sdo:familyName        "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
-    sdo:additionalName    [ a               pnv:PersonName ;
+    sdo:alternateName    [ a               pnv:PersonName ;
                             pnv:literalName "Bos, A." ;
                             pnv:initials    "A." ; ] ;
     sdo:hasOccupation     "loc. Bankwr" .

@@ -47,7 +47,7 @@ afr:geboorteregiser_1858_po_3
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
-    sdo:additionalName    [ a                 pnv:PersonName ;
+    sdo:alternateName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk" ;
                             pnv:baseSurname   "Wijk" ;
                             pnv:surnamePrefix "van der" ; ] ;

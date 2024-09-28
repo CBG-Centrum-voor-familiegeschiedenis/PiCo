@@ -657,11 +657,11 @@ prov:wasAssociatedWith
 # Object Properties
 ########################################################################################################################
 
-sdo:additionalName
+sdo:alternateName
     a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo:additionalName ;
+    rdfs:isDefinedBy   sdo:alternateName ;
     skos:definition    "The name of a Person, annotated according to the Person Name Vocabulary." ;
-    rdfs:label         "additionalName"@en ;
+    rdfs:label         "alternateName"@en ;
 #    rdfs:label        "heeft naam"@nl ;
     sdo:domainIncludes :Person ;
     sdo:rangeIncludes  pnv:PersonName ;

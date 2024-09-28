@@ -45,7 +45,7 @@ nha:huwelijksakte_1885_321_po_3
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
-    sdo:additionalName    [ a               pnv:PersonName ;
+    sdo:alternateName    [ a               pnv:PersonName ;
                             pnv:literalName "Sjouke Abes Bos" ;
                             pnv:patronym    "Abes" ; ] ;
     sdo:gender            sdo:Male ;
@@ -57,7 +57,7 @@ nha:huwelijksakte_1885_321_po_4
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
-    sdo:additionalName    [ a                 pnv:PersonName ;
+    sdo:alternateName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk" ;
                             pnv:baseSurname   "Wijk" ;
                             pnv:surnamePrefix "van der" ; ] ;
@@ -80,7 +80,7 @@ nha:huwelijksakte_1885_321_po_6
     sdo:name              "Helena Catharina van Zijl" ;
     sdo:familyName        "van Zijl" ;
     sdo:givenName         "Helena Catharina" ;
-    sdo:additionalName    [ a                 pnv:PersonName ;
+    sdo:alternateName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Helena Catharina van Zijl" ;
                             pnv:baseSurname   "Zijl" ;
                             pnv:surnamePrefix "van" ; ] ;
