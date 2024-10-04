@@ -45,7 +45,7 @@ Alle deliverables worden in eerste instantie in het Nederlands opgesteld. Indien
 
 
 ## PiCo Documentatie
-Utigebreide documentatie van het Persons in Context model is beschikbaar op: https://personsincontext.org.
+Uitgebreide documentatie van het Persons in Context model is beschikbaar op: https://personsincontext.org.
 
 ## Erkenning
 PiCo is geïnspireerd op de [ROAR](https://leonvanwissen.nl/vocab/roar/docs/) ontologie voor Reconstructions and Observations in Archival Resources.\

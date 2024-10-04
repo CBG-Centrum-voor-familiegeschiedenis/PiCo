@@ -30,7 +30,7 @@
 #                        sdo:name  "Pieter Woltjer"@en ;
 #                        sdo:affiliation
 #                                [
-#                                    sdo:name "CBG|Center for familiy history"@en ;
+#                                    sdo:name "CBG|Center for family history"@en ;
 #                                    sdo:url  "https://cbg.nl"
 #                                ] ;
 #                        sdo:email "pieter.woltjer@cbg.nl"
@@ -39,7 +39,7 @@
 #                        sdo:name   "Jeroen Balkenende"@en ;
 #                        sdo:affiliation
 #                                [
-#                                    sdo:name "CBG|Center for familiy history"@en ;
+#                                    sdo:name "CBG|Center for family history"@en ;
 #                                    sdo:url  "https://cbg.nl"
 #                                ] ;
 #                    ] ,
@@ -194,7 +194,7 @@ prov:Agent
                       sdo:encodingFormat "text/turtle" ;
                       sdo:name           "Person observation example" ;
                       sdo:text           """
-                                            afr:geboorteregiser_1858_po_1
+                                            afr:geboorteregister_1858_po_1
                                                a                     :PersonObservation ;
                                                prov:hadPrimarySource afr:geboorteregiser_1858 ;
                                                sdo:name              "Abe Bos" ;
@@ -297,7 +297,7 @@ sdo:ArchiveComponent
                       sdo:encodingFormat "text/turtle" ;
                       sdo:name           "Source with a linked Scan" ;
                       sdo:text           """
-                                                   afr:geboorteregiser_1858
+                                                   afr:geboorteregister_1858
                                                        a                   sdo:ArchiveComponent ;
                                                        sdo:additionalType  picot:sourcetypes/551 ;  # civil registry: birth
                                                        sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
@@ -625,7 +625,7 @@ sdo:position
 .
 
 prov:startedAtTime
-    a                  owl:DatatypeProperty ;  # TODO: startedAtTime vereist een xsd:dateTime. Vaak is het tijdstip niet bekend, maar volstaat een date. Gebruiken we dan T00:00:00 of maken we een subclasse die alleen een date toestaat?
+    a                  owl:DatatypeProperty ;  # TODO: startedAtTime vereist een xsd:dateTime. Vaak is het tijdstip niet bekend, maar volstaat een date. Gebruiken we dan T00:00:00 of maken we een subklasse die alleen een date toestaat?
     rdfs:isDefinedBy   prov:startedAtTime ;
     skos:definition    "The start time of the activity that generated a Person Reconstruction." ;
     rdfs:label         "startedAtTime" ;

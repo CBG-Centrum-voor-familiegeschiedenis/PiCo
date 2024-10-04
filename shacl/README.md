@@ -7,7 +7,7 @@ SHACL defines shapes—descriptions of how RDF data should be structured—and e
 ## Using Apache Jena SHACL
 To validate a RDF file (which can be Turtle, N-triple, RDF/XML, JSON-LD) against a SHACL shapes file, the [Apache Jena tool `shacl`](https://jena.apache.org/documentation/shacl/index.html) can be used. This tool is part of the [Apache Jena distribution](https://jena.apache.org/download/index.cgi).
 
-The `--shapes` and `--data` parameters can be an oflline file or an URL of an online file. For PiCo, the pico_shacl_v0.1.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
+The `--shapes` and `--data` parameters can be an offline file or an URL of an online file. For PiCo, the pico_shacl_v0.1.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
 
 	shacl validate --shapes pico_shacl_v0.1.ttl \ 
           --data test2.ttl
