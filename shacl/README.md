@@ -5,9 +5,9 @@ The [Shapes Constraint Language](https://www.w3.org/TR/shacl/) (SHACL) is a W3C-
 
 SHACL defines shapes—descriptions of how RDF data should be structured—and enforce these descriptions across datasets. These shapes ensure that the data conforms to predefined expectations, such as the types of properties entities should have, the data types of those properties, or cardinality constraints (e.g., how many times a property can occur). 
 ## Using Apache Jena SHACL
-To validate a RDF file (which can be Turtle, N-triple, RDF/XML, JSON-LD) against a SHACL shapes file, the [Apache Jena tool `shacl`](https://jena.apache.org/documentation/shacl/index.html) can be used. This tool is part of the [Apache Jena distribution](https://jena.apache.org/download/index.cgi).
+To validate an RDF file (which can be Turtle, N-triple, RDF/XML, JSON-LD) against a SHACL shapes file, the [Apache Jena tool `shacl`](https://jena.apache.org/documentation/shacl/index.html) can be used. This tool is part of the [Apache Jena distribution](https://jena.apache.org/download/index.cgi).
 
-The `--shapes` and `--data` parameters can be an offline file or an URL of an online file. For PiCo, the pico_shacl_v0.1.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
+The `--shapes` and `--data` parameters can be an offline file or a URL of an online file. For PiCo, the pico_shacl_v0.1.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
 
 	shacl validate --shapes pico_shacl_v0.1.ttl \ 
           --data test2.ttl

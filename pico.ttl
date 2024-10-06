@@ -88,9 +88,8 @@
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
     vann:preferredNamespacePrefix "pico" ;
-#    owl:versionIRI               :0.9 ;  # Versions are currently defined as redirects from :ontology in the .htaccess of the web server
-    owl:versionInfo               "0.9 - First published version of the PiCo model."@en ;
-#    owl:priorVersion                "n.a."
+    owl:versionInfo               "1.0"@en ;
+    owl:priorVersion              "0.9"@en ;
     skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and
                                      publishing person observations from historical sources.
                                      A main characteristic of PiCo is the distinction between Person observations
@@ -1379,9 +1378,6 @@ picot:sourectypes
 # ROAR attribution
 # PNV attribution (Voor de ontologie. En ik gebruik ook een aantal teksten uit hun documentatie.
 # LODE attribution. Dit gaat vanzelf goed in de ontpub versie, maar (nog?) niet in de nieuwe versie
-# Meertalig maken. Nu is alles in Engels. Moet ook in NL kunnen. En later mogelijk andere talen. Dit werkt nog niet in de supermodel versie van pyLODE
-# Versioning van de ontologie. Ook in de publicatie. Willen we oudere versies beschikbaar houden op eigen URL?
-# Alle pico-relaties tussen personen zijn van naam veranderd: prefix 'has' toegevoegd om ambiguïteit te voorkomen ('grandparent' kon geïnterpreteerd worden als 'hasGrandparent' of als 'grandparentOf'
 
 # Documentation
 # Must-read for publishing ontologies: https://www.w3.org/TR/swbp-vocab-pub/
