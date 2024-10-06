@@ -7,25 +7,25 @@ SHACL defines shapes—descriptions of how RDF data should be structured—and e
 ## Using Apache Jena SHACL
 To validate an RDF file (which can be Turtle, N-triple, RDF/XML, JSON-LD) against a SHACL shapes file, the [Apache Jena tool `shacl`](https://jena.apache.org/documentation/shacl/index.html) can be used. This tool is part of the [Apache Jena distribution](https://jena.apache.org/download/index.cgi).
 
-The `--shapes` and `--data` parameters can be an offline file or a URL of an online file. For PiCo, the pico_shacl_v0.1.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
+The `--shapes` and `--data` parameters can be an offline file or a URL of an online file. For PiCo, the pico_shacl.ttl can be downloaded or referenced via its (raw) URL. Some examples below (output omitted):
 
-	shacl validate --shapes pico_shacl_v0.1.ttl \ 
+	shacl validate --shapes pico_shacl.ttl \ 
           --data test2.ttl
                      
-	shacl validate --shapes pico_shacl_v0.1.ttl \ 
+	shacl validate --shapes pico_shacl.ttl \ 
           --data https://www.openarchieven.nl/smh:f9ddec9e-a701-463b-fb0c-a1beda807112/ttl:pico
                      
-	shacl validate --shapes pico_shacl_v0.1.ttl \ 
+	shacl validate --shapes pico_shacl.ttl \ 
           --data https://www.genealogieonline.nl/wo2slachtoffers/23.ttl
 
-    shacl validate --shapes https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/shacl/pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes https://personsincontext.org/shacl/pico_shacl.ttl \ 
           --data https://raw.githubusercontent.com/ivozandhuis/a2a-to-pico/refs/heads/main/examples/output/allefriezen_8f998b40-9d13-1861-62fe-feb667283688.ttl
 
-    shacl validate --shapes https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/shacl/pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes https://personsincontext.org/shacl/pico_shacl.ttl \ 
           --data https://raw.githubusercontent.com/ivozandhuis/a2a-to-pico/refs/heads/main/examples/output/NL-HlmNHA_3586-667_54_A2A.rdf
 
-    shacl validate --shapes pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes pico_shacl.ttl \ 
           --data https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/examples/reconstruction-with-blanknodes/rinske-pieters-van-der-werf.ttl
 
-    shacl validate --shapes pico_shacl_v0.1.ttl \ 
+    shacl validate --shapes pico_shacl.ttl \ 
           --data https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/refs/heads/main/examples/various-sources/personreconstruction.ttl
