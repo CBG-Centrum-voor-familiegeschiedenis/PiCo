@@ -32,7 +32,7 @@ afr:geboorteregiser_1858_po_2
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
-    pico:hasAge           "30"^^xs:decimal  ;
+    pico:hasAge           "30"^^xs:decimal ;
     sdo:hasOccupation     "klokmakersknecht" ;
     sdo:address           "Joure" ;
     sdo:gender            sdo:Male ;
