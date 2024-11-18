@@ -46,6 +46,7 @@
    <glyph unicode="I" horiz-adv-x="192" d="M 189,0 L 189,1409 380,1409 380,0 189,0 Z"/>
    <glyph unicode="H" horiz-adv-x="1140" d="M 1121,0 L 1121,653 359,653 359,0 168,0 168,1409 359,1409 359,813 1121,813 1121,1409 1312,1409 1312,0 1121,0 Z"/>
    <glyph unicode="F" horiz-adv-x="997" d="M 359,1253 L 359,729 1145,729 1145,571 359,571 359,0 168,0 168,1409 1169,1409 1169,1253 359,1253 Z"/>
+   <glyph unicode="E" horiz-adv-x="1106" d="M 168,0 L 168,1409 1237,1409 1237,1253 359,1253 359,801 1177,801 1177,647 359,647 359,156 1278,156 1278,0 168,0 Z"/>
    <glyph unicode="D" horiz-adv-x="1208" d="M 1381,719 C 1381,574 1353,447 1296,338 1239,229 1159,145 1055,87 951,29 831,0 695,0 L 168,0 168,1409 634,1409 C 873,1409 1057,1349 1187,1230 1316,1110 1381,940 1381,719 Z M 1189,719 C 1189,894 1141,1027 1046,1119 950,1210 811,1256 630,1256 L 359,1256 359,153 673,153 C 776,153 867,176 946,221 1024,266 1084,332 1126,417 1168,502 1189,603 1189,719 Z"/>
    <glyph unicode="C" horiz-adv-x="1292" d="M 792,1274 C 636,1274 515,1224 428,1124 341,1023 298,886 298,711 298,538 343,400 434,295 524,190 646,137 800,137 997,137 1146,235 1245,430 L 1401,352 C 1343,231 1262,138 1157,75 1052,12 930,-20 791,-20 649,-20 526,10 423,69 319,128 240,212 186,322 131,431 104,561 104,711 104,936 165,1112 286,1239 407,1366 575,1430 790,1430 940,1430 1065,1401 1166,1342 1267,1283 1341,1196 1388,1081 L 1207,1021 C 1174,1103 1122,1166 1050,1209 977,1252 891,1274 792,1274 Z"/>
    <glyph unicode="B" horiz-adv-x="1086" d="M 1258,397 C 1258,272 1212,174 1121,105 1030,35 903,0 740,0 L 168,0 168,1409 680,1409 C 1011,1409 1176,1295 1176,1067 1176,984 1153,914 1106,857 1059,800 993,762 908,743 1020,730 1106,692 1167,631 1228,569 1258,491 1258,397 Z M 984,1044 C 984,1120 958,1174 906,1207 854,1240 779,1256 680,1256 L 359,1256 359,810 680,810 C 782,810 858,829 909,868 959,906 984,965 984,1044 Z M 1065,412 C 1065,578 948,661 715,661 L 359,661 359,153 730,153 C 847,153 932,175 985,218 1038,261 1065,326 1065,412 Z"/>
@@ -70,7 +71,7 @@
    <glyph unicode=")" horiz-adv-x="543" d="M 555,528 C 555,335 525,162 465,9 404,-144 311,-289 186,-424 L 12,-424 C 137,-284 229,-136 287,19 345,174 374,344 374,530 374,716 345,887 287,1042 228,1197 137,1345 12,1484 L 186,1484 C 312,1348 405,1203 465,1050 525,896 555,723 555,532 L 555,528 Z"/>
    <glyph unicode="(" horiz-adv-x="542" d="M 127,532 C 127,725 157,898 218,1051 278,1204 371,1349 496,1484 L 670,1484 C 545,1345 454,1198 396,1042 337,886 308,715 308,530 308,345 337,175 395,20 452,-135 544,-283 670,-424 L 496,-424 C 370,-288 277,-143 217,11 157,164 127,337 127,528 L 127,532 Z"/>
    <glyph unicode="&quot;" horiz-adv-x="552" d="M 618,966 L 476,966 456,1409 640,1409 618,966 Z M 249,966 L 108,966 87,1409 271,1409 249,966 Z"/>
-   <glyph unicode=" " horiz-adv-x="556"/>
+   <glyph unicode=" " horiz-adv-x="566"/>
   </font>
  </defs>
  <defs>
@@ -224,7 +225,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 5752,2500 L 5671,2500"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 5563,2500 L 5482,2500"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 5375,2500 L 5294,2500"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2280" y="1932"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&quot;BS Huwelijk Haarlem, 11 november 1885, </tspan></tspan><tspan class="TextPosition" x="4025" y="2288"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">aktenummer 321&quot;</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2281" y="1932"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&quot;BS Huwelijk Haarlem, 11 november 1885, </tspan></tspan><tspan class="TextPosition" x="4025" y="2288"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">aktenummer 321&quot;</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -301,7 +302,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 22572,2300 L 22491,2300"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 22383,2300 L 22302,2300"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 22195,2300 L 22113,2300"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19719" y="2110"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://noord-hollandsarchief.nl&gt;</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="19720" y="2110"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://noord-hollandsarchief.nl&gt;</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -400,7 +401,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 22234,8750 L 22152,8750"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 22045,8750 L 21964,8750"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 21856,8750 L 21776,8750"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18516" y="8180"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://www.openarch.nl/nha:5ec8bcce-acd6-</tspan></tspan><tspan class="TextPosition" x="19851" y="8536"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">4107-8011-0ccd6b740e7c&gt;</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="20165" y="8002"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://hdl.handle.net/</tspan></tspan><tspan class="TextPosition" x="18223" y="8358"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">21.12102/5EC8BCCEACD6410780110CCD6B740</tspan></tspan><tspan class="TextPosition" x="21375" y="8714"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E7C&gt;</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -442,7 +443,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 5403,8578 L 5321,8578"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 5214,8578 L 5133,8578"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 5025,8578 L 4944,8578"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3980" y="8358"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">“</tspan><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1885-11-11”</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3978" y="8358"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">“</tspan><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1885-11-11”</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.ConnectorShape">
@@ -515,7 +516,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 14287,16205 L 14206,16205"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 14099,16205 L 14017,16205"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 13910,16205 L 13829,16205"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13636" y="15985"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13635" y="15985"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">1</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -613,7 +614,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 6464,16387 L 6383,16387"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 6276,16387 L 6194,16387"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 6087,16387 L 6006,16387"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3050" y="15806"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://proxy.archieven.nl/download/236/</tspan></tspan><tspan class="TextPosition" x="2887" y="16162"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">F9934C85D44446699C60862B3433A9AC&gt;</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3050" y="15807"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://proxy.archieven.nl/download/236/</tspan></tspan><tspan class="TextPosition" x="2887" y="16163"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">F9934C85D44446699C60862B3433A9AC&gt;</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -712,7 +713,7 @@
         <path fill="none" stroke="rgb(52,101,164)" d="M 21576,16387 L 21494,16387"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 21387,16387 L 21306,16387"/>
         <path fill="none" stroke="rgb(52,101,164)" d="M 21198,16387 L 21117,16387"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18391" y="15806"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://proxy.archieven.nl/thumb/236/</tspan></tspan><tspan class="TextPosition" x="17991" y="16162"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">F9934C85D44446699C60862B3433A9AC&gt;</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="18392" y="15807"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">&lt;https://proxy.archieven.nl/thumb/236/</tspan></tspan><tspan class="TextPosition" x="17991" y="16163"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">F9934C85D44446699C60862B3433A9AC&gt;</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.ConnectorShape">
@@ -740,21 +741,21 @@
        <g id="id20">
         <rect class="BoundingBox" stroke="none" fill="none" x="12199" y="3549" width="3054" height="3054"/>
         <path fill="none" stroke="rgb(0,0,0)" d="M 15251,5076 C 15251,5343 15181,5606 15047,5838 14913,6070 14720,6263 14488,6397 14256,6531 13993,6601 13726,6601 13458,6601 13195,6531 12963,6397 12731,6263 12538,6070 12404,5838 12270,5606 12200,5343 12200,5076 12200,4808 12270,4545 12404,4313 12538,4081 12731,3888 12963,3754 13195,3620 13458,3550 13726,3550 13993,3550 14256,3620 14488,3754 14720,3888 14913,4081 15047,4313 15181,4545 15251,4808 15251,5075 L 15251,5076 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13187" y="4772"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Source</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13494" y="5064"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13316" y="5339"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Archive</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13091" y="5614"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Component</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13187" y="4773"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Source</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13493" y="5065"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13316" y="5340"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Archive</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13091" y="5615"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Component</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id21">
         <rect class="BoundingBox" stroke="none" fill="none" x="12223" y="9998" width="3030" height="3053"/>
         <path fill="none" stroke="rgb(0,0,0)" d="M 15251,11524 C 15251,11792 15181,12055 15048,12287 14915,12518 14724,12711 14494,12845 14264,12979 14003,13049 13738,13049 13472,13049 13211,12979 12981,12845 12751,12711 12560,12518 12427,12287 12294,12055 12224,11792 12224,11524 12224,11256 12294,10993 12427,10762 12560,10530 12751,10337 12981,10203 13211,10069 13472,9999 13737,9999 14003,9999 14264,10069 14494,10203 14724,10337 14915,10530 15048,10761 15181,10993 15251,11256 15251,11524 L 15251,11524 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13376" y="11358"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Scan</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13506" y="11650"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13042" y="11925"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">ImageObject</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13375" y="11359"><tspan font-family="Liberation Sans, sans-serif" font-size="318px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">Scan</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13505" y="11651"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13041" y="11926"><tspan font-family="Liberation Sans, sans-serif" font-size="247px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">ImageObject</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id22">
         <rect class="BoundingBox" stroke="none" fill="none" x="16004" y="3242" width="2246" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 17127,4000 L 16004,4000 16004,3242 18249,3242 18249,4000 17127,4000 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16859" y="3561"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="16197" y="3879"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">holdingArchive</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16859" y="3561"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="16196" y="3879"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">holdingArchive</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -768,21 +769,21 @@
        <g id="id24">
         <rect class="BoundingBox" stroke="none" fill="none" x="8104" y="4742" width="2146" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 9177,5500 L 8104,5500 8104,4742 10249,4742 10249,5500 9177,5500 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8909" y="5061"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="8261" y="5379"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">additionalType</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8909" y="5061"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="8262" y="5379"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">additionalType</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id25">
         <rect class="BoundingBox" stroke="none" fill="none" x="8249" y="6250" width="2146" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 9322,7008 L 8249,7008 8249,6250 10394,6250 10394,7008 9322,7008 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9054" y="6569"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="8542" y="6887"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">dateCreated</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9054" y="6569"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="8541" y="6887"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">dateCreated</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id26">
         <rect class="BoundingBox" stroke="none" fill="none" x="15499" y="6242" width="2246" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 16622,7000 L 15499,7000 15499,6242 17744,6242 17744,7000 16622,7000 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16195" y="6720"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:url</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="16196" y="6720"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:url</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
@@ -803,14 +804,14 @@
        <g id="id29">
         <rect class="BoundingBox" stroke="none" fill="none" x="8099" y="13000" width="2246" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 9222,13758 L 8099,13758 8099,13000 10344,13000 10344,13758 9222,13758 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8795" y="13478"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:url</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8796" y="13478"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:url</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.CustomShape">
        <g id="id30">
         <rect class="BoundingBox" stroke="none" fill="none" x="12854" y="13750" width="1646" height="759"/>
         <path fill="rgb(255,255,255)" stroke="none" d="M 13677,14508 L 12854,14508 12854,13750 14499,13750 14499,14508 13677,14508 Z"/>
-        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13409" y="14069"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13189" y="14387"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">position</tspan></tspan></tspan></text>
+        <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13409" y="14069"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">sdo:</tspan></tspan></tspan><tspan class="TextParagraph"><tspan class="TextPosition" x="13188" y="14387"><tspan font-family="Liberation Sans, sans-serif" font-size="282px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">position</tspan></tspan></tspan></text>
        </g>
       </g>
      </g>
