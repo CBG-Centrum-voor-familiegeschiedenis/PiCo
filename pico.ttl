@@ -746,7 +746,7 @@ prov:hadPrimarySource
 #    rdfs:label         "heeftVoorouder"@nl ;
     skos:scopeNote     """hasAncestor is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of hasParent. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superclass of sdo:Parent. Since hasAncestor is a owl:TransitiveProperty, this will make
                           the parent of your parent into your ancestor.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -761,7 +761,7 @@ prov:hadPrimarySource
 #    rdfs:label "heeftAfstammeling"@nl ;
     skos:scopeNote     """hasDescendant is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of hasChild. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superclass of sdo:Children. Since hasAncestor is a owl:TransitiveProperty, this will make
                           the children of your children into your descendants.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
