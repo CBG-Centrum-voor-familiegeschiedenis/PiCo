@@ -3,13 +3,13 @@
 @prefix prov:   <http://www.w3.org/ns/prov#> .
 @prefix sdo:    <https://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
-@prefix pico:   <https://personsincontext.org/model#> .
+@prefix picom:   <https://personsincontext.org/model#> .
 @prefix picot:  <https://terms.personsincontext.org/> .
 @prefix sr-ont: <https://ontology.nationaalarchief.sr/> .
 @prefix nas:    <https://data.nationaalarchief.sr/> .
 
 nas:slavenregister_41_4890_po_1
-    a                       pico:PersonObservation ;
+    a                       picom:PersonObservation ;
     prov:hadPrimarySource   nas:slavenregister_41_4890 ;
     sdo:name                "Unico August Hoogberg" ;
     sdo:familyName          "Hoogberg" ;
@@ -21,7 +21,7 @@ nas:slavenregister_41_4890_po_1
 
 
 nas:slavenregister_41_4890_po_2
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
     sdo:name              "Wed. J.L. Stugen geboren Bruining" ;
     sdo:familyName        "Bruining" ;
@@ -30,13 +30,13 @@ nas:slavenregister_41_4890_po_2
 
 
 nas:slavenregister_41_4890_po_3
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
     sdo:name              "J.L. Stugen" ;
     sdo:familyName        "Stugen" ;
     sdo:givenName         "J.L." ;
     sdo:spouse            nas:slavenregister_41_4890_po_2 ;
-    pico:deceased         true ;
+    picom:deceased         true ;
     sdo:gender            sdo:Male .
 
 

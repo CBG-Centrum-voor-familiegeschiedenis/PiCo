@@ -4,43 +4,43 @@
 @prefix bio:   <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix pico:  <https://personsincontext.org/model#> .
+@prefix picom:  <https://personsincontext.org/model#> .
 @prefix picot: <https://terms.personsincontext.org/> .
 @prefix nha:   <https://noord-hollandsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
 nha:huwelijksakte_1885_321_po_1
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
-    pico:hasAge           "27"^^xsd:decimal ;
+    picom:hasAge           "27"^^xsd:decimal ;
     sdo:birthPlace        "Joure" ;
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
-    pico:hasRole          picot:roles/574 ;  # spouse
+    picom:hasRole          picot:roles/574 ;  # spouse
     sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_2 ;
                             sdo:startDate "1885-11-11"^^xsd:date ; ] ;
     sdo:parent            nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
 nha:huwelijksakte_1885_321_po_2
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Anna Maria Koppen" ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
-    pico:hasAge           "25"^^xsd:decimal ;
+    picom:hasAge           "25"^^xsd:decimal ;
     sdo:birthPlace        "Haarlem" ;
     sdo:hasOccupation     "dienstbode" ;
     sdo:gender            sdo:Female ;
-    pico:hasRole          picot:roles/574 ;  # spouse
+    picom:hasRole          picot:roles/574 ;  # spouse
     sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_1 ;
                             sdo:startDate "1885-11-11"^^xsd:date ; ] ;
     sdo:parent            nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
 nha:huwelijksakte_1885_321_po_3
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
@@ -52,7 +52,7 @@ nha:huwelijksakte_1885_321_po_3
     sdo:children          nha:huwelijksakte_1885_321_po_1 .
 
 nha:huwelijksakte_1885_321_po_4
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;
@@ -66,7 +66,7 @@ nha:huwelijksakte_1885_321_po_4
 
 
 nha:huwelijksakte_1885_321_po_5
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Johannes Koppen" ;
     sdo:familyName        "Koppen" ;
@@ -75,7 +75,7 @@ nha:huwelijksakte_1885_321_po_5
     sdo:children          nha:huwelijksakte_1885_321_po_2 .
 
 nha:huwelijksakte_1885_321_po_6
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
     sdo:name              "Helena Catharina van Zijl" ;
     sdo:familyName        "van Zijl" ;

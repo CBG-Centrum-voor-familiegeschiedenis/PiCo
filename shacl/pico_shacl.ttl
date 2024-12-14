@@ -2,15 +2,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico: <https://personsincontext.org/model#> .
+@prefix picom: <https://personsincontext.org/model#> .
 @prefix sdo:  <https://schema.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-pico:PersonReconstructionShape
+picom:PersonReconstructionShape
     a              sh:NodeShape ;
-    sh:targetClass pico:PersonReconstruction ;
+    sh:targetClass picom:PersonReconstruction ;
     sh:property    [ sh:path     prov:wasDerivedFrom ;
-                     sh:class    pico:PersonObservation ;
+                     sh:class    picom:PersonObservation ;
                      sh:minCount 1 ;
                      sh:message  "A PersonReconstruction must always refer to one or more PersonObservations via prov:wasDerivedFrom." ; ] ;
     sh:property    [ sh:path     prov:wasGeneratedBy ;
@@ -19,10 +19,10 @@ pico:PersonReconstructionShape
                      sh:message  "Information about the creation of a PersonReconstruction should be documented via prov:wasGeneratedBy." ; ] ;
 .
 
-pico:PersonObservationShape
+picom:PersonObservationShape
     a              sh:NodeShape ;
-    sh:targetClass pico:PersonObservation ;
-    sh:property    [ sh:path     pico:hasAge ;
+    sh:targetClass picom:PersonObservation ;
+    sh:property    [ sh:path     picom:hasAge ;
                      sh:datatype xsd:string ;
                      sh:maxCount 1 ;
                      sh:message  "A PersonObservation can have only one age." ; ] ;

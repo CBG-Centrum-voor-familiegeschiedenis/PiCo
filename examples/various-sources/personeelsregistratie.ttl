@@ -2,7 +2,7 @@
 @prefix sdo:    <https://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix pico:   <https://personsincontext.org/model#> .
+@prefix picom:   <https://personsincontext.org/model#> .
 @prefix picot:  <https://terms.personsincontext.org/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix dl:     <https://example.com/dwarsliggers/ind/> .
@@ -11,7 +11,7 @@
 
 # PERSOONSVERMELDING
 hua:NL-UtHUA_920_26-29_2430_po_1
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource hua:NL-UtHUA_920_26-29_2430 ;
     sdo:name              "Bos, A." ;
     sdo:familyName        "Bos" ;

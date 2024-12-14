@@ -81,7 +81,7 @@ We maken zoveel mogelijk gebruik van classes en properties uit verschillende bes
 
 Als het nodig is, zullen we eigenschappen uit de gebruikte ontologieën uitbreiden met extra kenmerken. Bijvoorbeeld: de relatie sdo:spouse is in Schema.org niet als wederkerig gedefinieerd. Dat willen we wel. Daarom voegen we in de ontologie deze wederkerigheid toe.
 
-### PiCo-ontologie
+### PiCo model
 De basisstructuur van PiCo is geïnspireerd door de ontologie Reconstructions and Observations in Archival Resources (ROAR). In deze ontologie zijn de concepten Persoonsvermelding (roar:PersonObservation) en Persoonsreconstructie (roar:PersonReconstruction) gedefinieerd. We hebben ervoor gekozen voor deze concepten zelf classes te definiëren in een eigen ontologie, om de complexiteit van de verschillende definities te beperken.
 
 Behalve de definities van Persoonsvermelding en Persoonsreconstructie, onderkennen we enkele eigenschappen die niet beschikbaar zijn in een van de door ons gekozen ontologieën. We missen een eigenschap voor leeftijd, geloof, rol en overleden. Deze eigenschappen worden daarom in de eigen ontologie vastgelegd.
@@ -144,7 +144,7 @@ Eigenschappen van een Bron:
 * sdo:url
 
 ### 2. Eigenschappen van Persoonsvermelding
-Class: pico:PersonObservation
+Class: picom:PersonObservation
 
 Een persoonsvermelding moet altijd gekoppeld zijn aan een bron via de eigenschap prov:hadPrimarySource. Een persoonsvermelding kan alle eigenschappen van sdo:Person krijgen. PiCo voegt daar een paar eigenschappen aan toe uit de PiCo-Ontologie.
 
@@ -162,29 +162,29 @@ Een beknopt overzicht van de mogelijke eigenschappen van een Persoonsvermelding:
   * pnv:baseSurname
   * pnv:patronym
 * sdo:birthDate
-* pico:hasAge
+* picom:hasAge
 * sdo:birthPlace
 * sdo:deathDate
-* pico:deceased
+* picom:deceased
 * sdo:deathPlace
 * sdo:address
 * sdo:hasOccupation
 * sdo:gender
 * sdo:spouse
 * sdo:parent
-* pico:hasRole
-* pico:hasReligion
+* picom:hasRole
+* picom:hasReligion
 
 ### 3. Eigenschappen van Persoonsreconstructie
-Class: pico:PersonReconstruction
+Class: picom:PersonReconstruction
 
-Een Persoonsreconstructie moet altijd gekoppeld zijn aan een Persoonsvermelding door middel van de eigenschap: prov:wasDerivedFrom. Hoe een Persoonsreconstructie tot stand is gekomen (bijvoorbeeld door middel van een algoritme of door handwerk van een onderzoeker) wordt vastgelegd met de eigenschap prov:wasGeneratedBy. Een Persoonsreconstructie is, in tegenstelling tot een Persoonsvermelding, niet direct gekoppeld aan een Bron. De eigenschap pico:hasRole, voor de rol van een Persoonsvermelding op de Bron, wordt niet gebruikt bij Persoonsreconstructies.
+Een Persoonsreconstructie moet altijd gekoppeld zijn aan een Persoonsvermelding door middel van de eigenschap: prov:wasDerivedFrom. Hoe een Persoonsreconstructie tot stand is gekomen (bijvoorbeeld door middel van een algoritme of door handwerk van een onderzoeker) wordt vastgelegd met de eigenschap prov:wasGeneratedBy. Een Persoonsreconstructie is, in tegenstelling tot een Persoonsvermelding, niet direct gekoppeld aan een Bron. De eigenschap picom:hasRole, voor de rol van een Persoonsvermelding op de Bron, wordt niet gebruikt bij Persoonsreconstructies.
 
 Naast alle eigenschappen die genoemd zijn bij een Persoonsvermelding, heeft een Persoonsreconstructie twee extra eigenschappen:
 * prov:wasDerivedFrom (verplicht)
 * prov:wasGeneratedBy
 
-De eigenschappen prov:hadPrimarySource en pico:hasRole, worden niet gebruikt bij een Persoonsreconstructie. Deze zijn wel te herleiden via de Persoonsvermelding(en) waarop de Persoonsreconstructie gebaseerd is.
+De eigenschappen prov:hadPrimarySource en picom:hasRole, worden niet gebruikt bij een Persoonsreconstructie. Deze zijn wel te herleiden via de Persoonsvermelding(en) waarop de Persoonsreconstructie gebaseerd is.
 
 ### 4. Relaties tussen Persoonsvermeldingen / Persoonsreconstructies
 Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Persoonsvermeldingen onderling en tussen Persoonsreconstructies onderling:
@@ -195,33 +195,33 @@ Een niet uitputtend overzicht van relaties die gelegd kunnen worden tussen Perso
 * sdo:sibling (broer/zus)
 * sdo:knows (kent, de meest generieke relatie)
 * sdo:relatedTo (de meest generieke familierelatie)
-* pico:grandparent (grootouder)
-* pico:grandchild (kleinkind)
-* pico:godparent (peetouder)
-* pico:godchild (petekind)
-* pico:previousPartner (eerdere partner)
-* pico:wid (weduwe/weduwnaar)
-* pico:stepparent (stiefouder)
-* pico:stepchild (stiefkind) 
-* pico:child-in-law (schoonkind)
-* pico:parent-in-law (schoonouder)
-* pico:half-sibling (halfbroer/halfzus)
-* pico:stepsibling (stiefbroer/stiefzus)
-* pico:sibling-in-law (schoonbroer/schoonzus)
-* pico:great-grandparent (overgrootouder)
-* pico:great-grandchild (overgrootkind)
-* pico:fosterParent (pleegouder)
-* pico:fosterChild (pleegkind)
-* pico:stepparent-in-law (stiefschoonouder)
-* pico:stepchild-in-law (stiefschoonkind)
-* pico:grandparent-in-law (schoongrootouder)
-* pico:grandchild-in-law (schoonkleinkind)
-* pico:uncle_aunt (oom/tante)
-* pico:nephew_niece (neef/nicht - oomzegger/tantezegger)
-* pico:nephew_niece-in-law (schoonneef/schoonnicht - oomzegger/tantezegger)
-* pico:cousin (neef/nicht)
-* pico:cousin-in-law (schoonneef/schoonnicht)
-* pico:legitimizedChild (gelegitimeerd kind)
+* picom:grandparent (grootouder)
+* picom:grandchild (kleinkind)
+* picom:godparent (peetouder)
+* picom:godchild (petekind)
+* picom:previousPartner (eerdere partner)
+* picom:wid (weduwe/weduwnaar)
+* picom:stepparent (stiefouder)
+* picom:stepchild (stiefkind) 
+* picom:child-in-law (schoonkind)
+* picom:parent-in-law (schoonouder)
+* picom:half-sibling (halfbroer/halfzus)
+* picom:stepsibling (stiefbroer/stiefzus)
+* picom:sibling-in-law (schoonbroer/schoonzus)
+* picom:great-grandparent (overgrootouder)
+* picom:great-grandchild (overgrootkind)
+* picom:fosterParent (pleegouder)
+* picom:fosterChild (pleegkind)
+* picom:stepparent-in-law (stiefschoonouder)
+* picom:stepchild-in-law (stiefschoonkind)
+* picom:grandparent-in-law (schoongrootouder)
+* picom:grandchild-in-law (schoonkleinkind)
+* picom:uncle_aunt (oom/tante)
+* picom:nephew_niece (neef/nicht - oomzegger/tantezegger)
+* picom:nephew_niece-in-law (schoonneef/schoonnicht - oomzegger/tantezegger)
+* picom:cousin (neef/nicht)
+* picom:cousin-in-law (schoonneef/schoonnicht)
+* picom:legitimizedChild (gelegitimeerd kind)
 
 
 ### 5. Terminologiebron voor Rollen
@@ -290,63 +290,5 @@ Een persoonsvermelding kan de volgende rollen hebben op een bron:
 * slavernijbronnen
 * publicatie
 * notariële archieven
-  * aanbesteding
-  * aanbreng
-  * aanneming
-  * acceptatie
-  * afstand
-  * akkoord
-  * akte (overig)
-  * akte van inbewaringgeving
-  * arbitersbenoeming
-  * attestatie
-  * boedelbeschrijving
-  * borgtocht
-  * cassatie
-  * codicil
-  * curatorsbenoeming
-  * erfpacht
-  * executeursbenoeming
-  * garantie
-  * goedkeuring
-  * herroeping
-  * huur en verhuur
-  * huwelijkse voorwaarden
-  * insinuatie
-  * koop en verkoop
-  * kwitantie
-  * liquidatie
-  * maatschap
-  * ontslag
-  * ontzegeling
-  * openbare aanbesteding
-  * openbare verhuring
-  * openbare verkoping
-  * openbare verpachting
-  * opening
-  * overdracht
-  * overeenkomst
-  * procuratie
-  * protest
-  * registratie
-  * rekening en verantwoording
-  * relaas
-  * repudiatie
-  * scheepshypotheek
-  * scheiding
-  * schenking
-  * schuldbekentenis
-  * superscriptie
-  * taxatie
-  * testament
-  * toestemming
-  * trouwbeloften
-  * uitkoop
-  * verklaring
-  * verpachting
-  * verzegeling
-  * verzoekschrift
-  * verzoening
-  * voogdbenoeming
 
 [^1]: De [ROAR ontologie](https://leonvanwissen.nl/vocab/roar/docs/) is ontwikkeld door Leon van Wissen en Menno den Engelse.

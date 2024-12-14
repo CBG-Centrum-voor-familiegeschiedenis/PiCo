@@ -23,12 +23,12 @@ PersonReconstruction.
 
 ### Ontology from examples (https://personsincontext.org/model/)
 
-- pico:PersonObservation
-- pico:PersonReconstruction
+- picom:PersonObservation
+- picom:PersonReconstruction
 - sdo:ArchiveComponent
 
-- pico:hasRole
-- pico:hasReligion
-- pico:hasAge
+- picom:hasRole
+- picom:hasReligion
+- picom:hasAge
 
 ![Part of graph on Abe Bos](https://github.com/CBG-nl/A2A-LD/blob/main/examples/abe-bos/abe-bos.png?raw=true)

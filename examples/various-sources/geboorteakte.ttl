@@ -6,14 +6,14 @@
 @prefix sdo:   <https://schema.org/> .
 @prefix pnv:   <https://w3id.org/pnv#> .
 @prefix bio:   <http://purl.org/vocab/bio/0.1/> .
-@prefix pico:  <https://personsincontext.org/model#> .
+@prefix picom:  <https://personsincontext.org/model#> .
 @prefix picot: <https://terms.personsincontext.org/> .
 @prefix afr:   <https://allefriezen.nl/zoeken/> .
 
 # PERSOONSVERMELDINGEN
 
 afr:geboorteregiser_1858_po_1
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
@@ -22,27 +22,27 @@ afr:geboorteregiser_1858_po_1
     sdo:birthDate         "1858-06-21"^^xsd:date ;
     sdo:birthPlace        "Joure" ;
     sdo:gender            sdo:Male ;
-    pico:hasRole          picot:roles/575 ;  # child
+    picom:hasRole          picot:roles/575 ;  # child
     sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
 
 afr:geboorteregiser_1858_po_2
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
-    pico:hasAge           "30"^^xs:decimal ;
+    picom:hasAge           "30"^^xs:decimal ;
     sdo:hasOccupation     "klokmakersknecht" ;
     sdo:address           "Joure" ;
     sdo:gender            sdo:Male ;
     sdo:spouse            afr:geboorteregiser_1858_po_3 ;
     sdo:children          afr:geboorteregiser_1858_po_1 ;
-    pico:hasRole          picot:roles/489 .  # declarant
+    picom:hasRole          picot:roles/489 .  # declarant
 
 
 afr:geboorteregiser_1858_po_3
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;

@@ -87,7 +87,7 @@
     dcterms:modified              "2024-04-25"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
-    vann:preferredNamespacePrefix "pico" ;
+    vann:preferredNamespacePrefix "picom" ;
     owl:versionInfo               "1.0"@en ;
     owl:priorVersion              "0.9"@en ;
     skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and

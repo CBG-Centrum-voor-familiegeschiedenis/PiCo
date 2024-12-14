@@ -1,15 +1,15 @@
 @prefix sdo:  <https://schema.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix pico: <https://personsincontext.org/model#> .
+@prefix picom: <https://personsincontext.org/model#> .
 
 # PERSOONSVERMELDING
 <>
-    a                     pico:PersonObservation ;
+    a                     picom:PersonObservation ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
     sdo:name              "DEN PRINSCHE DORANGE" ;
     sdo:deathDate         "DEN TIENDEN IVLI" ;
     sdo:deathPlace        "DELFT" ;
-    pico:hasAge           "51" .
+    picom:hasAge           "51" .
 
 <https://data.rkd.nl/images/170975>
     a        sdo:Painting ;

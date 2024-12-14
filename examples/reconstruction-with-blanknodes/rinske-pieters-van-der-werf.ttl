@@ -1,18 +1,18 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pico: <https://personsincontext.org/model#> .
+@prefix picom: <https://personsincontext.org/model#> .
 @prefix sdo:  <https://schema.org/> .
 @prefix pnv:  <https://w3id.org/pnv#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-# In PiCo a prov:wasDerivedFrom relating a pico:PersonObservation is required.
+# In PiCo a prov:wasDerivedFrom relating a picom:PersonObservation is required.
 # What if you do not have a proper PersonObservation, but only a URL pointing to a source 
 # and you still want to publish a PersonReconstruction?
 # Advise is to introduce a 'blank' PersonObservation. See following example.
 
 _:person_reconstruction_1
-    a                   pico:PersonReconstruction ;
+    a                   picom:PersonReconstruction ;
     sdo:name            "Rinske Pieters van der Werf" ;
     sdo:familyName      "van der Werf" ;
     sdo:givenName       "Rinske" ;
@@ -24,7 +24,7 @@ _:person_reconstruction_1
     sdo:gender          sdo:Female ;
     sdo:birthPlace      "Gorredijk, gemeente Opsterland" ;
     sdo:birthDate       "1816-10-11"^^xsd:date ;
-    prov:wasDerivedFrom [ a                     pico:PersonObservation ;
+    prov:wasDerivedFrom [ a                     picom:PersonObservation ;
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
                           prov:hadPrimarySource [ a sdo:ArchiveComponent ;
                                                   sdo:name
