@@ -1,0 +1,297 @@
+{
+  "@context": {
+    "@vocab": "https://personsincontext.org/model#",
+    "sdo": {
+      "@id": "https://schema.org/",
+      "@prefix": true
+    },
+    "pnv": {
+      "@id": "https://w3id.org/pnv#",
+      "@prefix": true
+    },
+    "prov": {
+      "@id": "http://www.w3.org/ns/prov#",
+      "@prefix": true
+    },
+    "Activity": {
+      "@id": "prov:Activity"
+    },
+    "Agent": {
+      "@id": "prov:Agent"
+    },
+    "PersonName": {
+      "@id": "pnv:PersonName"
+    },
+    "PersonObservation": {
+      "@id": "PersonObservation"
+    },
+    "PersonReconstruction": {
+      "@id": "PersonReconstruction"
+    },
+    "Scan": {
+      "@id": "sdo:ImageObject"
+    },
+    "Source": {
+      "@id": "sdo:ArchiveComponent"
+    },
+    "address": {
+      "@id": "sdo:address"
+    },
+    "baseSurname": {
+      "@id": "pnv:baseSurname"
+    },
+    "birthDate": {
+      "@id": "sdo:birthDate"
+    },
+    "birthPlace": {
+      "@id": "sdo:birthPlace"
+    },
+    "contentLocation": {
+      "@id": "sdo:contentLocation"
+    },
+    "dateCreated": {
+      "@id": "sdo:dateCreated"
+    },
+    "deathDate": {
+      "@id": "sdo:deathDate"
+    },
+    "deathPlace": {
+      "@id": "sdo:deathPlace"
+    },
+    "deceased": {
+      "@id": "deceased"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime"
+    },
+    "familyName": {
+      "@id": "sdo:familyName"
+    },
+    "gender": {
+      "@id": "sdo:gender",
+      "@type": "@id"
+    },
+    "givenName (pnv)": {
+      "@id": "pnv:givenName"
+    },
+    "givenName (schema)": {
+      "@id": "sdo:givenName"
+    },
+    "hasAge": {
+      "@id": "hasAge"
+    },
+    "hasOccupation": {
+      "@id": "sdo:hasOccupation"
+    },
+    "hasReligion": {
+      "@id": "hasReligion"
+    },
+    "initials": {
+      "@id": "pnv:initials"
+    },
+    "literalName": {
+      "@id": "pnv:literalName"
+    },
+    "name": {
+      "@id": "sdo:name"
+    },
+    "patronym": {
+      "@id": "pnv:patronym"
+    },
+    "position": {
+      "@id": "sdo:position"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime"
+    },
+    "surnamePrefix": {
+      "@id": "pnv:surnamePrefix"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith"
+    },
+    "additionalName": {
+      "@id": "sdo:additionalName",
+      "@type": "@id"
+    },
+    "additionalType": {
+      "@id": "sdo:additionalType",
+      "@type": "@id"
+    },
+    "associatedMedia": {
+      "@id": "sdo:associatedMedia",
+      "@type": "@id"
+    },
+    "children": {
+      "@id": "sdo:children",
+      "@type": "@id"
+    },
+    "embedUrl": {
+      "@id": "sdo:embedUrl",
+      "@type": "@id"
+    },
+    "hadPrimarySource": {
+      "@id": "prov:hadPrimarySource",
+      "@type": "@id"
+    },
+    "hasChild-in-law": {
+      "@id": "hasChild-in-law",
+      "@type": "@id"
+    },
+    "hasCousin": {
+      "@id": "hasCousin",
+      "@type": "@id"
+    },
+    "hasCousin-in-law": {
+      "@id": "hasCousin-in-law",
+      "@type": "@id"
+    },
+    "hasFosterChild": {
+      "@id": "hasFosterChild",
+      "@type": "@id"
+    },
+    "hasFosterParent": {
+      "@id": "hasFosterParent",
+      "@type": "@id"
+    },
+    "hasGodchild": {
+      "@id": "hasGodchild",
+      "@type": "@id"
+    },
+    "hasGodparent": {
+      "@id": "hasGodparent",
+      "@type": "@id"
+    },
+    "hasGrandchild": {
+      "@id": "hasGrandchild",
+      "@type": "@id"
+    },
+    "hasGrandchild-in-law": {
+      "@id": "hasGrandchild-in-law",
+      "@type": "@id"
+    },
+    "hasGrandparent": {
+      "@id": "hasGrandparent",
+      "@type": "@id"
+    },
+    "hasGrandparent-in-law": {
+      "@id": "hasGrandparent-in-law",
+      "@type": "@id"
+    },
+    "hasGreat-grandchild": {
+      "@id": "hasGreat-grandchild",
+      "@type": "@id"
+    },
+    "hasGreat-grandparent": {
+      "@id": "hasGreat-grandparent",
+      "@type": "@id"
+    },
+    "hasHalf-sibling": {
+      "@id": "hasHalf-sibling",
+      "@type": "@id"
+    },
+    "hasLegitimizedChild": {
+      "@id": "hasLegitimizedChild",
+      "@type": "@id"
+    },
+    "isLegitimitezedChildOf": {
+      "@id": "isLegitimitezedChildOf",
+      "@type": "@id"
+    },
+    "hasNephew_Niece-in-law": {
+      "@id": "hasNephew_Niece-in-law",
+      "@type": "@id"
+    },
+    "hasNephew_Niece": {
+      "@id": "hasNephew_Niece",
+      "@type": "@id"
+    },
+    "hasParent-in-law": {
+      "@id": "hasParent-in-law",
+      "@type": "@id"
+    },
+    "hasPreviousPartner": {
+      "@id": "hasPreviousPartner",
+      "@type": "@id"
+    },
+    "hasSibling-in-law": {
+      "@id": "hasSibling-in-law",
+      "@type": "@id"
+    },
+    "hasStepchild": {
+      "@id": "hasStepchild",
+      "@type": "@id"
+    },
+    "hasStepchild-in-law": {
+      "@id": "hasStepchild-in-law",
+      "@type": "@id"
+    },
+    "hasStepparent": {
+      "@id": "hasStepparent",
+      "@type": "@id"
+    },
+    "hasStepparent-in-law": {
+      "@id": "hasStepparent-in-law",
+      "@type": "@id"
+    },
+    "hasStepsibling": {
+      "@id": "hasStepsibling",
+      "@type": "@id"
+    },
+    "hasUncle_Aunt": {
+      "@id": "hasUncle_Aunt",
+      "@type": "@id"
+    },
+    "hasUncle_Aunt-in-law": {
+      "@id": "hasUncle_Aunt-in-law",
+      "@type": "@id"
+    },
+    "holdingArchive": {
+      "@id": "sdo:holdingArchive",
+      "@type": "@id"
+    },
+    "isLegitimitezedChildOf": {
+      "@id": "isLegitimitezedChildOf",
+      "@type": "@id"
+    },
+    "isWidOf": {
+      "@id": "isWidOf",
+      "@type": "@id"
+    },
+    "parent": {
+      "@id": "sdo:parent",
+      "@type": "@id"
+    },
+    "sibling": {
+      "@id": "sdo:sibling",
+      "@type": "@id"
+    },
+    "spouse": {
+      "@id": "sdo:spouse",
+      "@type": "@id"
+    },
+    "thumbnail": {
+      "@id": "sdo:thumbnail",
+      "@type": "@id"
+    },
+    "url": {
+      "@id": "sdo:url",
+      "@type": "@id"
+    },
+    "hasRole": {
+      "@id": "hasRole",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "wasRevisionOf": {
+      "@id": "prov:wasRevisionOf",
+      "@type": "@id"
+    }
+  }
+}
