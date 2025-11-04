@@ -1,6 +1,6 @@
 # Version: 20230921
 
-@prefix :        <https://personsincontext.org/model#> .  # TODO: Or change to hash namespace in stead of slash namespace?
+@prefix picom:   <https://personsincontext.org/model#> .
 @prefix picot:   <https://terms.personsincontext.org/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -156,7 +156,7 @@ prov:Agent
                                           """ ] ;
 .
 
-:Person
+picom:Person
     a               owl:Class ;
     rdfs:label      "Person"@en ;
     skos:definition "A Person is a human being whose individual existence can somehow be documented."@en ;
@@ -167,7 +167,7 @@ prov:Agent
     rdfs:subClassOf prov:Entity ;
 .
 
-:PersonObservation
+picom:PersonObservation
     a               owl:Class ;
     rdfs:label      "PersonObservation"@en ;  #, "Persoonsvermelding"@nl ;
     skos:definition "A Person observation is a person that can be observed on a Source"@en ;
@@ -179,7 +179,7 @@ prov:Agent
                        even though the source probably lists the date in a DMY or MDY format or another calendar
                        entirely. Information on the original entry can be stored using an optional triple.
                     """@en ;
-    rdfs:subClassOf :Person ;
+    rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
@@ -194,7 +194,7 @@ prov:Agent
                       sdo:name           "Person observation example" ;
                       sdo:text           """
                                             afr:geboorteregister_1858_po_1
-                                               a                     :PersonObservation ;
+                                               a                     picom:PersonObservation ;
                                                prov:hadPrimarySource afr:geboorteregiser_1858 ;
                                                sdo:name              "Abe Bos" ;
                                                sdo:familyName        "Bos" ;
@@ -203,26 +203,26 @@ prov:Agent
                                                sdo:birthDate         "1858-06-21"^^xsd:date ;
                                                sdo:birthPlace        "Joure" ;
                                                sdo:gender            sdo:Male ;
-                                               :hasRole          picot:roles/575 ;  # child
+                                               picom:hasRole         picot:roles/575 ;  # child
                                                sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
                                             afr:geboorteregiser_1858_po_2
-                                               a                     :PersonObservation ;
+                                               a                     picom:PersonObservation ;
                                                prov:hadPrimarySource afr:geboorteregiser_1858 ;
                                                sdo:name              "Sjouke Abes Bos" ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Sjouke" ;
-                                               :hasAge           "30"^^xsd:decimal ;
+                                               picom:hasAge          "30"^^xsd:decimal ;
                                                sdo:hasOccupation     "klokmakersknecht" ;
                                                sdo:address           "Joure" ;
                                                sdo:gender            sdo:Male ;
                                                sdo:spouse            afr:geboorteregiser_1858_po_3 ;
                                                sdo:children          afr:geboorteregiser_1858_po_1 ;
-                                               :hasRole          picot:roles/489 .  # declarant
+                                               picom:hasRole         picot:roles/489 .  # declarant
                                          """ ] ;
 .
 
-:PersonReconstruction
+picom:PersonReconstruction
     a               owl:Class ;
     rdfs:label      "PersonReconstruction"@en ;  #, "Persoonsreconstructie"@nl ;
     skos:definition """A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
@@ -233,7 +233,7 @@ prov:Agent
                        Information about updates of a Person reconstruction should be documented with
                        prov:wasRevisionOf
                     """@en ;
-    rdfs:subClassOf :Person ;
+    rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
@@ -248,7 +248,7 @@ prov:Agent
                       sdo:name           "Person Reconstruction example" ;
                       sdo:text           """
                                                 cbg:person_reconstruction_2
-                                                    a                   :PersonReconstruction ;
+                                                    a                   picom:PersonReconstruction ;
                                                     sdo:name            "Anna Maria Koppen" ;
                                                     sdo:familyName      "Koppen" ;
                                                     sdo:givenName       "Anna" ;
@@ -344,7 +344,7 @@ sdo:address
     skos:definition    "Physical address of the Person." ;
     rdfs:label         "address"@en ;
     skos:scopeNote     "Address of a Person as mentioned on the Source."@en ;
-    sdo:domainIncludes :PersonObservation ;
+    sdo:domainIncludes picom:PersonObservation ;
     sdo:rangeIncludes  sdo:Text ;   # We should support both textual addresses as URI's, is sdo:address daar wel geschikt voor?
 .
 
@@ -373,7 +373,7 @@ sdo:birthDate
                           record the date exactly as it was written on the Source. If possible use both the string
                           format and the xsd:date format in this case.
                        """@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:date, xsd:string ;
 .
 
@@ -387,7 +387,7 @@ sdo:birthPlace
                           If desired, both the literal place, as mentioned on the Source can be used together with
                           the reconciled version.
                        """@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
@@ -427,7 +427,7 @@ sdo:deathDate
                           record the date exactly as it was written on the Source. If possible use both the string
                           format and the xsd:date format in this case.
                        """@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:date, xsd:string ;
 .
 
@@ -440,11 +440,11 @@ sdo:deathPlace
                           the reconciled version.
                        """@en ;
     rdfs:label         "deathPlace"@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
-:deceased
+picom:deceased
     a                  owl:DatatypeProperty ;
     skos:definition    "Indication if a person is deceased." ;
     rdfs:label         "deceased"@en ;
@@ -455,7 +455,7 @@ sdo:deathPlace
                           will be considered alive. This will have consequences for the publication
                           of the person record and of any linked media items.
                        """@en ;
-    sdo:domainIncludes :PersonObservation ;
+    sdo:domainIncludes picom:PersonObservation ;
     sdo:rangeIncludes  xsd:boolean ;  # true or false
 .
 
@@ -476,7 +476,7 @@ sdo:familyName
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the most straightforward method for
                           describing person names. Use pnv:PersonName for more extensive name annotations.
                        """@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -499,7 +499,7 @@ sdo:gender
     skos:definition    "Gender of a Person." ;
     rdfs:label         "gender"@en ;
     skos:scopeNote     """Use one of: sdo:Male or sdo:Female."""@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  sdo:GenderType ;
 .
 
@@ -522,11 +522,11 @@ sdo:givenName
     skos:scopeNote     """The use of sdo:givenName and sdo:familyName is the preferred method for
                           describing person names. Use pnv:PersonName for more extensive name annotations.
                        """@en ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:string ;
 .
 
-:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
+picom:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
          a                  owl:DatatypeProperty ;
          skos:definition    "The age of a person."@en ;
 #         skos:definition       "De leeftijd van een persoon."@nl ;
@@ -539,7 +539,7 @@ sdo:givenName
                                "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
                                Numerical ages ("4") are preferred above ages in text ("four").
                             """@en ;
-         sdo:domainIncludes :PersonObservation ;
+         sdo:domainIncludes picom:PersonObservation ;
          sdo:rangeIncludes  xsd:string ;  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
 .
 
@@ -549,18 +549,18 @@ sdo:hasOccupation
     skos:definition    "The occupational title related to a person in an observation." ;
     rdfs:label         "hasOccupation"@en ;
     skos:scopeNote     """Occupation as mentioned on the Source"""@en ;
-    sdo:domainIncludes :PersonObservation ;
+    sdo:domainIncludes picom:PersonObservation ;
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
-:hasReligion
+picom:hasReligion
     a                   owl:DatatypeProperty ;
     skos:definition     "Religious conviction related to a person in an observation." ;
     rdfs:label          "hasReligion" ;
     skos:scopeNote      """Religion as mentioned on the Source.
                            If desired, a SKOS thesaurus can be used to annotate religion.
                         """@en ;  # Todo: Can we recommend a thesaurus for religions?
-    rdfs:domainIncludes :Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
+    rdfs:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
     sdo:rangeIncludes   xsd:string, xsd:anyURI ;
 .
 
@@ -595,7 +595,7 @@ sdo:name
     skos:scopeNote     """For Sources: Use a user-friendly name to identify the source. Depending on the Source type,
                           this may contain a combination of it's name, year of creation, creator, et cetera.
                        """@en ;
-    sdo:domainIncludes :Person, sdo:ArchiveComponent ;
+    sdo:domainIncludes picom:Person, sdo:ArchiveComponent ;
     sdo:rangeIncludes  xsd:string ;
 .
 
@@ -662,7 +662,7 @@ sdo:additionalName
     skos:definition    "The name of a Person, annotated according to the Person Name Vocabulary." ;
     rdfs:label         "additionalName"@en ;
 #    rdfs:label        "heeft naam"@nl ;
-    sdo:domainIncludes :Person ;
+    sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  pnv:PersonName ;
 .
 
@@ -705,9 +705,9 @@ sdo:children
                        """@en ;
     skos:scopeNote     """For Person reconstructions, the child should refer to another Person reconstruction.
                        """@en ;
-    rdfs:subPropertyOf sdo:relatedTo, :hasDescendant ;
-    sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  :Person ;
+    rdfs:subPropertyOf sdo:relatedTo, picom:hasDescendant ;
+    sdo:domainIncludes picom:Person ;
+    sdo:rangeIncludes  picom:Person ;
     owl:inverseOf      sdo:parent ;
 .
 
@@ -736,11 +736,11 @@ prov:hadPrimarySource
                        """@en ;
     rdfs:label         "hadPrimarySource"@en ;
     skos:scopeNote     "Linking a Source with the hadPrimarySource property is required for Person Observations." ;
-    sdo:domainIncludes :PersonObservation ;
+    sdo:domainIncludes picom:PersonObservation ;
     sdo:rangeIncludes  sdo:ArchiveComponent ;
 .
 
-:hasAncestor
+picom:hasAncestor
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasAncestor"@en ;
 #    rdfs:label         "heeftVoorouder"@nl ;
@@ -750,12 +750,12 @@ prov:hadPrimarySource
                           the parent of your parent into your ancestor.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    owl:inverseOf      :hasDescendant ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    owl:inverseOf      picom:hasDescendant ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasDescendant
+picom:hasDescendant
     a                  owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label         "hasDescendant"@en ;
 #    rdfs:label "heeftAfstammeling"@nl ;
@@ -765,12 +765,12 @@ prov:hadPrimarySource
                           the children of your children into your descendants.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    owl:inverseOf      :hasAncestor ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    owl:inverseOf      picom:hasAncestor ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasChild-in-law
+picom:hasChild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasChild-in-law"@en ;
 #    rdfs:label         "heeftSchoonkind"@nl ;
@@ -781,12 +781,12 @@ prov:hadPrimarySource
                           Person reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasParent-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasParent-in-law ;
 .
 
-:hasCousin
+picom:hasCousin
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasCousin"@en ;
 #    rdfs:label         "heeftNeef/Nicht"@nl ;
@@ -797,11 +797,11 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasCousin-in-law
+picom:hasCousin-in-law
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasCousin-in-law"@en ;
 #    rdfs:label         "heeftSchoonneef/Schoonnicht"@nl ;
@@ -812,11 +812,11 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasFosterChild
+picom:hasFosterChild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasFosterChild"@en ;
 #    rdfs:label         "heeftPleegkind"@nl ;
@@ -827,15 +827,14 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasFosterParent ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasFosterParent ;
 .
 
-:hasFosterParent
+picom:hasFosterParent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasFosterParent"@en ;
-#    rdfs:label         "heeftPleegouder"@nl ;
     skos:scopeNote     """For Person observations, the hasFosterParen property should always refer to another Person
                           observation on the same Source.
                        """@en ;
@@ -843,12 +842,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasFosterChild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasFosterChild ;
 .
 
-:hasGodchild
+picom:hasGodchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGodchild"@en ;
 #    rdfs:label         "heeftPetekind"@nl ;
@@ -859,12 +858,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGodparent ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGodparent ;
 .
 
-:hasGodparent
+picom:hasGodparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGodparent"@en ;
 #    rdfs:label         "heeftPeetouder"@nl ;
@@ -875,12 +874,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGodchild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGodchild ;
 .
 
-:hasGrandchild
+picom:hasGrandchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandchild"@en ;
 #    rdfs:label         "heeftKleinkind"@nl ;
@@ -891,12 +890,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGrandparent ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGrandparent ;
 .
 
-:hasGrandchild-in-law
+picom:hasGrandchild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandchild-in-law"@en ;
 #    rdfs:label         "heeftSchoonkleinkind"@nl ;
@@ -907,12 +906,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGrandparent-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGrandparent-in-law ;
 .
 
-:hasGrandparent
+picom:hasGrandparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandparent"@en ;
 #    rdfs:label         "heeftGrootouder"@nl ;
@@ -923,12 +922,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGrandchild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGrandchild ;
 .
 
-:hasGrandparent-in-law
+picom:hasGrandparent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGrandparent-in-law"@en ;
 #    rdfs:label         "heeftSchoongrootouder"@nl ;
@@ -939,12 +938,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGrandchild-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGrandchild-in-law ;
 .
 
-:hasGreat-grandchild
+picom:hasGreat-grandchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGreat-grandchild"@en ;
 #    rdfs:label         "heeftAchterkleinkind"@nl ;
@@ -955,12 +954,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGreat-grandparent ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGreat-grandparent ;
 .
 
-:hasGreat-grandparent
+picom:hasGreat-grandparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasGreat-grandparent"@en ;
 #    rdfs:label         "heeftOvergrootouder"@nl ;
@@ -971,12 +970,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasGreat-grandchild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasGreat-grandchild ;
 .
 
-:hasHalf-sibling
+picom:hasHalf-sibling
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasHalf-sibling"@en ;
 #    rdfs:label         "halfbroer/halfzus"@nl ;
@@ -987,11 +986,11 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasLegitimizedChild
+picom:hasLegitimizedChild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasLegitimizedChild"@en ;
 #    rdfs:label         "heeftGewettigdKind"@nl ;
@@ -1002,12 +1001,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :isLegitimitezedChildOf ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:isLegitimitezedChildOf ;
 .
 
-:isLegitimitezedChildOf
+picom:isLegitimitezedChildOf
     a                  owl:ObjectProperty ;
     rdfs:label         "isLegitimitezedChildOf" ;
 #    rdfs:label         "isGewettigdKindVan"@nl ;
@@ -1018,12 +1017,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasLegitimizedChild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasLegitimizedChild ;
 .
 
-:hasNephew_Niece-in-law
+picom:hasNephew_Niece-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasNephew-in-law/Niece-in-law"@en ;
 #    rdfs:label         "heeftSchoonneef/Schoonnicht (oomzegger/tantezegger)"@nl ;
@@ -1034,12 +1033,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasUncle_Aunt-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasUncle_Aunt-in-law ;
 .
 
-:hasNephew_Niece
+picom:hasNephew_Niece
     a                  owl:ObjectProperty ;
     rdfs:label         "hasNephew/Niece"@en ;
 #    rdfs:label         "heeftNeef/Nicht (oomzegger/tantezegger)"@nl ;
@@ -1050,12 +1049,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasUncle_Aunt ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasUncle_Aunt ;
 .
 
-:hasParent-in-law
+picom:hasParent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasParent-in-law"@en ;
 #    rdfs:label         "heeftSchoonouder"@nl ;
@@ -1066,12 +1065,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasChild-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasChild-in-law ;
 .
 
-:hasPreviousPartner
+picom:hasPreviousPartner
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasPreviousPartner"@en ;
 #    rdfs:label         "eerderePartner"@nl ;
@@ -1082,10 +1081,10 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person .
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person .
 
-:hasSibling-in-law
+picom:hasSibling-in-law
     a                  owl:SymmetricProperty, owl:ObjectProperty ;
     rdfs:label         "hasSibling-in-law"@en ;
 #    rdfs:label         "heeftZwager/Schoonzus"@nl ;
@@ -1096,11 +1095,11 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasStepchild
+picom:hasStepchild
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepchild"@en ;
 #    rdfs:label         "stiefkind"@nl ;
@@ -1111,12 +1110,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasStepparent ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasStepparent ;
 .
 
-:hasStepchild-in-law
+picom:hasStepchild-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepchild-in-law"@en ;
 #    rdfs:label         "heeftStiefschoonkind"@nl ;
@@ -1127,12 +1126,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasStepparent-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasStepparent-in-law ;
 .
 
-:hasStepparent
+picom:hasStepparent
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepparent"@en ;
 #    rdfs:label         "stiefouder"@nl ;
@@ -1143,12 +1142,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasStepchild ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasStepchild ;
 .
 
-:hasStepparent-in-law
+picom:hasStepparent-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasStepparent-in-law"@en ;
 #    rdfs:label         "heeftStiefschoonouder"@nl ;
@@ -1159,12 +1158,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasStepchild-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasStepchild-in-law ;
 .
 
-:hasStepsibling
+picom:hasStepsibling
     a                  owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:label         "hasStepsibling"@en ;
 #    rdfs:label         "heeftStiefbroer/Stiefzus"@nl ;
@@ -1175,11 +1174,11 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
-:hasUncle_Aunt
+picom:hasUncle_Aunt
     a                  owl:ObjectProperty ;
     rdfs:label         "hasUncle/Aunt"@en ;
 #    rdfs:label         "heeftOom/Tante"@nl ;
@@ -1190,12 +1189,12 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasNephew_Niece ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasNephew_Niece ;
 .
 
-:hasUncle_Aunt-in-law
+picom:hasUncle_Aunt-in-law
     a                  owl:ObjectProperty ;
     rdfs:label         "hasUncle/Aunt-in-law" ;
     skos:scopeNote     """For Person observations, the hasUncle_Aunt-in-law property should always refer to another
@@ -1205,9 +1204,9 @@ prov:hadPrimarySource
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
-    owl:inverseOf      :hasNephew_Niece-in-law ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
+    owl:inverseOf      picom:hasNephew_Niece-in-law ;
 .
 
 sdo:holdingArchive
@@ -1220,7 +1219,7 @@ sdo:holdingArchive
     sdo:rangeIncludes  xsd:anyURI ;
 .
 
-:isWidOf
+picom:isWidOf
     a                  owl:ObjectProperty ;
     rdfs:label         "isWidow/WidowerOf"@en ;
 #    rdfs:label         "isWeduwe/WeduwnaarVan"@nl ;
@@ -1231,8 +1230,8 @@ sdo:holdingArchive
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    rdfs:domain        :Person ;
-    rdfs:range         :Person ;
+    rdfs:domain        picom:Person ;
+    rdfs:range         picom:Person ;
 .
 
 sdo:parent
@@ -1246,9 +1245,9 @@ sdo:parent
     skos:scopeNote     """For Person reconstructions, the parent property should refer to another Person
                           reconstruction.
                        """@en ;
-    rdfs:subPropertyOf sdo:relatedTo, :hasAncestor ;
-    sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  :Person ;
+    rdfs:subPropertyOf sdo:relatedTo, picom:hasAncestor ;
+    sdo:domainIncludes picom:Person ;
+    sdo:rangeIncludes  picom:Person ;
     owl:inverseOf      sdo:children ;
 .
 
@@ -1264,8 +1263,8 @@ sdo:sibling
                           the spouse.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  :Person ;
+    sdo:domainIncludes picom:Person ;
+    sdo:rangeIncludes  picom:Person ;
 .
 
 sdo:spouse
@@ -1280,8 +1279,8 @@ sdo:spouse
                              the spouse.
                           """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
-    sdo:domainIncludes :Person ;
-    sdo:rangeIncludes  :Person ;
+    sdo:domainIncludes picom:Person ;
+    sdo:rangeIncludes  picom:Person ;
 .
 
 sdo:thumbnail
@@ -1305,7 +1304,7 @@ sdo:url
     sdo:rangeIncludes  sdo:URL ;
 .
 
-:hasRole
+picom:hasRole
     a                  qb:CodedProperty, owl:ObjectProperty ;
     qb:codeList        picot:roles ;
     #    rdfs:range           :Role ;
@@ -1314,7 +1313,7 @@ sdo:url
     skos:scopeNote     """Use a term from the PiCo Roles thesaurus:
                           https://terms.personsincontext.org/roles
                        """@en ;
-    sdo:domainIncludes :PersonObservation ;
+    sdo:domainIncludes picom:PersonObservation ;
 .
 
 #:Role
@@ -1330,8 +1329,8 @@ prov:wasDerivedFrom
     skos:scopeNote     """A PersonReconstruction is always derived from one or more PersonObservations.
                           The wasDerivedFrom property is therefore required for PersonReconstructions.
                        """@en ;
-    sdo:domainIncludes :PersonReconstruction ;
-    sdo:rangeIncludes  :PersonObservation ;
+    sdo:domainIncludes picom:PersonReconstruction ;
+    sdo:rangeIncludes  picom:PersonObservation ;
 .
 
 prov:wasGeneratedBy
@@ -1343,7 +1342,7 @@ prov:wasGeneratedBy
                        """@en ;  # TODO afgaande op deze definitie hebben we nog een prov property nodig voor updates: prov:wasRevisionOf
     rdfs:label         "wasGeneratedBy"@en ;
     skos:scopeNote     """Required for PersonReconstructions."""@en ;
-    sdo:domainIncludes :PersonReconstruction ;
+    sdo:domainIncludes picom:PersonReconstruction ;
     sdo:rangeIncludes  prov:Activity .
 
 prov:wasRevisionOf
@@ -1356,8 +1355,8 @@ prov:wasRevisionOf
     skos:scopeNote     """The wasRevisionOf property is used for modifications made on Person
                           reconstructions. It can be qualified with a prov:Revision.
                        """@en ;  # TODO registratie van creatie en updates van Person reconstructions verder uitwerken
-    sdo:domainIncludes :PersonReconstruction ;
-    sdo:rangeIncludes  :PersonReconstruction .
+    sdo:domainIncludes picom:PersonReconstruction ;
+    sdo:rangeIncludes  picom:PersonReconstruction .
 
 ########################################################################################################################
 # Vocabularies
