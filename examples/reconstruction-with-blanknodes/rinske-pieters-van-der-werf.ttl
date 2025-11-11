@@ -35,11 +35,11 @@ _:person_reconstruction_1
 
 _:reconstruction_activity_01
     a                      prov:Activity ;
-    rdfs:label             "Genealogical research" ;
+    rdfs:label             "Genealogical research"@en ;
     prov:wasAssociatedWith _:reconstruction_agent_01 ;
     prov:startedAtTime     "1990-01-01T00:00:00"^^xsd:dateTime .
 
 _:reconstruction_agent_01
     a          prov:Agent ;
-    sdo:name   "Ivo Zandhuis" ;
+    sdo:name   "Ivo Zandhuis"@nl ;
     sdo:sameAs <https://orcid.org/0000-0003-0165-8341> .

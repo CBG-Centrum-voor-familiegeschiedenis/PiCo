@@ -9,6 +9,11 @@
 prov:ActivityShape
     a              sh:NodeShape ;
     sh:targetClass prov:Activity ;
+    sh:property    [ sh:path rdfs:label ;   # TODO: include in example in pico.ttl (already in rinske-pieters-van-der-werk.ttl example)
+                     sh:datatype rdf:langString ;
+                     sh:uniqueLang true ;
+                     sh:minCount 0 ;
+                     sh:message  "An Actibity should have a label (and language tag)." ]
     sh:property    [ sh:path     prov:wasAssociatedWith ;
                      sh:class    prov:Agent ;
                      sh:minCount 1 ;
@@ -19,7 +24,7 @@ prov:ActivityShape
                      sh:message  "An Activity must have a starttime." ; ] ;
     sh:property    [ sh:path     prov:endedAtTime ;
                      sh:datatype xsd:dateTime ;
-                     sh:minCount 1 ;
+                     sh:minCount 0 ;
                      sh:message  "An Activity must have a endtime." ; ] ;
 .
 
@@ -30,13 +35,12 @@ prov:Agent
                      sh:datatype rdf:langString ;
                      sh:uniqueLang true ;
                      sh:minCount 1 ;
-                     sh:minCount 1 ;
-                     sh:message  "An Agent must have name (and language tag)." ; ] ;
-    sh:property    [  sh:path sdo:url ;
-                      sh:nodeKind sh:IRI ;
-                      sh:minCount 0 ;
-                      sh:pattern "^https?://" ;
-                      sh:message  "An Agent should have a URL." ; ] ;
+                     sh:message  "An Agent must have name (and language tag)." ] ;
+    sh:property    [ sh:path sdo:url ;
+                     sh:nodeKind sh:IRI ;
+                     sh:minCount 0 ;
+                     sh:pattern "^https?://" ;
+                     sh:message  "An Agent should have a URL." ] ;
 .
 
 picom:PersonReconstructionShape
