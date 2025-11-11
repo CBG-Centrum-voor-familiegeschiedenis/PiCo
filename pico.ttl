@@ -203,7 +203,7 @@ picom:PersonObservation
                                                sdo:birthDate         "1858-06-21"^^xsd:date ;
                                                sdo:birthPlace        "Joure" ;
                                                sdo:gender            sdo:Male ;
-                                               picom:hasRole         picot:roles/575 ;  # child
+                                               picom:hasRole         picot_roles:575 ;  # child
                                                sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
 
                                             afr:geboorteregiser_1858_po_2
@@ -218,7 +218,7 @@ picom:PersonObservation
                                                sdo:gender            sdo:Male ;
                                                sdo:spouse            afr:geboorteregiser_1858_po_3 ;
                                                sdo:children          afr:geboorteregiser_1858_po_1 ;
-                                               picom:hasRole         picot:roles/489 .  # declarant
+                                               picom:hasRole         picot_roles:489 .  # declarant
                                          """ ] ;
 .
 
@@ -298,7 +298,7 @@ sdo:ArchiveComponent
                       sdo:text           """
                                                    afr:geboorteregister_1858
                                                        a                   sdo:ArchiveComponent ;
-                                                       sdo:additionalType  picot:sourcetypes/551 ;  # civil registry: birth
+                                                       sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
                                                        sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
                                                        sdo:holdingArchive  <https://www.tresoar.nl/> ;
                                                        sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
@@ -668,7 +668,7 @@ sdo:additionalName
 
 sdo:additionalType
     a                  qb:CodedProperty, owl:ObjectProperty ;
-    qb:codeList        picot:sourcetypes ;
+    qb:codeList        picot_sourcetypes ;
     rdfs:isDefinedBy   sdo:additionalType ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
