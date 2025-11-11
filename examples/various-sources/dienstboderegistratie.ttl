@@ -36,7 +36,7 @@ nha:dienstboderegister_po_2
     sdo:additionalType  picot:sourcetypes/565 ;  # beroep en bedrijf
     sdo:name            "Bevolkingsregister van dienstboden en bewoners van gestichten, 1860-1900" ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
-    sdo:locationCreated "Haarlem" ;
+    sdo:locationCreated "Haarlem"@nl ;
     sdo:associatedMedia [ a            sdo:ImageObject ;
                           sdo:position 1 ;
-                          sdo:embedUrl "https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380" ; ] .
+                          sdo:embedUrl <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380> ; ] .

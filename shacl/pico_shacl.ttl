@@ -1,10 +1,11 @@
+@prefix picom: <https://personsincontext.org/model#> .
+@prefix pnv:   <https://w3id.org/pnv#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo:  <https://schema.org/> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix picom: <https://personsincontext.org/model#> .
-@prefix sdo:  <https://schema.org/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 
 prov:ActivityShape
     a              sh:NodeShape ;
@@ -49,14 +50,18 @@ picom:PersonReconstructionShape
     sh:property    [ sh:path     prov:wasDerivedFrom ;
                      sh:class    picom:PersonObservation ;
                      sh:minCount 1 ;
-                     sh:message  "A PersonReconstruction must always refer to one or more PersonObservations via prov:wasDerivedFrom." ; ] ;
+                     sh:message  "A person reconstruction must always refer to one or more person observations via prov:wasDerivedFrom."@en ,
+                                 "Bij een persoonsreconstructie moet altijd verwezen worden naar een of meerdere persoonsobservaties via prov:wasDerivedFrom."@nl ;
+                   ] ;
     sh:property    [ sh:path     prov:wasGeneratedBy ;
                      sh:class    prov:Activity ;
                      sh:minCount 1 ;
-                     sh:message  "Information about the creation of a PersonReconstruction should be documented via prov:wasGeneratedBy." ; ] ;
+                     sh:message  "Information about the creation of a person reconstruction should be documented via prov:wasGeneratedBy."@en ,
+                                 "Informatie over het maken van een persoonsreconstructie moet worden gedocumenteerd via prov:wasGeneratedBy."@nl ;
+                   ] ;
 .
 
-picom:PersonObservationShape
+_:ScanShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonObservation ;
     sh:property    [ sh:path     picom:hasAge ;
@@ -66,15 +71,63 @@ picom:PersonObservationShape
     sh:property    [ sh:path     prov:hadPrimarySource ;
                      sh:node     sdo:ArchiveComponent ;
                      sh:minCount 1 ;
-                     sh:message  "A PersonObservation must have at least one PrimarySource which is related to a ArchiveComponent." ; ] ;
+                     sh:message  "A scan can have an position of the scan within a set, must be an decimal."@en ,
+                                 "Een scan kan een positie van de scan binnen een set hebben, moet een decimaal zijn."@nl ; 
+                   ] ;
+    sh:property    [ sh:path     sdo:thumbnailUrl ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
+                     sh:nodeKind sh:IRI ;
+                     sh:pattern "^https?://" ;
+                     sh:message  "A scan can have an thumbnail URL, must be an IRI." @en ,
+                                 "Een scan kan een miniatuur-URL hebben, dit moet een IRI zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:url ;
+                     sh:nodeKind sh:IRI ;
+                     sh:pattern "^https?://" ;
+                     sh:message  "A scan can have an URL, must be an IRI."@en ,
+                                 "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ;
+                   ] ;                                                         
 .
 
-sdo:ArchiveComponentShape
+_:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
+    sh:property    [ sh:path     sdo:additionalType ;
+                     sh:or       ( 
+                                    [ sh:datatype rdf:langString ] 
+                                    [ sh:nodeKind sh:IRI ]  
+                                 );
+                     sh:message  "An source can have an additional type, can be a language-tagged literal or an IRI."@en ,
+                                 "Een bron kan een extra type hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:associatedMedia ;
+                     sh:class    sdo:ImageObject ;
+                     sh:message  "An source can have associatiad media, must be an image object."@en ,
+                                 "Een bron kan bijbehorende media hebben, dit moet een afbeeldingsobject zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:contentLocation ;
+                     sh:or       ( 
+                                    [ sh:datatype rdf:langString ] 
+                                    [ sh:datatype xsd:anyURI ]  
+                                 );
+                     sh:message  "An source can have a content location, can be a language-tagged literal or an IRI."@en ,
+                                 "Een bron kan een inhoudslocatie hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:dateCreated ;
+                     sh:or       (
+                                    [ sh:datatype xsd:date  ]
+                                    [ sh:datatype xsd:gYear ]
+                                 );
+                     sh:message  "An source can have a creation date, must be in ISO 8601 date format."@en ,
+                                 "Een bron kan een aanmaakdatum hebben, dit moet in het ISO 8601-datumformaat zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:holdingArchive ;
+                     sh:nodeKind sh:IRI ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/51 
+                     sh:pattern "^https?://" ;
+                     sh:message  "An source can have an URL for the holding archive, must be an IRI."@en ,
+                                 "Een bron kan een URL hebben voor het archief waarin het zich bevindt, dit moet een IRI zijn."@nl ;
+                   ] ;
     sh:property    [ sh:path     sdo:name ;
-                     sh:or       ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
+                     sh:datatype rdf:langString ;
                      sh:minCount 1 ;
                      sh:message  "An ArchiveComponent must have a name." ; ] ;
 .
-

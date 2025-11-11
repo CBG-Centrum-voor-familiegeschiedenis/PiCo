@@ -17,8 +17,9 @@ nha:NL-HlmNHA_1503_537_IVa_63_po_1
     sdo:familyName        "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
     sdo:additionalName    [ a               pnv:PersonName ;
-                            pnv:literalName "Bos, A." ;
-                            pnv:initials    "A." ; ] ;
+                            pnv:literalName "Bos, A."@nl ;
+                            pnv:initials    "A."@nl ; 
+                           ] ;
     sdo:address           "Eendrachtstraat 3" ;
     dl-ont:inkomen        "550"^^xsd:integer ;
     dl-ont:aftrek         "500"^^xsd:integer ;
@@ -32,4 +33,4 @@ nha:NL-HlmNHA_1503_537_IVa_63
     sdo:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1902"^^xsd:gYear ;
-    sdo:locationCreated "Haarlem" .
+    sdo:locationCreated "Haarlem"@nl .

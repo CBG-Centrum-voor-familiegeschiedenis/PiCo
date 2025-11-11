@@ -17,10 +17,10 @@ _:person_reconstruction_1
     sdo:familyName      "van der Werf" ;
     sdo:givenName       "Rinske" ;
     sdo:additionalName  [ a                 pnv:PersonName ;
-                          pnv:literalName   "Rinske Pieters van der Werf" ;
-                          pnv:baseSurname   "Werf" ;
-                          pnv:surnamePrefix "van der" ;
-                          pnv:patronym      "Pieters" ] ;
+                          pnv:literalName   "Rinske Pieters van der Werf"@nl ;
+                          pnv:baseSurname   "Werf"@nl ;
+                          pnv:surnamePrefix "van der"@nl ;
+                          pnv:patronym      "Pieters"@nl ] ;
     sdo:gender          sdo:Female ;
     sdo:birthPlace      "Gorredijk, gemeente Opsterland" ;
     sdo:birthDate       "1816-10-11"^^xsd:date ;
@@ -28,7 +28,7 @@ _:person_reconstruction_1
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
                           prov:hadPrimarySource [ a sdo:ArchiveComponent ;
                                                   sdo:name
-                                                    "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021" ;
+                                                    "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021"@nl ;
                                                   sdo:url
                                                     <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .

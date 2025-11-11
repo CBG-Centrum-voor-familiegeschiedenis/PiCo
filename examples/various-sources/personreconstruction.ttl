@@ -28,12 +28,13 @@ cbg:person_reconstruction_1
     sdo:spouse          [ rdf:value     cbg:person_reconstruction_2 ;
                           sdo:startDate "1885-11-11"^^xsd:date ;
                           sdo:endDate   "1926"^^xsd:gYear ; ] ;
-    prov:wasDerivedFrom nha:NL-HlmNHA_1503_537_IVa_63_po_1,    # belastingregistratie
-                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # bevolkingregistratie
-                        nha:NL-HlmNHA_1482_234_B_0006_po_1,    # jaarboekje
-                        nha:huwelijksakte_1885_321_po_1,       # huwelijksakte
-                        hua:NL-UtHUA_920_26-29_2430_po_1,      # personeelsregistratie
-                        cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
+    prov:wasDerivedFrom cbg:NL-HaCBG_1755_0341_142_po_1 ;       # persoonskaart
+                        #nha:NL-HlmNHA_1503_537_IVa_63_po_1,    # belastingregistratie
+                        #nha:NL-HlmNHA_1482_234_B_0006_po_1,    # bevolkingregistratie
+                        #nha:NL-HlmNHA_1482_234_B_0006_po_1,    # jaarboekje
+                        #nha:huwelijksakte_1885_321_po_1,       # huwelijksakte
+                        #hua:NL-UtHUA_920_26-29_2430_po_1,      # personeelsregistratie
+                        
     prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
 cbg:person_reconstruction_2
@@ -46,7 +47,7 @@ cbg:person_reconstruction_2
     sdo:birthDate       "1860-03-31"^^xsd:date ;
     sdo:deathPlace      "Detroit, VSA" ;
     sdo:deathDate       "1926"^^xsd:gYear ;
-    prov:wasDerivedFrom nha:huwelijksakte_1885_321_po_1, cbg:NL-HaCBG_1755_0341_142_po_1 ;
+    prov:wasDerivedFrom cbg:NL-HaCBG_1755_0341_142_po_1 ;  # nha:huwelijksakte_1885_321_po_1, 
     prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
 cbg:reconstruction_activity_01
@@ -57,5 +58,12 @@ cbg:reconstruction_activity_01
 
 cbg:reconstruction_agent_01
     a          prov:Agent ;
-    sdo:name   "Ivo Zandhuis" ;
+    sdo:name   "Ivo Zandhuis"@nl ;
     sdo:sameAs <https://orcid.org/0000-0003-0165-8341> .
+
+cbg:NL-HaCBG_1755_0341_142_po_1 
+    a picom:PersonObservation ;
+    prov:hadPrimarySource [ a sdo:ArchiveComponent ;
+                            sdo:name  "PK A. Bos"@nl ;
+                            sdo:url   <https://cbg.nl/persoonskaarten/voorbeeld> 
+                          ] . 

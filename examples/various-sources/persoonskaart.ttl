@@ -51,8 +51,9 @@ cbg:NL-HaCBG_1755_0341_142_po_3
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
-                            pnv:literalName "Sjouke Abes Bos" ;
-                            pnv:patronym    "Abes" ; ] ;
+                            pnv:literalName "Sjouke Abes Bos"@nl ;
+                            pnv:patronym    "Abes"@nl ; 
+                          ] ;
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 cbg:NL-HaCBG_1755_0341_142_po_4
@@ -62,9 +63,10 @@ cbg:NL-HaCBG_1755_0341_142_po_4
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
-                            pnv:literalName   "Geertruida van der Wijk" ;
-                            pnv:baseSurname   "Wijk" ;
-                            pnv:surnamePrefix "van der" ; ] ;
+                            pnv:literalName   "Geertruida van der Wijk"@nl ;
+                            pnv:baseSurname   "Wijk"@nl ;
+                            pnv:surnamePrefix "van der" @nl ; 
+                          ] ;
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 
