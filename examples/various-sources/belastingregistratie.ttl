@@ -3,7 +3,9 @@
 @prefix sdo:    <https://schema.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix picom:   <https://personsincontext.org/model#> .
-@prefix picot:  <https://terms.personsincontext.org/> .
+@prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
 @prefix nha:    <https://noord-hollandsarchief.nl/> .
 @prefix dl-ont: <https://example.com/dwarsliggers/ont/> .
 
@@ -28,7 +30,7 @@ nha:NL-HlmNHA_1503_537_IVa_63_po_1
 nha:NL-HlmNHA_1503_537_IVa_63
     a                   sdo:ArchiveComponent ;
     sdo:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
-    sdo:additionalType  picot:sourcetypes/537 ;  # fiscaal en financieel
+    sdo:additionalType  picot_sourcetypes:537 ;  # fiscaal en financieel
     sdo:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1902"^^xsd:gYear ;
