@@ -23,9 +23,9 @@ picom:PersonObservationShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonObservation ;
     sh:property    [ sh:path     picom:hasAge ;
-                     sh:datatype xsd:string ;
+                     sh:or       ( [ sh:datatype xsd:decimal ] [  sh:datatype xsd:string ; ] ) ;
                      sh:maxCount 1 ;
-                     sh:message  "A PersonObservation can have only one age." ; ] ;
+                     sh:message  "A PersonObservation can have only one age, must be a literal or decimal." ; ] ;
     sh:property    [ sh:path     prov:hadPrimarySource ;
                      sh:node     sdo:ArchiveComponent ;
                      sh:minCount 1 ;
