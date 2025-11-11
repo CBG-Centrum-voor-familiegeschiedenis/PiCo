@@ -6,6 +6,39 @@
 @prefix sdo:  <https://schema.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
+prov:ActivityShape
+    a              sh:NodeShape ;
+    sh:targetClass prov:Activity ;
+    sh:property    [ sh:path     prov:wasAssociatedWith ;
+                     sh:class    prov:Agent ;
+                     sh:minCount 1 ;
+                     sh:message  "An Activity must be associated with an Agent." ; ] ;
+    sh:property    [ sh:path     prov:startedAtTime ;
+                     sh:datatype xsd:dateTime ;
+                     sh:minCount 1 ;
+                     sh:message  "An Activity must have a starttime." ; ] ;
+    sh:property    [ sh:path     prov:endedAtTime ;
+                     sh:datatype xsd:dateTime ;
+                     sh:minCount 1 ;
+                     sh:message  "An Activity must have a endtime." ; ] ;
+.
+
+prov:Agent
+    a              sh:NodeShape ;
+    sh:targetClass prov:Agent ;
+    sh:property    [ sh:path sdo:name ;
+                     sh:datatype rdf:langString ;
+                     sh:uniqueLang true ;
+                     sh:minCount 1 ;
+                     sh:minCount 1 ;
+                     sh:message  "An Agent must have name (and language tag)." ; ] ;
+    sh:property    [  sh:path sdo:url ;
+                      sh:nodeKind sh:IRI ;
+                      sh:minCount 0 ;
+                      sh:pattern "^https?://" ;
+                      sh:message  "An Agent should have a URL." ; ] ;
+.
+
 picom:PersonReconstructionShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonReconstruction ;
@@ -41,11 +74,3 @@ sdo:ArchiveComponentShape
                      sh:message  "An ArchiveComponent must have a name." ; ] ;
 .
 
-prov:ActivityShape
-    a              sh:NodeShape ;
-    sh:targetClass prov:Activity ;
-    sh:property    [ sh:path     prov:wasAssociatedWith ;
-                     sh:class    prov:Agent ;
-                     sh:minCount 1 ;
-                     sh:message  "An Activity must be associated with an Agent." ; ] ;
-.
