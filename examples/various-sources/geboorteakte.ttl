@@ -66,6 +66,6 @@ afr:geboorteregiser_1858
     sdo:locationCreated "Haskerland"@nl ;
     sdo:associatedMedia [ a            sdo:ImageObject ;
                           sdo:position 51 ;
-                          sdo:url      <https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg> ;
+                          sdo:url      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ;
                           sdo:thumbnail
-                                       <https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg> ; ] .
+                                       "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ; ] .

@@ -108,6 +108,6 @@ nha:huwelijksakte_1885_321
     sdo:locationCreated "Haarlem"@nl ;
     sdo:associatedMedia [ a             sdo:ImageObject ;
                           sdo:position  1 ;
-                          sdo:url       <https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC> ;
-                          sdo:embedUrl  <https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC> ;
-                          sdo:thumbnail <https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC> ; ] .
+                          sdo:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ; ] .
