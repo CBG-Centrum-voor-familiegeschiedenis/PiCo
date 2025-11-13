@@ -129,5 +129,5 @@ _:SourceShape
     sh:property    [ sh:path     sdo:name ;
                      sh:datatype rdf:langString ;
                      sh:minCount 1 ;
-                     sh:message  "An ArchiveComponent must have a name." ; ] ;
+                     sh:message  "An ArchiveComponent must have a name with a language tag." ; ] ;
 .
