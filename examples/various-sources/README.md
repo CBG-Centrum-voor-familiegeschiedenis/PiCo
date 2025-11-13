@@ -10,16 +10,16 @@ PersonReconstruction.
 
 ### Terms from examples (https://terms.personsincontext.org/)
 
-- picot:sourcetypes/belastingregistratie
-- picot:sourcetypes/bevolkingsregistratie
-- picot:sourcetypes/boekpagina
-- picot:sourcetypes/dienstboderegistratie
-- picot:sourcetypes/huwelijksakte
-- picot:sourcetypes/personeelsregistratie
-- picot:sourcetypes/persoonskaart
+- picot_sourcetypes:belastingregistratie
+- picot_sourcetypes:bevolkingsregistratie
+- picot_sourcetypes:boekpagina
+- picot_sourcetypes:dienstboderegistratie
+- picot_sourcetypes:huwelijksakte
+- picot_sourcetypes:personeelsregistratie
+- picot_sourcetypes:persoonskaart
 
-- picot:roles/hoofd
-- picot:roles/huwelijkspartij
+- picot_roles:hoofd
+- picot_roles:huwelijkspartij
 
 ### Ontology from examples (https://personsincontext.org/model/)
 

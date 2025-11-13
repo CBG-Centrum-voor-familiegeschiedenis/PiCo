@@ -4,7 +4,9 @@
 @prefix bio:   <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix picom:  <https://personsincontext.org/model#> .
-@prefix picot: <https://terms.personsincontext.org/> .
+@prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
 @prefix cbg:   <https://data.cbg.nl/> .
 @prefix nha:   <https://noord-hollandsarchief.nl/> .
 @prefix hua:   <https://hetutrechtsarchief.nl/> .
@@ -73,5 +75,5 @@ cbg:NL-HaCBG_1755_0341_142
     a                   sdo:ArchiveComponent ;
     sdo:name            "Persoonskaart Abe Bos" ;
     sdo:locationCreated "Nederland" ;
-    sdo:additionalType  picot:sourcetypes/554 ;  # bevolkingsregister
+    sdo:additionalType  picot_sourcetypes:554 ;  # bevolkingsregister
     sdo:holdingArchive  <https://cbg.nl/> .
