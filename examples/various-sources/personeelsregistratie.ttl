@@ -24,7 +24,7 @@ hua:NL-UtHUA_920_26-29_2430_po_1
 
 hua:NL-UtHUA_920_26-29_2430
     a                   sdo:ArchiveComponent ;
-    sdo:name            "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430" ;
+    sdo:name            "Indices op het stamboek van het personeel van de dienst Tractie en Materieel, ca. 1874-1922 (NL-UtHUA, toegang 920, invnr. 29), scan 2430"@nl ;
     sdo:additionalType  picot:sourcetypes/565 ;  # beroep en bedrijf
     sdo:isPartOf        <https://hetutrechtsarchief.nl/collectie/609C5B9C31A84642E0534701000A17FD> ;
     sdo:locationCreated "Haarlem"@nl ;
