@@ -20,8 +20,7 @@ nha:huwelijksakte_1885_321_po_1
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
     picom:hasRole          picot:roles/574 ;  # spouse
-    sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_2 ;
-                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    sdo:spouse            nha:huwelijksakte_1885_321_po_2 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
 nha:huwelijksakte_1885_321_po_2
@@ -34,9 +33,8 @@ nha:huwelijksakte_1885_321_po_2
     sdo:birthPlace        "Haarlem" ;
     sdo:hasOccupation     "dienstbode" ;
     sdo:gender            sdo:Female ;
-    picom:hasRole          picot:roles/574 ;  # spouse
-    sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_1 ;
-                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    picom:hasRole         picot:roles/574 ;  # spouse
+    sdo:spouse            nha:huwelijksakte_1885_321_po_1 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
 nha:huwelijksakte_1885_321_po_3
@@ -101,7 +99,7 @@ nha:huwelijksakte_1885_321_event_1
 nha:huwelijksakte_1885_321
     a                   sdo:ArchiveComponent ;
     sdo:additionalType  picot:sourcetypes/552 ; # civil registry: marriage
-    sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+    sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:url             <https://hdl.handle.net/21.12102/5EC8BCCEACD6410780110CCD6B740E7C> ;
     sdo:dateCreated     "1885-11-11"^^xsd:date ;
