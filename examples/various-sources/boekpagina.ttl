@@ -23,7 +23,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_1
 nha:bibliotheek_5008_13-p299
     a                   sdo:ArchiveComponent ;
     sdo:additionalType  picot:sourcetypes/0 ;  # publicatie
-    sdo:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
+    sdo:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1903"^^xsd:gYear ;
     sdo:locationCreated "Haarlem" ;
