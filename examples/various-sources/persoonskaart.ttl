@@ -73,7 +73,7 @@ cbg:NL-HaCBG_1755_0341_142_po_4
 # BRON
 cbg:NL-HaCBG_1755_0341_142
     a                   sdo:ArchiveComponent ;
-    sdo:name            "Persoonskaart Abe Bos" ;
+    sdo:name            "Persoonskaart Abe Bos"@nl ;
     sdo:locationCreated "Nederland" ;
     sdo:additionalType  picot:sourcetypes/554 ;  # bevolkingsregister
     sdo:holdingArchive  <https://cbg.nl/> .
