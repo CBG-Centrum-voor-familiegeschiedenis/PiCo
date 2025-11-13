@@ -28,8 +28,8 @@ nha:NL-HlmNHA_1503_537_IVa_63_po_1
 
 nha:NL-HlmNHA_1503_537_IVa_63
     a                   sdo:ArchiveComponent ;
-    sdo:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63 " ;
-    sdo:additionalType  picot:sourcetypes/537 ;  # fiscaal en financieel
+    sdo:name            "Kohier plaatselijke directe belasting Haarlem 1902, afd. IV, deel 1 (toegang 1503, invnr 537) - spread 63"@nl ;
+    sdo:additionalType  picot_sourcetypes/537 ;  # fiscaal en financieel
     sdo:isPartOf        <https://hdl.handle.net/21.12102/0B734AAC134B457CBB5C8E305A9462D9> ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1902"^^xsd:gYear ;
