@@ -1,20 +1,22 @@
 # Version: 20230921
 
-@prefix picom:   <https://personsincontext.org/model#> .
-@prefix picot:   <https://terms.personsincontext.org/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann:    <http://purl.org/vocab/vann/> .  # vocabulary for annotating vocabulary descriptions
-@prefix sh:      <http://www.w3.org/ns/shacl#> .
-@prefix prov:    <http://www.w3.org/ns/prov#> .
-@prefix pnv:     <https://w3id.org/pnv#> .
-@prefix sdo:     <https://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix qb:      <http://purl.org/linked-data/cube#> .
-@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix picom:              <https://personsincontext.org/model#> .
+@prefix picot_sourcetypes:  <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes:   <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles:        <https://terms.personsincontext.org/roles/> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:               <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:               <http://purl.org/vocab/vann/> .  # vocabulary for annotating vocabulary descriptions
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix prov:               <http://www.w3.org/ns/prov#> .
+@prefix pnv:                <https://w3id.org/pnv#> .
+@prefix sdo:                <https://schema.org/> .
+@prefix dcterms:            <http://purl.org/dc/terms/> .
+@prefix qb:                 <http://purl.org/linked-data/cube#> .
+@prefix sosa:               <http://www.w3.org/ns/sosa/> .
 
 ########################################################################################################################
 # ontology
@@ -668,7 +670,7 @@ sdo:additionalName
 
 sdo:additionalType
     a                  qb:CodedProperty, owl:ObjectProperty ;
-    qb:codeList        picot_sourcetypes ;
+    qb:codeList        picot_sourcetypes: ;
     rdfs:isDefinedBy   sdo:additionalType ;
     skos:definition    "The type of the Source." ;
     rdfs:label         "additionalType"@en ;
@@ -1306,7 +1308,7 @@ sdo:url
 
 picom:hasRole
     a                  qb:CodedProperty, owl:ObjectProperty ;
-    qb:codeList        picot:roles ;
+    qb:codeList        picot_roles: ;
     #    rdfs:range           :Role ;
     skos:definition    "The role of a Person observation on the Source." ;
     rdfs:label         "hasRole"@en ;
@@ -1362,13 +1364,18 @@ prov:wasRevisionOf
 # Vocabularies
 ########################################################################################################################
 
-picot:roles
+picot_roles:
     a          skos:ConceptScheme ;
     rdfs:label 'Persons in Context role thesaurus' .
 
-picot:sourectypes
+picot_sourcetypes:
     a          skos:ConceptScheme ;
     rdfs:label 'Persons in Context sourceType thesaurus' .
+
+picot_eventtypes:
+    a          skos:ConceptScheme ;
+    rdfs:label 'Persons in Context eventType thesaurus' .
+
 
 ########################################################################################################################
 # TODO
