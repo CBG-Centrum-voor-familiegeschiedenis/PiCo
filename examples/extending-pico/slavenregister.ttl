@@ -44,14 +44,8 @@ nas:slavenregister_41_4890_po_3
 
 nas:slavenregister_41_4890
     a                   sdo:ArchiveComponent ;
-    sdo:name            "Nationaal Archief Suriname, Slavenregister, inv.nr. 41, fol. 4890" ;
-    sdo:locationCreated "Suriname" ;
-    sdo:additionalType  _:slavenregistratie ;
-    sdo:url             "https://www.nationaalarchief.nl/onderzoeken/archief/NadereToegangen/invnr/NT00461.41/file/Slavenregister_InvNr_41_FolioNr_4890a" ;
+    sdo:name            "Nationaal Archief Suriname, Slavenregister, inv.nr. 41, fol. 4890"@nl ;
+    sdo:locationCreated "Suriname"@nl ;
+    sdo:additionalType  "Slavenregistratie"@nl , "Slave Registration"@en ;
+    sdo:url             <https://www.nationaalarchief.nl/onderzoeken/archief/NadereToegangen/invnr/NT00461.41/file/Slavenregister_InvNr_41_FolioNr_4890a> ;
     sdo:holdingArchive  <https://nationaalarchief.sr/> .
-
-
-_:slavenregistratie
-    rdfs:label "Slavenregistratie"@nl ;
-    rdfs:label "Slave Registration"@en
-.

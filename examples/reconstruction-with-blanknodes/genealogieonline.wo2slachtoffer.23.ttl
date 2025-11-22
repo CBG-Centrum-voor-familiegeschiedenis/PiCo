@@ -5,14 +5,17 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.genealogieonline.nl/id/person_595_I000342>
-    a                    picom:PersonReconstruction ;
+    a                    picom:PersonObservation  ; # one persons PersonReconstruction is another persons PersonObservation ?
     sdo:name             "Willem Hermanus Brizee" ;
     sdo:givenName        "Willem Hermanus" ;
     sdo:familyName       "Brizee" ;
     sdo:birthDate        "1914-06-14" ;
     sdo:deathDate        "1945-05-03" ;
     sdo:deathPlace       <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
-    sdo:mainEntityOfPage "https://www.genealogieonline.nl/595/I000342" .
+    prov:hadPrimarySource [ a sdo:ArchiveComponent ;
+                            sdo:name  "Willem Hermanus (Wim) Brizee (1914-1945)"@nl ;
+                            sdo:url   <https://www.genealogieonline.nl/genealogie-coret/I000342.php> 
+                          ] . 
 
 <https://data.niod.nl/WO2_Thesaurus/kampen/3697>
     a        sdo:Place ;

@@ -1,6 +1,5 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix sdo:   <https://schema.org/> .
@@ -34,7 +33,7 @@ afr:geboorteregiser_1858_po_2
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
-    picom:hasAge           "30"^^xs:decimal ;
+    picom:hasAge          "30" ;
     sdo:hasOccupation     "klokmakersknecht" ;
     sdo:address           "Joure" ;
     sdo:gender            sdo:Male ;
@@ -50,9 +49,10 @@ afr:geboorteregiser_1858_po_3
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
-                            pnv:literalName   "Geertruida van der Wijk" ;
-                            pnv:baseSurname   "Wijk" ;
-                            pnv:surnamePrefix "van der" ; ] ;
+                            pnv:literalName   "Geertruida van der Wijk"@nl ;
+                            pnv:baseSurname   "Wijk"@nl ;
+                            pnv:surnamePrefix "van der"@nl ; 
+                          ] ;
     sdo:address           "Joure" ;
     sdo:spouse            afr:geboorteregiser_1858_po_2 ;
     sdo:children          afr:geboorteregiser_1858_po_1 ;
@@ -61,13 +61,13 @@ afr:geboorteregiser_1858_po_3
 afr:geboorteregiser_1858
     a                   sdo:ArchiveComponent ;
     sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
-    sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
+    sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051"@nl ;
     sdo:holdingArchive  <https://www.tresoar.nl/> ;
     sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
-    sdo:dateCreated     "1885"^^xs:gYear ;
-    sdo:locationCreated "Haskerland" ;
+    sdo:dateCreated     "1885"^^xsd:gYear ;
+    sdo:locationCreated "Haskerland"@nl ;
     sdo:associatedMedia [ a            sdo:ImageObject ;
                           sdo:position 51 ;
-                          sdo:url      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
+                          sdo:url      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ;
                           sdo:thumbnail
-                                       "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
+                                       "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ; ] .

@@ -15,8 +15,9 @@ nha:NL-HlmNHA_1482_234_B_0006_po_1
     prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
     sdo:name              "Bos, A." ;
     sdo:additionalName    [ a               pnv:PersonName ;
-                            pnv:initials    "A." ;
-                            pnv:literalName "Bos, A." ] ;
+                            pnv:initials    "A."@nl ;
+                            pnv:literalName "Bos, A."@nl ;
+                          ] ;
     sdo:address           "Eendrachtstraat 3" ;
     dl-ont:bestuurderVan  "Vereeniging de Dageraad" ;
     dl-ont:functie        "secretaris" .
@@ -24,7 +25,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_1
 nha:bibliotheek_5008_13-p299
     a                   sdo:ArchiveComponent ;
     sdo:additionalType  picot_sourcetypes:0 ;  # publicatie
-    sdo:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299" ;
+    sdo:name            "Janssen van Raay, H.L. / Jaarboekje van de stad Haarlem 13 (1903), p. 299"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1903"^^xsd:gYear ;
     sdo:locationCreated "Haarlem" ;

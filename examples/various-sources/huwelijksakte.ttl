@@ -22,8 +22,7 @@ nha:huwelijksakte_1885_321_po_1
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
     picom:hasRole          picot_roles:574 ;  # spouse
-    sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_2 ;
-                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    sdo:spouse            nha:huwelijksakte_1885_321_po_2 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
 nha:huwelijksakte_1885_321_po_2
@@ -36,9 +35,8 @@ nha:huwelijksakte_1885_321_po_2
     sdo:birthPlace        "Haarlem" ;
     sdo:hasOccupation     "dienstbode" ;
     sdo:gender            sdo:Female ;
-    picom:hasRole          picot_roles:574 ;  # spouse
-    sdo:spouse            [ rdf:value     nha:huwelijksakte_1885_321_po_1 ;
-                            sdo:startDate "1885-11-11"^^xsd:date ; ] ;
+    picom:hasRole         picot_roles:574 ;  # spouse
+    sdo:spouse            nha:huwelijksakte_1885_321_po_1 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
 nha:huwelijksakte_1885_321_po_3
@@ -48,8 +46,9 @@ nha:huwelijksakte_1885_321_po_3
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
-                            pnv:literalName "Sjouke Abes Bos" ;
-                            pnv:patronym    "Abes" ; ] ;
+                            pnv:literalName "Sjouke Abes Bos"@nl ;
+                            pnv:patronym    "Abes"@nl ; 
+                          ] ;
     sdo:gender            sdo:Male ;
     sdo:children          nha:huwelijksakte_1885_321_po_1 .
 
@@ -60,9 +59,10 @@ nha:huwelijksakte_1885_321_po_4
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
-                            pnv:literalName   "Geertruida van der Wijk" ;
-                            pnv:baseSurname   "Wijk" ;
-                            pnv:surnamePrefix "van der" ; ] ;
+                            pnv:literalName   "Geertruida van der Wijk"@nl ;
+                            pnv:baseSurname   "Wijk"@nl ;
+                            pnv:surnamePrefix "van der"@nl ; 
+                          ] ;
     sdo:gender            sdo:Female ;
     sdo:children          nha:huwelijksakte_1885_321_po_1 .
 
@@ -83,9 +83,10 @@ nha:huwelijksakte_1885_321_po_6
     sdo:familyName        "van Zijl" ;
     sdo:givenName         "Helena Catharina" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
-                            pnv:literalName   "Helena Catharina van Zijl" ;
-                            pnv:baseSurname   "Zijl" ;
-                            pnv:surnamePrefix "van" ; ] ;
+                            pnv:literalName   "Helena Catharina van Zijl"@nl ;
+                            pnv:baseSurname   "Zijl"@nl ;
+                            pnv:surnamePrefix "van"@nl ; 
+                          ] ;
     sdo:gender            sdo:Female ;
     sdo:children          nha:huwelijksakte_1885_321_po_2 .
 
@@ -100,13 +101,13 @@ nha:huwelijksakte_1885_321_event_1
 nha:huwelijksakte_1885_321
     a                   sdo:ArchiveComponent ;
     sdo:additionalType  picot_sourcetypes:552 ; # civil registry: marriage
-    sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321" ;
+    sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:url             <https://hdl.handle.net/21.12102/5EC8BCCEACD6410780110CCD6B740E7C> ;
     sdo:dateCreated     "1885-11-11"^^xsd:date ;
-    sdo:locationCreated "Haarlem" ;
+    sdo:locationCreated "Haarlem"@nl ;
     sdo:associatedMedia [ a             sdo:ImageObject ;
                           sdo:position  1 ;
-                          sdo:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC" ;
-                          sdo:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC" ;
-                          sdo:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC" ; ] .
+                          sdo:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ; ] .
