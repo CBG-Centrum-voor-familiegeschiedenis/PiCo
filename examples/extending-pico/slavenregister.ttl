@@ -4,7 +4,9 @@
 @prefix sdo:    <https://schema.org/> .
 @prefix pnv:    <https://w3id.org/pnv#> .
 @prefix picom:   <https://personsincontext.org/model#> .
-@prefix picot:  <https://terms.personsincontext.org/> .
+@prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
 @prefix sr-ont: <https://ontology.nationaalarchief.sr/> .
 @prefix nas:    <https://data.nationaalarchief.sr/> .
 

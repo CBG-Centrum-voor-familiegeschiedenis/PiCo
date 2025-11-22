@@ -1,12 +1,12 @@
 @echo off
 
-rem Use Java 17+
+REM Use Java 17+
 set JENA_HOME=C:\java\apache-jena-5.6.0
 set PATH=%PATH%;%JENA_HOME%\bat
 
 cd /d "%~dp0"
 
-rem === Create timestamp (YYYY-MM-DD_HH-MM-SS) ===
+REM === Create timestamp (YYYY-MM-DD_HH-MM-SS) ===
 for /f "tokens=1-4 delims=/- " %%a in ("%date%") do (
     set YYYY=%%d
     set MM=%%b
@@ -18,15 +18,15 @@ for /f "tokens=1-3 delims=:.," %%a in ("%time%") do (
     set Sec=%%c
 )
 
-rem Remove any leading spaces or zero-pad hour if needed
+REM Remove any leading spaces or zero-pad hour if needed
 set HH=%HH: =0%
 
-rem === Construct timestamped log file name ===
+REM === Construct timestamped log file name ===
 set LOGFILE=validate_examples.%YYYY%%MM%%DD%.%HH%%Min%.log
 
 echo === Validation run started %date% %time% === >> "%LOGFILE%"
 
-rem Loop through all .ttl files
+REM Loop through all .ttl files
 for /r "../examples" %%f in (*.ttl) do (
     echo. >> "%LOGFILE%"
     echo. >> "%LOGFILE%"

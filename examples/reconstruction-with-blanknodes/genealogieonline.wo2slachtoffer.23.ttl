@@ -30,7 +30,7 @@
     sdo:deathDate       "1945-05-03" ;
     sdo:deathPlace      <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
     rdfs:label          "Willem Hermanus Brizee (1914-1945)" ;
-    prov:wasDerivedFrom <https://www.genealogieonline.nl/id/595_I000342>, [ a                     picom:PersonObservation ;
+    prov:wasDerivedFrom <https://www.genealogieonline.nl/id/person_595_I000342>, [ a                     picom:PersonObservation ;
                                                                             sdo:name              "Willem Hermanus Brizee" ;
                                                                             sdo:givenName         "Willem Hermanus" ;
                                                                             sdo:familyName        "Brizee" ;

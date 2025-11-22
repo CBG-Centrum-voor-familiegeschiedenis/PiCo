@@ -5,7 +5,9 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix picom:  <https://personsincontext.org/model#> .
-@prefix picot: <https://terms.personsincontext.org/> .
+@prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
 @prefix nha:   <https://noord-hollandsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
@@ -19,7 +21,7 @@ nha:huwelijksakte_1885_321_po_1
     sdo:birthPlace        "Joure" ;
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
-    picom:hasRole          picot:roles/574 ;  # spouse
+    picom:hasRole          picot_roles:574 ;  # spouse
     sdo:spouse            nha:huwelijksakte_1885_321_po_2 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
@@ -33,7 +35,7 @@ nha:huwelijksakte_1885_321_po_2
     sdo:birthPlace        "Haarlem" ;
     sdo:hasOccupation     "dienstbode" ;
     sdo:gender            sdo:Female ;
-    picom:hasRole         picot:roles/574 ;  # spouse
+    picom:hasRole         picot_roles:574 ;  # spouse
     sdo:spouse            nha:huwelijksakte_1885_321_po_1 ;
     sdo:parent            nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
@@ -98,7 +100,7 @@ nha:huwelijksakte_1885_321_event_1
 # BRON
 nha:huwelijksakte_1885_321
     a                   sdo:ArchiveComponent ;
-    sdo:additionalType  picot:sourcetypes/552 ; # civil registry: marriage
+    sdo:additionalType  picot_sourcetypes:552 ; # civil registry: marriage
     sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:url             <https://hdl.handle.net/21.12102/5EC8BCCEACD6410780110CCD6B740E7C> ;
