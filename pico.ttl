@@ -1,22 +1,22 @@
 # Version: 20230921
 
-@prefix picom:              <https://personsincontext.org/model#> .
-@prefix picot_sourcetypes:  <https://terms.personsincontext.org/sourcetypes/> .
-@prefix picot_eventtypes:   <https://terms.personsincontext.org/eventtypes/> .
-@prefix picot_roles:        <https://terms.personsincontext.org/roles/> .
-@prefix owl:                <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:               <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann:               <http://purl.org/vocab/vann/> .  # vocabulary for annotating vocabulary descriptions
-@prefix sh:                 <http://www.w3.org/ns/shacl#> .
-@prefix prov:               <http://www.w3.org/ns/prov#> .
-@prefix pnv:                <https://w3id.org/pnv#> .
-@prefix sdo:                <https://schema.org/> .
-@prefix dcterms:            <http://purl.org/dc/terms/> .
-@prefix qb:                 <http://purl.org/linked-data/cube#> .
-@prefix sosa:               <http://www.w3.org/ns/sosa/> .
+@prefix picom:             <https://personsincontext.org/model#> .
+@prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
+@prefix picot_eventtypes:  <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles:       <https://terms.personsincontext.org/roles/> .
+@prefix owl:               <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:               <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:              <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:              <http://purl.org/vocab/vann/> .  # vocabulary for annotating vocabulary descriptions
+@prefix sh:                <http://www.w3.org/ns/shacl#> .
+@prefix prov:              <http://www.w3.org/ns/prov#> .
+@prefix pnv:               <https://w3id.org/pnv#> .
+@prefix sdo:               <https://schema.org/> .
+@prefix dcterms:           <http://purl.org/dc/terms/> .
+@prefix qb:                <http://purl.org/linked-data/cube#> .
+@prefix sosa:              <http://www.w3.org/ns/sosa/> .
 
 ########################################################################################################################
 # ontology
@@ -228,7 +228,7 @@ picom:PersonReconstruction
     a               owl:Class ;
     rdfs:label      "PersonReconstruction"@en ;  #, "Persoonsreconstructie"@nl ;
     skos:definition """A Person reconstruction is the result of modelling one or multiple PersonObservation(s) into a
-                           single resource."""@en ;
+                       single resource."""@en ;
     skos:scopeNote  """A Person reconstruction must always refer to one or more Person observations. For this,
                        the prov:wasDerivedFrom property is used.
                        Information about the creation should be documented with the prov:wasGeneratedBy property.
@@ -274,7 +274,7 @@ sdo:ArchiveComponent
     a               owl:Class ;
     rdfs:subClassOf sdo:CreativeWork ;
     skos:definition """An intangible type to be applied to any archive content, carrying with it a set of
-                            properties required to describe archival items and collections."""@en ;
+                    properties required to describe archival items and collections."""@en ;
     rdfs:label      "Source"@en ;  #, "Bron"@nl ;
     skos:scopeNote  """Person observations can appear on many types of historical documents. The PiCo model does
                        not aim to describe these sources, as excellent data models, such as Records in Contexts and
@@ -334,6 +334,40 @@ pnv:PersonName
                        See the full specification of the Person Name Vocabulary for more details.
                        Additionally to a pnv:PersonName, the properties sdo:literalName or sdo:givenName and sdo:familyName should be used.
                     """@en ;
+.
+
+picom:LifeEvent
+    a               owl:Class ;
+    skos:definition """A main biographical event in the life of a person"""@en ;
+    rdfs:label      "LifeEvent"@en ;
+    skos:scopeNote  """Life events in PiCo are used for modelling important events in the life of a Person, such as
+                       baptism, marriage or burrial. Events are primarily used to identify a Person or provide a date
+                       and/or a location for a specific milestone in a Persons life. Modelling Events by itself is not a
+                       goal of PiCo, and therefore the picom:LifeEvent has a limited set of properties.
+                    """@en ;
+    sdo:workExample [ a                  sdo:TextObject ;
+                      sdo:description    "Example of LifeEvent" ;
+                      sdo:encodingFormat "text/turtle" ;
+                      sdo:name           "LifeEvent example" ;
+                      sdo:text           """
+                                            nha:huwelijksakte_1885_321_po_1
+                                                a                       picom:PersonObservation ;
+                                                prov:hadPrimarySource   nha:huwelijksakte_1885_321 ;
+                                            sdo:name                    "Abe Bos" ;
+                                                sdo:familyName          "Bos" ;
+                                                sdo:givenName           "Abe" ;
+                                                picom:hasAge            "27"^^xsd:decimal ;
+                                                sdo:birthPlace          "Joure" ;
+                                                sdo:hasOccupation       "agent van politie" ;
+                                                sdo:gender              sdo:Male ;
+                                                picom:hasRole           picot_roles:574 ;  # spouse
+                                                sdo:spouse              nha:huwelijksakte_1885_321_po_2 ;
+                                                picom:hasLifeEvent      [ a   picom:LifeEvent ;
+                                                                        picom:eventType     picot_eventtype:83  # marriage
+                                                                        picom:eventDate     "1885-11-11"^^xsd:date ;
+                                                                        picom:eventPlace    "Haarlem" ;
+                                                ]
+                                         """ ] ;
 .
 
 ########################################################################################################################
@@ -528,21 +562,29 @@ sdo:givenName
     sdo:rangeIncludes  xsd:string ;
 .
 
-picom:hasAge  # zouden we hier ook foaf:age kunnen gebruiken? http://xmlns.com/foaf/spec/#term_age
-         a                  owl:DatatypeProperty ;
-         skos:definition    "The age of a person."@en ;
-#         skos:definition       "De leeftijd van een persoon."@nl ;
-         rdfs:label         "hasAge"@en ;
-#         rdfs:label        "leeftijd"@nl ;
-         skos:scopeNote     """Only used for Person observations, in case the birth date is not known,
-                               but the age is. In combination with de date of the Source, a birth date range can
-                               be derived, which can be used in the process of creating a Person reconstruction.
-                               The age is considered to be in years, unless otherwise mentioned. So an age of
-                               "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
-                               Numerical ages ("4") are preferred above ages in text ("four").
-                            """@en ;
-         sdo:domainIncludes picom:PersonObservation ;
-         sdo:rangeIncludes  xsd:string ;  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
+picom:hasAge
+    a                  owl:DatatypeProperty ;
+    skos:definition    "The age of a person."@en ;
+    # skos:definition       "De leeftijd van een persoon."@nl ;
+    rdfs:label         "hasAge"@en ;
+    # rdfs:label        "leeftijd"@nl ;
+    skos:scopeNote     """Only used for Person observations, in case the birth date is not known,
+                          but the age is. In combination with de date of the Source, a birth date range can
+                          be derived, which can be used in the process of creating a Person reconstruction.
+                          The age is considered to be in years, unless otherwise mentioned. So an age of
+                          "4" is considered to be 4 years, where "4 months" is interpreted as 4 months.
+                          Numerical ages ("4") are preferred above ages in text ("four").
+                          """@en ;
+    sdo:domainIncludes picom:PersonObservation ;
+    sdo:rangeIncludes  xsd:string ;  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
+.
+
+picom:hasLifeEvent
+    a               rdf:Property ;
+    skos:definition "Relates a person to a life event that occurred in his biography."@en ;
+    rdfs:label      "hasLifeEvent"@en ;
+    rdfs:domain     picom:Person ;
+    rdfs:range      picom:LifeEvent ;
 .
 
 sdo:hasOccupation
@@ -653,6 +695,36 @@ prov:wasAssociatedWith
     sdo:domainIncludes prov:Activity ;
     sdo:rangeIncludes  prov:Agent ;
 .
+
+
+picom:eventDate
+    a                   owl:DatatypeProperty ;
+    skos:definition     "The date of a life event." ;
+    rdfs:label          "eventDate"@en ;
+    skos:scopeNote      """The date of an event. A date value in ISO 8601 format should be used.
+                          Incomplete dates are allowed, but only when truncated from small to large. For example:
+                          "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
+                          Sometimes, you may want use a string as eventDate. For example if you want to or have to
+                          record the date exactly as it was written on the Source. If possible use both the string
+                          format and the xsd:date format in this case.
+                       """@en ;
+    rdfs:domainIncludes picom:LifeEvent ;
+    sdo:rangeIncludes   xsd:string, xsd:anyURI ;
+.
+
+picom:eventPlace
+    a                  owl:DatatypeProperty ;
+    skos:definition    "The place where a life event occured." ;
+    rdfs:label         "eventPlace"@en ;
+#    rdfs:label        "geboorteplaats"@nl ;
+    skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
+                          If desired, both the literal place, as mentioned on the Source can be used together with
+                          the reconciled version.
+                       """@en ;
+    sdo:domainIncludes picom:LifeEvent ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
+.
+
 
 ########################################################################################################################
 # Object Properties
@@ -1318,9 +1390,17 @@ picom:hasRole
     sdo:domainIncludes picom:PersonObservation ;
 .
 
-#:Role
-#    a          owl:Class ;
-#    rdfs:label "Role" .
+picom:eventType
+    a                  qb:CodedProperty, owl:ObjectProperty ;
+    qb:codeList        picot_eventtypes: ;
+    #    rdfs:range           :Role ;
+    skos:definition    "The type of life event." ;
+    rdfs:label         "hasRole"@en ;
+    skos:scopeNote     """Use a term from the PiCo Event Types thesaurus:
+                          https://terms.personsincontext.org/eventtypes
+                       """@en ;
+    sdo:domainIncludes picom:LifeEvent ;
+.
 
 prov:wasDerivedFrom
     a                  owl:ObjectProperty ;
