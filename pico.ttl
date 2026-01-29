@@ -353,7 +353,7 @@ picom:LifeEvent
                                             nha:huwelijksakte_1885_321_po_1
                                                 a                       picom:PersonObservation ;
                                                 prov:hadPrimarySource   nha:huwelijksakte_1885_321 ;
-                                            sdo:name                    "Abe Bos" ;
+                                                sdo:name                "Abe Bos" ;
                                                 sdo:familyName          "Bos" ;
                                                 sdo:givenName           "Abe" ;
                                                 picom:hasAge            "27"^^xsd:decimal ;
@@ -363,7 +363,7 @@ picom:LifeEvent
                                                 picom:hasRole           picot_roles:574 ;  # spouse
                                                 sdo:spouse              nha:huwelijksakte_1885_321_po_2 ;
                                                 picom:hasLifeEvent      [ a   picom:LifeEvent ;
-                                                                        picom:eventType     picot_eventtype:83  # marriage
+                                                                        picom:eventType     picot_eventtypes:83 ; # marriage
                                                                         picom:eventDate     "1885-11-11"^^xsd:date ;
                                                                         picom:eventPlace    "Haarlem" ;
                                                 ]
