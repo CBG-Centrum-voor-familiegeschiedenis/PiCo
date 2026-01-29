@@ -1,14 +1,14 @@
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix sdo:   <https://schema.org/> .
-@prefix pnv:   <https://w3id.org/pnv#> .
-@prefix bio:   <http://purl.org/vocab/bio/0.1/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix picom:  <https://personsincontext.org/model#> .
+@prefix prov:              <http://www.w3.org/ns/prov#> .
+@prefix sdo:               <https://schema.org/> .
+@prefix pnv:               <https://w3id.org/pnv#> .
+@prefix bio:               <http://purl.org/vocab/bio/0.1/> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:               <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix picom:             <https://personsincontext.org/model#> .
 @prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
-@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
-@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
-@prefix nha:   <https://noord-hollandsarchief.nl/> .
+@prefix picot_eventtypes:  <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles:       <https://terms.personsincontext.org/roles/> .
+@prefix nha:               <https://noord-hollandsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
 nha:huwelijksakte_1885_321_po_1
@@ -17,12 +17,16 @@ nha:huwelijksakte_1885_321_po_1
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
-    picom:hasAge           "27"^^xsd:decimal ;
+    picom:hasAge          "27"^^xsd:decimal ;
     sdo:birthPlace        "Joure" ;
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
-    picom:hasRole          picot_roles:574 ;  # spouse
+    picom:hasRole         picot_roles:574 ;  # spouse
     sdo:spouse            nha:huwelijksakte_1885_321_po_2 ;
+    picom:hasLifeEvent    [ a                picom:LifeEvent ;
+                            picom:eventType  picot_eventtypes:83 ; # marriage
+                            picom:eventDate  "1885-11-11"^^xsd:date ;
+                            picom:eventPlace "Haarlem" ; ] ;
     sdo:parent            nha:huwelijksakte_1885_321_po_3, nha:huwelijksakte_1885_321_po_4 .
 
 nha:huwelijksakte_1885_321_po_2
@@ -31,12 +35,16 @@ nha:huwelijksakte_1885_321_po_2
     sdo:name              "Anna Maria Koppen" ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
-    picom:hasAge           "25"^^xsd:decimal ;
+    picom:hasAge          "25"^^xsd:decimal ;
     sdo:birthPlace        "Haarlem" ;
     sdo:hasOccupation     "dienstbode" ;
     sdo:gender            sdo:Female ;
     picom:hasRole         picot_roles:574 ;  # spouse
     sdo:spouse            nha:huwelijksakte_1885_321_po_1 ;
+    picom:hasLifeEvent    [ a                picom:LifeEvent ;
+                            picom:eventType  picot_eventtypes:83 ; # marriage
+                            picom:eventDate  "1885-11-11"^^xsd:date ;
+                            picom:eventPlace "Haarlem" ; ] ;
     sdo:parent            nha:huwelijksakte_1885_321_po_5, nha:huwelijksakte_1885_321_po_6 .
 
 nha:huwelijksakte_1885_321_po_3
@@ -47,8 +55,7 @@ nha:huwelijksakte_1885_321_po_3
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:literalName "Sjouke Abes Bos"@nl ;
-                            pnv:patronym    "Abes"@nl ; 
-                          ] ;
+                            pnv:patronym    "Abes"@nl ; ] ;
     sdo:gender            sdo:Male ;
     sdo:children          nha:huwelijksakte_1885_321_po_1 .
 
@@ -61,8 +68,7 @@ nha:huwelijksakte_1885_321_po_4
     sdo:additionalName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk"@nl ;
                             pnv:baseSurname   "Wijk"@nl ;
-                            pnv:surnamePrefix "van der"@nl ; 
-                          ] ;
+                            pnv:surnamePrefix "van der"@nl ; ] ;
     sdo:gender            sdo:Female ;
     sdo:children          nha:huwelijksakte_1885_321_po_1 .
 
@@ -85,17 +91,9 @@ nha:huwelijksakte_1885_321_po_6
     sdo:additionalName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Helena Catharina van Zijl"@nl ;
                             pnv:baseSurname   "Zijl"@nl ;
-                            pnv:surnamePrefix "van"@nl ; 
-                          ] ;
+                            pnv:surnamePrefix "van"@nl ; ] ;
     sdo:gender            sdo:Female ;
     sdo:children          nha:huwelijksakte_1885_321_po_2 .
-
-nha:huwelijksakte_1885_321_event_1
-    a                     bio:Marriage ;
-    prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    bio:date              "1885-11-11"^^xsd:date ;
-    bio:place             "Haarlem" ;
-    bio:partner           nha:huwelijksakte_1885_321_po_1, nha:huwelijksakte_1885_321_po_2 .
 
 # BRON
 nha:huwelijksakte_1885_321
@@ -106,8 +104,9 @@ nha:huwelijksakte_1885_321
     sdo:url             <https://hdl.handle.net/21.12102/5EC8BCCEACD6410780110CCD6B740E7C> ;
     sdo:dateCreated     "1885-11-11"^^xsd:date ;
     sdo:locationCreated "Haarlem"@nl ;
-    sdo:associatedMedia [ a             sdo:ImageObject ;
-                          sdo:position  1 ;
-                          sdo:url       "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
-                          sdo:embedUrl  "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
-                          sdo:thumbnail "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ; ] .
+    sdo:associatedMedia [ a            sdo:ImageObject ;
+                          sdo:position 1 ;
+                          sdo:url      "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:embedUrl "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
+                          sdo:thumbnail
+                                       "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ; ] .

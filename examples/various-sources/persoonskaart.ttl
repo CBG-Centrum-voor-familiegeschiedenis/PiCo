@@ -1,15 +1,15 @@
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix sdo:   <https://schema.org/> .
-@prefix pnv:   <https://w3id.org/pnv#> .
-@prefix bio:   <http://purl.org/vocab/bio/0.1/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix picom:  <https://personsincontext.org/model#> .
+@prefix prov:              <http://www.w3.org/ns/prov#> .
+@prefix sdo:               <https://schema.org/> .
+@prefix pnv:               <https://w3id.org/pnv#> .
+@prefix bio:               <http://purl.org/vocab/bio/0.1/> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
+@prefix picom:             <https://personsincontext.org/model#> .
 @prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
-@prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
-@prefix picot_roles: <https://terms.personsincontext.org/roles/> .
-@prefix cbg:   <https://data.cbg.nl/> .
-@prefix nha:   <https://noord-hollandsarchief.nl/> .
-@prefix hua:   <https://hetutrechtsarchief.nl/> .
+@prefix picot_eventtypes:  <https://terms.personsincontext.org/eventtypes/> .
+@prefix picot_roles:       <https://terms.personsincontext.org/roles/> .
+@prefix cbg:               <https://data.cbg.nl/> .
+@prefix nha:               <https://noord-hollandsarchief.nl/> .
+@prefix hua:               <https://hetutrechtsarchief.nl/> .
 
 # PERSOONSVERMELDINGEN
 cbg:NL-HaCBG_1755_0341_142_po_1
@@ -25,7 +25,12 @@ cbg:NL-HaCBG_1755_0341_142_po_1
     sdo:deathPlace        "Haarlem" ;
     sdo:deathDate         "1954-02-28"^^xsd:date ;
     sdo:parent            cbg:NL-HaCBG_1755_0341_142_po_3, cbg:NL-HaCBG_1755_0341_142_po_4 ;
-    sdo:spouse            cbg:NL-HaCBG_1755_0341_142_po_2 .
+    sdo:spouse            cbg:NL-HaCBG_1755_0341_142_po_2 ;
+    picom:hasLifeEvent    [ a                picom:LifeEvent ;
+                            picom:eventType  picot_eventtypes:83 ; # marriage
+                            picom:eventDate  "1885-11-11"^^xsd:date ;
+                            picom:eventPlace "Haarlem" ; ] ;
+.
 
 cbg:NL-HaCBG_1755_0341_142_po_2
     a                     picom:PersonObservation ;
@@ -39,13 +44,6 @@ cbg:NL-HaCBG_1755_0341_142_po_2
     sdo:spouse            cbg:NL-HaCBG_1755_0341_142_po_1 ;
     sdo:deathDate         "1926"^^xsd:gYear .
 
-cbg:NL-HaCBG_1755_0341_142_event_1
-    a                     bio:Marriage ;
-    prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    bio:date              "1885-11-11"^^xsd:date ;
-    bio:place             "Haarlem" ;
-    bio:partner           cbg:NL-HaCBG_1755_0341_142_po_1, cbg:NL-HaCBG_1755_0341_142_po_2 .
-
 cbg:NL-HaCBG_1755_0341_142_po_3
     a                     picom:PersonObservation ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
@@ -54,8 +52,7 @@ cbg:NL-HaCBG_1755_0341_142_po_3
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:literalName "Sjouke Abes Bos"@nl ;
-                            pnv:patronym    "Abes"@nl ; 
-                          ] ;
+                            pnv:patronym    "Abes"@nl ; ] ;
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 cbg:NL-HaCBG_1755_0341_142_po_4
@@ -67,8 +64,7 @@ cbg:NL-HaCBG_1755_0341_142_po_4
     sdo:additionalName    [ a                 pnv:PersonName ;
                             pnv:literalName   "Geertruida van der Wijk"@nl ;
                             pnv:baseSurname   "Wijk"@nl ;
-                            pnv:surnamePrefix "van der" @nl ; 
-                          ] ;
+                            pnv:surnamePrefix "van der" @nl ; ] ;
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 
