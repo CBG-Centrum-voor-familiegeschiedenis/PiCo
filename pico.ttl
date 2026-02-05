@@ -440,7 +440,7 @@ sdo:birthPlace
                                                           ] ] ] ;
                                           """ ] ;
     sdo:domainIncludes picom:Person ;
-    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, sdo:Place ;  # TODO: should we remove the option to just use a string?
 .
 
 sdo:contentLocation

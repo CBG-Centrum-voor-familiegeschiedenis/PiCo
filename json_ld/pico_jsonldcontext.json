@@ -250,10 +250,6 @@
       "@id": "sdo:holdingArchive",
       "@type": "@id"
     },
-    "isLegitimitezedChildOf": {
-      "@id": "isLegitimitezedChildOf",
-      "@type": "@id"
-    },
     "isWidOf": {
       "@id": "isWidOf",
       "@type": "@id"
