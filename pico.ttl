@@ -343,7 +343,7 @@ picom:LifeEvent
     skos:scopeNote  """Life events in PiCo are used for modelling important events in the life of a Person, such as
                        baptism, marriage or burrial. Events are primarily used to identify a Person or provide a date
                        and/or a location for a specific milestone in a Persons life. Modelling Events by itself is not a
-                       goal of PiCo, and therefore the picom:LifeEvent has a limited set of properties.
+                       goal of PiCo, and therefore the picom:LifeEvent only has a limited set of properties.
                     """@en ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of LifeEvent" ;
@@ -362,10 +362,10 @@ picom:LifeEvent
                                                 sdo:gender              sdo:Male ;
                                                 picom:hasRole           picot_roles:574 ;  # spouse
                                                 sdo:spouse              nha:huwelijksakte_1885_321_po_2 ;
-                                                picom:hasLifeEvent      [ a   picom:LifeEvent ;
-                                                                        picom:eventType     picot_eventtypes:83 ; # marriage
-                                                                        picom:eventDate     "1885-11-11"^^xsd:date ;
-                                                                        picom:eventPlace    "Haarlem" ;
+                                                picom:hasLifeEvent      [ a                 picom:LifeEvent ;
+                                                                          picom:eventType   picot_eventtypes:83 ; # marriage
+                                                                          picom:eventDate   "1885-11-11"^^xsd:date ;
+                                                                          picom:eventPlace  "Haarlem" ;
                                                 ]
                                          """ ] ;
 .
@@ -423,6 +423,22 @@ sdo:birthPlace
                           If desired, both the literal place, as mentioned on the Source can be used together with
                           the reconciled version.
                        """@en ;
+    sdo:workExample    [ a                  sdo:TextObject ;
+                         sh:order           0 ;
+                         sdo:encodingFormat "text/turtle" ;
+                         sdo:name           "Example of a sdo:birthPlace" ;
+                         sdo:text           """
+                         sdo:birthPlace     [ a           sdo:Place ;
+                                              sdo:name    "Beeck, Berg bij Uberghen (L van Kleef)"@nl ;  # (literal from Source)
+                                              sdo:sameAs  gn:234345, gg:854 ;
+                                              sdo:address [ a                   sdo:PostalAddress ;
+                                                            sdo:name            "Beek"@nl ;  # (toponiem)
+                                                            sdo:addressLocality "Berg en Dal"@nl ;  # (municipality)
+                                                            sdo:addressRegion   "Gelderland"@nl ;  # (province / state)
+                                                            sdo:extendedAddress "Land van Kleef"@nl ; # (region)
+                                                            sdo:addressCountry  "Nederland"@nl   # (country)
+                                                          ] ] ] ;
+                                          """ ] ;
     sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
@@ -1347,11 +1363,28 @@ sdo:spouse
     skos:definition    "The person's spouse."@en ;
     rdfs:label         "spouse"@en ; #, "echtgenoot"@nl ;
     skos:scopeNote     """For Person observations, the spouse should always refer to another Person observation
-                             on the same Source.
-                          """@en ;
+                          on the same Source.
+                       """@en ;
     skos:scopeNote     """For Person reconstructions, the spouse should refer to the Person reconstruction of
-                             the spouse.
+                          the spouse.
+                          A spouse relation may have a startdate and an enddate. The startdate may be redundant to
+                          the date of a marriage event. The marriage event provides information when the marriage took
+                          place and is primarily used for Person Observations. The spouse relation can provide additional
+                          information about the duration of the relation, which is useful for Person Reconstructions,
+                          especially when a Person is married more than once.
                           """@en ;
+    sdo:workExample    [ a                  sdo:TextObject ;
+                         sh:order           0 ;
+                         sdo:encodingFormat "text/turtle" ;
+                         sdo:name           "Example of a spouse relation wiht start and end date" ;
+                         sdo:text           """cbg:person_reconstruction_01
+                                                a           picom:PersonReconstruction ;
+                                                sdo:name    "Abraham Woltjer"
+                                                ...
+                                                sdo:spouse  [ rdf:value         cbg:person_reconstruction_2 ;
+                                                              sdo:startDate     "1885-11-11"^^xsd:date ;
+                                                              sdo:endDate       "1926"^^xsd:gYear ; ] .
+                                          """ ] ;
     rdfs:subPropertyOf sdo:relatedTo ;
     sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  picom:Person ;
