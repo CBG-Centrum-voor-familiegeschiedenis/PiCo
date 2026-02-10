@@ -101,7 +101,7 @@ _:SourceShape
                    ] ;
     sh:property    [ sh:path     sdo:associatedMedia ;
                      sh:class    sdo:ImageObject ;
-                     sh:message  "An source can have associatied media, must be an image object."@en ,
+                     sh:message  "An source can have associated media, must be an image object."@en ,
                                  "Een bron kan bijbehorende media hebben, dit moet een afbeeldingsobject zijn."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:contentLocation ;
