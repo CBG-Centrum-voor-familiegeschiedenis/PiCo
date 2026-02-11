@@ -625,7 +625,7 @@ picom:hasReligion
     skos:scopeNote      """Religion as mentioned on the Source.
                            If desired, a SKOS thesaurus can be used to annotate religion.
                         """@en ;  # Todo: Can we recommend a thesaurus for religions?
-    rdfs:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
+    sdo:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
     sdo:rangeIncludes   xsd:string, xsd:anyURI ;
 .
 
@@ -729,7 +729,7 @@ picom:eventDate
                           record the date exactly as it was written on the Source. If possible use both the string
                           format and the xsd:date format in this case.
                        """@en ;
-    rdfs:domainIncludes picom:LifeEvent ;
+    sdo:domainIncludes picom:LifeEvent ;
     sdo:rangeIncludes   xsd:string, xsd:anyURI ;
 .
 
