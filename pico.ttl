@@ -90,8 +90,8 @@
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
     vann:preferredNamespacePrefix "picom" ;
-    owl:versionInfo               "1.0"@en ;
-    owl:priorVersion              "0.9"@en ;
+    owl:versionInfo               "1.1.0"@en ;
+    owl:priorVersion              "1.0.0"@en ;
     skos:definition               """Persons in Context, abbreviated as PiCo, is a knowledge model for annotating and
                                      publishing person observations from historical sources.
                                      A main characteristic of PiCo is the distinction between Person observations
@@ -595,13 +595,6 @@ picom:hasAge
     sdo:rangeIncludes  xsd:string ;  # Mooiste zou zijn als we óók integers kunnen toestaan, in combinatie met een eenheid (jaren, maanden, dagen)
 .
 
-picom:hasLifeEvent
-    a               rdf:Property ;
-    skos:definition "Relates a person to a life event that occurred in his biography."@en ;
-    rdfs:label      "hasLifeEvent"@en ;
-    rdfs:domain     picom:Person ;
-    rdfs:range      picom:LifeEvent ;
-.
 
 sdo:hasOccupation
     a                  owl:DatatypeProperty ;
@@ -828,6 +821,14 @@ prov:hadPrimarySource
     skos:scopeNote     "Linking a Source with the hadPrimarySource property is required for Person Observations." ;
     sdo:domainIncludes picom:PersonObservation ;
     sdo:rangeIncludes  sdo:ArchiveComponent ;
+.
+
+picom:hasLifeEvent
+    a               owl:ObjectProperty ;
+    skos:definition "Relates a person to a life event that occurred in his biography."@en ;
+    rdfs:label      "hasLifeEvent"@en ;
+    rdfs:domain     picom:Person ;
+    rdfs:range      picom:LifeEvent ;
 .
 
 picom:hasAncestor
