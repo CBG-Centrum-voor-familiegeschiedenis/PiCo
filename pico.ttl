@@ -341,7 +341,7 @@ picom:LifeEvent
     skos:definition """A main biographical event in the life of a person"""@en ;
     rdfs:label      "LifeEvent"@en ;
     skos:scopeNote  """Life events in PiCo are used for modelling important events in the life of a Person, such as
-                       baptism, marriage or burrial. Events are primarily used to identify a Person or provide a date
+                       baptism, marriage or burial. Events are primarily used to identify a Person or provide a date
                        and/or a location for a specific milestone in a Persons life. Modelling Events by itself is not a
                        goal of PiCo, and therefore the picom:LifeEvent only has a limited set of properties.
                     """@en ;
