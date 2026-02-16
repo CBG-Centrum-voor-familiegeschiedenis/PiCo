@@ -440,12 +440,7 @@ sdo:birthPlace
                                                           ] ] ] ;
                                           """ ] ;
     sdo:domainIncludes picom:Person ;
-    sdo:rangeIncludes  xsd:string, sdo:Place ;  # TODO: should we remove the option to just use a string?
-                                                # Many indexes by archival institutions will only have a single string
-                                                # for birthplace. If we want to be complient with NDE schema profile
-                                                # this should be modelled as a sdo:Place with just a sdo:name
-                                                # We should update all examples on GitHub in this case
-
+    sdo:rangeIncludes  xsd:string, sdo:Place, xsd:anyURI
 .
 
 sdo:contentLocation
@@ -498,7 +493,7 @@ sdo:deathPlace
                        """@en ;
     rdfs:label         "deathPlace"@en ;
     sdo:domainIncludes picom:Person ;
-    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, sdo:Place, xsd:anyURI ;
 .
 
 picom:deceased
@@ -743,7 +738,7 @@ picom:eventPlace
                           the reconciled version.
                        """@en ;
     sdo:domainIncludes picom:LifeEvent ;
-    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI, xsd:Place ;
 .
 
 
