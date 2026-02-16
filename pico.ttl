@@ -732,7 +732,7 @@ picom:eventPlace
     a                  owl:DatatypeProperty ;
     skos:definition    "The place where a life event occured." ;
     rdfs:label         "eventPlace"@en ;
-#    rdfs:label        "geboorteplaats"@nl ;
+#    rdfs:label        "gebeurtenisPlaats"@nl ;
     skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
                           If desired, both the literal place, as mentioned on the Source can be used together with
                           the reconciled version.
