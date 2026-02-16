@@ -21,7 +21,7 @@ nha:huwelijksakte_1885_321_po_1
     sdo:birthPlace        "Joure" ;
     sdo:hasOccupation     "agent van politie" ;
     sdo:gender            sdo:Male ;
-    picom:hasRole         picot_roles:574 ;  # bride/groom
+    picom:hasRole         picot_roles:574 ;  # spouse
     sdo:spouse            nha:huwelijksakte_1885_321_po_2 ;
     picom:hasLifeEvent    [ a                picom:LifeEvent ;
                             picom:eventType  picot_eventtypes:83 ; # marriage
