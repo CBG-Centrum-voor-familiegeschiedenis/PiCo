@@ -1427,9 +1427,9 @@ picom:hasRole
 picom:eventType
     a                  qb:CodedProperty, owl:ObjectProperty ;
     qb:codeList        picot_eventtypes: ;
-    #    rdfs:range           :Role ;
+    #    rdfs:range           :EventType
     skos:definition    "The type of life event." ;
-    rdfs:label         "hasRole"@en ;
+    rdfs:label         "eventType"@en ;
     skos:scopeNote     """Use a term from the PiCo Event Types thesaurus:
                           https://terms.personsincontext.org/eventtypes
                        """@en ;
