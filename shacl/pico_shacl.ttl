@@ -14,7 +14,7 @@ prov:ActivityShape
                      sh:datatype rdf:langString ;
                      sh:uniqueLang true ;
                      sh:minCount 0 ;
-                     sh:message  "An Actibity should have a label (and language tag)." ] ;
+                     sh:message  "An Activity should have a label (and language tag)." ] ;
     sh:property    [ sh:path     prov:wasAssociatedWith ;
                      sh:class    prov:Agent ;
                      sh:minCount 1 ;
@@ -101,7 +101,7 @@ _:SourceShape
                    ] ;
     sh:property    [ sh:path     sdo:associatedMedia ;
                      sh:class    sdo:ImageObject ;
-                     sh:message  "An source can have associatiad media, must be an image object."@en ,
+                     sh:message  "An source can have associated media, must be an image object."@en ,
                                  "Een bron kan bijbehorende media hebben, dit moet een afbeeldingsobject zijn."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:contentLocation ;
