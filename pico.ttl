@@ -86,7 +86,7 @@
 #                                    ]
 #                        ] ;
     dcterms:created               "2023-09-21"^^xsd:date ;
-    dcterms:modified              "2024-04-25"^^xsd:date ;
+    dcterms:modified              "2026-02-17"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     dcterms:rights                <https://cbg.nl> ;
     vann:preferredNamespacePrefix "picom" ;
