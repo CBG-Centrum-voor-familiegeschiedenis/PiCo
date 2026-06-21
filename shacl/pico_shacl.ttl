@@ -33,10 +33,13 @@ prov:AgentShape
     a              sh:NodeShape ;
     sh:targetClass prov:Agent ;
     sh:property    [ sh:path sdo:name ;
+                     sh:minCount 1 ;
+                     sh:message  "An Agent must have a name." ] ;
+    sh:property    [ sh:path sdo:name ;
                      sh:datatype rdf:langString ;
                      sh:uniqueLang true ;
-                     sh:minCount 1 ;
-                     sh:message  "An Agent must have name (and language tag)." ] ;
+                     sh:severity sh:Warning ;
+                     sh:message  "An Agent name should have a language tag." ] ;
     sh:property    [ sh:path sdo:url ;
                      sh:nodeKind sh:IRI ;
                      sh:minCount 0 ;
@@ -127,7 +130,11 @@ _:SourceShape
                                  "Een bron kan een URL hebben voor het archief waarin het zich bevindt, dit moet een IRI zijn."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:name ;
-                     sh:datatype rdf:langString ;
                      sh:minCount 1 ;
-                     sh:message  "An ArchiveComponent must have a name with a language tag." ; ] ;
+                     sh:message  "An ArchiveComponent must have a name." ; ] ;
+    sh:property    [ sh:path     sdo:name ;
+                     sh:datatype rdf:langString ;
+                     sh:uniqueLang true ;
+                     sh:severity sh:Warning ;
+                     sh:message  "An ArchiveComponent name should have a language tag." ; ] ;
 .
