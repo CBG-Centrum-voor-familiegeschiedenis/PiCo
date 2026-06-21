@@ -84,9 +84,8 @@ picom:PersonObservationShape
                                  "Een scan kan een miniatuur-URL hebben, dit moet een IRI zijn."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:url ;
-                     sh:datatype xsd:anyURI ;
-                     sh:pattern "^https?://" ;
-                     sh:message  "A scan can have an URL, must be an URI."@en ,
+                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
+                     sh:message  "A scan can have an URL, must be an IRI."@en ,
                                  "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ;
                    ] ;                                                         
 .
