@@ -64,7 +64,7 @@ picom:PersonReconstructionShape
                    ] ;
 .
 
-_:ScanShape
+picom:PersonObservationShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonObservation ;
     sh:property    [ sh:path     picom:hasAge ;
@@ -91,7 +91,7 @@ _:ScanShape
                    ] ;                                                         
 .
 
-_:SourceShape
+picom:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
     sh:property    [ sh:path     sdo:additionalType ;
