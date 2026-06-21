@@ -82,16 +82,26 @@ picom:PersonObservationShape
 picom:ScanShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ImageObject ;
-    sh:property    [ sh:path     sdo:thumbnailUrl ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
-                     sh:datatype xsd:anyURI ;
-                     sh:pattern "^https?://" ;
-                     sh:message  "A scan can have an thumbnail URL, must be an URI." @en ,
-                                 "Een scan kan een miniatuur-URL hebben, dit moet een IRI zijn."@nl ;
+    sh:property    [ sh:path     sdo:position ;
+                     sh:datatype xsd:integer ;
+                     sh:maxCount 1 ;
+                     sh:message  "A scan can have a position within a set, must be an integer."@en ,
+                                 "Een scan kan een positie binnen een set hebben, dit moet een geheel getal zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:thumbnail ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
+                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
+                     sh:message  "A scan can have a thumbnail, must be an IRI."@en ,
+                                 "Een scan kan een miniatuur hebben, dit moet een IRI zijn."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:url ;
                      sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
                      sh:message  "A scan can have an URL, must be an IRI."@en ,
                                  "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:embedUrl ;
+                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
+                     sh:message  "A scan can have an embed URL, must be an IRI."@en ,
+                                 "Een scan kan een embed-URL hebben, dit moet een IRI zijn."@nl ;
                    ] ;
 .
 
