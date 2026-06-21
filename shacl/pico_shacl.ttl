@@ -29,7 +29,7 @@ prov:ActivityShape
                      sh:message  "An Activity may have an end time." ; ] ;
 .
 
-prov:Agent
+prov:AgentShape
     a              sh:NodeShape ;
     sh:targetClass prov:Agent ;
     sh:property    [ sh:path sdo:name ;
