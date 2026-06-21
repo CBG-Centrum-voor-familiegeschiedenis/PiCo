@@ -74,8 +74,8 @@ picom:PersonObservationShape
     sh:property    [ sh:path     prov:hadPrimarySource ;
                      sh:node     sdo:ArchiveComponent ;
                      sh:minCount 1 ;
-                     sh:message  "A scan can have an position of the scan within a set, must be an decimal."@en ,
-                                 "Een scan kan een positie van de scan binnen een set hebben, moet een decimaal zijn."@nl ; 
+                     sh:message  "A PersonObservation must refer to its primary source (an ArchiveComponent) via prov:hadPrimarySource."@en ,
+                                 "Een persoonsobservatie moet via prov:hadPrimarySource verwijzen naar de primaire bron (een ArchiveComponent)."@nl ;
                    ] ;
     sh:property    [ sh:path     sdo:thumbnailUrl ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
                      sh:datatype xsd:anyURI ;
