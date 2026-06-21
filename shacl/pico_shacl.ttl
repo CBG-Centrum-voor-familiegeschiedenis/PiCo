@@ -105,6 +105,32 @@ picom:ScanShape
                    ] ;
 .
 
+picom:LifeEventShape
+    a              sh:NodeShape ;
+    sh:targetClass picom:LifeEvent ;
+    sh:property    [ sh:path     picom:eventType ;
+                     sh:nodeKind sh:IRI ;
+                     sh:minCount 1 ;
+                     sh:message  "A LifeEvent must have an eventType, referencing a thesaurus term (IRI)."@en ,
+                                 "Een LifeEvent moet een eventType hebben dat verwijst naar een thesaurusterm (IRI)."@nl ;
+                   ] ;
+    sh:property    [ sh:path     picom:eventDate ;
+                     sh:or       ( [ sh:datatype xsd:date ]
+                                    [ sh:datatype xsd:gYear ]
+                                    [ sh:datatype xsd:gYearMonth ]
+                                    [ sh:datatype xsd:string ] ) ;
+                     sh:message  "A LifeEvent date must be a date, gYear, gYearMonth or string."@en ,
+                                 "Een LifeEvent-datum moet een date, gYear, gYearMonth of string zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     picom:eventPlace ;
+                     sh:or       ( [ sh:datatype xsd:string ]
+                                    [ sh:nodeKind sh:IRI ]
+                                    [ sh:class sdo:Place ] ) ;
+                     sh:message  "A LifeEvent place must be a string, an IRI or an sdo:Place."@en ,
+                                 "Een LifeEvent-plaats moet een string, een IRI of een sdo:Place zijn."@nl ;
+                   ] ;
+.
+
 picom:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
