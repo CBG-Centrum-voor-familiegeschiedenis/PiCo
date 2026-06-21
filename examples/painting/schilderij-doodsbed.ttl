@@ -12,5 +12,5 @@
     picom:hasAge           "51" .
 
 <https://data.rkd.nl/images/170975>
-    a        sdo:Painting ;
+    a        sdo:Painting, sdo:ArchiveComponent ;
     sdo:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)" .
