@@ -77,6 +77,11 @@ picom:PersonObservationShape
                      sh:message  "A PersonObservation must refer to its primary source (an ArchiveComponent) via prov:hadPrimarySource."@en ,
                                  "Een persoonsobservatie moet via prov:hadPrimarySource verwijzen naar de primaire bron (een ArchiveComponent)."@nl ;
                    ] ;
+.
+
+picom:ScanShape
+    a              sh:NodeShape ;
+    sh:targetClass sdo:ImageObject ;
     sh:property    [ sh:path     sdo:thumbnailUrl ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
                      sh:datatype xsd:anyURI ;
                      sh:pattern "^https?://" ;
@@ -87,7 +92,7 @@ picom:PersonObservationShape
                      sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
                      sh:message  "A scan can have an URL, must be an IRI."@en ,
                                  "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ;
-                   ] ;                                                         
+                   ] ;
 .
 
 picom:SourceShape
