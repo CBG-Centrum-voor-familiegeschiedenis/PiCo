@@ -211,3 +211,33 @@ picom:SourceShape
                      sh:severity sh:Warning ;
                      sh:message  "An ArchiveComponent name should have a language tag." ; ] ;
 .
+
+# Targets the concrete subclasses of picom:Person directly, so the shape fires on processors
+# without RDFS subclass entailment (e.g. Apache Jena's `shacl validate`).
+picom:PersonShape
+    a              sh:NodeShape ;
+    sh:targetClass picom:PersonObservation ;
+    sh:targetClass picom:PersonReconstruction ;
+    sh:property    [ sh:path     sdo:gender ;
+                     sh:in       ( sdo:Male sdo:Female ) ;
+                     sh:maxCount 1 ;
+                     sh:message  "Gender must be sdo:Male or sdo:Female."@en ,
+                                 "Geslacht moet sdo:Male of sdo:Female zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:birthDate ;
+                     sh:or       ( [ sh:datatype xsd:date ]
+                                    [ sh:datatype xsd:gYear ]
+                                    [ sh:datatype xsd:gYearMonth ]
+                                    [ sh:datatype xsd:string ] ) ;
+                     sh:message  "A birth date must be a date, gYear, gYearMonth or string."@en ,
+                                 "Een geboortedatum moet een date, gYear, gYearMonth of string zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:deathDate ;
+                     sh:or       ( [ sh:datatype xsd:date ]
+                                    [ sh:datatype xsd:gYear ]
+                                    [ sh:datatype xsd:gYearMonth ]
+                                    [ sh:datatype xsd:string ] ) ;
+                     sh:message  "A death date must be a date, gYear, gYearMonth or string."@en ,
+                                 "Een overlijdensdatum moet een date, gYear, gYearMonth of string zijn."@nl ;
+                   ] ;
+.
