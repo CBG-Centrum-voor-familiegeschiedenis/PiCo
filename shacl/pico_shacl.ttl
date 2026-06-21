@@ -131,6 +131,39 @@ picom:LifeEventShape
                    ] ;
 .
 
+pnv:PersonNameShape
+    a              sh:NodeShape ;
+    sh:targetClass pnv:PersonName ;
+    sh:property    [ sh:path     pnv:literalName ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:literalName should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     pnv:givenName ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:givenName should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     sdo:familyName ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "sdo:familyName should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     pnv:surnamePrefix ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:surnamePrefix should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     pnv:patronym ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:patronym should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     pnv:initials ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:initials should be a language-tagged literal (rdf:langString)." ; ] ;
+    sh:property    [ sh:path     pnv:baseSurname ;
+                     sh:datatype rdf:langString ;
+                     sh:severity sh:Warning ;
+                     sh:message  "pnv:baseSurname should be a language-tagged literal (rdf:langString)." ; ] ;
+.
+
 picom:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
