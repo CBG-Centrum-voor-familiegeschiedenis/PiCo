@@ -22,14 +22,16 @@
 # ontology
 ########################################################################################################################
 
-<https://personsincontext.org/model>
+@base <https://personsincontext.org/model> .
+
+picom:ontology
     a                             owl:Ontology ;
     rdfs:label                    "Persons in Context"@en ;
 #    sdo:publisher                 <https://cbg.nl> ;
     sdo:publisher                 "CBG|Centre for family history" ;
     dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
                                   "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
-#    dcterms:creator [
+#    sdo:creator [
 #                        sdo:name  "Pieter Woltjer"@en ;
 #                        sdo:affiliation
 #                                [
@@ -608,14 +610,14 @@ sdo:hasOccupation
 .
 
 picom:hasReligion
-    a                   owl:DatatypeProperty ;
-    skos:definition     "Religious conviction related to a person in an observation." ;
-    rdfs:label          "hasReligion" ;
-    skos:scopeNote      """Religion as mentioned on the Source.
+    a                  owl:DatatypeProperty ;
+    skos:definition    "Religious conviction related to a person in an observation." ;
+    rdfs:label         "hasReligion" ;
+    skos:scopeNote     """Religion as mentioned on the Source.
                            If desired, a SKOS thesaurus can be used to annotate religion.
                         """@en ;  # Todo: Can we recommend a thesaurus for religions?
     sdo:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
-    sdo:rangeIncludes   xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 pnv:initials
@@ -708,10 +710,10 @@ prov:wasAssociatedWith
 
 
 picom:eventDate
-    a                   owl:DatatypeProperty ;
-    skos:definition     "The date of a life event." ;
-    rdfs:label          "eventDate"@en ;
-    skos:scopeNote      """The date of an event. A date value in ISO 8601 format should be used.
+    a                  owl:DatatypeProperty ;
+    skos:definition    "The date of a life event." ;
+    rdfs:label         "eventDate"@en ;
+    skos:scopeNote     """The date of an event. A date value in ISO 8601 format should be used.
                           Incomplete dates are allowed, but only when truncated from small to large. For example:
                           "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
                           Sometimes, you may want use a string as eventDate. For example if you want to or have to
@@ -719,7 +721,7 @@ picom:eventDate
                           format and the xsd:date format in this case.
                        """@en ;
     sdo:domainIncludes picom:LifeEvent ;
-    sdo:rangeIncludes   xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 picom:eventPlace
@@ -853,7 +855,7 @@ picom:hasDescendant
 #    rdfs:label "heeftAfstammeling"@nl ;
     skos:scopeNote     """hasDescendant is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of sdo:Children. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superproperty of sdo:children. Since hasDescendant is a owl:TransitiveProperty, this will make
                           the children of your children into your descendants.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
