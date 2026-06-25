@@ -113,7 +113,7 @@
     sdo:workExample               [ a                  sdo:ImageObject ;
                                     sh:order           0 ;
                                     sdo:caption        "Schematic overview" ;
-                                    sdo:contentUrl     "../web_images/pico_overview.svg"^^xsd:anyURI ;
+                                    sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
                                     sdo:description    "Schematic overview of the model." ;
                                     sdo:encodingFormat "image/svg+xml" ;
                                     sdo:name           "Model overview" ] ;
@@ -186,7 +186,7 @@ picom:PersonObservation
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a PersonObservation" ;
-                      sdo:contentUrl     "../web_images/pico_personobservation.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person observation." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonObservation overview" ] ;
@@ -240,7 +240,7 @@ picom:PersonReconstruction
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
-                      sdo:contentUrl     "../web_images/pico_personreconstruction.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person reconstruction." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonReconstruction overview" ] ;
@@ -289,7 +289,7 @@ sdo:ArchiveComponent
     sdo:workExample [ a                  sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a Source" ;
-                      sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a Source." ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "Source" ] ;
@@ -837,7 +837,7 @@ picom:hasAncestor
 #    rdfs:label         "heeftVoorouder"@nl ;
     skos:scopeNote     """hasAncestor is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of sdo:Parent. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superproperty of sdo:parent. Since hasAncestor is a owl:TransitiveProperty, this will make
                           the parent of your parent into your ancestor.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
