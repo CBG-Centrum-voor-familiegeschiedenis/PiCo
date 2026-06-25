@@ -25,7 +25,8 @@
 <https://personsincontext.org/model>
     a                             owl:Ontology ;
     rdfs:label                    "Persons in Context"@en ;
-    sdo:publisher                 <https://cbg.nl> ;
+#    sdo:publisher                 <https://cbg.nl> ;
+    sdo:publisher                 "CBG|Centre for family history" ;
     dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
                                   "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
 #    dcterms:creator [
@@ -88,7 +89,7 @@
     dcterms:created               "2023-09-21"^^xsd:date ;
     dcterms:modified              "2026-02-17"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
-    dcterms:rights                <https://cbg.nl> ;
+    dcterms:rights                "CBG|Centre for family history" ;
     vann:preferredNamespacePrefix "picom" ;
     owl:versionInfo               "1.1.0"@en ;
     owl:priorVersion              "1.0.0"@en ;
@@ -197,7 +198,7 @@ picom:PersonObservation
                       sdo:text           """
                                             afr:geboorteregister_1858_po_1
                                                a                     picom:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               prov:hadPrimarySource afr:geboorteregister_1858 ;
                                                sdo:name              "Abe Bos" ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Abe" ;
@@ -206,11 +207,11 @@ picom:PersonObservation
                                                sdo:birthPlace        "Joure" ;
                                                sdo:gender            sdo:Male ;
                                                picom:hasRole         picot_roles:575 ;  # child
-                                               sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
+                                               sdo:parent            afr:geboorteregister_1858_po_2, afr:geboorteregister_1858_po_3 .
 
-                                            afr:geboorteregiser_1858_po_2
+                                            afr:geboorteregister_1858_po_2
                                                a                     picom:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
+                                               prov:hadPrimarySource afr:geboorteregister_1858 ;
                                                sdo:name              "Sjouke Abes Bos" ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Sjouke" ;
@@ -218,8 +219,8 @@ picom:PersonObservation
                                                sdo:hasOccupation     "klokmakersknecht" ;
                                                sdo:address           "Joure" ;
                                                sdo:gender            sdo:Male ;
-                                               sdo:spouse            afr:geboorteregiser_1858_po_3 ;
-                                               sdo:children          afr:geboorteregiser_1858_po_1 ;
+                                               sdo:spouse            afr:geboorteregister_1858_po_3 ;
+                                               sdo:children          afr:geboorteregister_1858_po_1 ;
                                                picom:hasRole         picot_roles:489 .  # declarant
                                          """ ] ;
 .
@@ -723,7 +724,7 @@ picom:eventDate
 
 picom:eventPlace
     a                  owl:DatatypeProperty ;
-    skos:definition    "The place where a life event occured." ;
+    skos:definition    "The place where a life event occurred." ;
     rdfs:label         "eventPlace"@en ;
 #    rdfs:label        "gebeurtenisPlaats"@nl ;
     skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
@@ -1099,12 +1100,12 @@ picom:hasLegitimizedChild
 
 picom:isLegitimitezedChildOf
     a                  owl:ObjectProperty ;
-    rdfs:label         "isLegitimitezedChildOf" ;
+    rdfs:label         "isLegitimizedChildOf" ;
 #    rdfs:label         "isGewettigdKindVan"@nl ;
-    skos:scopeNote     """For Person observations, the isLegitimitezedChildOf property should always refer to another
+    skos:scopeNote     """For Person observations, the isLegitimizedChildOf property should always refer to another
                           Person observation on the same Source.
                        """@en ;
-    skos:scopeNote     """For Person reconstructions, the isLegitimitezedChildOf property should refer to another Person
+    skos:scopeNote     """For Person reconstructions, the isLegitimizedChildOf property should refer to another Person
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -1368,7 +1369,7 @@ sdo:spouse
                        """@en ;
     skos:scopeNote     """For Person reconstructions, the spouse should refer to the Person reconstruction of
                           the spouse.
-                          A spouse relation may have a startdate and an enddate. The startdate may be redundant to
+                          A spouse relation may have a start date and an end date. The start date may be redundant to
                           the date of a marriage event. The marriage event provides information when the marriage took
                           place and is primarily used for Person Observations. The spouse relation can provide additional
                           information about the duration of the relation, which is useful for Person Reconstructions,
@@ -1377,7 +1378,7 @@ sdo:spouse
     sdo:workExample    [ a                  sdo:TextObject ;
                          sh:order           0 ;
                          sdo:encodingFormat "text/turtle" ;
-                         sdo:name           "Example of a spouse relation wiht start and end date" ;
+                         sdo:name           "Example of a spouse relation with start and end date" ;
                          sdo:text           """cbg:person_reconstruction_01
                                                 a           picom:PersonReconstruction ;
                                                 sdo:name    "Abraham Woltjer"
