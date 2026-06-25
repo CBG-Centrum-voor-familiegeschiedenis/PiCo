@@ -734,7 +734,7 @@ picom:eventPlace
                           the reconciled version.
                        """@en ;
     sdo:domainIncludes picom:LifeEvent ;
-    sdo:rangeIncludes  xsd:string, xsd:anyURI, xsd:Place ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI, sdo:Place ;
 .
 
 
