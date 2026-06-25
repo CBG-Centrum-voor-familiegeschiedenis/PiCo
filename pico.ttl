@@ -1095,10 +1095,10 @@ picom:hasLegitimizedChild
     rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        picom:Person ;
     rdfs:range         picom:Person ;
-    owl:inverseOf      picom:isLegitimitezedChildOf ;
+    owl:inverseOf      picom:isLegitimizedChildOf ;
 .
 
-picom:isLegitimitezedChildOf
+picom:isLegitimizedChildOf
     a                  owl:ObjectProperty ;
     rdfs:label         "isLegitimizedChildOf" ;
 #    rdfs:label         "isGewettigdKindVan"@nl ;
