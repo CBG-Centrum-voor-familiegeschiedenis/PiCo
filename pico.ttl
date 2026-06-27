@@ -117,9 +117,9 @@ picom:ontology
                                     sh:order           0 ;
                                     sdo:caption        "Schematic overview" ;
                                     sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
-                                    sdo:description    "Schematic overview of the model." ;
+                                    sdo:description    "Schematic overview of the model."@en ;
                                     sdo:encodingFormat "image/svg+xml" ;
-                                    sdo:name           "Model overview" ] ;
+                                    sdo:name           "Model overview"@en ] ;
 .
 
 ########################################################################################################################
@@ -190,9 +190,9 @@ picom:PersonObservation
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a PersonObservation" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person observation." ;
+                      sdo:description    "Schematic overview of a person observation."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonObservation overview" ] ;
+                      sdo:name           "PersonObservation overview"@en ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -244,9 +244,9 @@ picom:PersonReconstruction
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person reconstruction." ;
+                      sdo:description    "Schematic overview of a person reconstruction."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonReconstruction overview" ] ;
+                      sdo:name           "PersonReconstruction overview"@en ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -293,9 +293,9 @@ sdo:ArchiveComponent
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a Source" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a Source." ;
+                      sdo:description    "Schematic overview of a Source."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "Source" ] ;
+                      sdo:name           "Source"@en ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
                       sdo:encodingFormat "text/turtle" ;
