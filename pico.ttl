@@ -318,7 +318,7 @@ sdo:ArchiveComponent
                                                        sdo:locationCreated "Haskerland" ;
                                                        sdo:associatedMedia [ a                sdo:MediaObject, sdo:ImageObject ;
                                                                              sdo:position  51 ;
-                                                                             sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
+                                                                             sdo:contentUrl       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
                                                                              sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
                                                """ ] ;
 .
@@ -1412,13 +1412,22 @@ sdo:thumbnail
 sdo:url
     a                  owl:ObjectProperty ;
     rdfs:isDefinedBy   sdo:url ;
-    skos:definition    "URL of the Source or Scan." ;
+    skos:definition    "URL of the Source." ;
     rdfs:label         "url"@en ;
     skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
-    skos:scopeNote     """For Scans of Sources: a link to the scan of the Source at the holding archive.
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  sdo:URL ;
+.
+
+sdo:contentUrl
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo:contentUrl ;
+    skos:definition    "URL of the Scan." ;
+    rdfs:label         "url"@en ;
+    skos:scopeNote     """A link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        """@en ;
-    sdo:domainIncludes sdo:ImageObject, sdo:ArchiveComponent ;
+    sdo:domainIncludes sdo:ImageObject ;
     sdo:rangeIncludes  sdo:URL ;
 .
 

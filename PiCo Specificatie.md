@@ -134,7 +134,7 @@ Eigenschappen van een Bron:
 * sdo:contentLocation
 * sdo:associatedMedia
   * sdo:position
-  * sdo:url
+  * sdo:contentUrl
   * sdo:embedUrl
   * sdo:thumbnail
 * sdo:url
