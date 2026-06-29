@@ -13,7 +13,7 @@
 nha:NL-HlmNHA_1482_234_B_0006_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
-    sdo:name              "Bos, A." ;
+    sdo:name              "Bos, A."@nl ;
     sdo:additionalName    [ a               pnv:PersonName ;
                             pnv:initials    "A."@nl ;
                             pnv:literalName "Bos, A."@nl ;

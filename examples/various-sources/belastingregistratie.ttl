@@ -15,7 +15,7 @@
 nha:NL-HlmNHA_1503_537_IVa_63_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1503_537_IVa_63 ;
-    sdo:name              "Bos, A." ;
+    sdo:name              "Bos, A."@nl ;
     sdo:familyName        "Bos" ;
     # Hier noteren we eventueel eigenschappen van de naam die niet in schema.org passen:
     sdo:additionalName    [ a               pnv:PersonName ;

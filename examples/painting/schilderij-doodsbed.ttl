@@ -6,11 +6,11 @@
 <>
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
-    sdo:name              "DEN PRINSCHE DORANGE" ;
+    sdo:name              "DEN PRINSCHE DORANGE"@nl ;
     sdo:deathDate         "DEN TIENDEN IVLI" ;
     sdo:deathPlace        "DELFT" ;
     picom:hasAge           "51" .
 
 <https://data.rkd.nl/images/170975>
     a        sdo:Painting ;
-    sdo:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)" .
+    sdo:name "Deathbed portrait of Willem I 'de Zwijger' van Oranje-Nassau (1533-1584)"@nl .

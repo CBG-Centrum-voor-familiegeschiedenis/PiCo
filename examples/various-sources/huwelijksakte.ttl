@@ -13,7 +13,7 @@
 nha:huwelijksakte_1885_321_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     picom:hasAge          "27"^^xsd:decimal ;
@@ -31,12 +31,12 @@ nha:huwelijksakte_1885_321_po_1
 nha:huwelijksakte_1885_321_po_2
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna" ; # Klopt dit wel, moet dit niet "Anna Maria" of ("Anna" "Maria") zijn?
     picom:hasAge          "25"^^xsd:decimal ;
     sdo:birthPlace        "Haarlem" ;
-    sdo:hasOccupation     "dienstbode" ;
+    sdo:hasOccupation     "dienstbode"@nl ;
     sdo:gender            sdo:Female ;
     picom:hasRole         picot_roles:574 ;  # bride/groom
     sdo:spouse            nha:huwelijksakte_1885_321_po_1 ;
@@ -49,7 +49,7 @@ nha:huwelijksakte_1885_321_po_2
 nha:huwelijksakte_1885_321_po_3
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Sjouke Abes Bos" ;
+    sdo:name              "Sjouke Abes Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
@@ -61,7 +61,7 @@ nha:huwelijksakte_1885_321_po_3
 nha:huwelijksakte_1885_321_po_4
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Geertruida van der Wijk" ;
+    sdo:name              "Geertruida van der Wijk"@nl ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
@@ -75,7 +75,7 @@ nha:huwelijksakte_1885_321_po_4
 nha:huwelijksakte_1885_321_po_5
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Johannes Koppen" ;
+    sdo:name              "Johannes Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Johannes" ;
     sdo:gender            sdo:Male ;
@@ -84,7 +84,7 @@ nha:huwelijksakte_1885_321_po_5
 nha:huwelijksakte_1885_321_po_6
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:huwelijksakte_1885_321 ;
-    sdo:name              "Helena Catharina van Zijl" ;
+    sdo:name              "Helena Catharina van Zijl"@nl ;
     sdo:familyName        "van Zijl" ;
     sdo:givenName         "Helena Catharina" ;
     sdo:additionalName    [ a                 pnv:PersonName ;

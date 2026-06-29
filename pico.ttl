@@ -69,7 +69,7 @@ picom:ontology
 #                            sdo:Name "Rick Mourits"@en ;
 #                            sdo:affiliation
 #                                  [
-#                                      sdo:name "International Institute Of Social History (IISH)" ;
+#                                      sdo:name "International Institute Of Social History (IISH)"@en ;
 #                                      sdo:url "https://iisg.amsterdam/"
 #                                  ]
 #                        ] ,
@@ -77,14 +77,14 @@ picom:ontology
 #                            sdo:Name "Micon Schorsij"@en ;
 #                            sdo:affiliation
 #                                    [
-#                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
+#                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies"@nl ;
 #                                        sdo:url "https://www.niod.nl/"
 #                                    ]
 #                        ] ,
 #                        [
 #                            sdo:Name "Richard Zijdeman"@en ;
 #                            sdo:affiliation
-#                                    [ sdo:name "International Institute Of Social History (IISH)" ;
+#                                    [ sdo:name "International Institute Of Social History (IISH)"@en ;
 #                                      sdo:url "https://iisg.amsterdam/"
 #                                    ]
 #                        ] ;
@@ -150,7 +150,7 @@ prov:Agent
     sdo:workExample [ a                  sdo:TextObject ;
                       sh:order           0 ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Example of an Agent responsible for an Activity" ;
+                      sdo:name           "Example of an Agent responsible for an Activity"@en ;
                       sdo:text           """
                                              cbg:reconstruction_activity_01
                                                 a                      prov:Activity ;
@@ -160,7 +160,7 @@ prov:Agent
 
                                              cbg:reconstruction_agent_01
                                                 a             prov:Agent ;
-                                                sdo:name   "CBG|Center for Family History" ;
+                                                sdo:name   "CBG|Center for Family History"@en ;
                                                 sdo:url    <https://cbg.nl> .
                                           """ ] ;
 .
@@ -201,12 +201,12 @@ picom:PersonObservation
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Person observation example" ;
+                      sdo:name           "Person observation example"@nl ;
                       sdo:text           """
                                             afr:geboorteregister_1858_po_1
                                                a                     picom:PersonObservation, sdo:Person ;
                                                prov:hadPrimarySource afr:geboorteregister_1858 ;
-                                               sdo:name              "Abe Bos" ;
+                                               sdo:name              "Abe Bos"@nl ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Abe" ;
                                                sdo:birthDate         "21 Junij 1858"^^xsd:string ;
@@ -219,7 +219,7 @@ picom:PersonObservation
                                             afr:geboorteregister_1858_po_2
                                                a                     picom:PersonObservation, sdo:Person ;
                                                prov:hadPrimarySource afr:geboorteregister_1858 ;
-                                               sdo:name              "Sjouke Abes Bos" ;
+                                               sdo:name              "Sjouke Abes Bos"@nl ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Sjouke" ;
                                                picom:hasAge          "30"^^xsd:decimal ;
@@ -256,11 +256,11 @@ picom:PersonReconstruction
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Person Reconstruction example" ;
+                      sdo:name           "Person Reconstruction example"@en ;
                       sdo:text           """
                                                 cbg:person_reconstruction_2
                                                     a                   picom:PersonReconstruction, sdo:Person ;
-                                                    sdo:name            "Anna Maria Koppen" ;
+                                                    sdo:name            "Anna Maria Koppen"@nl ;
                                                     sdo:familyName      "Koppen" ;
                                                     sdo:givenName       "Anna" ;
                                                     sdo:gender          sdo:Female ;
@@ -306,12 +306,12 @@ sdo:ArchiveComponent
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Source with a linked Scan" ;
+                      sdo:name           "Source with a linked Scan"@en ;
                       sdo:text           """
                                                    afr:geboorteregister_1858
                                                        a                   sdo:ArchiveComponent ;
                                                        sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
-                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
+                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051"@nl ;
                                                        sdo:holdingArchive  <https://www.tresoar.nl/> ;
                                                        sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
                                                        sdo:dateCreated     "1885"^^xs:gYear ;
@@ -358,12 +358,12 @@ picom:LifeEvent
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of LifeEvent" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "LifeEvent example" ;
+                      sdo:name           "LifeEvent example"@en ;
                       sdo:text           """
                                             nha:huwelijksakte_1885_321_po_1
                                                 a                       picom:PersonObservation, sdo:Person ;
                                                 prov:hadPrimarySource   nha:huwelijksakte_1885_321 ;
-                                                sdo:name                "Abe Bos" ;
+                                                sdo:name                "Abe Bos"@nl ;
                                                 sdo:familyName          "Bos" ;
                                                 sdo:givenName           "Abe" ;
                                                 picom:hasAge            "27"^^xsd:decimal ;
@@ -436,7 +436,7 @@ sdo:birthPlace
     sdo:workExample    [ a                  sdo:TextObject ;
                          sh:order           0 ;
                          sdo:encodingFormat "text/turtle" ;
-                         sdo:name           "Example of a sdo:birthPlace" ;
+                         sdo:name           "Example of a sdo:birthPlace"@en ;
                          sdo:text           """
                          sdo:birthPlace     [ a           sdo:Place ;
                                               sdo:name    "Beeck, Berg bij Uberghen (L van Kleef)"@nl ;  # (literal from Source)
@@ -650,7 +650,7 @@ pnv:initials
 sdo:name
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   sdo:name ;
-    skos:definition    "The name of a Person or a Source." ;
+    skos:definition    "The name of a Person or a Source."@en ;
     rdfs:label         "name"@en ;  #, "Volledige naam"@nl ;
     skos:scopeNote     """For Persons: Use full name if the name can't be split into given name and family name.
                           Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:PersonName.
@@ -1387,10 +1387,10 @@ sdo:spouse
     sdo:workExample    [ a                  sdo:TextObject ;
                          sh:order           0 ;
                          sdo:encodingFormat "text/turtle" ;
-                         sdo:name           "Example of a spouse relation with start and end date" ;
+                         sdo:name           "Example of a spouse relation with start and end date"@en ;
                          sdo:text           """cbg:person_reconstruction_01
                                                 a           picom:PersonReconstruction, sdo:Person ;
-                                                sdo:name    "Abraham Woltjer"
+                                                sdo:name    "Abraham Woltjer"@nl
                                                 ...
                                                 sdo:spouse  [ rdf:value         cbg:person_reconstruction_2 ;
                                                               sdo:startDate     "1885-11-11"^^xsd:date ;

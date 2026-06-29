@@ -6,7 +6,7 @@
 
 <https://www.genealogieonline.nl/id/person_595_I000342>
     a                    picom:PersonObservation, sdo:Person  ; # one persons PersonReconstruction is another persons PersonObservation ?
-    sdo:name             "Willem Hermanus Brizee" ;
+    sdo:name             "Willem Hermanus Brizee"@nl ;
     sdo:givenName        "Willem Hermanus" ;
     sdo:familyName       "Brizee" ;
     sdo:birthDate        "1914-06-14" ;
@@ -23,7 +23,7 @@
 
 <https://www.genealogieonline.nl/wo2slachtoffers/23>
     a                   picom:PersonReconstruction, sdo:Person ;
-    sdo:name            "Willem Hermanus Brizee" ;
+    sdo:name            "Willem Hermanus Brizee"@nl ;
     sdo:givenName       "Willem Hermanus" ;
     sdo:familyName      "Brizee" ;
     sdo:birthDate       "1914-06-14" ;
@@ -31,7 +31,7 @@
     sdo:deathPlace      <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
     rdfs:label          "Willem Hermanus Brizee (1914-1945)" ;
     prov:wasDerivedFrom <https://www.genealogieonline.nl/id/person_595_I000342>, [ a                     picom:PersonObservation ;
-                                                                            sdo:name              "Willem Hermanus Brizee" ;
+                                                                            sdo:name              "Willem Hermanus Brizee"@nl ;
                                                                             sdo:givenName         "Willem Hermanus" ;
                                                                             sdo:familyName        "Brizee" ;
                                                                             prov:hadPrimarySource [ a sdo:ArchiveComponent, sdo:CreativeWork;
@@ -40,14 +40,14 @@
                                                                                                     sdo:url
                                                                                                       <https://monument.vriendenkringneuengamme.nl/person/400674> ] ],
                         [ a                     picom:PersonObservation, sdo:Person ;
-                          sdo:name              "Willem Hermanus Brizee" ;
+                          sdo:name              "Willem Hermanus Brizee"@nl ;
                           sdo:givenName         "Willem Hermanus" ;
                           sdo:familyName        "Brizee" ;
                           prov:hadPrimarySource [ a        sdo:ArchiveComponent, sdo:CreativeWork ;
                                                   sdo:name "Arolsen Archives"@en ;
                                                   sdo:url  <https://collections.arolsen-archives.org/en/search/people/3772230/?p=1&amp;s_lastName=asc> ] ],
                         [ a                     picom:PersonObservation, sdo:Person ;
-                          sdo:name              "Willem Hermanus Brizee" ;
+                          sdo:name              "Willem Hermanus Brizee"@nl ;
                           sdo:givenName         "Willem Hermanus" ;
                           sdo:familyName        "Brizee" ;
                           prov:hadPrimarySource [ a        sdo:ArchiveComponent, sdo:CreativeWork ;

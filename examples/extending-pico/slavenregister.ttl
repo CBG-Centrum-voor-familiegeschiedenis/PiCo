@@ -13,7 +13,7 @@
 nas:slavenregister_41_4890_po_1
     a                       picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource   nas:slavenregister_41_4890 ;
-    sdo:name                "Unico August Hoogberg" ;
+    sdo:name                "Unico August Hoogberg"@nl ;
     sdo:familyName          "Hoogberg" ;
     sdo:givenName           "Unico August" ;
     sdo:gender              sdo:Male ;
@@ -25,7 +25,7 @@ nas:slavenregister_41_4890_po_1
 nas:slavenregister_41_4890_po_2
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
-    sdo:name              "Wed. J.L. Stugen geboren Bruining" ;
+    sdo:name              "Wed. J.L. Stugen geboren Bruining"@nl ;
     sdo:familyName        "Bruining" ;
     sdo:spouse            nas:slavenregister_41_4890_po_3 ;
     sdo:gender            sdo:Female .
@@ -34,7 +34,7 @@ nas:slavenregister_41_4890_po_2
 nas:slavenregister_41_4890_po_3
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
-    sdo:name              "J.L. Stugen" ;
+    sdo:name              "J.L. Stugen"@nl ;
     sdo:familyName        "Stugen" ;
     sdo:givenName         "J.L." ;
     sdo:spouse            nas:slavenregister_41_4890_po_2 ;

@@ -14,7 +14,7 @@
 cbg:NL-HaCBG_1755_0341_142_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     sdo:gender            sdo:Male ;
@@ -34,7 +34,7 @@ cbg:NL-HaCBG_1755_0341_142_po_1
 cbg:NL-HaCBG_1755_0341_142_po_2
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna" ;
     sdo:birthPlace        "Haarlem" ;
@@ -46,7 +46,7 @@ cbg:NL-HaCBG_1755_0341_142_po_2
 cbg:NL-HaCBG_1755_0341_142_po_3
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Sjouke Abes Bos" ;
+    sdo:name              "Sjouke Abes Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
@@ -57,7 +57,7 @@ cbg:NL-HaCBG_1755_0341_142_po_3
 cbg:NL-HaCBG_1755_0341_142_po_4
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Geertruida van der Wijk" ;
+    sdo:name              "Geertruida van der Wijk"@nl ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;

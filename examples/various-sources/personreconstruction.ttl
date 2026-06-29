@@ -13,7 +13,7 @@
 
 cbg:person_reconstruction_1
     a                   picom:PersonReconstruction, sdo:Person ;
-    sdo:name            "Abe Bos" ;
+    sdo:name            "Abe Bos"@nl ;
     sdo:familyName      "Bos" ;
     sdo:givenName       "Abe" ;
     sdo:gender          sdo:Male ;
@@ -40,7 +40,7 @@ cbg:person_reconstruction_1
 
 cbg:person_reconstruction_2
     a                   picom:PersonReconstruction, sdo:Person ;
-    sdo:name            "Anna Maria Koppen" ;
+    sdo:name            "Anna Maria Koppen"@bk ;
     sdo:familyName      "Koppen" ;
     sdo:givenName       "Anna" ;
     sdo:gender          sdo:Female ;

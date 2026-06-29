@@ -11,7 +11,7 @@
 nha:NL-HlmNHA_1482_234_B_0006_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     picom:hasRole          "hoofd" ;
@@ -35,7 +35,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_2
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna Maria" ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:birthDate         "1860-03-31"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
     sdo:address           "Eendrachtstraat 3" ;

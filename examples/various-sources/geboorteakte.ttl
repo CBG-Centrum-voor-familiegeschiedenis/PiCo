@@ -15,7 +15,7 @@
 afr:geboorteregiser_1858_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     sdo:birthDate         "21 Junij 1858"^^xsd:string ;
@@ -29,7 +29,7 @@ afr:geboorteregiser_1858_po_1
 afr:geboorteregiser_1858_po_2
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Sjouke Abes Bos" ;
+    sdo:name              "Sjouke Abes Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     picom:hasAge          "30" ;
@@ -44,7 +44,7 @@ afr:geboorteregiser_1858_po_2
 afr:geboorteregiser_1858_po_3
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Geertruida van der Wijk" ;
+    sdo:name              "Geertruida van der Wijk"@nl ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;

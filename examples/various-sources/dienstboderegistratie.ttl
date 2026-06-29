@@ -10,7 +10,7 @@
 nha:dienstboderegister_po_1
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna Maria" ;
     sdo:birthDate         "1860-03-31"^^xsd:date ;
@@ -23,7 +23,7 @@ nha:dienstboderegister_po_1
 nha:dienstboderegister_po_2
     a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna Maria" ;
     sdo:birthDate         "1860-03-31"^^xsd:date ;
