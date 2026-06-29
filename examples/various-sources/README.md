@@ -5,7 +5,7 @@ PersonReconstruction.
 
 ## Overview
 
-* Use schema, prov, pnv and bio.
+* Use schema, prov and pnv.
 * CBG addition would be the relevant basic classes, "named individuals" and properties.
 
 ### Terms from examples (https://terms.personsincontext.org/)

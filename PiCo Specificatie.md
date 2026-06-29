@@ -9,7 +9,6 @@ Redactie: Jeroen Balkenende, Bob Coret, Mark Lindeman, Pieter Woltjer, Ivo Zandh
 ### Samenvatting
 PiCo is een kennismodel voor het beschrijven van persoonsvermeldingen en (daaruit afgeleid) uniek geïdentificeerde personen. Het kennismodel maakt gebruik van een aantal bestaande ontologieën:
 * [Schema.org](https://schema.org/) wordt zo veel mogelijk gebruikt voor de klassen en eigenschappen 
-* [BIO](https://vocab.org/bio/) wordt gebruikt voor een aantal life events, zoals een huwelijk of echtscheiding 
 * [PNV](https://www.lodewijkpetram.nl/vocab/pnv/doc/) wordt optioneel gebruikt voor uitgebreide persoonsnamen
 * [PROV-O](https://www.w3.org/TR/prov-o/) wordt gebruikt voor informatie over de totstandkoming van persoonsreconstructies 
 
@@ -99,9 +98,6 @@ Ook voor bronnen kunnen eigenschappen worden gebruikt uit [Schema.org](https://s
 
 ### PROV-O
 Om aan te geven op welke Persoonsvermeldingen een Persoonsreconstructie is gebaseerd, wordt de property prov:wasDerivedFrom voorgeschreven. Deze is afkomstig uit de [PROV-O](https://www.w3.org/TR/prov-o/) ontologie.
-
-### BIO
-Voor een aantal life events die meerdere keren kunnen voorkomen in een leven, zoals huwelijken en echtscheidingen, wordt de [BIO](https://vocab.org/bio/) ontologie gebruikt. Geboortedatum en -plaats en overlijdensdatum en -plaats worden omwille van de eenvoud uit Schema.org gehaald. De stelregel hierbij is: waar mogelijk gebruiken we Schema.org. Wanneer dit niet goed mogelijk is, bijvoorbeeld omdat je meer gegevens wil vastleggen over een Gebeurtenis, of wanneer Schema.org geen geschikte property heeft voor een specifieke gebeurtenis, gebruiken we BIO.  
 
 ## Termen
 ### Rollen en Relaties
