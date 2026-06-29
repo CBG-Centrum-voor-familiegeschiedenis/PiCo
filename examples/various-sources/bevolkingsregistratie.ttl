@@ -53,7 +53,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_3
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_4
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1888-08-11"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
