@@ -1423,7 +1423,7 @@ sdo:contentUrl
     a                  owl:ObjectProperty ;
     rdfs:isDefinedBy   sdo:contentUrl ;
     skos:definition    "URL of the Scan." ;
-    rdfs:label         "url"@en ;
+    rdfs:label         "contentUrl"@en ;
     skos:scopeNote     """A link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        """@en ;
