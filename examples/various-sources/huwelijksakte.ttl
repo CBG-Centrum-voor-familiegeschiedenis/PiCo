@@ -96,7 +96,7 @@ nha:huwelijksakte_1885_321_po_6
 
 # BRON
 nha:huwelijksakte_1885_321
-    a                   sdo:ArchiveComponent ;
+    a                   sdo:ArchiveComponent, sdo:CreativeWork ;
     sdo:additionalType  picot_sourcetypes:552 ; # civil registry: marriage
     sdo:name            "BS Huwelijk Haarlem, 11 november 1885, aktenummer 321"@nl ;
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;

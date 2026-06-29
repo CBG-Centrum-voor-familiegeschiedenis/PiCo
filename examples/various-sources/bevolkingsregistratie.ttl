@@ -107,7 +107,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_9
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006
-    a                  sdo:ArchiveComponent ;
+    a                  sdo:ArchiveComponent, sdo:CreativeWork ;
     sdo:name           "Bevolkingsregister Haarlem 1900-1924, (NL-HlmNHA, toegang 1482, invnr. 234), fol. 0006"@nl ;
     sdo:holdingArchive nha: ;
     sdo:additionalType picot_sourcetypes:554 .  # bevolkingsregister
