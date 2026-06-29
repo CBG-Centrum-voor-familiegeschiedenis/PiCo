@@ -13,7 +13,7 @@
 
 # PERSOONSVERMELDING
 hua:NL-UtHUA_920_26-29_2430_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource hua:NL-UtHUA_920_26-29_2430 ;
     sdo:name              "Bos, A." ;
     sdo:familyName        "Bos" ;

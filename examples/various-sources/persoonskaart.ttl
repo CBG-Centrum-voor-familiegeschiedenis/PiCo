@@ -12,7 +12,7 @@
 
 # PERSOONSVERMELDINGEN
 cbg:NL-HaCBG_1755_0341_142_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
@@ -32,7 +32,7 @@ cbg:NL-HaCBG_1755_0341_142_po_1
 .
 
 cbg:NL-HaCBG_1755_0341_142_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     sdo:name              "Anna Maria Koppen" ;
     sdo:familyName        "Koppen" ;
@@ -44,7 +44,7 @@ cbg:NL-HaCBG_1755_0341_142_po_2
     sdo:deathDate         "1926"^^xsd:gYear .
 
 cbg:NL-HaCBG_1755_0341_142_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
@@ -55,7 +55,7 @@ cbg:NL-HaCBG_1755_0341_142_po_3
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 cbg:NL-HaCBG_1755_0341_142_po_4
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;

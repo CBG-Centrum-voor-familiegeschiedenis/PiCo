@@ -12,7 +12,7 @@
 # Advise is to introduce a 'blank' PersonObservation. See following example.
 
 _:person_reconstruction_1
-    a                   picom:PersonReconstruction ;
+    a                   picom:PersonReconstruction, sdo:Person ;
     sdo:name            "Rinske Pieters van der Werf" ;
     sdo:familyName      "van der Werf" ;
     sdo:givenName       "Rinske" ;
@@ -24,7 +24,7 @@ _:person_reconstruction_1
     sdo:gender          sdo:Female ;
     sdo:birthPlace      "Gorredijk, gemeente Opsterland" ;
     sdo:birthDate       "1816-10-11"^^xsd:date ;
-    prov:wasDerivedFrom [ a                     picom:PersonObservation ;
+    prov:wasDerivedFrom [ a                     picom:PersonObservation, sdo:Person ;
                           sdo:identifier        "573ace76-6f44-389f-666d-4c81bb13ed88#Person:5d3dca44-35af-17d7-d5f8-503cb3c50902" ;
                           prov:hadPrimarySource [ a sdo:ArchiveComponent, sdo:CreativeWork ;
                                                   sdo:name

@@ -11,7 +11,7 @@
 @prefix nas:    <https://data.nationaalarchief.sr/> .
 
 nas:slavenregister_41_4890_po_1
-    a                       picom:PersonObservation ;
+    a                       picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource   nas:slavenregister_41_4890 ;
     sdo:name                "Unico August Hoogberg" ;
     sdo:familyName          "Hoogberg" ;
@@ -23,7 +23,7 @@ nas:slavenregister_41_4890_po_1
 
 
 nas:slavenregister_41_4890_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
     sdo:name              "Wed. J.L. Stugen geboren Bruining" ;
     sdo:familyName        "Bruining" ;
@@ -32,7 +32,7 @@ nas:slavenregister_41_4890_po_2
 
 
 nas:slavenregister_41_4890_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nas:slavenregister_41_4890 ;
     sdo:name              "J.L. Stugen" ;
     sdo:familyName        "Stugen" ;

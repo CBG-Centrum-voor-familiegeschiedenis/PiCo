@@ -13,7 +13,7 @@
 # PERSOONSVERMELDINGEN
 
 afr:geboorteregiser_1858_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
@@ -27,7 +27,7 @@ afr:geboorteregiser_1858_po_1
 
 
 afr:geboorteregiser_1858_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Sjouke Abes Bos" ;
     sdo:familyName        "Bos" ;
@@ -42,7 +42,7 @@ afr:geboorteregiser_1858_po_2
 
 
 afr:geboorteregiser_1858_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
     sdo:name              "Geertruida van der Wijk" ;
     sdo:familyName        "van der Wijk" ;

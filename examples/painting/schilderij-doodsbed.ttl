@@ -4,7 +4,7 @@
 
 # PERSOONSVERMELDING
 <>
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://data.rkd.nl/images/170975> ;
     sdo:name              "DEN PRINSCHE DORANGE" ;
     sdo:deathDate         "DEN TIENDEN IVLI" ;

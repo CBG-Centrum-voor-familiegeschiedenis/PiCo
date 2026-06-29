@@ -13,7 +13,7 @@
 # PERSOONSVERMELDING
 # PERSOONSVERMELDING
 nha:NL-HlmNHA_1503_537_IVa_63_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1503_537_IVa_63 ;
     sdo:name              "Bos, A." ;
     sdo:familyName        "Bos" ;

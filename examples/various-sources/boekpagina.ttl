@@ -11,7 +11,7 @@
 
 # PERSOONSVERMELDING
 nha:NL-HlmNHA_1482_234_B_0006_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:bibliotheek_5008_13-p299 ;
     sdo:name              "Bos, A." ;
     sdo:additionalName    [ a               pnv:PersonName ;

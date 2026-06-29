@@ -9,7 +9,7 @@
 
 # PERSOONSVERMELDINGEN
 nha:NL-HlmNHA_1482_234_B_0006_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:name              "Abe Bos" ;
     sdo:familyName        "Bos" ;
@@ -31,7 +31,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_1
     sdo:children          nha:NL-HlmNHA_1482_234_B_0006_po_9 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna Maria" ;
@@ -44,7 +44,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_2
     sdo:spouse            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1887-06-07"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
@@ -62,7 +62,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_4
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_5
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1891-04-13"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
@@ -71,7 +71,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_5
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_6
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1892-12-25"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
@@ -80,7 +80,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_6
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_7
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1894-10-04"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
@@ -89,7 +89,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_7
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_8
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1900-08-27"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;
@@ -98,7 +98,7 @@ nha:NL-HlmNHA_1482_234_B_0006_po_8
     sdo:parent            nha:NL-HlmNHA_1482_234_B_0006_po_1 .
 
 nha:NL-HlmNHA_1482_234_B_0006_po_9
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource nha:NL-HlmNHA_1482_234_B_0006 ;
     sdo:birthDate         "1900-08-27"^^xsd:date ;
     sdo:birthPlace        "Haarlem" ;

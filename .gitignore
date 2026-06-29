@@ -1,2 +1,3 @@
 /.conda_config
 *.log
+/shacl/nde_schema_profile_shacl.ttl

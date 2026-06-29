@@ -8,7 +8,7 @@
 @prefix nha:               <https://noord-hollandsarchief.nl/> .
 
 nha:dienstboderegister_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
     sdo:name              "Anna Maria Koppen" ;
     sdo:familyName        "Koppen" ;
@@ -21,7 +21,7 @@ nha:dienstboderegister_po_1
     sdo:gender            sdo:Female .
 
 nha:dienstboderegister_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380#regel123> ;
     sdo:name              "Anna Maria Koppen" ;
     sdo:familyName        "Koppen" ;

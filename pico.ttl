@@ -204,7 +204,7 @@ picom:PersonObservation
                       sdo:name           "Person observation example" ;
                       sdo:text           """
                                             afr:geboorteregister_1858_po_1
-                                               a                     picom:PersonObservation ;
+                                               a                     picom:PersonObservation, sdo:Person ;
                                                prov:hadPrimarySource afr:geboorteregister_1858 ;
                                                sdo:name              "Abe Bos" ;
                                                sdo:familyName        "Bos" ;
@@ -217,7 +217,7 @@ picom:PersonObservation
                                                sdo:parent            afr:geboorteregister_1858_po_2, afr:geboorteregister_1858_po_3 .
 
                                             afr:geboorteregister_1858_po_2
-                                               a                     picom:PersonObservation ;
+                                               a                     picom:PersonObservation, sdo:Person ;
                                                prov:hadPrimarySource afr:geboorteregister_1858 ;
                                                sdo:name              "Sjouke Abes Bos" ;
                                                sdo:familyName        "Bos" ;
@@ -259,7 +259,7 @@ picom:PersonReconstruction
                       sdo:name           "Person Reconstruction example" ;
                       sdo:text           """
                                                 cbg:person_reconstruction_2
-                                                    a                   picom:PersonReconstruction ;
+                                                    a                   picom:PersonReconstruction, sdo:Person ;
                                                     sdo:name            "Anna Maria Koppen" ;
                                                     sdo:familyName      "Koppen" ;
                                                     sdo:givenName       "Anna" ;
@@ -361,7 +361,7 @@ picom:LifeEvent
                       sdo:name           "LifeEvent example" ;
                       sdo:text           """
                                             nha:huwelijksakte_1885_321_po_1
-                                                a                       picom:PersonObservation ;
+                                                a                       picom:PersonObservation, sdo:Person ;
                                                 prov:hadPrimarySource   nha:huwelijksakte_1885_321 ;
                                                 sdo:name                "Abe Bos" ;
                                                 sdo:familyName          "Bos" ;
@@ -1389,7 +1389,7 @@ sdo:spouse
                          sdo:encodingFormat "text/turtle" ;
                          sdo:name           "Example of a spouse relation with start and end date" ;
                          sdo:text           """cbg:person_reconstruction_01
-                                                a           picom:PersonReconstruction ;
+                                                a           picom:PersonReconstruction, sdo:Person ;
                                                 sdo:name    "Abraham Woltjer"
                                                 ...
                                                 sdo:spouse  [ rdf:value         cbg:person_reconstruction_2 ;
