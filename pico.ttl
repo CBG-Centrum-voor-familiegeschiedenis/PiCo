@@ -113,14 +113,17 @@ picom:ontology
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
                                   """@en ;
     sdo:codeRepository            "https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/"^^xsd:anyURI ;
-    sdo:workExample               [ a                  sdo:ImageObject ;
+    sdo:workExample               [ a                  sdo:MediaObject, sdo:ImageObject ;
                                     sh:order           0 ;
                                     sdo:caption        "Schematic overview" ;
                                     sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
                                     sdo:description    "Schematic overview of the model."@en ;
                                     sdo:encodingFormat "image/svg+xml" ;
-                                    sdo:name           "Model overview"@en ] ;
+                                    sdo:name           "Model overview"@en ;
+                                    sdo:sDatePublished "2026-02-17" ;
+                                    sdo:licence        <http://creativecommons.org/licenses/by/4.0/deed.nl> ] ;
 .
+
 
 ########################################################################################################################
 # Classes
@@ -137,6 +140,7 @@ prov:Activity
                        configuration settings of the program.
                     """@en ;
 .
+
 
 prov:Agent
     a               owl:Class ;
@@ -186,13 +190,14 @@ picom:PersonObservation
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a PersonObservation" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person observation."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonObservation overview"@en ] ;
+                      sdo:name           "PersonObservation overview"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -240,13 +245,14 @@ picom:PersonReconstruction
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a person reconstruction."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonReconstruction overview"@en ] ;
+                      sdo:name           "PersonReconstruction overview"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -289,13 +295,14 @@ sdo:ArchiveComponent
                        elements that identify the source, heritage institutions are free to use any authoritative
                        domain-specific standard to describe their historical person records.
                     """@en ;
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a Source" ;
                       sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
                       sdo:description    "Schematic overview of a Source."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "Source"@en ] ;
+                      sdo:name           "Source"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -309,7 +316,7 @@ sdo:ArchiveComponent
                                                        sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
                                                        sdo:dateCreated     "1885"^^xs:gYear ;
                                                        sdo:locationCreated "Haskerland" ;
-                                                       sdo:associatedMedia [ a                sdo:ImageObject ;
+                                                       sdo:associatedMedia [ a                sdo:MediaObject, sdo:ImageObject ;
                                                                              sdo:position  51 ;
                                                                              sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
                                                                              sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .

@@ -66,7 +66,7 @@ afr:geboorteregiser_1858
     sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
     sdo:dateCreated     "1885"^^xsd:gYear ;
     sdo:locationCreated "Haskerland"@nl ;
-    sdo:associatedMedia [ a            sdo:ImageObject ;
+    sdo:associatedMedia [ a            sdo:MediaObject, sdo:ImageObject ;
                           sdo:position 51 ;
                           sdo:url      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ;
                           sdo:thumbnail
