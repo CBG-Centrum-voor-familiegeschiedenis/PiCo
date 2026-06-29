@@ -266,12 +266,16 @@
       "@id": "sdo:spouse",
       "@type": "@id"
     },
-    "thumbnail": {
-      "@id": "sdo:thumbnail",
+    "thumbnailUrl": {
+      "@id": "sdo:thumbnailUrl",
       "@type": "@id"
     },
     "url": {
       "@id": "sdo:url",
+      "@type": "@id"
+    },
+    "contentUrl": {
+      "@id": "sdo:contentUrl",
       "@type": "@id"
     },
     "hasRole": {

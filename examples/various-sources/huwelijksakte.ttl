@@ -107,5 +107,5 @@ nha:huwelijksakte_1885_321
                           sdo:position 1 ;
                           sdo:contentUrl      "https://proxy.archieven.nl/download/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
                           sdo:embedUrl "https://proxy.archieven.nl/embed/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ;
-                          sdo:thumbnail
+                          sdo:thumbnailUrl
                                        "https://proxy.archieven.nl/thumb/236/F9934C85D44446699C60862B3433A9AC"^^xsd:anyURI ; ] .

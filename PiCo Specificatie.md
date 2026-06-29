@@ -136,7 +136,7 @@ Eigenschappen van een Bron:
   * sdo:position
   * sdo:contentUrl
   * sdo:embedUrl
-  * sdo:thumbnail
+  * sdo:thumbnailUrl
 * sdo:url
 
 ### 2. Eigenschappen van Persoonsvermelding

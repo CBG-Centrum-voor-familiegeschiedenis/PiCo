@@ -319,7 +319,7 @@ sdo:ArchiveComponent
                                                        sdo:associatedMedia [ a                sdo:MediaObject, sdo:ImageObject ;
                                                                              sdo:position  51 ;
                                                                              sdo:contentUrl       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
-                                                                             sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
+                                                                             sdo:thumbnailUrl "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
                                                """ ] ;
 .
 
@@ -1401,10 +1401,10 @@ sdo:spouse
     sdo:rangeIncludes  picom:Person ;
 .
 
-sdo:thumbnail
+sdo:thumbnailUrl
     a                  owl:ObjectProperty ;
     skos:definition    """Thumbnail image of the Scan."""@en ;
-    rdfs:label         "thumbnail"@en ;
+    rdfs:label         "thumbnailUrl"@en ;
     sdo:domainIncludes sdo:ImageObject ; #, sdo:ArchiveComponent ?
     sdo:rangeIncludes  sdo:ImageObject ;
 .
