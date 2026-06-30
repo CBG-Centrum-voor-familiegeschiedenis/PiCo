@@ -26,10 +26,10 @@ prov:ActivityShape
     sh:property    [ sh:path     prov:endedAtTime ;
                      sh:datatype xsd:dateTime ;
                      sh:minCount 0 ;
-                     sh:message  "An Activity must have a endtime." ; ] ;
+                     sh:message  "An Activity may have an end time." ; ] ;
 .
 
-prov:Agent
+prov:AgentShape
     a              sh:NodeShape ;
     sh:targetClass prov:Agent ;
     sh:property    [ sh:path       sdo:name ;
@@ -59,7 +59,7 @@ picom:PersonReconstructionShape
                                  "Informatie over het maken van een persoonsreconstructie moet worden gedocumenteerd via prov:wasGeneratedBy."@nl ; ] ;
 .
 
-_:ScanShape
+picom:PersonObservationShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonObservation ;
     sh:property [
@@ -72,7 +72,7 @@ _:ScanShape
         sh:message "A PersonObservation can have only one age; must be a decimal or a string."
     ] ;
     sh:property    [ sh:path     prov:hadPrimarySource ;
-                     sh:node     sdo:ArchiveComponent ;
+                     sh:class    sdo:ArchiveComponent ;
                      sh:minCount 1 ;
                      sh:message  "A scan can have an position of the scan within a set, must be an decimal."@en,
                                  "Een scan kan een positie van de scan binnen een set hebben, moet een decimaal zijn."@nl ] ;
@@ -88,7 +88,7 @@ _:ScanShape
                                  "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ; ] ;
 .
 
-_:SourceShape
+picom:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
     sh:property    [ sh:path    sdo:additionalType ;
@@ -113,7 +113,41 @@ _:SourceShape
                      sh:message  "An source can have an URL for the holding archive, must be an IRI."@en,
                                  "Een bron kan een URL hebben voor het archief waarin het zich bevindt, dit moet een IRI zijn."@nl ; ] ;
     sh:property    [ sh:path     sdo:name ;
-                     sh:datatype rdf:langString ;
                      sh:minCount 1 ;
-                     sh:message  "An ArchiveComponent must have a name with a language tag." ; ] ;
+                     sh:message  "An ArchiveComponent must have a name." ; ] ;
+    sh:property    [ sh:path     sdo:name ;
+                     sh:datatype rdf:langString ;
+                     sh:uniqueLang true ;
+                     sh:severity sh:Warning ;
+                     sh:message  "An ArchiveComponent name should have a language tag." ; ] ;
+.
+
+# Targets the concrete subclasses of picom:Person directly, so the shape fires on processors
+# without RDFS subclass entailment (e.g. Apache Jena's `shacl validate`).
+picom:PersonShape
+    a              sh:NodeShape ;
+    sh:targetClass picom:PersonObservation ;
+    sh:targetClass picom:PersonReconstruction ;
+    sh:property    [ sh:path     sdo:gender ;
+                     sh:in       ( sdo:Male sdo:Female ) ;
+                     sh:maxCount 1 ;
+                     sh:message  "Gender must be sdo:Male or sdo:Female."@en ,
+                                 "Geslacht moet sdo:Male of sdo:Female zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:birthDate ;
+                     sh:or       ( [ sh:datatype xsd:date ]
+                                    [ sh:datatype xsd:gYear ]
+                                    [ sh:datatype xsd:gYearMonth ]
+                                    [ sh:datatype xsd:string ] ) ;
+                     sh:message  "A birth date must be a date, gYear, gYearMonth or string."@en ,
+                                 "Een geboortedatum moet een date, gYear, gYearMonth of string zijn."@nl ;
+                   ] ;
+    sh:property    [ sh:path     sdo:deathDate ;
+                     sh:or       ( [ sh:datatype xsd:date ]
+                                    [ sh:datatype xsd:gYear ]
+                                    [ sh:datatype xsd:gYearMonth ]
+                                    [ sh:datatype xsd:string ] ) ;
+                     sh:message  "A death date must be a date, gYear, gYearMonth or string."@en ,
+                                 "Een overlijdensdatum moet een date, gYear, gYearMonth of string zijn."@nl ;
+                   ] ;
 .
