@@ -121,7 +121,7 @@ picom:ontology
                                     sdo:encodingFormat "image/svg+xml" ;
                                     sdo:name           "Model overview"@en ;
                                     sdo:sdDatePublished "2026-02-17"^^xsd:date ;
-                                    sdo:license        <http://creativecommons.org/licenses/by/4.0/deed.nl> ] ;
+                                    sdo:license        "http://creativecommons.org/licenses/by/4.0/deed.nl"^^xsd:anyURI ] ;
 .
 
 
