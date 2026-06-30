@@ -1,20 +1,20 @@
 @prefix picom: <https://personsincontext.org/model#> .
 @prefix pnv:   <https://w3id.org/pnv#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo:  <https://schema.org/> .
-@prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo:   <https://schema.org/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 prov:ActivityShape
     a              sh:NodeShape ;
     sh:targetClass prov:Activity ;
-    sh:property    [ sh:path rdfs:label ;   # TODO: include in example in pico.ttl (already in rinske-pieters-van-der-werk.ttl example)
-                     sh:datatype rdf:langString ;
+    sh:property    [ sh:path       rdfs:label ;   # TODO: include in example in pico.ttl (already in rinske-pieters-van-der-werk.ttl example)
+                     sh:datatype   rdf:langString ;
                      sh:uniqueLang true ;
-                     sh:minCount 0 ;
-                     sh:message  "An Activity should have a label (and language tag)." ] ;
+                     sh:minCount   0 ;
+                     sh:message    "An Activity should have a label (and language tag)." ] ;
     sh:property    [ sh:path     prov:wasAssociatedWith ;
                      sh:class    prov:Agent ;
                      sh:minCount 1 ;
@@ -22,7 +22,7 @@ prov:ActivityShape
     sh:property    [ sh:path     prov:startedAtTime ;
                      sh:datatype xsd:dateTime ;
                      sh:minCount 1 ;
-                     sh:message  "An Activity must have a starttime." ; ] ;
+                     sh:message  "An Activity must have a start time." ; ] ;
     sh:property    [ sh:path     prov:endedAtTime ;
                      sh:datatype xsd:dateTime ;
                      sh:minCount 0 ;
@@ -32,19 +32,16 @@ prov:ActivityShape
 prov:AgentShape
     a              sh:NodeShape ;
     sh:targetClass prov:Agent ;
-    sh:property    [ sh:path sdo:name ;
-                     sh:minCount 1 ;
-                     sh:message  "An Agent must have a name." ] ;
-    sh:property    [ sh:path sdo:name ;
-                     sh:datatype rdf:langString ;
+    sh:property    [ sh:path       sdo:name ;
+                     sh:datatype   rdf:langString ;
                      sh:uniqueLang true ;
-                     sh:severity sh:Warning ;
-                     sh:message  "An Agent name should have a language tag." ] ;
-    sh:property    [ sh:path sdo:url ;
+                     sh:minCount   1 ;
+                     sh:message    "An Agent must have name (and language tag)." ] ;
+    sh:property    [ sh:path     sdo:url ;
                      sh:nodeKind sh:IRI ;
                      sh:minCount 0 ;
-                     sh:pattern "^https?://" ;
-                     sh:message  "An Agent should have a URL." ] ;
+                     sh:pattern  "^https?://" ;
+                     sh:message  "An Agent should have a URL." ]
 .
 
 picom:PersonReconstructionShape
@@ -53,155 +50,68 @@ picom:PersonReconstructionShape
     sh:property    [ sh:path     prov:wasDerivedFrom ;
                      sh:class    picom:PersonObservation ;
                      sh:minCount 1 ;
-                     sh:message  "A person reconstruction must always refer to one or more person observations via prov:wasDerivedFrom."@en ,
-                                 "Bij een persoonsreconstructie moet altijd verwezen worden naar een of meerdere persoonsobservaties via prov:wasDerivedFrom."@nl ;
-                   ] ;
+                     sh:message  "A person reconstruction must always refer to one or more person observations via prov:wasDerivedFrom."@en,
+                                 "Bij een persoonsreconstructie moet altijd verwezen worden naar een of meerdere persoonsobservaties via prov:wasDerivedFrom."@nl ; ] ;
     sh:property    [ sh:path     prov:wasGeneratedBy ;
                      sh:class    prov:Activity ;
                      sh:minCount 1 ;
-                     sh:message  "Information about the creation of a person reconstruction should be documented via prov:wasGeneratedBy."@en ,
-                                 "Informatie over het maken van een persoonsreconstructie moet worden gedocumenteerd via prov:wasGeneratedBy."@nl ;
-                   ] ;
+                     sh:message  "Information about the creation of a person reconstruction should be documented via prov:wasGeneratedBy."@en,
+                                 "Informatie over het maken van een persoonsreconstructie moet worden gedocumenteerd via prov:wasGeneratedBy."@nl ; ] ;
 .
 
 picom:PersonObservationShape
     a              sh:NodeShape ;
     sh:targetClass picom:PersonObservation ;
-    sh:property    [ sh:path     picom:hasAge ;
-                     sh:or       ( [ sh:datatype xsd:decimal ] [  sh:datatype xsd:string ; ] ) ;
-                     sh:maxCount 1 ;
-                     sh:message  "A PersonObservation can have only one age, must be a literal or decimal." ; ] ;
+    sh:property [
+        sh:path picom:hasAge ;
+        sh:or (
+            [ sh:datatype xsd:decimal ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:maxCount 1 ;
+        sh:message "A PersonObservation can have only one age; must be a decimal or a string."
+    ] ;
     sh:property    [ sh:path     prov:hadPrimarySource ;
                      sh:class    sdo:ArchiveComponent ;
                      sh:minCount 1 ;
-                     sh:message  "A PersonObservation must refer to its primary source (an ArchiveComponent) via prov:hadPrimarySource."@en ,
-                                 "Een persoonsobservatie moet via prov:hadPrimarySource verwijzen naar de primaire bron (een ArchiveComponent)."@nl ;
-                   ] ;
-.
-
-picom:ScanShape
-    a              sh:NodeShape ;
-    sh:targetClass sdo:ImageObject ;
-    sh:property    [ sh:path     sdo:position ;
-                     sh:datatype xsd:integer ;
-                     sh:maxCount 1 ;
-                     sh:message  "A scan can have a position within a set, must be an integer."@en ,
-                                 "Een scan kan een positie binnen een set hebben, dit moet een geheel getal zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     sdo:thumbnail ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
-                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
-                     sh:message  "A scan can have a thumbnail, must be an IRI."@en ,
-                                 "Een scan kan een miniatuur hebben, dit moet een IRI zijn."@nl ;
-                   ] ;
+                     sh:message  "A scan can have an position of the scan within a set, must be an decimal."@en,
+                                 "Een scan kan een positie van de scan binnen een set hebben, moet een decimaal zijn."@nl ] ;
+    sh:property    [ sh:path     sdo:thumbnailUrl ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/21
+                     sh:datatype xsd:anyURI ;
+                     sh:pattern  "^https?://" ;
+                     sh:message  "A scan can have an thumbnail URL, must be an URI." @en,
+                                 "Een scan kan een miniatuur-URL hebben, dit moet een IRI zijn."@nl ; ] ;
     sh:property    [ sh:path     sdo:url ;
-                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
-                     sh:message  "A scan can have an URL, must be an IRI."@en ,
-                                 "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     sdo:embedUrl ;
-                     sh:or       ( [ sh:nodeKind sh:IRI ] [ sh:datatype xsd:anyURI ] ) ;
-                     sh:message  "A scan can have an embed URL, must be an IRI."@en ,
-                                 "Een scan kan een embed-URL hebben, dit moet een IRI zijn."@nl ;
-                   ] ;
-.
-
-picom:LifeEventShape
-    a              sh:NodeShape ;
-    sh:targetClass picom:LifeEvent ;
-    sh:property    [ sh:path     picom:eventType ;
-                     sh:nodeKind sh:IRI ;
-                     sh:minCount 1 ;
-                     sh:message  "A LifeEvent must have an eventType, referencing a thesaurus term (IRI)."@en ,
-                                 "Een LifeEvent moet een eventType hebben dat verwijst naar een thesaurusterm (IRI)."@nl ;
-                   ] ;
-    sh:property    [ sh:path     picom:eventDate ;
-                     sh:or       ( [ sh:datatype xsd:date ]
-                                    [ sh:datatype xsd:gYear ]
-                                    [ sh:datatype xsd:gYearMonth ]
-                                    [ sh:datatype xsd:string ] ) ;
-                     sh:message  "A LifeEvent date must be a date, gYear, gYearMonth or string."@en ,
-                                 "Een LifeEvent-datum moet een date, gYear, gYearMonth of string zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     picom:eventPlace ;
-                     sh:or       ( [ sh:datatype xsd:string ]
-                                    [ sh:nodeKind sh:IRI ]
-                                    [ sh:class sdo:Place ] ) ;
-                     sh:message  "A LifeEvent place must be a string, an IRI or an sdo:Place."@en ,
-                                 "Een LifeEvent-plaats moet een string, een IRI of een sdo:Place zijn."@nl ;
-                   ] ;
-.
-
-pnv:PersonNameShape
-    a              sh:NodeShape ;
-    sh:targetClass pnv:PersonName ;
-    sh:property    [ sh:path     pnv:literalName ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:literalName should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     pnv:givenName ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:givenName should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     sdo:familyName ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "sdo:familyName should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     pnv:surnamePrefix ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:surnamePrefix should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     pnv:patronym ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:patronym should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     pnv:initials ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:initials should be a language-tagged literal (rdf:langString)." ; ] ;
-    sh:property    [ sh:path     pnv:baseSurname ;
-                     sh:datatype rdf:langString ;
-                     sh:severity sh:Warning ;
-                     sh:message  "pnv:baseSurname should be a language-tagged literal (rdf:langString)." ; ] ;
+                     sh:datatype xsd:anyURI ;
+                     sh:pattern  "^https?://" ;
+                     sh:message  "A scan can have an URL, must be an URI."@en,
+                                 "Een scan kan een URL hebben, dit moet een IRI zijn."@nl ; ] ;
 .
 
 picom:SourceShape
     a              sh:NodeShape ;
     sh:targetClass sdo:ArchiveComponent ;
-    sh:property    [ sh:path     sdo:additionalType ;
-                     sh:or       ( 
-                                    [ sh:datatype rdf:langString ] 
-                                    [ sh:nodeKind sh:IRI ]  
-                                 );
-                     sh:message  "An source can have an additional type, can be a language-tagged literal or an IRI."@en ,
-                                 "Een bron kan een extra type hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     sdo:associatedMedia ;
-                     sh:class    sdo:ImageObject ;
-                     sh:message  "An source can have associated media, must be an image object."@en ,
-                                 "Een bron kan bijbehorende media hebben, dit moet een afbeeldingsobject zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     sdo:contentLocation ;
-                     sh:or       ( 
-                                    [ sh:datatype rdf:langString ] 
-                                    [ sh:datatype xsd:anyURI ]  
-                                 );
-                     sh:message  "An source can have a content location, can be a language-tagged literal or an IRI."@en ,
-                                 "Een bron kan een inhoudslocatie hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ;
-                   ] ;
-    sh:property    [ sh:path     sdo:dateCreated ;
-                     sh:or       (
-                                    [ sh:datatype xsd:date  ]
-                                    [ sh:datatype xsd:gYear ]
-                                 );
-                     sh:message  "An source can have a creation date, must be in ISO 8601 date format."@en ,
-                                 "Een bron kan een aanmaakdatum hebben, dit moet in het ISO 8601-datumformaat zijn."@nl ;
-                   ] ;
+    sh:property    [ sh:path    sdo:additionalType ;
+                     sh:or      ( [ sh:datatype rdf:langString ] [ sh:nodeKind sh:IRI ] ) ;
+                     sh:message "An source can have an additional type, can be a language-tagged literal or an IRI."@en,
+                                "Een bron kan een extra type hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ; ] ;
+    sh:property    [ sh:path    sdo:associatedMedia ;
+                     sh:class   sdo:ImageObject ;
+                     sh:message "An source can have associated media, must be an image object."@en,
+                                "Een bron kan bijbehorende media hebben, dit moet een afbeeldingsobject zijn."@nl ; ] ;
+    sh:property    [ sh:path    sdo:contentLocation ;
+                     sh:or      ( [ sh:datatype rdf:langString ] [ sh:datatype xsd:anyURI ] ) ;
+                     sh:message "An source can have a content location, can be a language-tagged literal or an IRI."@en,
+                                "Een bron kan een inhoudslocatie hebben, dit moet een taalgelabelde letterlijke waarde of een IRI zijn."@nl ; ] ;
+    sh:property    [ sh:path    sdo:dateCreated ;
+                     sh:or      ( [ sh:datatype xsd:date ] [ sh:datatype xsd:gYear ] ) ;
+                     sh:message "An source can have a creation date, must be in ISO 8601 date format."@en,
+                                "Een bron kan een aanmaakdatum hebben, dit moet in het ISO 8601-datumformaat zijn."@nl ; ] ;
     sh:property    [ sh:path     sdo:holdingArchive ;
                      sh:nodeKind sh:IRI ;  # see https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/issues/51 
-                     sh:pattern "^https?://" ;
-                     sh:message  "An source can have an URL for the holding archive, must be an IRI."@en ,
-                                 "Een bron kan een URL hebben voor het archief waarin het zich bevindt, dit moet een IRI zijn."@nl ;
-                   ] ;
+                     sh:pattern  "^https?://" ;
+                     sh:message  "An source can have an URL for the holding archive, must be an IRI."@en,
+                                 "Een bron kan een URL hebben voor het archief waarin het zich bevindt, dit moet een IRI zijn."@nl ; ] ;
     sh:property    [ sh:path     sdo:name ;
                      sh:minCount 1 ;
                      sh:message  "An ArchiveComponent must have a name." ; ] ;

@@ -12,8 +12,8 @@
 @prefix hua:   <https://hetutrechtsarchief.nl/> .
 
 cbg:person_reconstruction_1
-    a                   picom:PersonReconstruction ;
-    sdo:name            "Abe Bos" ;
+    a                   picom:PersonReconstruction, sdo:Person ;
+    sdo:name            "Abe Bos"@nl ;
     sdo:familyName      "Bos" ;
     sdo:givenName       "Abe" ;
     sdo:gender          sdo:Male ;
@@ -39,8 +39,8 @@ cbg:person_reconstruction_1
     prov:wasGeneratedBy cbg:reconstruction_activity_01 .
 
 cbg:person_reconstruction_2
-    a                   picom:PersonReconstruction ;
-    sdo:name            "Anna Maria Koppen" ;
+    a                   picom:PersonReconstruction, sdo:Person ;
+    sdo:name            "Anna Maria Koppen"@bk ;
     sdo:familyName      "Koppen" ;
     sdo:givenName       "Anna" ;
     sdo:gender          sdo:Female ;
@@ -63,8 +63,8 @@ cbg:reconstruction_agent_01
     sdo:sameAs <https://orcid.org/0000-0003-0165-8341> .
 
 cbg:NL-HaCBG_1755_0341_142_po_1 
-    a                       picom:PersonObservation ;
-    prov:hadPrimarySource   [ a sdo:ArchiveComponent ;
+    a                       picom:PersonObservation, sdo:Person ;
+    prov:hadPrimarySource   [ a sdo:ArchiveComponent, sdo:CreativeWork ;
                               sdo:name  "PK A. Bos"@nl ;
                               sdo:url   <https://cbg.nl/persoonskaarten/voorbeeld>
                             ] .

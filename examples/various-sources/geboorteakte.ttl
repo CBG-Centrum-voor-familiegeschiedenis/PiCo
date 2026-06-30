@@ -4,7 +4,6 @@
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix sdo:   <https://schema.org/> .
 @prefix pnv:   <https://w3id.org/pnv#> .
-@prefix bio:   <http://purl.org/vocab/bio/0.1/> .
 @prefix picom:  <https://personsincontext.org/model#> .
 @prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
 @prefix picot_eventtypes: <https://terms.personsincontext.org/eventtypes/> .
@@ -14,9 +13,9 @@
 # PERSOONSVERMELDINGEN
 
 afr:geboorteregiser_1858_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     sdo:birthDate         "21 Junij 1858"^^xsd:string ;
@@ -28,9 +27,9 @@ afr:geboorteregiser_1858_po_1
 
 
 afr:geboorteregiser_1858_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Sjouke Abes Bos" ;
+    sdo:name              "Sjouke Abes Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     picom:hasAge          "30" ;
@@ -43,9 +42,9 @@ afr:geboorteregiser_1858_po_2
 
 
 afr:geboorteregiser_1858_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource afr:geboorteregiser_1858 ;
-    sdo:name              "Geertruida van der Wijk" ;
+    sdo:name              "Geertruida van der Wijk"@nl ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
@@ -59,15 +58,15 @@ afr:geboorteregiser_1858_po_3
     sdo:gender            sdo:Female .
 
 afr:geboorteregiser_1858
-    a                   sdo:ArchiveComponent ;
+    a                   sdo:ArchiveComponent, sdo:CreativeWork ;
     sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
     sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051"@nl ;
     sdo:holdingArchive  <https://www.tresoar.nl/> ;
     sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
     sdo:dateCreated     "1885"^^xsd:gYear ;
     sdo:locationCreated "Haskerland"@nl ;
-    sdo:associatedMedia [ a            sdo:ImageObject ;
+    sdo:associatedMedia [ a            sdo:MediaObject, sdo:ImageObject ;
                           sdo:position 51 ;
-                          sdo:url      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ;
-                          sdo:thumbnail
+                          sdo:contentUrl      "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ;
+                          sdo:thumbnailUrl
                                        "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg"^^xsd:anyURI ; ] .

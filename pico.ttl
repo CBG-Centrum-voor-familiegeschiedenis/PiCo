@@ -22,13 +22,16 @@
 # ontology
 ########################################################################################################################
 
-<https://personsincontext.org/model>
+@base <https://personsincontext.org/model> .
+
+picom:ontology
     a                             owl:Ontology ;
     rdfs:label                    "Persons in Context"@en ;
-    sdo:publisher                 <https://cbg.nl> ;
+#    sdo:publisher                 <https://cbg.nl> ;
+    sdo:publisher                 "CBG|Centre for family history" ;
     dcterms:creator               "Jeroen Balkenende", "Bob Coret", "Mark Lindeman", "Pieter Woltjer",
                                   "Ivo Zandhuis" ;  # pyLODE werkt nog niet goed met agents in Supermodel mode
-#    dcterms:creator [
+#    sdo:creator [
 #                        sdo:name  "Pieter Woltjer"@en ;
 #                        sdo:affiliation
 #                                [
@@ -66,7 +69,7 @@
 #                            sdo:Name "Rick Mourits"@en ;
 #                            sdo:affiliation
 #                                  [
-#                                      sdo:name "International Institute Of Social History (IISH)" ;
+#                                      sdo:name "International Institute Of Social History (IISH)"@en ;
 #                                      sdo:url "https://iisg.amsterdam/"
 #                                  ]
 #                        ] ,
@@ -74,21 +77,21 @@
 #                            sdo:Name "Micon Schorsij"@en ;
 #                            sdo:affiliation
 #                                    [
-#                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies" ;
+#                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies"@nl ;
 #                                        sdo:url "https://www.niod.nl/"
 #                                    ]
 #                        ] ,
 #                        [
 #                            sdo:Name "Richard Zijdeman"@en ;
 #                            sdo:affiliation
-#                                    [ sdo:name "International Institute Of Social History (IISH)" ;
+#                                    [ sdo:name "International Institute Of Social History (IISH)"@en ;
 #                                      sdo:url "https://iisg.amsterdam/"
 #                                    ]
 #                        ] ;
     dcterms:created               "2023-09-21"^^xsd:date ;
     dcterms:modified              "2026-02-17"^^xsd:date ;
     dcterms:license               "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
-    dcterms:rights                <https://cbg.nl> ;
+    dcterms:rights                "CBG|Centre for family history" ;
     vann:preferredNamespacePrefix "picom" ;
     owl:versionInfo               "1.1.0"@en ;
     owl:priorVersion              "1.0.0"@en ;
@@ -110,14 +113,17 @@
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
                                   """@en ;
     sdo:codeRepository            "https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/"^^xsd:anyURI ;
-    sdo:workExample               [ a                  sdo:ImageObject ;
+    sdo:workExample               [ a                  sdo:MediaObject, sdo:ImageObject ;
                                     sh:order           0 ;
                                     sdo:caption        "Schematic overview" ;
-                                    sdo:contentUrl     "../web_images/pico_overview.svg"^^xsd:anyURI ;
-                                    sdo:description    "Schematic overview of the model." ;
+                                    sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
+                                    sdo:description    "Schematic overview of the model."@en ;
                                     sdo:encodingFormat "image/svg+xml" ;
-                                    sdo:name           "Model overview" ] ;
+                                    sdo:name           "Model overview"@en ;
+                                    sdo:sDatePublished "2026-02-17" ;
+                                    sdo:licence        <http://creativecommons.org/licenses/by/4.0/deed.nl> ] ;
 .
+
 
 ########################################################################################################################
 # Classes
@@ -135,6 +141,7 @@ prov:Activity
                     """@en ;
 .
 
+
 prov:Agent
     a               owl:Class ;
     rdfs:label      "Agent"@en ;
@@ -143,7 +150,7 @@ prov:Agent
     sdo:workExample [ a                  sdo:TextObject ;
                       sh:order           0 ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Example of an Agent responsible for an Activity" ;
+                      sdo:name           "Example of an Agent responsible for an Activity"@en ;
                       sdo:text           """
                                              cbg:reconstruction_activity_01
                                                 a                      prov:Activity ;
@@ -153,7 +160,7 @@ prov:Agent
 
                                              cbg:reconstruction_agent_01
                                                 a             prov:Agent ;
-                                                sdo:name   "CBG|Center for Family History" ;
+                                                sdo:name   "CBG|Center for Family History"@en ;
                                                 sdo:url    <https://cbg.nl> .
                                           """ ] ;
 .
@@ -183,22 +190,23 @@ picom:PersonObservation
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a PersonObservation" ;
-                      sdo:contentUrl     "../web_images/pico_personobservation.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person observation." ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a person observation."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonObservation overview" ] ;
+                      sdo:name           "PersonObservation overview"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Person observation example" ;
+                      sdo:name           "Person observation example"@nl ;
                       sdo:text           """
                                             afr:geboorteregister_1858_po_1
-                                               a                     picom:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
-                                               sdo:name              "Abe Bos" ;
+                                               a                     picom:PersonObservation, sdo:Person ;
+                                               prov:hadPrimarySource afr:geboorteregister_1858 ;
+                                               sdo:name              "Abe Bos"@nl ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Abe" ;
                                                sdo:birthDate         "21 Junij 1858"^^xsd:string ;
@@ -206,20 +214,20 @@ picom:PersonObservation
                                                sdo:birthPlace        "Joure" ;
                                                sdo:gender            sdo:Male ;
                                                picom:hasRole         picot_roles:575 ;  # child
-                                               sdo:parent            afr:geboorteregiser_1858_po_2, afr:geboorteregiser_1858_po_3 .
+                                               sdo:parent            afr:geboorteregister_1858_po_2, afr:geboorteregister_1858_po_3 .
 
-                                            afr:geboorteregiser_1858_po_2
-                                               a                     picom:PersonObservation ;
-                                               prov:hadPrimarySource afr:geboorteregiser_1858 ;
-                                               sdo:name              "Sjouke Abes Bos" ;
+                                            afr:geboorteregister_1858_po_2
+                                               a                     picom:PersonObservation, sdo:Person ;
+                                               prov:hadPrimarySource afr:geboorteregister_1858 ;
+                                               sdo:name              "Sjouke Abes Bos"@nl ;
                                                sdo:familyName        "Bos" ;
                                                sdo:givenName         "Sjouke" ;
                                                picom:hasAge          "30"^^xsd:decimal ;
                                                sdo:hasOccupation     "klokmakersknecht" ;
                                                sdo:address           "Joure" ;
                                                sdo:gender            sdo:Male ;
-                                               sdo:spouse            afr:geboorteregiser_1858_po_3 ;
-                                               sdo:children          afr:geboorteregiser_1858_po_1 ;
+                                               sdo:spouse            afr:geboorteregister_1858_po_3 ;
+                                               sdo:children          afr:geboorteregister_1858_po_1 ;
                                                picom:hasRole         picot_roles:489 .  # declarant
                                          """ ] ;
 .
@@ -237,21 +245,22 @@ picom:PersonReconstruction
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a person reconstruction" ;
-                      sdo:contentUrl     "../web_images/pico_personreconstruction.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person reconstruction." ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a person reconstruction."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonReconstruction overview" ] ;
+                      sdo:name           "PersonReconstruction overview"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Person Reconstruction example" ;
+                      sdo:name           "Person Reconstruction example"@en ;
                       sdo:text           """
                                                 cbg:person_reconstruction_2
-                                                    a                   picom:PersonReconstruction ;
-                                                    sdo:name            "Anna Maria Koppen" ;
+                                                    a                   picom:PersonReconstruction, sdo:Person ;
+                                                    sdo:name            "Anna Maria Koppen"@nl ;
                                                     sdo:familyName      "Koppen" ;
                                                     sdo:givenName       "Anna" ;
                                                     sdo:gender          sdo:Female ;
@@ -286,30 +295,31 @@ sdo:ArchiveComponent
                        elements that identify the source, heritage institutions are free to use any authoritative
                        domain-specific standard to describe their historical person records.
                     """@en ;
-    sdo:workExample [ a                  sdo:ImageObject ;
+    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
                       sh:order           0 ;
                       sdo:caption        "Schematic overview of a Source" ;
-                      sdo:contentUrl     "../web_images/pico_source.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a Source." ;
+                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
+                      sdo:description    "Schematic overview of a Source."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "Source" ] ;
+                      sdo:name           "Source"@en ;
+                      sdo:sDatePublished "2026-02-17" ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "Source with a linked Scan" ;
+                      sdo:name           "Source with a linked Scan"@en ;
                       sdo:text           """
                                                    afr:geboorteregister_1858
                                                        a                   sdo:ArchiveComponent ;
                                                        sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
-                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051" ;
+                                                       sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051"@nl ;
                                                        sdo:holdingArchive  <https://www.tresoar.nl/> ;
                                                        sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
                                                        sdo:dateCreated     "1885"^^xs:gYear ;
                                                        sdo:locationCreated "Haskerland" ;
-                                                       sdo:associatedMedia [ a                sdo:ImageObject ;
+                                                       sdo:associatedMedia [ a                sdo:MediaObject, sdo:ImageObject ;
                                                                              sdo:position  51 ;
-                                                                             sdo:url       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
-                                                                             sdo:thumbnail "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
+                                                                             sdo:contentUrl       "https://tresoar-images.memorix.nl/frl/download/fullsize/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ;
+                                                                             sdo:thumbnailUrl "https://tresoar-images.memorix.nl/frl/thumb/250x250/3a9b2d6a-f225-a14e-ab85-3581be7d4d04.jpg" ; ] .
                                                """ ] ;
 .
 
@@ -348,12 +358,12 @@ picom:LifeEvent
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of LifeEvent" ;
                       sdo:encodingFormat "text/turtle" ;
-                      sdo:name           "LifeEvent example" ;
+                      sdo:name           "LifeEvent example"@en ;
                       sdo:text           """
                                             nha:huwelijksakte_1885_321_po_1
-                                                a                       picom:PersonObservation ;
+                                                a                       picom:PersonObservation, sdo:Person ;
                                                 prov:hadPrimarySource   nha:huwelijksakte_1885_321 ;
-                                                sdo:name                "Abe Bos" ;
+                                                sdo:name                "Abe Bos"@nl ;
                                                 sdo:familyName          "Bos" ;
                                                 sdo:givenName           "Abe" ;
                                                 picom:hasAge            "27"^^xsd:decimal ;
@@ -426,7 +436,7 @@ sdo:birthPlace
     sdo:workExample    [ a                  sdo:TextObject ;
                          sh:order           0 ;
                          sdo:encodingFormat "text/turtle" ;
-                         sdo:name           "Example of a sdo:birthPlace" ;
+                         sdo:name           "Example of a sdo:birthPlace"@en ;
                          sdo:text           """
                          sdo:birthPlace     [ a           sdo:Place ;
                                               sdo:name    "Beeck, Berg bij Uberghen (L van Kleef)"@nl ;  # (literal from Source)
@@ -607,14 +617,14 @@ sdo:hasOccupation
 .
 
 picom:hasReligion
-    a                   owl:DatatypeProperty ;
-    skos:definition     "Religious conviction related to a person in an observation." ;
-    rdfs:label          "hasReligion" ;
-    skos:scopeNote      """Religion as mentioned on the Source.
+    a                  owl:DatatypeProperty ;
+    skos:definition    "Religious conviction related to a person in an observation." ;
+    rdfs:label         "hasReligion" ;
+    skos:scopeNote     """Religion as mentioned on the Source.
                            If desired, a SKOS thesaurus can be used to annotate religion.
                         """@en ;  # Todo: Can we recommend a thesaurus for religions?
     sdo:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
-    sdo:rangeIncludes   xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 pnv:initials
@@ -640,7 +650,7 @@ pnv:initials
 sdo:name
     a                  owl:DatatypeProperty ;
     rdfs:isDefinedBy   sdo:name ;
-    skos:definition    "The name of a Person or a Source." ;
+    skos:definition    "The name of a Person or a Source."@en ;
     rdfs:label         "name"@en ;  #, "Volledige naam"@nl ;
     skos:scopeNote     """For Persons: Use full name if the name can't be split into given name and family name.
                           Otherwise use sdo:givenNamen and sdo:fullName or the more extensive pnv:PersonName.
@@ -707,10 +717,10 @@ prov:wasAssociatedWith
 
 
 picom:eventDate
-    a                   owl:DatatypeProperty ;
-    skos:definition     "The date of a life event." ;
-    rdfs:label          "eventDate"@en ;
-    skos:scopeNote      """The date of an event. A date value in ISO 8601 format should be used.
+    a                  owl:DatatypeProperty ;
+    skos:definition    "The date of a life event." ;
+    rdfs:label         "eventDate"@en ;
+    skos:scopeNote     """The date of an event. A date value in ISO 8601 format should be used.
                           Incomplete dates are allowed, but only when truncated from small to large. For example:
                           "1970-08-15", "1970-08" and "1970" are all allowed, but "1970-00-15" or "08-15" are not.
                           Sometimes, you may want use a string as eventDate. For example if you want to or have to
@@ -718,12 +728,12 @@ picom:eventDate
                           format and the xsd:date format in this case.
                        """@en ;
     sdo:domainIncludes picom:LifeEvent ;
-    sdo:rangeIncludes   xsd:string, xsd:anyURI ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
 
 picom:eventPlace
     a                  owl:DatatypeProperty ;
-    skos:definition    "The place where a life event occured." ;
+    skos:definition    "The place where a life event occurred." ;
     rdfs:label         "eventPlace"@en ;
 #    rdfs:label        "gebeurtenisPlaats"@nl ;
     skos:scopeNote     """Preferably, use a link to an existing thesaurus like geonames or wikidata.
@@ -731,7 +741,7 @@ picom:eventPlace
                           the reconciled version.
                        """@en ;
     sdo:domainIncludes picom:LifeEvent ;
-    sdo:rangeIncludes  xsd:string, xsd:anyURI, xsd:Place ;
+    sdo:rangeIncludes  xsd:string, xsd:anyURI, sdo:Place ;
 .
 
 
@@ -837,7 +847,7 @@ picom:hasAncestor
 #    rdfs:label         "heeftVoorouder"@nl ;
     skos:scopeNote     """hasAncestor is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of sdo:Parent. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superproperty of sdo:parent. Since hasAncestor is a owl:TransitiveProperty, this will make
                           the parent of your parent into your ancestor.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -852,7 +862,7 @@ picom:hasDescendant
 #    rdfs:label "heeftAfstammeling"@nl ;
     skos:scopeNote     """hasDescendant is not meant to be used as a property for PersonObservations or
                           PersonReconstructions.
-                          It is a superclass of sdo:Children. Since hasAncestor is a owl:TransitiveProperty, this will make
+                          It is a superproperty of sdo:children. Since hasDescendant is a owl:TransitiveProperty, this will make
                           the children of your children into your descendants.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -1094,17 +1104,17 @@ picom:hasLegitimizedChild
     rdfs:subPropertyOf sdo:relatedTo ;
     rdfs:domain        picom:Person ;
     rdfs:range         picom:Person ;
-    owl:inverseOf      picom:isLegitimitezedChildOf ;
+    owl:inverseOf      picom:isLegitimizedChildOf ;
 .
 
-picom:isLegitimitezedChildOf
+picom:isLegitimizedChildOf
     a                  owl:ObjectProperty ;
-    rdfs:label         "isLegitimitezedChildOf" ;
+    rdfs:label         "isLegitimizedChildOf" ;
 #    rdfs:label         "isGewettigdKindVan"@nl ;
-    skos:scopeNote     """For Person observations, the isLegitimitezedChildOf property should always refer to another
+    skos:scopeNote     """For Person observations, the isLegitimizedChildOf property should always refer to another
                           Person observation on the same Source.
                        """@en ;
-    skos:scopeNote     """For Person reconstructions, the isLegitimitezedChildOf property should refer to another Person
+    skos:scopeNote     """For Person reconstructions, the isLegitimizedChildOf property should refer to another Person
                           reconstruction.
                        """@en ;
     rdfs:subPropertyOf sdo:relatedTo ;
@@ -1368,7 +1378,7 @@ sdo:spouse
                        """@en ;
     skos:scopeNote     """For Person reconstructions, the spouse should refer to the Person reconstruction of
                           the spouse.
-                          A spouse relation may have a startdate and an enddate. The startdate may be redundant to
+                          A spouse relation may have a start date and an end date. The start date may be redundant to
                           the date of a marriage event. The marriage event provides information when the marriage took
                           place and is primarily used for Person Observations. The spouse relation can provide additional
                           information about the duration of the relation, which is useful for Person Reconstructions,
@@ -1377,10 +1387,10 @@ sdo:spouse
     sdo:workExample    [ a                  sdo:TextObject ;
                          sh:order           0 ;
                          sdo:encodingFormat "text/turtle" ;
-                         sdo:name           "Example of a spouse relation wiht start and end date" ;
+                         sdo:name           "Example of a spouse relation with start and end date"@en ;
                          sdo:text           """cbg:person_reconstruction_01
-                                                a           picom:PersonReconstruction ;
-                                                sdo:name    "Abraham Woltjer"
+                                                a           picom:PersonReconstruction, sdo:Person ;
+                                                sdo:name    "Abraham Woltjer"@nl
                                                 ...
                                                 sdo:spouse  [ rdf:value         cbg:person_reconstruction_2 ;
                                                               sdo:startDate     "1885-11-11"^^xsd:date ;
@@ -1391,10 +1401,10 @@ sdo:spouse
     sdo:rangeIncludes  picom:Person ;
 .
 
-sdo:thumbnail
+sdo:thumbnailUrl
     a                  owl:ObjectProperty ;
     skos:definition    """Thumbnail image of the Scan."""@en ;
-    rdfs:label         "thumbnail"@en ;
+    rdfs:label         "thumbnailUrl"@en ;
     sdo:domainIncludes sdo:ImageObject ; #, sdo:ArchiveComponent ?
     sdo:rangeIncludes  sdo:ImageObject ;
 .
@@ -1402,13 +1412,22 @@ sdo:thumbnail
 sdo:url
     a                  owl:ObjectProperty ;
     rdfs:isDefinedBy   sdo:url ;
-    skos:definition    "URL of the Source or Scan." ;
+    skos:definition    "URL of the Source." ;
     rdfs:label         "url"@en ;
     skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
-    skos:scopeNote     """For Scans of Sources: a link to the scan of the Source at the holding archive.
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  sdo:URL ;
+.
+
+sdo:contentUrl
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   sdo:contentUrl ;
+    skos:definition    "URL of the Scan." ;
+    rdfs:label         "contentUrl"@en ;
+    skos:scopeNote     """A link to the scan of the Source at the holding archive.
                           Preferably a link to a IIIF manifest.
                        """@en ;
-    sdo:domainIncludes sdo:ImageObject, sdo:ArchiveComponent ;
+    sdo:domainIncludes sdo:ImageObject ;
     sdo:rangeIncludes  sdo:URL ;
 .
 

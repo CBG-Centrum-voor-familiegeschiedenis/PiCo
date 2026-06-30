@@ -1,7 +1,6 @@
 @prefix prov:              <http://www.w3.org/ns/prov#> .
 @prefix sdo:               <https://schema.org/> .
 @prefix pnv:               <https://w3id.org/pnv#> .
-@prefix bio:               <http://purl.org/vocab/bio/0.1/> .
 @prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
 @prefix picom:             <https://personsincontext.org/model#> .
 @prefix picot_sourcetypes: <https://terms.personsincontext.org/sourcetypes/> .
@@ -13,9 +12,9 @@
 
 # PERSOONSVERMELDINGEN
 cbg:NL-HaCBG_1755_0341_142_po_1
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Abe Bos" ;
+    sdo:name              "Abe Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Abe" ;
     sdo:gender            sdo:Male ;
@@ -33,9 +32,9 @@ cbg:NL-HaCBG_1755_0341_142_po_1
 .
 
 cbg:NL-HaCBG_1755_0341_142_po_2
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Anna Maria Koppen" ;
+    sdo:name              "Anna Maria Koppen"@nl ;
     sdo:familyName        "Koppen" ;
     sdo:givenName         "Anna" ;
     sdo:birthPlace        "Haarlem" ;
@@ -45,9 +44,9 @@ cbg:NL-HaCBG_1755_0341_142_po_2
     sdo:deathDate         "1926"^^xsd:gYear .
 
 cbg:NL-HaCBG_1755_0341_142_po_3
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Sjouke Abes Bos" ;
+    sdo:name              "Sjouke Abes Bos"@nl ;
     sdo:familyName        "Bos" ;
     sdo:givenName         "Sjouke" ;
     sdo:additionalName    [ a               pnv:PersonName ;
@@ -56,9 +55,9 @@ cbg:NL-HaCBG_1755_0341_142_po_3
     sdo:children          cbg:NL-HaCBG_1755_0341_142_po_1 .
 
 cbg:NL-HaCBG_1755_0341_142_po_4
-    a                     picom:PersonObservation ;
+    a                     picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource cbg:NL-HaCBG_1755_0341_142 ;
-    sdo:name              "Geertruida van der Wijk" ;
+    sdo:name              "Geertruida van der Wijk"@nl ;
     sdo:familyName        "van der Wijk" ;
     sdo:givenName         "Geertruida" ;
     sdo:additionalName    [ a                 pnv:PersonName ;
@@ -70,7 +69,7 @@ cbg:NL-HaCBG_1755_0341_142_po_4
 
 # BRON
 cbg:NL-HaCBG_1755_0341_142
-    a                   sdo:ArchiveComponent ;
+    a                   sdo:ArchiveComponent, sdo:CreativeWork ;
     sdo:name            "Persoonskaart Abe Bos"@nl ;
     sdo:locationCreated "Nederland" ;
     sdo:additionalType  picot_sourcetypes:554 ;  # bevolkingsregister
