@@ -120,7 +120,7 @@ picom:ontology
                                     sdo:description    "Schematic overview of the model."@en ;
                                     sdo:encodingFormat "image/svg+xml" ;
                                     sdo:name           "Model overview"@en ;
-                                    sdo:sDatePublished "2026-02-17" ;
+                                    sdo:sdDatePublished "2026-02-17"^^xsd:date ;
                                     sdo:licence        <http://creativecommons.org/licenses/by/4.0/deed.nl> ] ;
 .
 
@@ -197,7 +197,7 @@ picom:PersonObservation
                       sdo:description    "Schematic overview of a person observation."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonObservation overview"@en ;
-                      sdo:sDatePublished "2026-02-17" ] ;
+                      sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -252,7 +252,7 @@ picom:PersonReconstruction
                       sdo:description    "Schematic overview of a person reconstruction."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "PersonReconstruction overview"@en ;
-                      sdo:sDatePublished "2026-02-17" ] ;
+                      sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
                       sdo:encodingFormat "text/turtle" ;
@@ -302,7 +302,7 @@ sdo:ArchiveComponent
                       sdo:description    "Schematic overview of a Source."@en ;
                       sdo:encodingFormat "image/svg+xml" ;
                       sdo:name           "Source"@en ;
-                      sdo:sDatePublished "2026-02-17" ] ;
+                      sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
                       sdo:encodingFormat "text/turtle" ;
