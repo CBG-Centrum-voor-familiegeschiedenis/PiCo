@@ -593,6 +593,7 @@ picom:hasAge
     skos:definition    "The age of a person."@en ;
     # skos:definition       "De leeftijd van een persoon."@nl ;
     rdfs:label         "hasAge"@en ;
+    rdfs:label         "hasAge"@en ;
     # rdfs:label        "leeftijd"@nl ;
     skos:scopeNote     """Only used for Person observations, in case the birth date is not known,
                           but the age is. In combination with de date of the Source, a birth date range can
@@ -744,6 +745,35 @@ picom:eventPlace
     sdo:rangeIncludes  xsd:string, xsd:anyURI, sdo:Place ;
 .
 
+sdo:thumbnailUrl
+    a                  owl:DatatypeProperty ;
+    skos:definition    """Thumbnail image of the Scan."""@en ;
+    rdfs:label         "thumbnailUrl"@en ;
+    sdo:domainIncludes sdo:ImageObject ; #, sdo:ArchiveComponent ?
+    sdo:rangeIncludes  sdo:URL ;
+.
+
+sdo:url
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo:url ;
+    skos:definition    "URL of the Source." ;
+    rdfs:label         "url"@en ;
+    skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
+    sdo:domainIncludes sdo:ArchiveComponent ;
+    sdo:rangeIncludes  sdo:URL ;
+.
+
+sdo:contentUrl
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   sdo:contentUrl ;
+    skos:definition    "URL of the Scan." ;
+    rdfs:label         "contentUrl"@en ;
+    skos:scopeNote     """A link to the scan of the Source at the holding archive.
+                          Preferably a link to a IIIF manifest.
+                       """@en ;
+    sdo:domainIncludes sdo:ImageObject ;
+    sdo:rangeIncludes  sdo:URL ;
+.
 
 ########################################################################################################################
 # Object Properties
@@ -1399,36 +1429,6 @@ sdo:spouse
     rdfs:subPropertyOf sdo:relatedTo ;
     sdo:domainIncludes picom:Person ;
     sdo:rangeIncludes  picom:Person ;
-.
-
-sdo:thumbnailUrl
-    a                  owl:ObjectProperty ;
-    skos:definition    """Thumbnail image of the Scan."""@en ;
-    rdfs:label         "thumbnailUrl"@en ;
-    sdo:domainIncludes sdo:ImageObject ; #, sdo:ArchiveComponent ?
-    sdo:rangeIncludes  sdo:ImageObject ;
-.
-
-sdo:url
-    a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo:url ;
-    skos:definition    "URL of the Source." ;
-    rdfs:label         "url"@en ;
-    skos:scopeNote     "For Sources: a link to the Source at the holding archive. Preferably a permalink."@en ;
-    sdo:domainIncludes sdo:ArchiveComponent ;
-    sdo:rangeIncludes  sdo:URL ;
-.
-
-sdo:contentUrl
-    a                  owl:ObjectProperty ;
-    rdfs:isDefinedBy   sdo:contentUrl ;
-    skos:definition    "URL of the Scan." ;
-    rdfs:label         "contentUrl"@en ;
-    skos:scopeNote     """A link to the scan of the Source at the holding archive.
-                          Preferably a link to a IIIF manifest.
-                       """@en ;
-    sdo:domainIncludes sdo:ImageObject ;
-    sdo:rangeIncludes  sdo:URL ;
 .
 
 picom:hasRole
