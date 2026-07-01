@@ -38,21 +38,21 @@
                                                                                                     sdo:name
                                                                                                       "Digitaal Monument Neuengamme"@nl ;
                                                                                                     sdo:url
-                                                                                                      <https://monument.vriendenkringneuengamme.nl/person/400674> ] ],
+                                                                                                      "https://monument.vriendenkringneuengamme.nl/person/400674"^^xsd:anyURI ] ],
                         [ a                     picom:PersonObservation, sdo:Person ;
                           sdo:name              "Willem Hermanus Brizee"@nl ;
                           sdo:givenName         "Willem Hermanus" ;
                           sdo:familyName        "Brizee" ;
                           prov:hadPrimarySource [ a        sdo:ArchiveComponent, sdo:CreativeWork ;
                                                   sdo:name "Arolsen Archives"@en ;
-                                                  sdo:url  <https://collections.arolsen-archives.org/en/search/people/3772230/?p=1&amp;s_lastName=asc> ] ],
+                                                  sdo:url  "https://collections.arolsen-archives.org/en/search/people/3772230/?p=1&amp;s_lastName=asc"^^xsd:anyURI ] ],
                         [ a                     picom:PersonObservation, sdo:Person ;
                           sdo:name              "Willem Hermanus Brizee"@nl ;
                           sdo:givenName         "Willem Hermanus" ;
                           sdo:familyName        "Brizee" ;
                           prov:hadPrimarySource [ a        sdo:ArchiveComponent, sdo:CreativeWork ;
                                                   sdo:name "Oorlogsgravenstiching"@nl ;
-                                                  sdo:url  <https://www.oorlogsgravenstichting.nl/personen/225645/willem-hermanus-brizee> ] ] ;
+                                                  sdo:url  "https://www.oorlogsgravenstichting.nl/personen/225645/willem-hermanus-brizee"^^xsd:anyURI ] ] ;
     prov:wasGeneratedBy <https://www.genealogieonline.nl/id/reconstruction_activity_23> .
 
 <https://www.genealogieonline.nl/>

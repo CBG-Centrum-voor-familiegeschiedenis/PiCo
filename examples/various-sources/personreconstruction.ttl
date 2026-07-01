@@ -66,5 +66,5 @@ cbg:NL-HaCBG_1755_0341_142_po_1
     a                       picom:PersonObservation, sdo:Person ;
     prov:hadPrimarySource   [ a sdo:ArchiveComponent, sdo:CreativeWork ;
                               sdo:name  "PK A. Bos"@nl ;
-                              sdo:url   <https://cbg.nl/persoonskaarten/voorbeeld>
+                              sdo:url   "https://cbg.nl/persoonskaarten/voorbeeld"^^xsd:anyURI
                             ] .

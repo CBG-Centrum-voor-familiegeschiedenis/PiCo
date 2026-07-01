@@ -17,6 +17,7 @@
 @prefix dcterms:           <http://purl.org/dc/terms/> .
 @prefix qb:                <http://purl.org/linked-data/cube#> .
 @prefix sosa:              <http://www.w3.org/ns/sosa/> .
+#@prefix picot:             <https://terms.personsincontext.org/ThesaurusHistorischePersoonsgegevens/> .
 
 ########################################################################################################################
 # ontology
@@ -36,7 +37,7 @@ picom:ontology
 #                        sdo:affiliation
 #                                [
 #                                    sdo:name "CBG|Center for family history"@en ;
-#                                    sdo:url  "https://cbg.nl"
+#                                    sdo:url  "https://cbg.nl"^^xsd:anyURI
 #                                ] ;
 #                        sdo:email "pieter.woltjer@cbg.nl"
 #                    ] ,
@@ -45,20 +46,20 @@ picom:ontology
 #                        sdo:affiliation
 #                                [
 #                                    sdo:name "CBG|Center for family history"@en ;
-#                                    sdo:url  "https://cbg.nl"
+#                                    sdo:url  "https://cbg.nl"^^xsd:anyURI
 #                                ] ;
 #                    ] ,
 #                    [
 #                        sdo:name  "Bob Coret"@en ;
-#                        sdo:url   <https://bob.coret.org/>
+#                        sdo:url   "https://bob.coret.org/"^^xsd:anyURI
 #                    ] ,
 #                    [
 #                        sdo:name   "Mark Lindeman"@en ;
-#                        sdo:url "https://lindeman.it/"
+#                        sdo:url "https://lindeman.it/"^^xsd:anyURI
 #                    ] ,
 #                    [
 #                        sdo:name "Ivo Zandhuis"@en ;
-#                        sdo:url "https://ivozandhuis.nl/"
+#                        sdo:url "https://ivozandhuis.nl/"^^xsd:anyURI
 #                    ] ;
     dcterms:contributor           "Rick Companje", "Rick Mourits", "Micon Schorsij", "Richard Zijdeman" ;
 
@@ -70,7 +71,7 @@ picom:ontology
 #                            sdo:affiliation
 #                                  [
 #                                      sdo:name "International Institute Of Social History (IISH)"@en ;
-#                                      sdo:url "https://iisg.amsterdam/"
+#                                      sdo:url "https://iisg.amsterdam/"^^xsd:anyURI
 #                                  ]
 #                        ] ,
 #                        [
@@ -78,14 +79,14 @@ picom:ontology
 #                            sdo:affiliation
 #                                    [
 #                                        sdo:name "NIOD Instituut voor Oorlogs-, Holocaust- en Genocidestudies"@nl ;
-#                                        sdo:url "https://www.niod.nl/"
+#                                        sdo:url "https://www.niod.nl/"^^xsd:anyURI
 #                                    ]
 #                        ] ,
 #                        [
 #                            sdo:Name "Richard Zijdeman"@en ;
 #                            sdo:affiliation
 #                                    [ sdo:name "International Institute Of Social History (IISH)"@en ;
-#                                      sdo:url "https://iisg.amsterdam/"
+#                                      sdo:url "https://iisg.amsterdam/"^^xsd:anyURI
 #                                    ]
 #                        ] ;
     dcterms:created               "2023-09-21"^^xsd:date ;
@@ -113,15 +114,15 @@ picom:ontology
                                      scientists. PiCo is maintained by the PiCo Maintenance Group.
                                   """@en ;
     sdo:codeRepository            "https://github.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/"^^xsd:anyURI ;
-    sdo:workExample               [ a                  sdo:MediaObject, sdo:ImageObject ;
-                                    sh:order           0 ;
-                                    sdo:caption        "Schematic overview" ;
-                                    sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
-                                    sdo:description    "Schematic overview of the model."@en ;
-                                    sdo:encodingFormat "image/svg+xml" ;
-                                    sdo:name           "Model overview"@en ;
+    sdo:workExample               [ a                   sdo:MediaObject, sdo:ImageObject ;
+                                    sh:order            0 ;
+                                    sdo:caption         "Schematic overview" ;
+                                    sdo:contentUrl      "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_overview.svg"^^xsd:anyURI ;
+                                    sdo:description     "Schematic overview of the model."@en ;
+                                    sdo:encodingFormat  "image/svg+xml" ;
+                                    sdo:name            "Model overview"@en ;
                                     sdo:sdDatePublished "2026-02-17"^^xsd:date ;
-                                    sdo:license        "http://creativecommons.org/licenses/by/4.0/deed.nl"^^xsd:anyURI ] ;
+                                    sdo:license         "http://creativecommons.org/licenses/by/4.0/deed.nl"^^xsd:anyURI ] ;
 .
 
 
@@ -161,7 +162,7 @@ prov:Agent
                                              cbg:reconstruction_agent_01
                                                 a             prov:Agent ;
                                                 sdo:name   "CBG|Center for Family History"@en ;
-                                                sdo:url    <https://cbg.nl> .
+                                                sdo:url    "https://cbg.nl"^^xsd:anyURI .
                                           """ ] ;
 .
 
@@ -190,13 +191,13 @@ picom:PersonObservation
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonObservation> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
-                      sh:order           0 ;
-                      sdo:caption        "Schematic overview of a PersonObservation" ;
-                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person observation."@en ;
-                      sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonObservation overview"@en ;
+    sdo:workExample [ a                   sdo:MediaObject, sdo:ImageObject ;
+                      sh:order            0 ;
+                      sdo:caption         "Schematic overview of a PersonObservation" ;
+                      sdo:contentUrl      "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personobservation.svg"^^xsd:anyURI ;
+                      sdo:description     "Schematic overview of a person observation."@en ;
+                      sdo:encodingFormat  "image/svg+xml" ;
+                      sdo:name            "PersonObservation overview"@en ;
                       sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of two Person Observations from the same source" ;
@@ -245,13 +246,13 @@ picom:PersonReconstruction
                     """@en ;
     rdfs:subClassOf picom:Person ;
 #    owl:equivalentClass <https://w3id.org/roar#PersonReconstruction> ;  # komt (nog) niet in de HTML van 'pylode -p supermodel'. Wel in de ontpub versie.
-    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
-                      sh:order           0 ;
-                      sdo:caption        "Schematic overview of a person reconstruction" ;
-                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a person reconstruction."@en ;
-                      sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "PersonReconstruction overview"@en ;
+    sdo:workExample [ a                   sdo:MediaObject, sdo:ImageObject ;
+                      sh:order            0 ;
+                      sdo:caption         "Schematic overview of a person reconstruction" ;
+                      sdo:contentUrl      "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_personreconstruction.svg"^^xsd:anyURI ;
+                      sdo:description     "Schematic overview of a person reconstruction."@en ;
+                      sdo:encodingFormat  "image/svg+xml" ;
+                      sdo:name            "PersonReconstruction overview"@en ;
                       sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Person Reconstruction" ;
@@ -295,13 +296,13 @@ sdo:ArchiveComponent
                        elements that identify the source, heritage institutions are free to use any authoritative
                        domain-specific standard to describe their historical person records.
                     """@en ;
-    sdo:workExample [ a                  sdo:MediaObject, sdo:ImageObject ;
-                      sh:order           0 ;
-                      sdo:caption        "Schematic overview of a Source" ;
-                      sdo:contentUrl     "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
-                      sdo:description    "Schematic overview of a Source."@en ;
-                      sdo:encodingFormat "image/svg+xml" ;
-                      sdo:name           "Source"@en ;
+    sdo:workExample [ a                   sdo:MediaObject, sdo:ImageObject ;
+                      sh:order            0 ;
+                      sdo:caption         "Schematic overview of a Source" ;
+                      sdo:contentUrl      "https://raw.githubusercontent.com/CBG-Centrum-voor-familiegeschiedenis/PiCo/feb99eb97d2bcb9a86f04a9abf7ffb0ee56e0ca0/schemas/pico_source.svg"^^xsd:anyURI ;
+                      sdo:description     "Schematic overview of a Source."@en ;
+                      sdo:encodingFormat  "image/svg+xml" ;
+                      sdo:name            "Source"@en ;
                       sdo:sdDatePublished "2026-02-17"^^xsd:date ] ;
     sdo:workExample [ a                  sdo:TextObject ;
                       sdo:description    "Example of a Source with a linked Scan" ;
@@ -313,7 +314,7 @@ sdo:ArchiveComponent
                                                        sdo:additionalType  picot_sourcetypes:551 ;  # civil registry: birth
                                                        sdo:name            "Geboorteregister 1858, archiefnummer 30-16, Burgerlijke Stand Haskerland - Tresoar, inventarisnummer 1020, blad 051"@nl ;
                                                        sdo:holdingArchive  <https://www.tresoar.nl/> ;
-                                                       sdo:url             <https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9> ;
+                                                       sdo:url             "https://allefriezen.nl/zoeken/deeds/f7e82c08-47c5-de67-c636-26aa1603f6c9" ;
                                                        sdo:dateCreated     "1885"^^xs:gYear ;
                                                        sdo:locationCreated "Haskerland" ;
                                                        sdo:associatedMedia [ a                sdo:MediaObject, sdo:ImageObject ;

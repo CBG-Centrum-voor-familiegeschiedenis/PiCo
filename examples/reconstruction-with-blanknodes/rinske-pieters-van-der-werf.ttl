@@ -30,7 +30,7 @@ _:person_reconstruction_1
                                                   sdo:name
                                                     "Geboorteregister 1816 Gorredijk, archiefnummer 30-28, Burgerlijke Stand Opsterland - Tresoar, inventarisnummer 1003, blad 021"@nl ;
                                                   sdo:url
-                                                    <https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88> ] ; ] ;
+                                                    "https://allefriezen.nl/zoeken/deeds/573ace76-6f44-389f-666d-4c81bb13ed88"^^xsd:anyURI ] ; ] ;
     prov:wasGeneratedBy _:reconstruction_activity_01 .
 
 _:reconstruction_activity_01
