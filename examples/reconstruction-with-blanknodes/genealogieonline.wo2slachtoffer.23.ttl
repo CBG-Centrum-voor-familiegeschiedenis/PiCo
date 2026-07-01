@@ -14,7 +14,7 @@
     sdo:deathPlace       <https://data.niod.nl/WO2_Thesaurus/kampen/3697> ;
     prov:hadPrimarySource [ a sdo:ArchiveComponent, sdo:CreativeWork ;
                             sdo:name  "Willem Hermanus (Wim) Brizee (1914-1945)"@nl ;
-                            sdo:url   <https://www.genealogieonline.nl/genealogie-coret/I000342.php> 
+                            sdo:url   "https://www.genealogieonline.nl/genealogie-coret/I000342.php"^^xsd:xsd:anyURI
                           ] . 
 
 <https://data.niod.nl/WO2_Thesaurus/kampen/3697>

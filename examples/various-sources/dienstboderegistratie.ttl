@@ -41,4 +41,4 @@ nha:dienstboderegister_po_2
     sdo:locationCreated "Haarlem"@nl ;
     sdo:associatedMedia [ a            sdo:MediaObject, sdo:ImageObject ;
                           sdo:position 1 ;
-                          sdo:embedUrl <https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380> ; ] .
+                          sdo:embedUrl "https://hdl.handle.net/21.12102/7671D6FB68564CBEBF4DE0B1E8151380"^^xsd:anyURI  ; ] .
