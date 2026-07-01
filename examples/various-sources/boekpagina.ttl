@@ -29,4 +29,4 @@ nha:bibliotheek_5008_13-p299
     sdo:holdingArchive  <https://noord-hollandsarchief.nl> ;
     sdo:dateCreated     "1903"^^xsd:gYear ;
     sdo:locationCreated "Haarlem" ;
-    sdo:isPartOf        <https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D> .
+    sdo:isPartOf        "https://hdl.handle.net/21.12102/DDDF0E0831AE49B7ABC0DF5FD7CA7E1D"^^xsd:anyURI .
