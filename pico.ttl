@@ -623,8 +623,10 @@ picom:hasReligion
     skos:definition    "Religious conviction related to a person in an observation." ;
     rdfs:label         "hasReligion" ;
     skos:scopeNote     """Religion as mentioned on the Source.
-                           If desired, a SKOS thesaurus can be used to annotate religion.
-                        """@en ;  # Todo: Can we recommend a thesaurus for religions?
+                           Preferably, use a concept from a public thesaurus to annotate religion.
+                           The Taxonomy of Religions as maintained by the IISG is recommended.
+                           It is available in the Dutch Netwerk of Terms by the NDE.
+                        """@en ;
     sdo:domainIncludes picom:Person ; #  zo staat het nu in de ontologie. Is de aanpak met domainIncludes ook goed?
     sdo:rangeIncludes  xsd:string, xsd:anyURI ;
 .
